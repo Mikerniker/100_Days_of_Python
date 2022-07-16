@@ -25,7 +25,6 @@ while not end_of_game:
     clear()   
     if guess in display:
       print(f"You've already guessed {guess}.")
-    
 
     #Check guessed letter
     for position in range(word_length):
@@ -35,14 +34,13 @@ while not end_of_game:
             display[position] = letter
           
     if guess not in chosen_word:
-      
       lives -= 1
       if 3 <= lives <= 5:
-        print(f"Eep, you guessed: {guess}, that's not in the word. 😱 My tears are welling up...You have {lives} chances left before the hangman makes his final judgment.")
+        print(f"Eep, you guessed: {guess}, that's not in the word. 😱 You have {lives} chances left before the hangman makes his final judgment.")
       elif 1 <= lives < 3:
-        print(f"Aiii...you guessed: {guess}, that's not in the word. My tears are dripping down my cheeks...You have {lives} chances left 😢...the hangman is coming!!!")
-      if lives == 0:
-        print(f"OOh noooooooo. The hangman got youu! The tears I cry...the answer was: {chosen_word}.😭😭")
+        print(f"You guessed: {guess}, that's not in the word. You have {lives} chances left 😢...the hangman is coming!!!")
+      elif lives == 0:
+        print(f"OOh nooo. The hangman got youu! The answer was: {chosen_word}.😭😭")
         end_of_game = True
         
 
@@ -51,7 +49,7 @@ while not end_of_game:
     #Check if user has got all letters.
     if "_" not in display:
         end_of_game = True
-        print("WOOOOT!!! You've escaped the hangman's noose! 🥲 YOU WINNN!!!! 🥳")
+        print("WOOOOT! You've escaped the hangman's noose! 🥲 YOU WINNN!!!! 🥳")
 
 
     print(stages[lives])
