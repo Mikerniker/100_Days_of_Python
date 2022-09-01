@@ -1,12 +1,5 @@
-#Greeting
-welcome = "Welcome to the Band Name Generator"
-print(welcome)
+Day 1 Project: Band Name Generator
+Topics for Day 1: Printing, Commenting, Debugging, String Manipulation and Variables 
 
-#Ask the user where they grew up.
-city = input("What's the name of the city you grew up in?\n").capitalize()
-
-#Ask the user for the last thing they ate.
-food = input("What's the last thing you ate? \n").capitalize()
-
-#Combine the name of city and food they ate and show the the band name.
-print("Your band name could be " + city + " " + food)
+Notes: This is the final project for Day 1 of Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2022 
+Small changes made to the original project, used food instead of pets, and used .capitalize() method.
