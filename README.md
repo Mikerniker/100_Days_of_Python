@@ -9,14 +9,11 @@ Thank you for visiting!
 
 
 
-Notes for Day 1
-This is the final project for Day 1 of Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2022
-\n Topics in Day 1 include:
-\n Printing, Commenting, Debugging, String Manipulation and Variables
-\n Small changes made to the original project, used food instead of pets, and used .capitalize() method.
+Topics for Day 1: Printing, Commenting, Debugging, String Manipulation and Variables
+    Notes: This is the final project for Day 1 of Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2022
+    Small changes made to the original project, used food instead of pets, and used .capitalize() method.
 
-Notes for Day 2:
-\n This is my solution for the Tip Calculator Project
-\n Topics in Day 2 include:
-\n Data Types, Numbers, Operations, Type Conversion, f-Strings
+
+Topics for Day 2: Data Types, Numbers, Operations, Type Conversion, f-Strings
+    Notes: This is my solution for the Tip Calculator Project
 
