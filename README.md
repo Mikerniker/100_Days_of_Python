@@ -14,3 +14,9 @@ This is the final project for Day 1 of Angela Yu's 100 Days of Code: The Complet
 Topics in Day 1 include:
 Printing, Commenting, Debugging, String Manipulation and Variables
 Small changes made to the original project, used food instead of pets, and used .capitalize() method.
+
+Notes for Day 2:
+This is my solution for the Tip Calculator Project
+Topics in Day 2 include:
+Data Types, Numbers, Operations, Type Conversion, f-Strings
+
