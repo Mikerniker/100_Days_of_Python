@@ -1,24 +1,13 @@
-## Rock Paper Scissors
+Hello,
 
-# Instructions
+This is a repository of my final projects for Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2022. I am currently on Day 36, but slowly putting my finished projects (Days 1-35) into Github for my reference. I'm still trying to understand Github and how to add files, so this repository is still a mess...will fix it soon! Thank you for visiting!
 
-Make a rock, paper, scissors game. 
+## Beginner
+**Day 1 Project: Band Name Generator**
+- Topics:Printing, Commenting, Debugging, String Manipulation and Variables
 
-Inside the `main.py` file, you'll find the ASCII art for the hand signals already saved to a corresponding variable: `rock`, `paper`, and `scissors`. This will make it easy to print them out to the console. 
+**Day 2 Project: Tip Calculator**
+- Topics: Data Types, Numbers, Operations, Type Conversion, f-Strings
 
-Start the game by asking the player:
-
-*"What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors."*
-
-From there you will need to figure out: 
-* How you will store the user's input.
-* How you will generate a random choice for the computer.
-* How you will compare the user's and the computer's choice to determine the winner (or a draw).
-* And also how you will give feedback to the player. 
-
-You can find the "official" rules of the game on [the World Rock Paper Scissors Association website.](https://wrpsa.com/the-official-rules-of-rock-paper-scissors/)
-
-
-# Solution
-
-[https://replit.com/@appbrewery/rock-paper-scissors-end](https://replit.com/@appbrewery/rock-paper-scissors-end)
+**Day 3 Project: Treasure Island Hunt**
+- Topics: Conditional Statements, Logical Operators, Code Blocks and Scope
