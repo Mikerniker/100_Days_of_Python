@@ -4,7 +4,7 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 
 ## Beginner
 **Day 1 Project: Band Name Generator**
-- Topics:Printing, Commenting, Debugging, String Manipulation and Variables
+- Topics: Printing, Commenting, Debugging, String Manipulation and Variables
 
 **Day 2 Project: Tip Calculator**
 - Topics: Data Types, Numbers, Operations, Type Conversion, f-Strings
