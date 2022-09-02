@@ -10,13 +10,13 @@ Thank you for visiting!
 
 
 ## Beginner
-**Day 1:**
+**Day 1 Project: Band Name Generator **
 - Topics:Printing, Commenting, Debugging, String Manipulation and Variables
-- Notes: This is the final project for Day 1 of Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2022
-- Small changes made to the original project, used food instead of pets, and used .capitalize() method.
 
-
-**Day 2:**
+**Day 2 Project: Tip Calculator **
 - Topics: Data Types, Numbers, Operations, Type Conversion, f-Strings
-- Notes: This is my solution for the Tip Calculator Project
+
+** Day 3 Project: Treasure Island Hunt **
+- Topics: Conditional Statements, Logical Operators, Code Blocks and Scope
+
 
