@@ -11,3 +11,9 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 
 **Day 3 Project: Treasure Island Hunt**
 - Topics: Conditional Statements, Logical Operators, Code Blocks and Scope
+
+**Day 4 Project: Rock, Paper, Scissors**
+- Topics: Randomisation and Python Lists
+
+**Day 5 Project: Password Generator**
+- Topics: Python Loops
