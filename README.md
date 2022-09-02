@@ -10,13 +10,13 @@ Thank you for visiting!
 
 
 ## Beginner
-**Day 1 Project: Band Name Generator **
+**Day 1 Project: Band Name Generator**
 - Topics:Printing, Commenting, Debugging, String Manipulation and Variables
 
-**Day 2 Project: Tip Calculator **
+**Day 2 Project: Tip Calculator**
 - Topics: Data Types, Numbers, Operations, Type Conversion, f-Strings
 
-** Day 3 Project: Treasure Island Hunt **
+**Day 3 Project: Treasure Island Hunt**
 - Topics: Conditional Statements, Logical Operators, Code Blocks and Scope
 
 
