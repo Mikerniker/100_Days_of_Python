@@ -1,0 +1,3 @@
+## Day 2 Tip Calculator
+- Topics for Day 2: Data Types, Numbers, Operations, Type Conversion, f-Strings 
+- Notes: This is my solution for the Tip Calculator Project for Day 2
