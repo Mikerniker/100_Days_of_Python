@@ -17,3 +17,10 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 
 **Day 5 Project: Password Generator**
 - Topics: Python Loops
+
+**Day 6 Project: Escaping the Maze**
+- Topics: Functions, Code Blocks, and While Loops
+
+**Day 7 Project: Baginner Hangman**
+- Topics: Learning to Break Complex Problems down, Checking User Input, Improving User Experience, Add ASCII Art
+- Repository is currently in a separate repository, still trying to figure out how to move it here.
