@@ -24,3 +24,6 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 **Day 7 Project: Beginner Hangman**
 - Topics: Learning to Break Complex Problems down, Checking User Input, Improving User Experience, Add ASCII Art
 - Repository is currently in a separate repository, still trying to figure out how to move it here.
+
+**Day 8 Project: Caesar Cipher**
+- Topics: Functions with Inputs, Positional vs. Keyword Arguments
