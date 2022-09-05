@@ -30,3 +30,8 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 
 **Day 9 Project: Silent Auction Program**
 - Topics: Dictionaries and Nesting
+
+**Day 10 Project: Text-based Calculator**
+- Topics: Functions with Outputs, Docstrings
+
+
