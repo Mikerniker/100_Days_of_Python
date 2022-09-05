@@ -27,3 +27,6 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 
 **Day 8 Project: Caesar Cipher**
 - Topics: Functions with Inputs, Positional vs. Keyword Arguments
+
+**Day 9 Project: Silent Auction Program**
+- Topics: Dictionaries and Nesting
