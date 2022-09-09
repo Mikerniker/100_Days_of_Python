@@ -39,5 +39,5 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 
 
 ## Intermediate
-** Day 37 Habit Tracking Project
+**Day 37 Habit Tracking Project**
 - Topics: Advanced Authentication and POST/PUT/DELETE Requests
