@@ -4,7 +4,7 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 
 ## Beginner
 **Day 1 Project: Band Name Generator**
-- Topics: Printing, Commenting, Debugging, String Manipulation and Variables
+- Topics: Printing, Commenting, Debugging, String Manipulation, and Variables
 
 **Day 2 Project: Tip Calculator**
 - Topics: Data Types, Numbers, Operations, Type Conversion, f-Strings
@@ -39,5 +39,8 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 
 
 ## Intermediate
-**Day 37 Habit Tracking Project**
+**Day 37 Project: Habit Tracking**
 - Topics: Advanced Authentication and POST/PUT/DELETE Requests
+
+**Day 38 Project: Exercise Tracking with Python and Google Sheets**
+- Topics: APIs and making POST Requests, Python DateTime strftime(), Authorization Headers (Basic Authentication), Environment Variables
