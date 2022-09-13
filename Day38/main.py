@@ -9,10 +9,11 @@ API_KEY = os.environ["SHEETLY_API_KEY"]
 
 URL = " https://trackapi.nutritionix.com/v2/natural/exercise"
 
+sheet_add_row_api = os.environ.get("SHEETLY_ROW_SHEET_API")
+
 exercise_config = {
    "query": input("What exercises did you do?: "),
 }
-
 
 # With Authentication / Authorization
 headers = {
@@ -31,12 +32,11 @@ duration = data["exercises"][0]["duration_min"]
 calories = data["exercises"][0]["nf_calories"]
 # print(f"Exercise: {user_input}, Duration: {duration}, Calories: {calories}")
 
+#Record current date and time
 date = datetime.now()
 formatted_date = date.strftime("%d/%m/%Y")
 time = date.strftime("%H:%M:%S")
 # print(date)
-
-row_sheet_api = os.environ.get("SHEETLY_ROW_SHEET_API")
 
 workout_data = {
     "workout": {
@@ -49,6 +49,5 @@ workout_data = {
   }
 
 # Add new row to the spreadsheet with inputted data
-
-new_response = requests.post(url=row_sheet_api, json=workout_data, headers=headers)
+new_response = requests.post(url=sheet_add_row_api, json=workout_data, headers=headers)
 print(new_response.text)
