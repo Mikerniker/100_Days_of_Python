@@ -7,9 +7,9 @@ APP_ID = os.environ["SHEETLY_APP_ID"]
 
 API_KEY = os.environ["SHEETLY_API_KEY"]
 
-URL = " https://trackapi.nutritionix.com/v2/natural/exercise"
+NUTRITIONIX_URL_ENDPOINT = " https://trackapi.nutritionix.com/v2/natural/exercise"
 
-sheet_add_row_api = os.environ.get("SHEETLY_ROW_SHEET_API")
+sheetly_endpoint_api = os.environ.get("SHEETLY_ROW_SHEET_API")
 
 exercise_config = {
    "query": input("What exercises did you do?: "),
@@ -22,7 +22,7 @@ headers = {
     "Authorization": os.environ.get("SHEETLY_AUTH_TOKEN")
 }
 
-response = requests.post(url=URL, json=exercise_config, headers=headers)
+response = requests.post(url=NUTRITIONIX_URL_ENDPOINT, json=exercise_config, headers=headers)
 print(response.text)
 data = response.json()
 # print(data["exercises"])
@@ -49,5 +49,5 @@ workout_data = {
   }
 
 # Add new row to the spreadsheet with inputted data
-new_response = requests.post(url=sheet_add_row_api, json=workout_data, headers=headers)
+new_response = requests.post(url=sheetly_endpoint_api, json=workout_data, headers=headers)
 print(new_response.text)
