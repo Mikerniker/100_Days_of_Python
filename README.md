@@ -44,3 +44,10 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 
 **Day 38 Project: Exercise Tracking with Python and Google Sheets**
 - Topics: APIs and making POST Requests, Python DateTime strftime(), Authorization Headers (Basic Authentication), Environment Variables
+
+**Day 39 Project:  TO FOLLOW**
+**Day 40 Project:  TO FOLLOW**
+
+**Day 41 Project:  HTML CV Website**
+- Topics: HTML Tag, HTML Boilerplate, HTML Lists, HTML Image Elements, HTML Links and Anchor Tags
+
