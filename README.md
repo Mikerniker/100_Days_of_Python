@@ -34,8 +34,15 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 **Day 10 Project: Text-based Calculator**
 - Topics: Functions with Outputs, Docstrings
 
+**Day 11 Project: Blackjack Game**
+- Blackjack Capstone Project
+- Still a work in progress
 
-###### slowly adding projects 11 - 36 here...still figuring github out.
+**Day 12 Project: The Number Guessing Game**
+- Topics: Namespaces, Local vs. Global Scope, Modifying a Global Variable, Python Constants
+
+
+###### slowly adding projects 13 - 36, 39, 40 here...still figuring github out.
 
 
 ## Intermediate
