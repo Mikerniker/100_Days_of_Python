@@ -41,8 +41,11 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 **Day 12 Project: The Number Guessing Game**
 - Topics: Namespaces, Local vs. Global Scope, Modifying a Global Variable, Python Constants
 
+**Day 13 Debugging: Finding and Fixing Errors in your Code**
+- Topics: Describe the Problem, Reproduce the Bug, Evaluate Each Line, Use a print() Statement, Use a Debugger
 
-###### slowly adding projects 13 - 36, 39, 40 here...still figuring github out.
+
+###### slowly adding projects 14 - 36, 39, 43 here...still figuring github out.
 
 
 ## Intermediate
