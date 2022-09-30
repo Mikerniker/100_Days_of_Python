@@ -1,6 +1,6 @@
 Hello,
 
-This is a repository of my final projects for Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2022. I am currently on Day (39,40) and 43, but slowly putting my finished projects (Days 1-36) into Github for my reference. I'm still trying to understand Github and how to add files, so this repository is still a work in progress...! Thank you for visiting!
+This is a repository of my final projects for Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2022. I am currently on Day (39,40) and 43, but slowly putting my finished projects (Days 1-39) into Github for my reference. I'm still trying to understand Github and how to add files, so this repository is still a work in progress...! Thank you for visiting!
 
 ## Beginner
 **Day 1 Project: Band Name Generator**
@@ -43,8 +43,11 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 **Day 13 Debugging: Finding and Fixing Errors in your Code**
 - Topics: Describe the Problem, Reproduce the Bug, Evaluate Each Line, Use a print() Statement, Use a Debugger
 
+**Day 14 Project: Higher Lower Game**
+- Topics: Using Dictionaries, Conditionals, Functions, Debugging, and Random module 
 
-###### slowly adding projects 14 - 36, 39, 43 here...still figuring github out.
+
+###### slowly adding projects 15 - 36, 39, 43 here...still figuring github out.
 
 
 ## Intermediate
