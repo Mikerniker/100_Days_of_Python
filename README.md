@@ -1,6 +1,6 @@
 Hello,
 
-This is a repository of my final projects for Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2022. I am currently on Day (39,40) and 43, but slowly putting my finished projects (Days 1-39) into Github for my reference. I'm still trying to understand Github and how to add files, so this repository is still a work in progress...! Thank you for visiting!
+This is a repository of my final projects for Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2022. I am currently on Day (39,40) and 44, but slowly putting my finished projects (Days 1-39) into Github for my reference. I'm still trying to understand Github and how to add files, so this repository is still a work in progress...! Thank you for visiting!
 
 ## Beginner
 **Day 1 Project: Band Name Generator**
@@ -65,10 +65,15 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 - Topics: APIs and making POST Requests, Python DateTime strftime(), Authorization Headers (Basic Authentication), Environment Variables
 
 **Day 39 Project:  TO FOLLOW**
+
+
 **Day 40 Project:  TO FOLLOW**
 
-**Day 41 Project:  HTML CV Website**
+**Day 41 Project: Personal Website (simple HTML)**
 - Topics: HTML Tag, HTML Boilerplate, HTML Lists, HTML Image Elements, HTML Links and Anchor Tags
 
-**Day 42 Project: Personal Website (expanded)**
+**Day 42 Project: Personal Website (with tables and forms)**
 - Topics: HTML Tables, HTML Forms
+
+**Day 43 Project: Personal Website (with simple CSS)**
+- Topics: Inline, Internal and External CSS, Debugging CSS Code, ID Selectors, Class Selectors, Tag Selectors
