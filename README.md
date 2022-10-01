@@ -46,8 +46,15 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 **Day 14 Project: Higher Lower Game**
 - Topics: Using Dictionaries, Conditionals, Functions, Debugging, and Random module 
 
+**Day 15 Project: Coffee Machine**
+- Topics: Setup Local Development Environment and Coffee Machine Project, PEP8 Style Guide, Functions, Using Pycharm
 
-###### slowly adding projects 15 - 36, 39, 43 here...still figuring github out.
+**Day16 Project: Coffee Machine in OOP**
+- Topics: Object Oriented Programming (OOP): Classes, Objects, Constructing Objects, Accessing Attributes, Add Python Packages, Modifying Object Attributes and Calling Methods 
+
+
+
+###### slowly adding projects 17 - 36, 39, 43 here...
 
 
 ## Intermediate
