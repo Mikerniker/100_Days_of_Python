@@ -1,0 +1,12 @@
+## Day 44 Project: Personal Website (Stylised with Advanced CSS)
+- Topics: 
+  - Favicons
+  - HTML Divs
+  - Box Model
+  - CSS Display Property
+  - Static and Relative Positioning
+  - Absolute Positioning
+  - Centering Elements with CSS 
+  - Font Styling
+  - CSS Sizing
+  - Font Properties
