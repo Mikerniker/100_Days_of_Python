@@ -52,9 +52,12 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 **Day16 Project: Coffee Machine in OOP**
 - Topics: Object Oriented Programming (OOP): Classes, Objects, Constructing Objects, Accessing Attributes, Add Python Packages, Modifying Object Attributes and Calling Methods 
 
+**Day17 Project: Quiz Game**
+- Topics: Object Oriented Programming (OOP): Classes, Attributes, Class Constructors (__init__()), Methods 
 
 
-###### slowly adding projects 17 - 36, 39, 43 here...
+
+###### slowly adding projects 18 - 36, 39, 40, 44 here...
 
 
 ## Intermediate
