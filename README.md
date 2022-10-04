@@ -55,9 +55,11 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 **Day17 Project: Quiz Game**
 - Topics: Object Oriented Programming (OOP): Classes, Attributes, Class Constructors (__init__()), Methods 
 
+**Day 18 Project: The Hirst Painting**
+- Topics: Turtle Graphics, Tuples, and Importing Modules
 
 
-###### slowly adding projects 18 - 36, 39, 40, 44 here...
+###### slowly adding projects 19 - 36, 39, 40, 44 here...
 
 
 ## Intermediate
