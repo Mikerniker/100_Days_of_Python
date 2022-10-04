@@ -1,2 +1,2 @@
 ## Day 17 Project: Quiz Game
-- Topics: OOP, Classes 
+- OOP Topics: Classes, Attributes, Class Constructors (__init__()), Methods 
