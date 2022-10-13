@@ -3,66 +3,75 @@ Hello,
 This is a repository of my final projects for Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2022. I am currently on Day (39,40) and 44, but slowly putting my finished projects (Days 1-39) into Github for my reference. I'm still trying to understand Github and how to add files, so this repository is still a work in progress...! Thank you for visiting!
 
 ## Beginner
-**Day 1 Project: Band Name Generator**
+**Day 1 Project: [Band Name Generator](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day01)**
 - Topics: Printing, Commenting, Debugging, String Manipulation, and Variables
 
-**Day 2 Project: Tip Calculator**
+**Day 2 Project: [Tip Calculator](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day02)**
 - Topics: Data Types, Numbers, Operations, Type Conversion, f-Strings
 
-**Day 3 Project: Treasure Island Hunt**
+**Day 3 Project: [Treasure Island Hunt](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day03)**
 - Topics: Conditional Statements, Logical Operators, Code Blocks and Scope
 
-**Day 4 Project: Rock, Paper, Scissors**
+**Day 4 Project: [Rock, Paper, Scissors](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day04)**
 - Topics: Randomisation and Python Lists
 
-**Day 5 Project: Password Generator**
+**Day 5 Project: [Password Generator](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day05)**
 - Topics: Python Loops
 
-**Day 6 Project: Escaping the Maze**
+**Day 6 Project: [Escaping the Maze](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day06)**
 - Topics: Functions, Code Blocks, and While Loops
 
-**Day 7 Project: Beginner Hangman**
+**Day 7 Project: [Beginner Hangman](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day07)**
 - Topics: For & While Loops, IF/ELSE, Lists, Strings, Range, Random module, ASCII art, Improve User Experience
 
-**Day 8 Project: Caesar Cipher**
+**Day 8 Project: [Caesar Cipher](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day08)**
 - Topics: Functions with Inputs, Positional vs. Keyword Arguments
 
-**Day 9 Project: Silent Auction Program**
+**Day 9 Project: [Silent Auction Program](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day09)**
 - Topics: Dictionaries and Nesting
 
-**Day 10 Project: Text-based Calculator**
+**Day 10 Project: [Text-based Calculator](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day10)**
 - Topics: Functions with Outputs, Docstrings
 
-**Day 11 Project: Blackjack Game**
+**Day 11 Project: [Blackjack Game](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day11)**
 - Blackjack Capstone Project
 - Still a work in progress
 
-**Day 12 Project: The Number Guessing Game**
+**Day 12 Project: [The Number Guessing Game](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day12)**
 - Topics: Namespaces, Local vs. Global Scope, Modifying a Global Variable, Python Constants
 
-**Day 13 Debugging: Finding and Fixing Errors in your Code**
+**Day 13 Debugging: [Finding and Fixing Errors in your Code](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day13)**
 - Topics: Describe the Problem, Reproduce the Bug, Evaluate Each Line, Use a print() Statement, Use a Debugger
 
-**Day 14 Project: Higher Lower Game**
+**Day 14 Project: [Higher Lower Game](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day14)**
 - Topics: Using Dictionaries, Conditionals, Functions, Debugging, and Random module 
-
-**Day 15 Project: Coffee Machine**
-- Topics: Setup Local Development Environment and Coffee Machine Project, PEP8 Style Guide, Functions, Using Pycharm
-
-**Day16 Project: Coffee Machine in OOP**
-- Topics: Object Oriented Programming (OOP): Classes, Objects, Constructing Objects, Accessing Attributes, Add Python Packages, Modifying Object Attributes and Calling Methods 
-
-**Day17 Project: Quiz Game**
-- Topics: Object Oriented Programming (OOP): Classes, Attributes, Class Constructors (__init__()), Methods 
-
-**Day 18 Project: The Hirst Painting**
-- Topics: Turtle Graphics, Tuples, and Importing Modules
-
-
-###### slowly adding projects 19 - 36, 39, 40, 44 here...
 
 
 ## Intermediate
+
+**Day 15 Project: [Coffee Machine](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day15)**
+- Topics: Setup Local Development Environment and Coffee Machine Project, PEP8 Style Guide, Functions, Using Pycharm
+
+**Day16 Project: [Coffee Machine in OOP](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day16)**
+- Topics: Object Oriented Programming (OOP): Classes, Objects, Constructing Objects, Accessing Attributes, Add Python Packages, Modifying Object Attributes and Calling Methods 
+
+**Day17 Project: [Quiz Game](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day17)**
+- Topics: Object Oriented Programming (OOP): Classes, Attributes, Class Constructors (__init__()), Methods 
+
+**Day 18 Project: [The Hirst Painting](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day18)**
+- Topics: Turtle Graphics, Tuples, and Importing Modules
+
+**Day 19 Project: [Etch a Sketch and Turtle Racing Game](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day19)**
+- Topics: Turtle Graphics, Event listeners, Functions, Objects States and Instances, Turtle Coordinate System
+
+**Day 20 Project: [Snake Game Part 1](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day20)**
+- Topics: Turtle module, Animating Snake Segments, OOP and classes
+- ##### Adding in progress
+
+
+###### slowly adding projects 20 - 36, 39, 40, 44 here...
+
+
 **Day 37 Project: Habit Tracking**
 - Topics: Advanced Authentication and POST/PUT/DELETE Requests
 
