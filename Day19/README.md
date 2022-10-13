@@ -1,35 +1,27 @@
 # Day 19 Project - Etch a Sketch and Turtle Racing Game
 
-This is my solution to the [Angela Yu's Day 19 project] on Udemy. IN PROGRESS
+This is my solution to Angela Yu's Day 19 challenges on Udemy.
 
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
 
 ## Overview
 
 ### The challenge
-will input
 
-### Screenshot
-
-![](./screenshot.jpg)
-
-
+- Create an Etch a Sketch with specific commands and be able to draw things on the screen.
+- Create a game with multiple turtles racing towards a finish line.
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-
+- Solution URL: [Etch a Sketch](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day19/Etch%20a%20Sketch)
+- Solution URL: [Turtle Race](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day19/Turtle%20Race)
 
 ## My process
 
@@ -38,27 +30,9 @@ will input
 - Python
 - Turtle module
 
-
-
 ### What I learned
 
-event listeners - on-key method
-
-### Continued development
-
-Things I want to continue focusing on in future projects:
-Concepts I'm still not completely comfortable with:
-Techniques I found useful that I want to refine and perfect:
-
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - 
-- [Example resource 2](https://www.example.com) - 
-
-
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Github: - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-
+- Event listeners - listening to keyboard strokes
+- Reviewed Functions
+- Objects States and Instances
+- Turtle Coordinate System
