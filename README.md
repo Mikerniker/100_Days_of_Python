@@ -66,8 +66,12 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 
 **Day 20 Project: [Snake Game Part 1](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day20)**
 - Topics: Turtle module, Animating Snake Segments, OOP and classes
-- ##### Adding in progress
 
+**Day 21 Project: [Snake Game Part 2](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day21)**
+- Topics: Turtle module, Class Inheritance, Slicing
+
+
+- ##### Adding in progress
 
 ###### slowly adding projects 20 - 36, 39, 40, 44 here...
 
