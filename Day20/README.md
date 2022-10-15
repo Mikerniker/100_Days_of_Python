@@ -1,7 +1,5 @@
 # Day 20 Project - Snake Game Part 1
 
-This is my solution to Angela Yu's Day 20 challenge on Udemy.
-
 ## Table of contents
 
 - [Overview](#overview)
@@ -23,7 +21,7 @@ This is my solution to Angela Yu's Day 20 challenge on Udemy.
 
 ### Links
 
-- Solution URL: [Snake Game](https://website to addh)
+- Solution URL: [Snake Game](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day20)
 
 ## My process
 
@@ -33,7 +31,11 @@ This is my solution to Angela Yu's Day 20 challenge on Udemy.
 - Turtle module
 
 ### What I learned
-
+Notes:
 - Review Turtle module: Screen setup
 - Animating Snake Segments
 - OOP  and classes
+- Tracer - turns animation on or off: screen.tracer(0)
+- Update - screen to show new image each time: screen.update()
+- Time module: time.sleep(1)   #adds a one sec delay after each segment moves
+
