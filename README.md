@@ -88,10 +88,13 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 **Day 40 Project:  TO FOLLOW**
 
 **Day 41 Project: [Personal Website (simple HTML)](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day41)**
-- Topics: HTML Tag, HTML Boilerplate, HTML Lists, HTML Image Elements, HTML Links and Anchor Tags
+- Topics: Intro to HTML: HTML Tag, HTML Boilerplate, HTML Lists, HTML Image Elements, HTML Links and Anchor Tags
 
 **Day 42 Project: [Personal Website (with tables and forms)](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day42)**
-- Topics: HTML Tables, HTML Forms
+- Topics: Intermediate HTML: HTML Tables, HTML Forms
 
 **Day 43 Project: [Personal Website (with simple CSS)](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day43)**
-- Topics: Inline, Internal and External CSS, Debugging CSS Code, ID Selectors, Class Selectors, Tag Selectors
+- Topics: Intro to CSS: Inline, Internal and External CSS, Debugging CSS Code, ID Selectors, Class Selectors, Tag Selectors
+
+**Day 44 Project: [Personal Website (Stylised with Advanced CSS)](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day43)**
+- Topics: Intermediate CSS: Favicons, Box Model, CSS Display Property, Static and Relative Positioning, Absolute Positioning, Centering Elements with CSS, Font Styling, CSS Sizing, Font Properties
