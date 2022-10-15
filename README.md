@@ -76,10 +76,10 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 ###### slowly adding projects 20 - 36, 39, 40, 44 here...
 
 
-**Day 37 Project: Habit Tracking**
+**Day 37 Project: [Habit Tracking](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day37)**
 - Topics: Advanced Authentication and POST/PUT/DELETE Requests
 
-**Day 38 Project: Exercise Tracking with Python and Google Sheets**
+**Day 38 Project: [Exercise Tracking with Python and Google Sheets](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day38)**
 - Topics: APIs and making POST Requests, Python DateTime strftime(), Authorization Headers (Basic Authentication), Environment Variables
 
 **Day 39 Project:  TO FOLLOW**
@@ -87,11 +87,11 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 
 **Day 40 Project:  TO FOLLOW**
 
-**Day 41 Project: Personal Website (simple HTML)**
+**Day 41 Project: [Personal Website (simple HTML)](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day41)**
 - Topics: HTML Tag, HTML Boilerplate, HTML Lists, HTML Image Elements, HTML Links and Anchor Tags
 
-**Day 42 Project: Personal Website (with tables and forms)**
+**Day 42 Project: [Personal Website (with tables and forms)](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day42)**
 - Topics: HTML Tables, HTML Forms
 
-**Day 43 Project: Personal Website (with simple CSS)**
+**Day 43 Project: [Personal Website (with simple CSS)](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day43)**
 - Topics: Inline, Internal and External CSS, Debugging CSS Code, ID Selectors, Class Selectors, Tag Selectors
