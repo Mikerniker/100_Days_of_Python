@@ -1,7 +1,5 @@
 # Day 21 Project - Snake Game Part 2
 
-This is my solution to Angela Yu's Day 21 challenge on Udemy.
-
 ## Table of contents
 
 - [Overview](#overview)
@@ -21,11 +19,10 @@ This is my solution to Angela Yu's Day 21 challenge on Udemy.
    - Create a scoreboard
    - Detect collision with wall
    - Detect collision with tail
- 
 
 ### Links
 
-- Solution URL: [Snake Game](https://website to addh)
+- Solution URL: [Final Snake Game](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day21)
 
 ## My process
 
@@ -36,6 +33,6 @@ This is my solution to Angela Yu's Day 21 challenge on Udemy.
 
 ### What I learned
 
-- Review Turtle module: Screen setup
-- Animating Snake Segments
-- OOP  and classes
+- Class Inheritance
+- Slicing
+- Tuples
