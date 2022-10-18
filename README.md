@@ -70,10 +70,16 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 **Day 21 Project: [Snake Game Part 2](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day21)**
 - Topics: Turtle module, Class Inheritance, Slicing
 
+**Day 22 Project: [Pong Game](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day22)**
+- Topics: Turtle module, OOP: Classes, Game Logic
 
-- ##### Adding in progress
+**Day 23 Project: [Turtle Crossing Game Capstone](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day23)**
+- Topics: OOP: Constructor Classes, Inheritance, Turtle Coordinate System, Turtle Game engine
 
-###### slowly adding projects 20 - 36, 39, 40, 44 here...
+
+### Adding in progress
+
+###### slowly adding projects 24 - 36, 39, 40, 44 here...
 
 
 **Day 37 Project: [Habit Tracking](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day37)**
