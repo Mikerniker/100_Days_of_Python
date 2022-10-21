@@ -13,9 +13,11 @@
 
 ### The challenge
 
-- Create a letter using a given .txt file
-- In a given list of names, replace a [name] placeholder with the actual name.
+- Create a letter using starting_letter.txt 
+- For each name in invited_names.txt
+- Replace the [name] placeholder with the actual name.
 - Save the letters in the folder "ReadyToSend".
+
 
 ### Links
 
@@ -30,8 +32,11 @@
 ### What I learned
 - Open, Read, and Write to Files using the "with" Keyword
 - Understand Relative and Absolute File Paths
+- Readlines Method
+- Replace() Method
+- Strip() Method
 
 ### Useful Resources:
-Resource 1: [Readlines Method](https://www.w3schools.com/python/ref_file_readlines.asp)
-Resource 2: [String Replace() Method](https://www.w3schools.com/python/ref_string_replace.asp)
-Resource 3: [String Strip() Method](https://www.w3schools.com/python/ref_string_strip.asp)
+- Resource 1: [Readlines Method](https://www.w3schools.com/python/ref_file_readlines.asp)
+- Resource 2: [String Replace() Method](https://www.w3schools.com/python/ref_string_replace.asp)
+- Resource 3: [String Strip() Method](https://www.w3schools.com/python/ref_string_strip.asp)
