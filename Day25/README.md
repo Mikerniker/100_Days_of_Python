@@ -15,8 +15,8 @@
 ### The challenge
 
 - Exercise: The Great Squirrel Census Data Analysis
-  - Use given data census of squirrels and the pandas library to create a csv called "squirrel count", which contains the fur color of squirrels: grey, cinnamon, or black
-  - Figure out how many squirrels there are based on their fur color and create a dataframe for it and output in csv.
+  - Use given data census of squirrels and the pandas library to create a csv called "squirrel count", which contains the fur color of squirrels: grey, cinnamon, or black.
+  - Figure out how many squirrels there are based on their fur color and create a dataframe for it and output to csv.
 
 - Project: The States Game
   - Create a US States quiz.
@@ -24,8 +24,8 @@
 
 ### Links
 
-- Solution URL: [Squirrel Census](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day24)
-- Solution URL: [States Game](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day24)
+- Solution URL: [Squirrel Census](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day25/Squirrel%20Census)
+- Solution URL: [States Game](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day25/States%20Game)
 
 ## My process
 
