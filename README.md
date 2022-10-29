@@ -76,10 +76,19 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 **Day 23 Project: [Turtle Crossing Game Capstone](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day23)**
 - Topics: OOP: Constructor Classes, Inheritance, Turtle Coordinate System, Turtle Game engine
 
+**Day 24 Project: [Mail Merge Project](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day24)**
+- Topics: Open, Read, and Write to Files, Relative and Absolute File Paths, Readlines Method, Replace() Method, Strip() Method
+
+**Day 25 Project: [The States Game](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day25)**
+- Topics: CSV Library, Pandas Library: DataFrames and Series
+
+**Day 26 Project: [NATO Alphabet](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day26)**
+- Topics: List Comprehension, Dictionary Comprehension, Iterate over Pandas DataFrames
+
 
 ### Adding in progress
 
-###### slowly adding projects 24 - 36, 39, 40, 44 here...
+###### slowly adding projects 27 - 36, 39, 40, 44 here...
 
 
 **Day 37 Project: [Habit Tracking](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day37)**
