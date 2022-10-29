@@ -3,7 +3,7 @@
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenges](#the-challenge)
+  - [The challenge](#the-challenge)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -13,9 +13,9 @@
 
 ### The challenge
 
-- 1. Create a dictionary in this format: {"A": "Alfa", "B": "Bravo"}
-- 2. Create a list of the phonetic code words from a word that the user inputs.
-- 3. Use list comprehension and Pandas 
+- Create a dictionary in this format: {"A": "Alfa", "B": "Bravo"}
+- Create a list of the phonetic code words from a word that the user inputs.
+- Use list comprehension and Pandas 
 
 ### Links
 
