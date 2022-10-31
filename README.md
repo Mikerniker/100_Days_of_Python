@@ -85,7 +85,7 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 **Day 26 Project: [NATO Alphabet](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day26)**
 - Topics: List Comprehension, Dictionary Comprehension, Iterate over Pandas DataFrames
 
-**Day 27 Project: [NATO Alphabet](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day27)**
+**Day 27 Project: [Unit Converter Program](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day27)**
 - Topics: Graphical User Interfaces with Tkinter (Widgets and Methods), Advanced Functions (*Args, **Kwargs) 
 
 **Day 28 Project: [Pomodoro Timer](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day28)**
