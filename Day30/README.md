@@ -13,7 +13,7 @@
 
 ### The challenge
 
-- Create a Password manager with tkinter 
+- Update Password manager with tkinter 
 
 ### Links
 
@@ -27,9 +27,9 @@
 - Tkinter
 
 ### What I learned
-- Review Tkinter:
-- Working with Images and Setting up the Canvas 
-- Using grid() and columnspan
-- Dialogue boxes and pop-ups
-- Reviewed list comprehensions, join() method
+- Errors, Raising Exceptions, 
+- Write, read and update JSON Data
+- IndexError Handling
+- KeyError Handling
+- Exception Handling
 
