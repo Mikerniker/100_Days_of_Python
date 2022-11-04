@@ -23,6 +23,43 @@ def generate_password():
     pyperclip.copy(password)
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 
+
+# def save():
+#     website = website_input.get()
+#     email = email_input.get()
+#     password = password_input.get()
+#     new_data = {
+#         website: {
+#             "email": email,
+#             "password": password,
+#         }
+#     }
+
+#     if len(website) == 0 or len(password) == 0:
+#         messagebox.showinfo(title="Oops", message="Please don't leave the fields empty.")
+#     else:
+#         try:
+#             with open("data.json", mode="r") as data_file:
+#                 data = json.load(data_file)
+#         except FileNotFoundError:
+#             with open("data.json", mode="w") as data_file:
+#                 json.dump(new_data, data_file, indent=4)
+#         else:
+#             data.update(new_data)
+#             with open("data.json", mode="w") as data_file:
+#                 json.dump(data, data_file, indent=4)
+#         finally:
+#             website_input.delete(0, END)
+#             password_input.delete(0, END)
+
+
+        # is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered: \nEmail: {email} "
+        #                                        f"\nPassword: {password} \nIs it ok to save?")
+        #
+        # if is_ok:
+        #     with open("data.txt", mode="a+") as file:
+        #         file.write(f"\n{website} | {email} | {password}.")
+
 def save():
     website = website_input.get()
     email = email_input.get()
@@ -31,13 +68,34 @@ def save():
     if len(website) == 0 or len(password) == 0:
         messagebox.showinfo(title="Oops", message="Please don't leave the fields empty.")
     else:
-        is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered: \nEmail: {email} \nPassword: {password} \nIs it ok to save?")
+        is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered: \nEmail: {email} "
+                                               f"\nPassword: {password} \nIs it ok to save?")
         
         if is_ok:
             with open("data.txt", mode="a+") as file:
-                file.write(f"\n{website} | {email} | {password}")
+                file.write(f"\n{website} | {email} | {password}.")
                 website_input.delete(0, END)
                 password_input.delete(0, END)
+
+
+
+# ---------------------------- FIND PASSWORD ------------------------------- #
+
+# def find_password():
+#     website = website_input.get()
+
+#     try:
+#         with open("data.json", mode="r") as data_file:
+#             data = json.load(data_file)
+#     except FileNotFoundError:
+#         messagebox.showerror(message="No data file found.")
+#     else:
+#         if website in data:
+#             messagebox.showinfo(title=f"{website}",
+#                                 message=f"Email: {data[website]['email']}\nPassword: {data[website]['password']}")
+#         else:
+#             messagebox.showerror(message="No details for the website exists.")
+
 
 # ---------------------------- UI SETUP ------------------------------- #
 
