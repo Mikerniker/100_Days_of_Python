@@ -24,33 +24,33 @@ def generate_password():
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 
 
-def save():
-    website = website_input.get()
-    email = email_input.get()
-    password = password_input.get()
-    new_data = {
-        website: {
-            "email": email,
-            "password": password,
-        }
-    }
+# def save():
+#     website = website_input.get()
+#     email = email_input.get()
+#     password = password_input.get()
+#     new_data = {
+#         website: {
+#             "email": email,
+#             "password": password,
+#         }
+#     }
 
-    if len(website) == 0 or len(password) == 0:
-        messagebox.showinfo(title="Oops", message="Please don't leave the fields empty.")
-    else:
-        try:
-            with open("data.json", mode="r") as data_file:
-                data = json.load(data_file)
-        except FileNotFoundError:
-            with open("data.json", mode="w") as data_file:
-                json.dump(new_data, data_file, indent=4)
-        else:
-            data.update(new_data)
-            with open("data.json", mode="w") as data_file:
-                json.dump(data, data_file, indent=4)
-        finally:
-            website_input.delete(0, END)
-            password_input.delete(0, END)
+#     if len(website) == 0 or len(password) == 0:
+#         messagebox.showinfo(title="Oops", message="Please don't leave the fields empty.")
+#     else:
+#         try:
+#             with open("data.json", mode="r") as data_file:
+#                 data = json.load(data_file)
+#         except FileNotFoundError:
+#             with open("data.json", mode="w") as data_file:
+#                 json.dump(new_data, data_file, indent=4)
+#         else:
+#             data.update(new_data)
+#             with open("data.json", mode="w") as data_file:
+#                 json.dump(data, data_file, indent=4)
+#         finally:
+#             website_input.delete(0, END)
+#             password_input.delete(0, END)
 
 
         # is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered: \nEmail: {email} "
@@ -60,22 +60,41 @@ def save():
         #     with open("data.txt", mode="a+") as file:
         #         file.write(f"\n{website} | {email} | {password}.")
 
+def save():
+    website = website_input.get()
+    email = email_input.get()
+    password = password_input.get()
+
+    if len(website) == 0 or len(password) == 0:
+        messagebox.showinfo(title="Oops", message="Please don't leave the fields empty.")
+    else:
+        is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered: \nEmail: {email} "
+                                               f"\nPassword: {password} \nIs it ok to save?")
+        
+        if is_ok:
+            with open("data.txt", mode="a+") as file:
+                file.write(f"\n{website} | {email} | {password}.")
+                website_input.delete(0, END)
+                password_input.delete(0, END)
+
+
+
 # ---------------------------- FIND PASSWORD ------------------------------- #
 
-def find_password():
-    website = website_input.get()
+# def find_password():
+#     website = website_input.get()
 
-    try:
-        with open("data.json", mode="r") as data_file:
-            data = json.load(data_file)
-    except FileNotFoundError:
-        messagebox.showerror(message="No data file found.")
-    else:
-        if website in data:
-            messagebox.showinfo(title=f"{website}",
-                                message=f"Email: {data[website]['email']}\nPassword: {data[website]['password']}")
-        else:
-            messagebox.showerror(message="No details for the website exists.")
+#     try:
+#         with open("data.json", mode="r") as data_file:
+#             data = json.load(data_file)
+#     except FileNotFoundError:
+#         messagebox.showerror(message="No data file found.")
+#     else:
+#         if website in data:
+#             messagebox.showinfo(title=f"{website}",
+#                                 message=f"Email: {data[website]['email']}\nPassword: {data[website]['password']}")
+#         else:
+#             messagebox.showerror(message="No details for the website exists.")
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -92,7 +111,6 @@ canvas.grid(column=1, row=0)
 website_label = Label(text="Website:", font="Courier")
 website_label.grid(column=0, row=1)
 
-
 email_label = Label(text="Email/Username:", font="Courier")
 email_label.grid(column=0, row=2)
 
@@ -103,7 +121,6 @@ website_input = Entry(width=30)
 website_input.grid(column=1, row=1)
 website_input.focus()
 
-
 email_input = Entry(width=48)
 email_input.grid(column=1, row=2, columnspan=2)
 email_input.insert(0, "myemail@yahoo.com")
@@ -111,10 +128,10 @@ email_input.insert(0, "myemail@yahoo.com")
 password_input = Entry(width=30)
 password_input.grid(column=1, row=3)
 
-search_button = Button(text="Search", width=14, command=find_password)
+search_button = Button(text="Search", width=14) #, command=find_password)
 search_button.grid(column=2, row=1)
 
-genpass_button = Button(text="Generate Password", width=14, command=generate_password)
+genpass_button = Button(text="Generate Password", width=14) #, command=generate_password)
 genpass_button.grid(column=2, row=3)
 
 add_button = Button(text="Add", width=40, command=save)
