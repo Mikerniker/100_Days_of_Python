@@ -38,14 +38,14 @@ def save():
         messagebox.showinfo(title="Oops", message="Please don't leave the fields empty.")
     else:
         try:
-            with open("data.json", mode="r") as data_file:
+            with open("data.json", "r") as data_file:
                 data = json.load(data_file)
         except FileNotFoundError:
-            with open("data.json", mode="w") as data_file:
+            with open("data.json", "w") as data_file:
                 json.dump(new_data, data_file, indent=4)
         else:
             data.update(new_data)
-            with open("data.json", mode="w") as data_file:
+            with open("data.json", "w") as data_file:
                 json.dump(data, data_file, indent=4)
         finally:
             website_input.delete(0, END)
@@ -54,20 +54,20 @@ def save():
 
 # ---------------------------- FIND PASSWORD ------------------------------- #
 
-# def find_password():
-#     website = website_input.get()
+def find_password():
+    website = website_input.get()
 
-#     try:
-#         with open("data.json", mode="r") as data_file:
-#             data = json.load(data_file)
-#     except FileNotFoundError:
-#         messagebox.showerror(message="No data file found.")
-#     else:
-#         if website in data:
-#             messagebox.showinfo(title=f"{website}",
-#                                 message=f"Email: {data[website]['email']}\nPassword: {data[website]['password']}")
-#         else:
-#             messagebox.showerror(message="No details for the website exists.")
+    try:
+        with open("data.json", mode="r") as data_file:
+            data = json.load(data_file)
+    except FileNotFoundError:
+        messagebox.showerror(message="No data file found.")
+    else:
+        if website in data:
+            messagebox.showinfo(title=f"{website}",
+                                message=f"Email: {data[website]['email']}\nPassword: {data[website]['password']}")
+        else:
+            messagebox.showerror(message="No details for the website exists.")
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -101,7 +101,7 @@ email_input.insert(0, "myemail@yahoo.com")
 password_input = Entry(width=30)
 password_input.grid(column=1, row=3)
 
-search_button = Button(text="Search", width=14) #, command=find_password)
+search_button = Button(text="Search", width=14, command=find_password)
 search_button.grid(column=2, row=1)
 
 genpass_button = Button(text="Generate Password", width=14, command=generate_password)
