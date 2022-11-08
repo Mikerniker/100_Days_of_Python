@@ -1,4 +1,4 @@
-# Day 29: Project - Password Manager
+# Day 29: Project - Password Manager 1.0
 
 ## Table of contents
 

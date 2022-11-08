@@ -1,4 +1,4 @@
-# Day 30: Project - Password Manager
+# Day 30: Project - Password Manager 2.0
 
 ## Table of contents
 

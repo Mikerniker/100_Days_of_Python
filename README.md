@@ -90,6 +90,13 @@ This is a repository of my final projects for Angela Yu's 100 Days of Code: The 
 
 **Day 28 Project: [Pomodoro Timer](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day28)**
 - Topics: Tkinter, Canvas Widget, Add Images to Tkinter, UI, Dynamic Typing 
+
+**Day 29 Project: [Password Manager 1.0](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day29)**
+- Topics: Tkinter: Working with Images and Setting up the Canvas, Using grid() and columnspan
+Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method 
+
+**Day 30 Project: [Password Manager 2.0](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day30)**
+- Topics: Errors, Raising Exceptions, Write, read and update JSON Data, IndexError Handling, KeyError Handling, Exception Handling 
  
 
 ### Adding in progress
