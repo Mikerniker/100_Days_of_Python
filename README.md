@@ -101,7 +101,7 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 
 ### Adding in progress
 
-###### slowly adding projects 29 - 36, 39, 40, 44 here...
+###### slowly adding projects 31 - 36, 39, 40, 44 here...
 
 
 **Day 37 Project: [Habit Tracking](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day37)**
