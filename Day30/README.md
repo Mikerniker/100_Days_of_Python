@@ -17,7 +17,7 @@
 
 ### Links
 
-- Solution URL: [Password Manager](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day29)
+- Solution URL: [Password Manager](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day30)
 
 ## My process
 
