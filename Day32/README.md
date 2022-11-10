@@ -1,4 +1,4 @@
-# Day 31: Capstone Project Flash Card Program
+# Day 31: Automated Happy Birthday Email
 
 ## Table of contents
 
@@ -13,24 +13,29 @@
 
 ### The challenge
 
-- Create a flash card program to learn words from a specific language.
+- Create an automated email birthday greeting with python.
+
+  - TODOs:
+    - Update the birthdays.csv
+    - Check if today matches a birthday in the birthdays.csv
+    - If step 2 is true, pick a random letter from letter templates and replace the [NAME] with the person's actual name from birthdays.csv
+    - Send the letter generated in step 3 to that person's email address.
 
 ### Links
 
-- Solution URL: [Flash Card Program](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day31)
+- Solution URL: [Automated Happy Birthday Email](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day32)
 
 ## My process
 
 ### Built with
 
 - Python
-- Tkinter
+
 
 ### What I reviewed
-- Exception handling 
-- Write, read and update JSON Data
-- Reading CSVs
+- Email SMTP - python module that helps sends emails
+- Datetime module -helps find dates and formats dates and times
 - Pandas
-- Opening and Writing to Files
+- Dictionary comprehensions
 
 
