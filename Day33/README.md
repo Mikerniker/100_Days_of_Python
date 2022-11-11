@@ -1,4 +1,4 @@
-# Day 32: Automated Happy Birthday Email
+# Day 33: Automated Happy Birthday Email
 
 ## Table of contents
 
