@@ -3,20 +3,21 @@ import pandas
 import os, random
 import smtplib
 
+
+my_email = "myemail@email.com"
+password = "your_password"
+
 #Get the current date
 now = dt.datetime.now()
-print(now.date())
+#print(now.date())
 today = (now.month, now.day)
-print(today)
+#print(today)
 
 #Read CSV
 birthdays = pandas.read_csv("birthdays.csv")
 
 birthdays_dict = {(row.month, row.day): row for (index, row) in birthdays.iterrows()}
 # print(birthdays_dict)
-
-my_email = "myemail@email.com"
-password = "your_password"
 
 
 if today in birthdays_dict:
