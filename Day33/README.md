@@ -13,7 +13,8 @@
 
 ### The challenge
 
-- Track where the ISS (International Space Station Tracker) in the night sky then send ourselves an email when it is above us.
+- Track where the ISS (International Space Station Tracker) in the night sky then send an email when it is above us.
+- If the ISS is close to my current position and it is currently dark, send myself an email to tell me to look up.
 
 ### Links
 
@@ -24,6 +25,8 @@
 ### Built with
 
 - Python
+- [Sunset and sunrise times API](https://sunrise-sunset.org/api)
+- [International Space Station Current Location API](http://open-notify.org/Open-Notify-API/ISS-Location-Now/)
 
 
 ### What I learned
@@ -31,5 +34,6 @@
 - HTTP Codes, Exceptions
 - JSON Data
 - API Parameters
+- Python split() method
 
 
