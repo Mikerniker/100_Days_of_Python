@@ -11,14 +11,17 @@ class QuizInterface:
         self.window.title("Quizzler")
         self.window.config(padx=20, pady=20, bg=THEME_COLOR)
         self.canvas = Canvas(width=300, height=250, bg="white")
+        self.canvas.grid(row=1, column=0, columnspan=2, pady=50)
 
         self.question_text = self.canvas.create_text(150, 125,
                                                      text="Text goes here",
                                                      width=280,
                                                      font=("Arial", 20, "italic"))
-        self.canvas.grid(row=1, column=0, columnspan=2, pady=50)
-
-        self.score = Label(text="Score: 0", font=("Arial", 10), bg=THEME_COLOR, fg="WHITE")
+        
+        self.score = Label(text="Score: 0",
+                           font=("Arial", 10),
+                           bg=THEME_COLOR,
+                           fg="WHITE")
         self.score.grid(row=0, column=1)
         self.score.config(padx=20, pady=20)
 
@@ -47,7 +50,6 @@ class QuizInterface:
             self.false_button.config(state="disabled")
 
     def check_true(self):
-        # is_right = self.quiz.check_answer("True")
         self.give_feedback(self.quiz.check_answer("True"))
 
     def check_false(self):
