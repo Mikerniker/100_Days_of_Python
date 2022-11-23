@@ -32,7 +32,7 @@
 - API: Review API Endpoints, Making API Calls, API Parameters
 - [Unescaping HTML Entities](https://www.freeformatter.com/html-escape.html)
 - Class based Tkinter UI
-- Python Typing
+- Python Typing, Type Hints
 
 
 
