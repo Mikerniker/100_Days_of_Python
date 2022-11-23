@@ -1,4 +1,4 @@
-# Day 33: The Quizzler App (GUI Quiz App)
+# Day 34: The Quizzler App (GUI Quiz App)
 
 ## Table of contents
 
