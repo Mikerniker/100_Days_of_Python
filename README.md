@@ -97,11 +97,26 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 
 **Day 30 Project: [Password Manager 2.0](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day30)**
 - Topics: Errors, Raising Exceptions, Write, read and update JSON Data, IndexError Handling, KeyError Handling, Exception Handling 
+
+**Day 31 Project: [Capstone Project Flash Card Program](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day31)**
+- Topics: Tkinter, Exception handling, Write, read and update JSON Data, Reading CSVs, Pandas, Opening and Writing to Files 
+
+**Day 32 Project: [Automated Happy Birthday Email](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day32)**
+- Topics: Email SMTP, Datetime module, Pandas, Dictionary comprehensions 
+
+**Day 33 Project: [ISS Overhead Notifier Project](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day33)**
+- Topics: API: API Endpoints, Making API Calls, HTTP Codes, Exceptions, JSON Data, API Parameters, Python split() method 
+
+**Day 34 Project: [The Quizzler App (GUI Quiz App)](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day34)**
+- Topics: API: Review API Endpoints, Making API Calls, API Parameters, Unescaping HTML Entities, Class based Tkinter UI, Python Typing, Type Hints 
+
+**Day 35 Project: [Rain Alert App](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day35)**
+- Topics: API: API Keys, Authentication, Environment Variables, Sending SMS via Twilio, Review python slicing,  
  
 
 ### Adding in progress
 
-###### slowly adding projects 31 - 36, 39, 40, 44 here...
+###### slowly adding projects 35 - 36, 39, 40, 44 here...
 
 
 **Day 37 Project: [Habit Tracking](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day37)**
