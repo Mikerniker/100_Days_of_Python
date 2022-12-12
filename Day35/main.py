@@ -48,7 +48,7 @@ weather_data = response.json()
 list_of_twelve_hours = weather_data["hourly"][0:12]
 will_rain = False
 for hour in list_of_twelve_hours:
-    condition_code = i["weather"][0]["id"]
+    condition_code = hour["weather"][0]["id"]
     if int(condition_code) < 700:
         will_rain = True
 
