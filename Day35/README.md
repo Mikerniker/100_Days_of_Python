@@ -21,11 +21,14 @@
 
 ## My process
 
+- The original requirement was to send a message via Twilio, but I switched to Telegram to send a message. The code was also modified to send a sticker with a rain cloud to practice sending messages via the Telegram bot and to practice reading documentation. This was a bit challenging for me as I had a hard time figuring out how to send messages via Telegram via the documentation. Especially when finding the chat_ids and understanding how the bot can send messages to the user.   
+
 ### Built with
 
 - Python
 - [OpenWeather API](https://openweathermap.org/api/one-call-api)
 - [Latitude and Longitude Finder](https://www.latlong.net/)
+- 
 
 
 ### What I learned
