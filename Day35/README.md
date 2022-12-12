@@ -28,7 +28,7 @@
 - Python
 - [OpenWeather API](https://openweathermap.org/api/one-call-api)
 - [Latitude and Longitude Finder](https://www.latlong.net/)
-- 
+- [Telegram API docs](https://core.telegram.org/bots/api)
 
 
 ### What I learned
