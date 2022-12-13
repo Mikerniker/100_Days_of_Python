@@ -34,6 +34,6 @@
 ### What I learned
 - API: API Keys, Authentication
 - Environment Variables
-- Sending SMS via Twilio
+- Sending SMS via Telegram
 - Review python slicing
 - Tools: [JSON Viewer](http://jsonviewer.stack.hu/)
