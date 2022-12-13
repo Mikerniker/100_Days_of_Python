@@ -1,3 +1,4 @@
+# IN PROGRESS
 # Day 36: Stock News Monitoring Project
 
 ## Table of contents
