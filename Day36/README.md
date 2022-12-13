@@ -32,9 +32,9 @@
 - [Telegram API docs](https://core.telegram.org/bots/api)
 
 
-### What I learned
+### What I reviewed
 - API: API Keys, Authentication
 - Environment Variables
-- Sending SMS via Twilio
+- Sending Messages via Telegram
 - Review python slicing
 - Tools: [JSON Viewer](http://jsonviewer.stack.hu/)
