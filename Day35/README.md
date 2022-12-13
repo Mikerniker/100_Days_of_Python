@@ -21,7 +21,7 @@
 
 ## My process
 
-- The original requirement was to send a message via Twilio, but I switched to Telegram to send a message. The code was also modified to send a sticker with a rain cloud to practice sending messages via the Telegram bot and to practice reading documentation. This was a bit challenging for me as I had a hard time figuring out how to send messages via Telegram via the documentation. Especially when finding the chat_ids and understanding how the bot can send messages to the user.   
+- The original requirement was to send a message via Twilio, but I switched to Telegram to send a message. The code was also modified to send a sticker with a rain cloud to practice sending messages via the Telegram bot and to practice reading documentation. This was a bit challenging for me as I had a hard time figuring out how to send messages via Telegram via the documentation, especially when finding the chat_ids and understanding how the bot can send messages to the user. It took a while for me to figure out, but I was able to apply some of the concepts I learned from the previous modules to the Telegram documentation and some Googling.    
 
 ### Built with
 
