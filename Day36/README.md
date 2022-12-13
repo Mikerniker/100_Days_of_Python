@@ -1,4 +1,4 @@
-# Day 36: - App
+# Day 36: Stock News Monitoring Project
 
 ## Table of contents
 
@@ -13,11 +13,13 @@
 
 ### The challenge
 
-
+- Step 1: Monitor when stock price increases/decreases by 5% between yesterday and the day before yesterday.
+- Step 2: Get the first 3 news pieces for the COMPANY_NAME. 
+- Step 3: Send a separate message with the percentage change and each article's title and description to your Telegram.  
 
 ### Links
 
-- Solution URL: [ App](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day36)
+- Solution URL: [Stock News Monitoring Project](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day36)
 
 ## My process
 
@@ -25,8 +27,8 @@
 ### Built with
 
 - Python
-- [OpenWeather API](https://openweathermap.org/api/one-call-api)
-- [Latitude and Longitude Finder](https://www.latlong.net/)
+- [Alpha Vantage API](https://www.alphavantage.co)
+- [News API](https://newsapi.org)
 - [Telegram API docs](https://core.telegram.org/bots/api)
 
 
