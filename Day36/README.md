@@ -18,6 +18,9 @@
 - Step 2: Get the first 3 news pieces for the COMPANY_NAME. 
 - Step 3: Send a separate message with the percentage change and each article's title and description to your Telegram.  
 
+##### Note:
+- The original challenge was to send the message via Twilio, but Telegram was used for this instead.
+
 ### Links
 
 - Solution URL: [Stock News Monitoring Project](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day36)
