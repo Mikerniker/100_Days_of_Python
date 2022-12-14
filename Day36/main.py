@@ -6,7 +6,12 @@
 from datetime import datetime
 
 today = datetime.now()
-print(today.strftime("%Y%m%d"))
+print(today.strftime("%Y-%m-%d"))
+yesterday = (int(today.strftime("%d")))- 1
+print(yesterday)
+print(today.strftime(f"%Y-%m-{yesterday}"))
+
+
 
 import requests
 
