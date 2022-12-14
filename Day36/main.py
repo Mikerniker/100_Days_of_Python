@@ -6,10 +6,10 @@
 from datetime import datetime
 
 today = datetime.now()
-print(today.strftime("%Y-%m-%d"))
+# print(today.strftime("%Y-%m-%d"))
 yesterday = (int(today.strftime("%d")))- 1
-print(yesterday)
-print(today.strftime(f"%Y-%m-{yesterday}"))
+yesterday_formatted = today.strftime(f"%Y-%m-{yesterday}")
+# print(yesterday_formatted)
 
 
 
@@ -28,7 +28,7 @@ stock_params = {
 
 url = 'https://www.alphavantage.co/query'
 
-stock_data = requests.get(url, params=stock_params)
-stock_data.raise_for_status()
-data = stock_data.json()['Time Series (Daily)']
+# stock_data = requests.get(url, params=stock_params)
+# stock_data.raise_for_status()
+# data = stock_data.json()['Time Series (Daily)']
 # print(data)
