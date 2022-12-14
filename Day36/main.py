@@ -13,7 +13,8 @@ yesterday_formatted = today.strftime(f"%Y-%m-{yesterday}")
 
 day_before_yesterday = (int(today.strftime("%d")))- 2
 day_before_yesterday_formatted = today.strftime(f"%Y-%m-{day_before_yesterday}")
-print(day_before_yesterday_formatted)
+# print(day_before_yesterday_formatted)
+
 
 import requests
 
@@ -30,7 +31,12 @@ stock_params = {
 
 url = 'https://www.alphavantage.co/query'
 
-# stock_data = requests.get(url, params=stock_params)
-# stock_data.raise_for_status()
-# data = stock_data.json()['Time Series (Daily)']
-# print(data)
+stock_data = requests.get(url, params=stock_params)
+stock_data.raise_for_status()
+data = stock_data.json()['Time Series (Daily)']
+print(data)
+
+stock_yesterday = data[yesterday_formatted]["4. close"]
+stock_day_before_yesterday = data[day_before_yesterday_formatted]["4. close"]
+print(stock_yesterday)
+print(stock_day_before_yesterday)
