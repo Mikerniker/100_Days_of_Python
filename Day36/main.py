@@ -11,7 +11,9 @@ yesterday = (int(today.strftime("%d")))- 1
 yesterday_formatted = today.strftime(f"%Y-%m-{yesterday}")
 # print(yesterday_formatted)
 
-
+day_before_yesterday = (int(today.strftime("%d")))- 2
+day_before_yesterday_formatted = today.strftime(f"%Y-%m-{day_before_yesterday}")
+print(day_before_yesterday_formatted)
 
 import requests
 
