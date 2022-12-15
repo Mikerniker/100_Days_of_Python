@@ -40,3 +40,6 @@ stock_yesterday = data[yesterday_formatted]["4. close"]
 stock_day_before_yesterday = data[day_before_yesterday_formatted]["4. close"]
 print(stock_yesterday)
 print(stock_day_before_yesterday)
+
+price_difference = float(stock_yesterday) - float(stock_day_before_yesterday)
+print(f"Price difference: {price_difference}")
