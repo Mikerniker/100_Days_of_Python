@@ -46,10 +46,32 @@ print(f"Price difference: {price_difference}")
 percent_diff = abs(price_difference / float(stock_yesterday) * 100)
 print("Percent:" + str(percent_diff))
 
-percent_diff = 5
+
 
 # def stock_changed():
 if percent_diff == 5:
-    print("get_news")
+    print("Get news")
 else:
     print("No significant change")
+
+
+# STEP 2 GET NEWS: Use https://newsapi.org
+# Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME.
+
+news_url = 'https://newsapi.org/v2/everything'
+NEWS_API = ""  #insert api
+
+# def get_news():
+news_params = {
+    "q": COMPANY_NAME,
+    "from": yesterday_formatted,
+    "to": day_before_yesterday_formatted,
+    "language": "en",
+    "sortBy": "relevancy",
+    "pageSize": 3,
+    "apiKey": NEWS_API,
+}
+request = requests.get(news_url, params=news_params)
+request.raise_for_status()
+news_data = request.json()
+print(news_data)
