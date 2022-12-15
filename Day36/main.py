@@ -45,3 +45,11 @@ price_difference = float(stock_yesterday) - float(stock_day_before_yesterday)
 print(f"Price difference: {price_difference}")
 percent_diff = abs(price_difference / float(stock_yesterday) * 100)
 print("Percent:" + str(percent_diff))
+
+percent_diff = 5
+
+# def stock_changed():
+if percent_diff == 5:
+    print("get_news")
+else:
+    print("No significant change")
