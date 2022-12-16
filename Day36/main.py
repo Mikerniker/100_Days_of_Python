@@ -1,9 +1,31 @@
+import requests
+from datetime import datetime
+
+
+TELEGRAM_CHAT_ID = "insert id"
+TELEGRAM_TOKEN = "add your token"
+ALPHAVANTAGE_API = ""
+STOCK = "TSLA"
+COMPANY_NAME = "Tesla Inc"
+NEWS_API = ""  #insert api
+alphavantage_url = 'https://www.alphavantage.co/query'
+news_url = 'https://newsapi.org/v2/everything'
+
+def send_telegram_message(message):
+    parameters = {
+        "chat_id": TELEGRAM_CHAT_ID,
+        "text": message,
+    }
+
+    response = requests.post(url=f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage", params=parameters)
+    response.raise_for_status()
+    data = response.json()
+    return data
 
 
 ## STEP 1: Use https://www.alphavantage.co
 # When STOCK price increase/decreases by 5% between yesterday and the day before yesterday then print("Get News").
 
-from datetime import datetime
 
 today = datetime.now()
 # print(today.strftime("%Y-%m-%d"))
@@ -16,22 +38,15 @@ day_before_yesterday_formatted = today.strftime(f"%Y-%m-{day_before_yesterday}")
 # print(day_before_yesterday_formatted)
 
 
-import requests
-
-API = ""
-
-STOCK = "TSLA"
-COMPANY_NAME = "Tesla Inc"
 
 stock_params = {
     "function": "TIME_SERIES_DAILY_ADJUSTED",
     "symbol": STOCK,
-    "apikey": API
+    "apikey": ALPHAVANTAGE_API,
 }
 
-url = 'https://www.alphavantage.co/query'
 
-stock_data = requests.get(url, params=stock_params)
+stock_data = requests.get(alphavantage_url, params=stock_params)
 stock_data.raise_for_status()
 data = stock_data.json()['Time Series (Daily)']
 print(data)
@@ -47,13 +62,9 @@ percent_diff = abs(price_difference / float(stock_yesterday) * 100)
 print("Percent:" + str(percent_diff))
 
 
-
-
 # STEP 2 GET NEWS: Use https://newsapi.org
 # Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME.
 
-news_url = 'https://newsapi.org/v2/everything'
-NEWS_API = ""  #insert api
 
 # def get_news():
 news_params = {
