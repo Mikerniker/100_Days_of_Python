@@ -84,7 +84,13 @@ news_data = request.json()['articles']
 # def stock_changed():
 if percent_diff == 5:
     for article in range(3):
-        print(news_data[article]['title'])
+        title = news_data[article]['title']
+        brief = news_data[article]['description']
+        message = f"{STOCK}: \n Headline: {title} \n Brief: {brief}"
+        send_telegram_message(message)
 
 else:
-    print("No significant change")
+    send_telegram_message("No significant change")
+
+
+
