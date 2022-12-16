@@ -73,5 +73,7 @@ news_params = {
 }
 request = requests.get(news_url, params=news_params)
 request.raise_for_status()
-news_data = request.json()
-print(news_data)
+news_data = request.json()['articles']
+
+for article in range(3):
+    print(news_data[article]['title'])
