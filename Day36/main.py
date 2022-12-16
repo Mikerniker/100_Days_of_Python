@@ -48,12 +48,6 @@ print("Percent:" + str(percent_diff))
 
 
 
-# def stock_changed():
-if percent_diff == 5:
-    print("Get news")
-else:
-    print("No significant change")
-
 
 # STEP 2 GET NEWS: Use https://newsapi.org
 # Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME.
@@ -75,5 +69,11 @@ request = requests.get(news_url, params=news_params)
 request.raise_for_status()
 news_data = request.json()['articles']
 
-for article in range(3):
-    print(news_data[article]['title'])
+
+# def stock_changed():
+if percent_diff == 5:
+    for article in range(3):
+        print(news_data[article]['title'])
+
+else:
+    print("No significant change")
