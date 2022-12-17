@@ -26,7 +26,7 @@
 - Solution URL: [Stock News Monitoring Project](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day36)
 
 ## My process
-
+- Some differences between my code and Angels'c code. I added additional parameters for the news, which may not have been necessary. I also used the datetime module instead of indexing the items on the list. I hope to simplify the code and make it cleaner in the future as I learn more. 
 
 ### Built with
 
