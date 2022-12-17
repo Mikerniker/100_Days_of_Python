@@ -38,7 +38,5 @@
 
 ### What I reviewed
 - API: API Keys, Authentication
-- Environment Variables
 - Sending Messages via Telegram
-- Review python slicing
 - Tools: [JSON Viewer](http://jsonviewer.stack.hu/)
