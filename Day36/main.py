@@ -14,18 +14,6 @@ alphavantage_url = 'https://www.alphavantage.co/query'
 news_url = 'https://newsapi.org/v2/everything'
 
 
-def send_telegram_message(message):
-    parameters = {
-        "chat_id": TELEGRAM_CHAT_ID,
-        "text": message,
-    }
-
-    response = requests.post(url=f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage", params=parameters)
-    response.raise_for_status()
-    data = response.json()
-    return data
-
-
 # STEP 1: Get stocks
 
 def get_stocks():
@@ -74,18 +62,28 @@ stock_day_before_yesterday = get_stocks()[day_before_yesterday_formatted]["4. cl
 
 
 price_difference = float(stock_yesterday) - float(stock_day_before_yesterday)
-print(f"Price difference: {price_difference}")
+
 percent_diff = abs(price_difference / float(stock_yesterday) * 100)
-print("Percent:" + str(percent_diff))
 
 
+# STEP 3: Send a message
+
+def send_telegram_message(message):
+    parameters = {
+        "chat_id": TELEGRAM_CHAT_ID,
+        "text": message,
+    }
+
+    response = requests.post(url=f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage", params=parameters)
+    response.raise_for_status()
+    data = response.json()
+    return data
 
 
-# def stock_changed():
-if percent_diff == 5:
+if percent_diff >= 5:
     for article in range(3):
-        title = news_data[article]['title']
-        brief = news_data[article]['description']
+        title = get_news()[article]['title']
+        brief = get_news()[article]['description']
         message = f"{STOCK}: \n Headline: {title} \n Brief: {brief}"
         send_telegram_message(message)
 
