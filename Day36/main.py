@@ -4,11 +4,9 @@ from datetime import datetime
 
 TELEGRAM_CHAT_ID = "insert id"
 TELEGRAM_TOKEN = "add your token"
-
 ALPHAVANTAGE_API = "add your api"
 STOCK = "TSLA"
 COMPANY_NAME = "Tesla Inc"
-
 NEWS_API = "add your api" 
 alphavantage_url = 'https://www.alphavantage.co/query'
 news_url = 'https://newsapi.org/v2/everything'
@@ -47,7 +45,7 @@ def get_news():
     return news_data
 
 
-# Get date range
+# Get dates needed
 
 today = datetime.now()
 
@@ -60,9 +58,7 @@ day_before_yesterday_formatted = today.strftime(f"%Y-%m-{day_before_yesterday}")
 stock_yesterday = get_stocks()[yesterday_formatted]["4. close"]
 stock_day_before_yesterday = get_stocks()[day_before_yesterday_formatted]["4. close"]
 
-
 price_difference = float(stock_yesterday) - float(stock_day_before_yesterday)
-
 percent_diff = abs(price_difference / float(stock_yesterday) * 100)
 
 
@@ -89,6 +85,3 @@ if percent_diff >= 5:
 
 else:
     send_telegram_message("No significant change")
-
-
-
