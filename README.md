@@ -111,7 +111,7 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 - Topics: API: Review API Endpoints, Making API Calls, API Parameters, Unescaping HTML Entities, Class based Tkinter UI, Python Typing, Type Hints 
 
 **Day 35 Project: [Rain Alert App](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day35)**
-- Topics: API: API Keys, Authentication, Environment Variables, Sending SMS via Twilio, Review python slicing  
+- Topics: API: API Keys, Authentication, Environment Variables, Sending SMS, Review python slicing  
  
 **Day 36 Project: [Stock News Monitoring](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day36)**
 - Topics: API: API Keys, Authentication, Sending Messages, working with JSON
