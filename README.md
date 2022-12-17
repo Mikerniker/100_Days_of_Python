@@ -127,7 +127,6 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 ###### slowly adding projects 39, 40, 44 here...
 
 
-
 **Day 39 Project:  TO FOLLOW**
 
 

@@ -9,7 +9,7 @@ NUTRITIONIX_URL_ENDPOINT = " https://trackapi.nutritionix.com/v2/natural/exercis
 SHEETY_ENDPOINT_API = os.environ.get("SHEETLY_ROW_SHEET_API")
 
 exercise_config = {
-   "query": input("What exercises did you do?: "),
+   "query": input("What exercises did you do (you can include duration and/or distance)?: "),
 }
 
 # With Authentication / Authorization
@@ -20,7 +20,7 @@ headers = {
 }
 
 response = requests.post(url=NUTRITIONIX_URL_ENDPOINT, json=exercise_config, headers=headers)
-print(response.text)
+#print(response.text)
 data = response.json()
 # print(data["exercises"])
 

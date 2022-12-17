@@ -25,7 +25,6 @@
 ### Built with
 
 - Python
-- [OpenAi GPT-3](https://openai.com/blog/openai-api/)
 - [Nutritionix API](https://www.nutritionix.com/business/api)
 - [Sheety API](https://sheety.co/)
 
@@ -35,3 +34,4 @@
 - Python DateTime strftime()
 - Authorization Headers (Basic Authentication)
 - Environment Variables
+- [OpenAi GPT-3](https://openai.com/blog/openai-api/)
