@@ -116,16 +116,17 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 **Day 36 Project: [Stock News Monitoring](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day36)**
 - Topics: API: API Keys, Authentication, Sending Messages, working with JSON
 
-### Adding in progress
-
-###### slowly adding projects 37, 39, 40, 44 here...
-
-
 **Day 37 Project: [Habit Tracking](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day37)**
 - Topics: Advanced Authentication and POST/PUT/DELETE Requests
 
 **Day 38 Project: [Exercise Tracking with Python and Google Sheets](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day38)**
-- Topics: APIs and making POST Requests, Python DateTime strftime(), Authorization Headers (Basic Authentication), Environment Variables
+- Topics: APIs and making POST Requests, Python DateTime strftime(), Authorization Headers (Basic Authentication), Environment Variables, OpenAi GPT-3, Nutritionix API
+
+### Adding in progress
+
+###### slowly adding projects 39, 40, 44 here...
+
+
 
 **Day 39 Project:  TO FOLLOW**
 
