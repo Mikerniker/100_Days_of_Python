@@ -5,11 +5,14 @@ from pprint import pprint
 
 SHEETY_URL = '#insertsheetyurl'
 
-sheety_data = requests.get(SHEETY_URL)
+sheety_table = requests.get(SHEETY_URL)
 
-sheety_data.raise_for_status()
-data = sheety_data.json()['sheet1']
-pprint(data)
+sheety_table.raise_for_status()
+sheet_data = sheety_table.json()['sheet1']
+pprint(sheet_data)
 
-all_prices = [item['lowestPrice'] for item in data]
+all_prices = [item['lowestPrice'] for item in sheet_data]
 print(all_prices)
+
+
+
