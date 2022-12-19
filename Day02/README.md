@@ -1,3 +1,31 @@
 ## Day 2 Tip Calculator
-- Topics for Day 2: Data Types, Numbers, Operations, Type Conversion, f-Strings 
-- Notes: This is my solution for the Tip Calculator Project for Day 2
+ 
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+
+## Overview
+
+### The challenge
+
+- Create a simple python program that calculates tips from the final bill
+
+### Links
+
+- Solution URL: [Cheap Flight Finder](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day2)
+
+### Built with
+
+- Python
+
+### What I learned
+- Data Types
+- Numbers
+- Operations
+- Type Conversion
+- f-Strings
