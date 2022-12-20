@@ -19,7 +19,7 @@
 
 ### Links
 
-- Solution URL: [Cheap Flight Finder](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day3)
+- Solution URL: [Treasure Island Hunt](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day3)
 
 ### Built with
 
