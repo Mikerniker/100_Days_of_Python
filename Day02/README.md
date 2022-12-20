@@ -17,7 +17,7 @@
 
 ### Links
 
-- Solution URL: [Cheap Flight Finder](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day2)
+- Solution URL: [Tip Calculator](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day2)
 
 ### Built with
 
