@@ -15,7 +15,11 @@ pprint(sheet_data)
 all_prices = [item['lowestPrice'] for item in sheet_data]
 print(all_prices)
 
+#Search for flights
 flights = FlightSearch()
 pprint(flights.add_iata_code(sheet_data))
 
 
+#Add to sheety spreadsheet
+managed_data = DataManager()
+print(managed_data.add_iatacode_to_sheet(SHEETY_URL, sheet_data).text)
