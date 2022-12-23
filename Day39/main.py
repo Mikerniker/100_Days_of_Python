@@ -1,5 +1,6 @@
 import requests
 from pprint import pprint
+from flight_search import FlightSearch
 
 #Get sheety data
 
