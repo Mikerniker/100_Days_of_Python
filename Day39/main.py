@@ -29,3 +29,7 @@ print(all_prices)
 flights = FlightSearch()
 sheet_data = flights.search_iata_code(sheet_data)
 pprint(sheet_data)
+
+#Add changes to Sheety
+managed_data = DataManager()
+managed_data.add_iatacode_to_sheet(SHEETY_URL, sheet_data)
