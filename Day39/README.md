@@ -16,13 +16,17 @@
 
 ### The challenge
 
-- Find flight deals via an API. Use Google sheets to keept track of the locations you want to visit, with a price cutoff. Take the data from Google sheet and feed it into the Flight Search API that will look for the cheapest flights within the next 6 months and send an alert/SMS to your mobile phone.
+- Find flight deals via an API. Use Google sheets to keep track of the locations you want to visit with a price cutoff. Take the data from Google sheet and feed it into the Flight Search API that will look for the cheapest flights within the next 6 months and send an alert/SMS to your mobile phone.
 
 ### Links
 
 - Solution URL: [Cheap Flight Finder](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day39)
 
 ## Notes
+
+- This was particularly difficult, I spent a few days trying to figure out how to get the iata code and print it on the sheet via the Classes. Without using classes the tasks seemed a bit easier, but putting them in separate modules and figuring out how to make them interact with each other confused me for several days. I also did some indentation errors which sometimes still take me a while to figure out. Progressing through each task is taking a while but I'm slowly getting there. 12/30/2022
+- Mental Note: Be careful with your indentations in your functions/methods.
+
 
 
 ### Built with
