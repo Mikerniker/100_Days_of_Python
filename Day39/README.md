@@ -23,10 +23,11 @@
 - Solution URL: [Cheap Flight Finder](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day39)
 
 ## Notes
-
-- This was particularly difficult, I spent a few days trying to figure out how to get the iata code and print it on the sheet via the Classes. Without using classes the tasks seemed a bit easier, but putting them in separate modules and figuring out how to make them interact with each other confused me for several days. I also did some indentation errors which sometimes still take me a while to figure out. Progressing through each task is taking a while but I'm slowly getting there. 12/30/2022
+- I did this a few months ago but am re-doing it again now because I had a lot of difficulties with this challenge. It's still difficult and is taking me longer than usual as I need to remember and review some of the concepts I learned from the past lectures.  
+- I finally finished Step 3 of the challenge (as given by Angela) and this was particularly difficult, I spent a few days trying to figure out how to get the iata code and print it on the sheet via the Classes. Without using classes the tasks seemed a bit easier, but putting them in separate modules and figuring out how to make them interact with each other confused me for several days. I also did some indentation errors, which sometimes still take me a while to figure out. 
+- The added pressure also comes from the limited usage I'm allowed from the Sheety API to test my code. Progressing through each task is taking a while but I'm slowly getting there. 12/30/2022
 - Mental Note: Be careful with your indentations in your functions/methods.
-
+- Step 4: Currently in progress...
 
 
 ### Built with
