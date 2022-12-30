@@ -33,3 +33,15 @@ pprint(sheet_data)
 #Add changes to Sheety
 managed_data = DataManager()
 managed_data.add_iatacode_to_sheet(SHEETY_URL, sheet_data)
+
+
+#TESTING STEP 4:
+
+from datetime import datetime, timedelta
+
+today = datetime.now()
+
+print(today.strftime("%d/%m/%Y"))
+
+tomorrow = today + timedelta(1)
+print(tomorrow.strftime("%d/%m/%Y"))
