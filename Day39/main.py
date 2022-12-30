@@ -45,19 +45,38 @@ print(today.strftime("%d/%m/%Y"))
 
 tomorrow = today + timedelta(1)
 print(tomorrow.strftime("%d/%m/%Y"))
+tomorrow_formatted = tomorrow.strftime("%d/%m/%Y")
 
 six_months = tomorrow + timedelta(days=180)
-print(six_months.strftime("%d/%m/%Y"))
+print(type(six_months.strftime("%d/%m/%Y")))
+six_months_formatted = six_months.strftime("%d/%m/%Y")
 
+#STEP 4.1
+TEQ_SEARCH_ENDPOINT = "https://api.tequila.kiwi.com/v2/search"
+TEQ_API_KEY = "add api key"
+
+# cities = ["PAR", "BER", "TYO", "SYD", "IST", "KUL", "NYC", "SFO", "CPT"]
+#
+# for city in cities:
 tequila_newparameters = {
     "fly_from": "LON",
-    "fly_to":  city,
-    "date_from": tomorrow,
-    "date_to": six_months,
+    "fly_to":  "PAR",
+    "date_from": tomorrow_formatted,  #tomorrow, "01/01/2023"
+    "date_to": six_months_formatted, #30/06/2023", #six_months,
     "nights_in_dst_from": 7,
     "nights_in_dst_to": 28,
-    "flight_type": round,
+    "flight_type": "round",
     "one_for_city": 1,
     "curr": "GBP",
     "max_stopovers": 0,
 }
+
+headers = {
+    "apikey": TEQ_API_KEY,
+    "Content-Type": "application/json",
+}
+
+flight_check = requests.get(TEQ_SEARCH_ENDPOINT, params=tequila_newparameters, headers=headers)
+flight_check.raise_for_status()
+data = flight_check.json()
+print(data)
