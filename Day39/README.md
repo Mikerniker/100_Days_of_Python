@@ -45,4 +45,5 @@
 - Timedelta in datetime module
 
 ### References
-- [Timedelta](https://www.geeksforgeeks.org/python-find-yesterdays-todays-and-tomorrows-date/)
+- [Timedelta Reference 1](https://www.geeksforgeeks.org/python-find-yesterdays-todays-and-tomorrows-date/)
+- [Timedelta Reference 2](https://stackoverflow.com/questions/4541629/how-to-create-a-datetime-equal-to-15-minutes-ago/4541668)
