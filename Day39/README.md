@@ -28,7 +28,7 @@
 - The added pressure also comes from the limited usage I'm allowed from the Sheety API to test my code. Progressing through each task is taking a while but I'm slowly getting there. 12/30/2022
 - Mental Note: Be careful with your indentations in your functions/methods.
 - Step 4: Currently in progress...
-
+- Mental Note: Don't forget to reassign your variables when you make changes and need to access them again like for strftime, save it instead of printing it.
 
 ### Built with
 
