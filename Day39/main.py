@@ -45,3 +45,19 @@ print(today.strftime("%d/%m/%Y"))
 
 tomorrow = today + timedelta(1)
 print(tomorrow.strftime("%d/%m/%Y"))
+
+six_months = tomorrow + timedelta(days=180)
+print(six_months.strftime("%d/%m/%Y"))
+
+tequila_newparameters = {
+    "fly_from": "LON",
+    "fly_to":  city,
+    "date_from": tomorrow,
+    "date_to": six_months,
+    "nights_in_dst_from": 7,
+    "nights_in_dst_to": 28,
+    "flight_type": round,
+    "one_for_city": 1,
+    "curr": "GBP",
+    "max_stopovers": 0,
+}
