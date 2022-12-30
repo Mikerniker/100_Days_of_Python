@@ -42,3 +42,7 @@
 - Python DateTime strftime()
 - Authorization Headers (Basic Authentication)
 - Environment Variables
+- Timedelta in datetime module
+
+### References
+- [Timedelta](https://www.geeksforgeeks.org/python-find-yesterdays-todays-and-tomorrows-date/)
