@@ -53,3 +53,53 @@ class FlightSearch:
         return {"tomorrow": self.tomorrow_formatted, "six_months": self.six_months_formatted}
 
 
+    def search_cheap_flights(self, sheety):
+        """
+        This function checks Tequila API for flight prices of the cities in the sheety data
+         and returns data from the cheapest flights.
+        """
+        cheap_flights = []
+        for city_name in sheety:
+            tequila_new_params = {
+                "fly_from": "LON",
+                "fly_to":  city_name['iataCode'],
+                "date_from": self.get_flight_date_range()["tomorrow"],
+                "date_to": self.get_flight_date_range()["six_months"],
+                "nights_in_dst_from": 7,
+                "nights_in_dst_to": 28,
+                "flight_type": "round",
+                "one_for_city": 1,
+                "curr": "GBP",
+                "max_stopovers": 0,
+            }
+
+            headers = {
+                "apikey": TEQ_API_KEY,
+                "Content-Type": "application/json",
+            }
+
+            flight_check = requests.get(TEQ_SEARCH_ENDPOINT, params=tequila_new_params, headers=headers)
+            flight_check.raise_for_status()
+            available_flights = flight_check.json()['data'][0]
+
+            price = available_flights['price']
+            departure_city_name = available_flights['cityFrom']
+            departure_airport_iata_code = available_flights['flyFrom']
+            arrival_city_name = available_flights['cityTo']
+            arrival_airport_iata_code = available_flights['flyTo']
+            outbound_date = available_flights['local_departure'].split('T')[0]
+            inbound_date = available_flights['local_arrival'].split('T')[0]
+
+            destination = {"price": price,
+                "departure_city_name": departure_city_name,
+                "departure_airport_iata_code": departure_airport_iata_code,
+                "arrival_city_name": arrival_city_name,
+                "arrival_airport_iata_code": arrival_airport_iata_code,
+                "outbound_date": outbound_date,
+                "inbound_date": inbound_date}
+
+            cheap_flights.append(destination)
+
+        return cheap_flights
+
+
