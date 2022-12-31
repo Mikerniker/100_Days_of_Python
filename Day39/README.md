@@ -29,6 +29,11 @@
 - Mental Note: Be careful with your indentations in your functions/methods.
 - Step 4: Currently in progress...
 - Mental Note: Don't forget to reassign your variables when you make changes and need to access them again like for strftime, save it instead of printing it.
+- January 1: added methods to flight_search, modified main, and added flight data module.
+- Mental Notes: I still get confused on when running a for loop when only the last or the first get printed out on some occasions, and I found this helpful note on [reddit](https://www.reddit.com/r/learnpython/comments/tc32uw/why_is_my_loop_only_iterating_once/): "Any function will run the return statement only once. As soon as it encounters return, the function will end. Hence, a function can only return one output. And you can't return from a for loop, return will only work with a function. So even if it's inside a for loop, it will return from the function and the loop will end after the first iteration. Usually when you want to return multiple values from a function, you have to add all those values to a list or tuple and return the list after the iterations have completed." so I ended up changing my search_cheap_flights(self, sheety) method to return a list of dictionaries instead to see the results I wanted.
+
+
+
 
 ### Built with
 
