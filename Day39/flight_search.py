@@ -1,17 +1,19 @@
 import requests
+from datetime import datetime, timedelta
 
 TEQ_QUERY_ENDPOINT = "https://api.tequila.kiwi.com/locations/query"
+TEQ_SEARCH_ENDPOINT = "https://api.tequila.kiwi.com/v2/search"
 TEQ_API_KEY = "**************************************"
 
 
 
 class FlightSearch:
 
-    # def add_iata_code(self, data):
-    #     for item in data:
-    #         if item['iataCode'] == '':
-    #             item['iataCode'] = "TESTING"
-    #     return data
+    def __init__(self):
+        self.today = datetime.now()
+        self.tomorrow = self.today + timedelta(1)
+        self.six_months = self.tomorrow + timedelta(days=180)
+        self.get_flight_date_range()
 
 #TESTING CODE:
     def call_tequila(self, city):
@@ -40,3 +42,14 @@ class FlightSearch:
                 iata = self.call_tequila(city_name['city'])
                 city_name['iataCode'] = iata
         return sheety
+
+#SEARCH PRICES
+
+    def get_flight_date_range(self):
+        """ This gets the date range for the tequila search parameters """
+        self.tomorrow_formatted = self.tomorrow.strftime("%d/%m/%Y")
+
+        self.six_months_formatted = self.six_months.strftime("%d/%m/%Y")
+        return {"tomorrow": self.tomorrow_formatted, "six_months": self.six_months_formatted}
+
+
