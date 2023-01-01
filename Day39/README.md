@@ -1,5 +1,3 @@
-#IN PROGRESS
-
 ## Day 39 CAPSTONE: Part 1 - Cheap Flight Finder
 
 
@@ -31,9 +29,9 @@
 - Mental Note: Don't forget to reassign your variables when you make changes and need to access them again like for strftime, save it instead of printing it.
 - January 1: added methods to flight_search, modified main, and added flight data module.
 - Mental Notes: I still get confused on when running a for loop when only the last or the first get printed out on some occasions, and I found this helpful note on [reddit](https://www.reddit.com/r/learnpython/comments/tc32uw/why_is_my_loop_only_iterating_once/): "Any function will run the return statement only once. As soon as it encounters return, the function will end. Hence, a function can only return one output. And you can't return from a for loop, return will only work with a function. So even if it's inside a for loop, it will return from the function and the loop will end after the first iteration. Usually when you want to return multiple values from a function, you have to add all those values to a list or tuple and return the list after the iterations have completed." so I ended up changing my search_cheap_flights(self, sheety) method to return a list of dictionaries instead to see the results I wanted.
-
-
-
+- January 2: The last few steps really confused me especially when trying to connect the different modules with each other. I finally had to peek to see how they were connected. For the most part, I saw that a lot of the code I made had similarities to the final solution, I had to make changes as I originally kept the for loop within the function to make requests to the Tequila app, whereas Angela's code kept them separate. This is where I got stuck for a few days. I ended up following Angela's code of keeping them separate which made things a lot easier to figure out. My code is not as clean as hers but it gets the overall action done. Will work on making it cleaner in the future. Currently, I'm happy that I finally got it to work.  
+- Other Notes: The code was working when I started getting an index error, which was confusing because I didn't change anything to the original code - which was working. So I was able to use a Try and Except option, which helped with the index error issue. 
+- Also, Angela's original code uses Twilio, this was modified to use Telegram instead. 
 
 ### Built with
 
@@ -41,6 +39,7 @@
 - [Kiwi Partners Flight Search API](https://partners.kiwi.com/)
 - [Tequila Flight Search API](https://tequila.kiwi.com/portal/login)
 - [Sheety API](https://sheety.co/)
+- [Telegram API docs](https://core.telegram.org/bots/api)
 
 ### What I learned
 - APIs and making POST Requests
