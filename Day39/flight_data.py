@@ -1,7 +1,3 @@
-from flight_search import FlightSearch
-
-cheap_flights = FlightSearch()
-
 class FlightData:
     #This class is responsible for structuring the flight data.
     def __init__(self, price, departure_city_name, departure_airport_iata_code,
