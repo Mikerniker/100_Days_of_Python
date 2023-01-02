@@ -45,4 +45,4 @@
 - Timedelta in datetime module
 
 ### References
-- (Python Continue Keyword)[https://www.w3schools.com/python/ref_keyword_continue.asp]
+- [Python Continue Keyword](https://www.w3schools.com/python/ref_keyword_continue.asp)
