@@ -27,7 +27,11 @@
 - Solution URL: [Cheap Flight Finder](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day40)
 
 ## Notes
+- I kept getting an UnboundLocalError so I moved around my code in flight_search.py function: 
+```def search_cheap_flights(self, depart_city, arrival_city, stopovers):```
+ I ended up moving the print statement and the return statement within the try block.
 
+- After trying to fix that, an AttributeError appeared in main.py, to resolve this I added it in another if-else block...which was not the cleanest after comparing it to Angela's code...so far it works.
 
 ### Built with
 
