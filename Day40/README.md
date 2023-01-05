@@ -33,6 +33,8 @@
 
 - After trying to fix that, an AttributeError appeared in main.py, to resolve this I added it in another if-else block...which was not the cleanest after comparing it to Angela's code...so far it works.
 
+- Part of the challenge was to see if there are flights with 1 stop if a flight is not found. The suggestion was to test this with LON to Bali, however no flights were found with this either. The forums also mentioned that there were limitations to API services of Kiwi. So I changed the search to look for two stops, which seemed to work. I need a code review though because it feels like my code is messy.
+
 ### Built with
 
 - Python
@@ -50,3 +52,4 @@
 
 ### References
 - [Python Continue Keyword](https://www.w3schools.com/python/ref_keyword_continue.asp)
+- [UnboundLocalError](https://pythoncircle.com/post/680/solving-python-error-unboundlocalerror-local-variable-x-referenced-before-assignment/)
