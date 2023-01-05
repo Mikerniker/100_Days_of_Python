@@ -52,7 +52,7 @@ class FlightSearch(FlightData):
         six_months_formatted = self.six_months.strftime("%d/%m/%Y")
         return {"tomorrow": tomorrow_formatted, "six_months": six_months_formatted}
 
-    def search_cheap_flights(self, depart_city, arrival_city):
+    def search_cheap_flights(self, depart_city, arrival_city, stopovers):
         """
         This function checks Tequila API for flight prices of the cities in the sheety data
          and returns the cheapest flights.
@@ -67,7 +67,7 @@ class FlightSearch(FlightData):
             "flight_type": "round",
             "one_for_city": 1,
             "curr": "GBP",
-            "max_stopovers": 0,
+            "max_stopovers": stopovers,
         }
 
         headers = {
@@ -82,17 +82,19 @@ class FlightSearch(FlightData):
             available_flights = flight_check.json()['data'][0]
             # print(available_flights)
 
+            if available_flights:
+                flight_information = FlightData(price=available_flights['price'],
+                                                departure_city_name=available_flights['cityFrom'],
+                                                departure_airport_iata_code=available_flights['flyFrom'],
+                                                arrival_city_name=available_flights['cityTo'],
+                                                arrival_airport_iata_code=available_flights['flyTo'],
+                                                outbound_date=available_flights['local_departure'].split('T')[0],
+                                                inbound_date=available_flights['local_arrival'].split('T')[0],
+                                                via_city=flight_check.json()['data'][0]['route'][0]['cityTo'])
+            else:
+                flight_information = None
+            print(f"A flight to {arrival_city}: GBP £{flight_information.price}")
+            return flight_information
+
         except IndexError:
-            print(f"Flight to {arrival_city} is not available.") #{city}
-
-
-        flight_information = FlightData(price=available_flights['price'],
-                                            departure_city_name=available_flights['cityFrom'],
-                                            departure_airport_iata_code=available_flights['flyFrom'],
-                                            arrival_city_name=available_flights['cityTo'],
-                                            arrival_airport_iata_code=available_flights['flyTo'],
-                                            outbound_date=available_flights['local_departure'].split('T')[0],
-                                            inbound_date=available_flights['local_arrival'].split('T')[0])
-
-        print(f"Flight to {arrival_city}: GBP {flight_information.price}")
-        return flight_information
+            print(f"Flight to {arrival_city} is not available.")
