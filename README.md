@@ -123,7 +123,7 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 - Topics: APIs and making POST Requests, Python DateTime strftime(), Authorization Headers (Basic Authentication), Environment Variables, OpenAi GPT-3, Nutritionix API
 
 **Day 39 CAPSTONE Project: [Part 1 - Cheap Flight Finder](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day39)**
-- Topics: APIs and making POST Requests, Python DateTime strftime(), OOP Classes, Exception Handling
+- Topics: APIs and making POST Requests, Python DateTime strftime(), Timedelta in datetime module, OOP Classes, Exception Handling
 
 ### Adding in progress
 
