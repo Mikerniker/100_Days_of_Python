@@ -122,12 +122,12 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 **Day 38 Project: [Exercise Tracking with Python and Google Sheets](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day38)**
 - Topics: APIs and making POST Requests, Python DateTime strftime(), Authorization Headers (Basic Authentication), Environment Variables, OpenAi GPT-3, Nutritionix API
 
+**Day 39 CAPSTONE Project: [Part 1 - Cheap Flight Finder](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day39)**
+- Topics: APIs and making POST Requests, Python DateTime strftime(), OOP Classes, Exception Handling
+
 ### Adding in progress
 
-###### slowly adding projects 39, 40, 44 here...
-
-
-**Day 39 Project:  TO FOLLOW**
+###### slowly adding projects 40, 44 here...
 
 
 **Day 40 Project:  TO FOLLOW**
