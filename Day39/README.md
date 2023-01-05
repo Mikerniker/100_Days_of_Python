@@ -44,9 +44,9 @@ Finished January 2: The last few steps really confused me especially when trying
 ### What I learned
 - APIs and making POST Requests
 - Python DateTime strftime()
-- Authorization Headers (Basic Authentication)
-- Environment Variables
 - Timedelta in datetime module
+- OOP Classes
+- Exception Handling
 
 ### References
 - [Timedelta Reference 1](https://www.geeksforgeeks.org/python-find-yesterdays-todays-and-tomorrows-date/)
