@@ -69,3 +69,4 @@ for item in sheet_data:
         for i in get_customer_email():
             email = i['email']
             notify.send_emails(message, email)
+        notify.send_telegram_message(message)
