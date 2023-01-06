@@ -35,6 +35,10 @@
 
 - Part of the challenge was to see if there are flights with 1 stop if a flight is not found. The suggestion was to test this with LON to Bali, however no flights were found with this either. The forums also mentioned that there were limitations to API services of Kiwi. So I changed the search to look for two stops, which seemed to work. I need a code review though because it feels like my code is messy.
 
+- I wasn't so clear on how Angela added/connected the customer acquisition task, so I just added it as a separate file (customers.py).
+
+- The final code I made was pretty messy so I still need to review and figure out how to simplify it further. But I'm happy I got everything to "work."
+
 ### Built with
 
 - Python
@@ -46,10 +50,13 @@
 ### What I learned
 - APIs and making POST Requests
 - Python DateTime strftime()
-- Authorization Headers (Basic Authentication)
-- Environment Variables
 - Timedelta in datetime module
+- To fix the unicode encode error:
+```
+a.encode('utf-8')
+```
 
 ### References
 - [Python Continue Keyword](https://www.w3schools.com/python/ref_keyword_continue.asp)
 - [UnboundLocalError](https://pythoncircle.com/post/680/solving-python-error-unboundlocalerror-local-variable-x-referenced-before-assignment/)
+- [UnicodeEncodeError](https://stackoverflow.com/questions/9942594/unicodeencodeerror-ascii-codec-cant-encode-character-u-xa0-in-position-20#answer-9942885)
