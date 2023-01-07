@@ -22,7 +22,7 @@
 
 ## Notes
 
-- Tools
+- References
   - [List Methods](https://developers.google.com/edu/python/lists#list-methods)
   - [Sum Function](https://docs.python.org/3/library/functions.html#sum)
 
