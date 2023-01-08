@@ -12,3 +12,7 @@ titles = [title.getText() for title in movie_titles]
 
 titles.reverse()
 print(titles)
+
+with open("movies.txt", "w", encoding="utf-8") as file:
+    for title in titles:
+        file.writelines(f"{title}\n")
