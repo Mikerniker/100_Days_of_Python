@@ -32,7 +32,7 @@
 - Scraping the Web with Beautiful Soup
 
 #### Notes
-- Had to resolve a unicode error with a writelines section, I found two options for that:
+- Had to resolve a unicode error in the writelines section, I found two options for that:
   - 1. Add ```.encode("UTF-8"))``` example ```f.write(s.encode("UTF-8"))```
   - 2. Adding encoding to the with open section:
 ```
