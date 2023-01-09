@@ -32,9 +32,12 @@
 
 ### What I reviewed
 - Scraping the Web with Beautiful Soup
+- strip() method
+- list comprehensions
+- requests module
 
 #### Notes
 - I had a hard time figuring out the proper syntax for selectors, I was making the mistake of writing them separately (i.e. with spaces): ```selector: li h3 .c-title```  or ```selector: li hr c-title```, eventually saw an example for the right syntax: ```selector: li h3.c-title```  (i.e. no space between h3 and c-title with a . in between)
 - Still To Figure out:
   - I initially was using find_all method, and couldn't figure out why this wasn't working: ```song_titles = soup.find_all(name="li h3")```, so I'm not so clear on why select works and not find_all for this exercise.
-- I also found an alternative solution that worked, based on what I saw from [stackoverflow](https://stackoverflow.com/questions/35465182/how-to-find-all-divs-whose-class-starts-with-a-string-in-beautifulsoup): ```song_titles = soup.select("li h3[class*=c-title]")``` The original example: ```soup.select("div[class*=span3]")``` where # with *= means: contains. Though I'm not so clear on how this syntax works compared and I couldn't find it in the documentation.
+- I also found an alternative solution that worked, based on what I saw from [stackoverflow](https://stackoverflow.com/questions/35465182/how-to-find-all-divs-whose-class-starts-with-a-string-in-beautifulsoup): ```song_titles = soup.select("li h3[class*=c-title]")``` The original example: ```soup.select("div[class*=span3]")``` where # with *= means: contains. Though I'm not entirely clear on how this syntax works and I couldn't find it in the documentation. It also feels more accidental that I was able to modify the stackoverflow suggestion to find a suitable alternative solution. Will need to review this again at a later time.
