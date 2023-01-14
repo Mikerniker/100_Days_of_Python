@@ -17,8 +17,21 @@ spotify2 = spotipy.oauth2.SpotifyOAuth(client_id=CLIENT_ID,
                                        requests_session=True,
                                        cache_path="token.txt")
 
+#STEP2: Authentication with Spotify
 
 # spotify2.get_auth_response()
 # print(spotify2.get_cached_token())
 print(spotify1.current_user()['id'])
 
+#STEP 3: Search Spotify for Songs
+
+playlist = []
+for song in all_songs:
+    song_tracks = spotify1.search(f"track: {song} year: {year_to_travel}", limit=1, type='track')
+    try:
+        song_uri = song_tracks['tracks']['items'][0]['uri']
+        playlist.append(song_uri)
+    except IndexError:
+        print("The song is not available")
+        continue
+print(playlist)
