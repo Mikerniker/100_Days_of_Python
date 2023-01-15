@@ -21,6 +21,7 @@ spotify2 = spotipy.oauth2.SpotifyOAuth(client_id=CLIENT_ID,
 
 # spotify2.get_auth_response()
 # print(spotify2.get_cached_token())
+spotify2.refresh_access_token("ADD_REFRESH_TOKEN")
 print(spotify1.current_user()['id'])
 
 #STEP 3: Search Spotify for Songs
