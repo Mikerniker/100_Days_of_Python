@@ -35,3 +35,12 @@ for song in all_songs:
         print("The song is not available")
         continue
 print(playlist)
+
+#STEP 4: Create a playlist and add to it
+
+playlist_id = spotify1.user_playlist_create(user=user_id,
+                              name=f"{year_to_travel} Billboard 100",
+                              public=False,
+                              description="music memory lane")['id']
+
+print(spotify1.playlist_add_items(playlist_id=playlist_id, items=playlist))
