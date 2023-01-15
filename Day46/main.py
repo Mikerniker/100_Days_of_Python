@@ -2,9 +2,9 @@ from bs4 import BeautifulSoup
 import requests
 
 #TEST YEAR
-year_to_travel = "2005-03-20"
+# year_to_travel = "2005-03-20"
 
-# year_to_travel = input("Which year do you want to travel to? Type the date in this format YYYY-MM-DD: ")
+year_to_travel = input("Which year do you want to travel to? Type the date in this format YYYY-MM-DD: ")
 
 billboard_url = f"https://www.billboard.com/charts/hot-100/{year_to_travel}/"
 
@@ -14,7 +14,7 @@ songs_page = response.text
 
 soup = BeautifulSoup(songs_page, "html.parser")
 
-#Solution 1
+# MAIN Solution
 song_titles = soup.select(selector="li h3.c-title")
 # print(song_titles)
 
