@@ -1,5 +1,4 @@
-##IN PROGRESS
-## Day 47 Project: Amazon Price Tracker Project
+## Day 47 Project: Amazon Price Tracker
 
 ## Table of contents
 

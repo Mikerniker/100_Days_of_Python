@@ -125,12 +125,8 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 **Day 39 CAPSTONE Project: [Part 1 - Cheap Flight Finder](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day39)**
 - Topics: APIs and making POST Requests, Python DateTime strftime(), Timedelta in datetime module, OOP Classes, Exception Handling
 
-### Adding in progress
-
-###### slowly adding projects 40, 44 here...
-
-
-**Day 40 Project:  TO FOLLOW**
+**Day 40 CAPSTONE Project: [Part 2 - Cheap Flight Finder](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day40)**
+- Topics: APIs and making POST Requests, Python DateTime strftime(), Timedelta in datetime module
 
 **Day 41 Project: [Personal Website (simple HTML)](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day41)**
 - Topics: Intro to HTML: HTML Tag, HTML Boilerplate, HTML Lists, HTML Image Elements, HTML Links and Anchor Tags
@@ -141,5 +137,14 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 **Day 43 Project: [Personal Website (with simple CSS)](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day43)**
 - Topics: Intro to CSS: Inline, Internal and External CSS, Debugging CSS Code, ID Selectors, Class Selectors, Tag Selectors
 
-**Day 44 Project: [Personal Website (Stylised with Advanced CSS)](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day43)**
+**Day 44 Project: [Personal Website (Stylised with Advanced CSS)](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day44)**
 - Topics: Intermediate CSS: Favicons, Box Model, CSS Display Property, Static and Relative Positioning, Absolute Positioning, Centering Elements with CSS, Font Styling, CSS Sizing, Font Properties
+
+**Day 45 Project: [Scrape a List of 100 Greatest Movies](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day45)**
+- Topics: Scraping the Web with Beautiful Soup
+
+**Day 46 Project: [Spotify Playlist Musical Time Machine](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day46)**
+- Topics: Scraping the Web with Beautiful Soup, strip() method, list comprehensions, requests module
+
+**Day 47 Project: [Amazon Price Tracker](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day47)**
+- Topics: Scraping the Web with Beautiful Soup, strip() method, smtplib module, requests module
