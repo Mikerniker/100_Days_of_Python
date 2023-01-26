@@ -1,6 +1,5 @@
 ## Day 18 Project: The Hirst Painting 
 
- 
 ## Table of contents
 
 - [Overview](#overview)
