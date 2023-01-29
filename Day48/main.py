@@ -31,6 +31,10 @@ print(merged_list)
 merged_events = list(enumerate(merged_list))
 print(merged_events)
 
+combined = {x:y for (x, y) in merged_events}
+print(combined)
 
+# print(combined.keys())
+print(combined.values())
 
 driver.quit()
