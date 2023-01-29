@@ -26,6 +26,11 @@ for event in get_events:
 print(events)
 
 
+merged_list = list(zip(dates, events))
+print(merged_list)
+merged_events = list(enumerate(merged_list))
+print(merged_events)
+
 
 
 driver.quit()
