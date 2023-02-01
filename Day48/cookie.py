@@ -23,3 +23,33 @@ cursor_price = driver.find_element_by_css_selector("#buyCursor b")
 cursor_words = cursor_price.text
 price = int(cursor_words.split(" ")[2])
 print(price)
+
+#TEST
+def get_price(selector):
+    try:
+        price = driver.find_element_by_css_selector(f"#{selector}")
+        words = price.text
+        cookie_number = words.split(" ")[2]
+        print(f"{selector}: {cookie_number}")
+        return cookie_number
+    except selenium.common.exceptions.NoSuchElementException:
+        price = driver.find_element_by_id(selector)
+        words = price.text
+        cookie_number = words.split(" ")[2]
+        print(f"{selector}: {cookie_number}")
+        return cookie_number
+    except ValueError:
+        print(f"{selector} not available")
+    except IndexError:
+        print("No amount available")
+
+
+
+# print(get_price("buyAlchemy lab"))
+
+all_ids = ["buyGrandma", "buyFactory", "buyMine", "buyShipment",
+           "buyAlchemy lab", "buyPortal", "buyTime machine", "buyElder Pledge"]
+
+for id in all_ids:
+    print(get_price(id))
+
