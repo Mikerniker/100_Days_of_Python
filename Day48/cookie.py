@@ -34,3 +34,29 @@ def get_price(selector):
     cookie_number = words.split(" ")[2].split("\n")[0]
     # print(f"{selector}: {cookie_number}")
     return cookie_number
+
+
+def get_price_alternate(id):
+    price = driver.find_element_by_id(id)
+    words = price.text
+    cookie_number = words.split(" ")[3].split("\n")[0]
+    # print(f"{selector}: {cookie_number}")
+    return cookie_number
+
+
+grandma = int(get_price("buyGrandma"))
+factory = int(get_price("buyFactory"))
+mine = int(get_price("buyMine").replace(',', ''))
+shipment = int(get_price("buyShipment").replace(',', ''))
+alchemy = int(get_price_alternate("buyAlchemy lab").replace(',', ''))
+portal = int(get_price("buyPortal").replace(',', ''))
+time_machine = int(get_price_alternate("buyTime machine").replace(',', ''))
+
+
+print(grandma)
+print(factory)
+print(mine)
+print(shipment)
+print(alchemy)
+print(portal)
+print(time_machine)
