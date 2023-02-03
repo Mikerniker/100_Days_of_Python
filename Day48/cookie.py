@@ -60,3 +60,7 @@ print(shipment)
 print(alchemy)
 print(portal)
 print(time_machine)
+
+#COOKIES PERSECOND
+cookies_per_second = driver.find_element_by_id("cps")
+print(f"C per C: {cookies_per_second.text}")
