@@ -46,11 +46,11 @@ def get_price_alternate(id):
 
 grandma = int(get_price("buyGrandma"))
 factory = int(get_price("buyFactory"))
-mine = int(get_price("buyMine").replace(',', ''))
-shipment = int(get_price("buyShipment").replace(',', ''))
-alchemy = int(get_price_alternate("buyAlchemy lab").replace(',', ''))
-portal = int(get_price("buyPortal").replace(',', ''))
-time_machine = int(get_price_alternate("buyTime machine").replace(',', ''))
+mine = int(get_price("buyMine"))
+shipment = int(get_price("buyShipment"))
+alchemy = int(get_price_alternate("buyAlchemy lab"))
+portal = int(get_price("buyPortal"))
+time_machine = int(get_price_alternate("buyTime machine"))
 
 
 print(grandma)
