@@ -43,7 +43,7 @@ def get_price_alternate(id):
     # print(f"{selector}: {cookie_number}")
     return cookie_number
 
-
+cursor = int(get_price("buyCursor"))
 grandma = int(get_price("buyGrandma"))
 factory = int(get_price("buyFactory"))
 mine = int(get_price("buyMine"))
