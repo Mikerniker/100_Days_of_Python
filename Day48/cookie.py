@@ -31,7 +31,7 @@ print(price)
 def get_price(selector):
     price = driver.find_element_by_css_selector(f"#{selector}")
     words = price.text
-    cookie_number = words.split(" ")[2].split("\n")[0]
+    cookie_number = words.split(" ")[2].split("\n")[0].replace(',', '')
     # print(f"{selector}: {cookie_number}")
     return cookie_number
 
@@ -39,7 +39,7 @@ def get_price(selector):
 def get_price_alternate(id):
     price = driver.find_element_by_id(id)
     words = price.text
-    cookie_number = words.split(" ")[3].split("\n")[0]
+    cookie_number = words.split(" ")[3].split("\n")[0].replace(',', '')
     # print(f"{selector}: {cookie_number}")
     return cookie_number
 
