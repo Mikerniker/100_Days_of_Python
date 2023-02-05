@@ -29,19 +29,20 @@ print(price)
 #TEST
 
 def get_price(selector):
-    price = driver.find_element_by_css_selector(f"#{selector}")
-    words = price.text
-    cookie_number = words.split(" ")[2].split("\n")[0].replace(',', '')
-    # print(f"{selector}: {cookie_number}")
-    return cookie_number
+    price = driver.find_element_by_id(selector)
+    return price
 
+def format_price(count):
+    cookie_count = count.text
+    try:
+        cookie_number = cookie_count.split(" ")[2].split("\n")[0].replace(',', '')
+        # print(f"{selector}: {cookie_number}")
+        return int(cookie_number)
+    except ValueError:
+        cookie_number = cookie_count.split(" ")[3].split("\n")[0].replace(',', '')
+        # print(f"{selector}: {cookie_number}")
+        return int(cookie_number)
 
-def get_price_alternate(id):
-    price = driver.find_element_by_id(id)
-    words = price.text
-    cookie_number = words.split(" ")[3].split("\n")[0].replace(',', '')
-    # print(f"{selector}: {cookie_number}")
-    return cookie_number
 
 cursor = int(get_price("buyCursor"))
 grandma = int(get_price("buyGrandma"))
