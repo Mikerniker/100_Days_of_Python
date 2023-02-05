@@ -44,23 +44,31 @@ def format_price(count):
         return int(cookie_number)
 
 
-cursor = int(get_price("buyCursor"))
-grandma = int(get_price("buyGrandma"))
-factory = int(get_price("buyFactory"))
-mine = int(get_price("buyMine"))
-shipment = int(get_price("buyShipment"))
-alchemy = int(get_price_alternate("buyAlchemy lab"))
-portal = int(get_price("buyPortal"))
-time_machine = int(get_price_alternate("buyTime machine"))
+cursor = get_price("buyCursor")
+cursor_price = format_price(cursor)
+
+grandma = get_price("buyGrandma")
+grandma_price = format_price(grandma)
+
+factory = get_price("buyFactory")
+factory_price = format_price(factory)
+
+mine = get_price("buyMine")
+mine_price = format_price(mine)
+
+shipment = get_price("buyShipment")
+shipment_price = format_price(shipment)
+
+alchemy = get_price("buyAlchemy lab")
+alchemy_price = format_price(alchemy)
+
+portal = get_price("buyPortal")
+portal_price = format_price(portal)
+
+time_machine = get_price("buyTime machine")
+time_machine_price = format_price(time_machine)
 
 
-print(grandma)
-print(factory)
-print(mine)
-print(shipment)
-print(alchemy)
-print(portal)
-print(time_machine)
 
 #COOKIES PERSECOND
 cookies_per_second = driver.find_element_by_id("cps")
