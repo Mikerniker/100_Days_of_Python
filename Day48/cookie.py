@@ -68,7 +68,17 @@ portal_price = format_price(portal)
 time_machine = get_price("buyTime machine")
 time_machine_price = format_price(time_machine)
 
+#TEST 2
+products = driver.find_elements_by_css_selector("#store b")
 
+product_prices = []
+for product in products:
+    price = (product.text.split("-")[-1].replace(',', '').strip())
+    if price != '':
+        product_prices.append(int(price))
+
+
+print(product_prices)
 
 #COOKIES PERSECOND
 cookies_per_second = driver.find_element_by_id("cps")
