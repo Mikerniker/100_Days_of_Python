@@ -86,6 +86,13 @@ for price in product_prices:
         can_afford.append(price)
 print(can_afford)
 
+product_to_buy = can_afford[-1]
+index_of_item = can_afford.index(product_to_buy)
+print(f"index of item is {index_of_item}")
+
+products[index_of_item].click()
+
+
 #COOKIES PERSECOND
 cookies_per_second = driver.find_element_by_id("cps")
 print(f"C per C: {cookies_per_second.text}")
