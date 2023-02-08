@@ -80,6 +80,12 @@ for product in products:
 
 print(product_prices)
 
+can_afford = []
+for price in product_prices:
+    if price < cookie_money:
+        can_afford.append(price)
+print(can_afford)
+
 #COOKIES PERSECOND
 cookies_per_second = driver.find_element_by_id("cps")
 print(f"C per C: {cookies_per_second.text}")
