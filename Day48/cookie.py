@@ -44,29 +44,6 @@ def format_price(count):
         return int(cookie_number)
 
 
-cursor = get_price("buyCursor")
-cursor_price = format_price(cursor)
-
-grandma = get_price("buyGrandma")
-grandma_price = format_price(grandma)
-
-factory = get_price("buyFactory")
-factory_price = format_price(factory)
-
-mine = get_price("buyMine")
-mine_price = format_price(mine)
-
-shipment = get_price("buyShipment")
-shipment_price = format_price(shipment)
-
-alchemy = get_price("buyAlchemy lab")
-alchemy_price = format_price(alchemy)
-
-portal = get_price("buyPortal")
-portal_price = format_price(portal)
-
-time_machine = get_price("buyTime machine")
-time_machine_price = format_price(time_machine)
 
 #TEST 2
 products = driver.find_elements_by_css_selector("#store b")
