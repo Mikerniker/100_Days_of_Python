@@ -23,7 +23,12 @@
 
 - HTML
 
+### Tools
+ 
+ - [Colorhunt](https://colorhunt.co/)
+
 ### What I learned
 - Inline, Internal and External CSS
 - Debugging CSS Code
+- CSS
 - ID Selectors, Class Selectors, and Tag Selectors
