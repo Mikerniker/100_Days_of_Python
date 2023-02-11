@@ -53,49 +53,17 @@ while True:
                 can_upgrade[id] = price
         print(can_upgrade)
 
+        most_expensive_item = max(can_upgrade)
+        print(most_expensive_item)
+
+        buy_upgrade = driver.find_element_by_id(most_expensive_item)
+        buy_upgrade.click()
+
+        five_seconds = time.time() + 5
+
 
 #TEST
 
-def get_price(selector):
-    price = driver.find_element_by_id(selector)
-    return price
-
-def format_price(count):
-    cookie_count = count.text
-    try:
-        cookie_number = cookie_count.split(" ")[2].split("\n")[0].replace(',', '')
-        # print(f"{selector}: {cookie_number}")
-        return int(cookie_number)
-    except ValueError:
-        cookie_number = cookie_count.split(" ")[3].split("\n")[0].replace(',', '')
-        # print(f"{selector}: {cookie_number}")
-        return int(cookie_number)
-
-
-
-#TEST 2
-products = driver.find_elements_by_css_selector("#store b")
-
-product_prices = []
-for product in products:
-    price = (product.text.split("-")[-1].replace(',', '').strip())
-    if price != '':
-        product_prices.append(int(price))
-
-
-print(product_prices)
-
-can_afford = []
-for price in product_prices:
-    if price < cookie_money:
-        can_afford.append(price)
-print(can_afford)
-
-product_to_buy = can_afford[-1]
-index_of_item = can_afford.index(product_to_buy)
-print(f"index of item is {index_of_item}")
-
-products[index_of_item].click()
 
 
 #COOKIES PERSECOND
