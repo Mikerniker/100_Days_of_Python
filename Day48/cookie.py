@@ -61,11 +61,9 @@ while True:
 
         five_seconds = time.time() + 5
 
+    if time.time() > five_minutes:
+        # Get cookies per second
+        cookies_per_second = driver.find_element_by_id("cps")
+        print(f"Cookies per second: {cookies_per_second.text}")
 
-#TEST
-
-
-
-#COOKIES PERSECOND
-cookies_per_second = driver.find_element_by_id("cps")
-print(f"C per C: {cookies_per_second.text}")
+        break
