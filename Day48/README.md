@@ -29,7 +29,7 @@ Day 48 Project: Cookie Game Playing Bot
 
 ### Links
 
-- Solution URL: [Game Playing Bot](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day48)
+- Solution URL: [Cookie Game Playing Bot](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day48)
 
 ### Built with
 
@@ -47,4 +47,8 @@ Day 48 Project: Cookie Game Playing Bot
 #### Notes
 Exercise 1
 - I realize that this solution is not the most efficient. I had a hard time figuring out how  to simplify it, but ended up with a longer than necessary solution. On the bright side, it works...
-- 
+
+Cookie Game Challenge
+- Had a really hard time figuring this out and had to eventually peek. I got some sections right but got confused with the time.time() reference, it was easier to follow after reading Angela's code.
+- I had to also review the ```range(len(some_list))``` which was helped by this [reference](https://v4.software-carpentry.org/python/lists.html#:~:text=Well%2C%20if%20len(list),legal%20indices%20of%20the%20list.)
+- I also had to review the get_attribute() element method in selenium. See this [reference](https://www.geeksforgeeks.org/get_attribute-element-method-selenium-python/)
