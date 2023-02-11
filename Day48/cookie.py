@@ -1,7 +1,5 @@
-
 from selenium import webdriver
 import time
-
 
 chrome_driver_path = "D:\DEVELOPMENT\chromedriver.exe"
 driver = webdriver.Chrome(executable_path=chrome_driver_path)
@@ -33,7 +31,6 @@ while True:
                 product_prices.append(int(price))
         print(product_prices)
 
-
         # Get cookie money
         find_cookie_money = driver.find_element_by_id("money")
         cookie_money = int(find_cookie_money.text.replace(',', ''))
@@ -46,7 +43,6 @@ while True:
         print(product_catalogue.items())
 
         # Get items that can be upgraded
-
         can_upgrade = {}
         for id, price in product_catalogue.items():
             if price < cookie_money:
