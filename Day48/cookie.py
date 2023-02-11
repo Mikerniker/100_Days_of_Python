@@ -15,15 +15,20 @@ products = driver.find_elements_by_css_selector("#store div")
 all_products = [product.get_attribute("id") for product in products]
 print(all_products)
 
+#5 seconds from now
+five_seconds = time.time() + 5
+
+# 5 minutes from now
+five_minutes = time.time() + 60*5
+
+
+
+
+# Get cookie money
 cookie_money = driver.find_element_by_id("money")
 print(cookie_money.text)
 print(type(cookie_money.text))
 
-
-cursor_price = driver.find_element_by_css_selector("#buyCursor b")
-cursor_words = cursor_price.text
-price = int(cursor_words.split(" ")[2])
-print(price)
 
 #TEST
 
