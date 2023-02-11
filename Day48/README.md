@@ -1,21 +1,20 @@
 ##IN PROGRESS
-Day 48 Project: Game Playing Bot
+Day 48 Project: Cookie Game Playing Bot
 
 ## Overview
 
 
-## Exercise 1:
+## Exercise 1 (main.py):
 - Extract the upcoming event data from the python.org website. 
 - Use Selenium to scrape all upcoming event date and event names andstore them in a nested Python dictionary. 
 - Print the dictionary to the console. 
 - The event data from python .org should be stored under the keys 'time; and 'name"
 
-## Exercise 2:
-- Create a blank file called interaction.py.
-- Use Selenium to print the total number of articles from the Wikipedia homepage to the PyCharm console.
-
-## Challenge
-
+## Cookie Challenge (cookie.py)
+- Access cookie to click
+- Get product ids
+- After 5 seconds check most affordable products to upgrade with cookie money and purchase the most expensive product
+- After 5 minutes have passed since starting the game, stop the bot and print the "cookies/second".
 
 ## Table of contents
 
