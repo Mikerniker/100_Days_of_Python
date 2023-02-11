@@ -22,12 +22,22 @@ five_seconds = time.time() + 5
 five_minutes = time.time() + 60*5
 
 
+while True:
+    cookie.click()
+    if time.time() > five_seconds:
+        product_prices = []
+        products = driver.find_elements_by_css_selector("#store b")
+        for product in products:
+            price = (product.text.split("-")[-1].replace(',', '').strip())
+            if price != '':
+                product_prices.append(int(price))
+        print(product_prices)
 
 
-# Get cookie money
-cookie_money = driver.find_element_by_id("money")
-print(cookie_money.text)
-print(type(cookie_money.text))
+        # Get cookie money
+        find_cookie_money = driver.find_element_by_id("money")
+        cookie_money = int(find_cookie_money.text.replace(',', ''))
+        print(cookie_money)
 
 
 #TEST
