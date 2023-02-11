@@ -1,7 +1,5 @@
-#IN PROGRESS
 
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 import time
 
 
@@ -9,12 +7,13 @@ chrome_driver_path = "D:\DEVELOPMENT\chromedriver.exe"
 driver = webdriver.Chrome(executable_path=chrome_driver_path)
 driver.get("http://orteil.dashnet.org/experiments/cookie/")
 
+# Get cookie to click
 cookie = driver.find_element_by_id("cookie")
 
-countdown = 50
-while countdown > 0:
-    cookie.click()
-    countdown -= 1
+# Get product ids
+products = driver.find_elements_by_css_selector("#store div")
+all_products = [product.get_attribute("id") for product in products]
+print(all_products)
 
 cookie_money = driver.find_element_by_id("money")
 print(cookie_money.text)
