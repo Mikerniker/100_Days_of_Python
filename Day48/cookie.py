@@ -39,6 +39,12 @@ while True:
         cookie_money = int(find_cookie_money.text.replace(',', ''))
         print(cookie_money)
 
+        product_catalogue = {}
+        for item in range(len(product_prices)):
+            product_catalogue[all_products[item]] = product_prices[item]
+        print(product_catalogue)
+        print(product_catalogue.items())
+
 
 #TEST
 
