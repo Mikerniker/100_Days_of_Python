@@ -45,6 +45,14 @@ while True:
         print(product_catalogue)
         print(product_catalogue.items())
 
+        # Get items that can be upgraded
+
+        can_upgrade = {}
+        for id, price in product_catalogue.items():
+            if price < cookie_money:
+                can_upgrade[id] = price
+        print(can_upgrade)
+
 
 #TEST
 
