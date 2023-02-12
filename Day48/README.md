@@ -1,8 +1,6 @@
-##IN PROGRESS
 Day 48 Project: Cookie Game Playing Bot
 
 ## Overview
-
 
 ## Exercise 1 (main.py):
 - Extract the upcoming event data from the python.org website. 
