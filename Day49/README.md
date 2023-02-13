@@ -36,3 +36,12 @@
 - [Selenium Documentation](https://selenium-python.readthedocs.io/)
 
 #### Notes
+
+- My code is a little different from Angelas, I added an option to save the new page which you're redirected to after clicking on a button. This was achieved by window_handles and switch_to_window. i.e.
+```
+linkedin_signin_window = driver.window_handles[0]
+print(linkedin_signin_window)
+
+linkedin = driver.switch_to.window(linkedin_signin_window)
+```
+I'm not sure if I understood this part correctly. In Angela's code she doesn't use this but uses time.sleep(5) to wait for the new page to load.
