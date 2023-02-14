@@ -23,3 +23,8 @@ password.send_keys(MY_PASSWORD)
 
 signin_button = driver.find_element_by_class_name("btn__primary--large")
 signin_button.click()
+
+time.sleep(6)
+
+find_save = driver.find_element_by_class_name("jobs-save-button")
+find_save.click()
