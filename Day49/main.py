@@ -28,3 +28,10 @@ time.sleep(6)
 
 find_save = driver.find_element_by_class_name("jobs-save-button")
 find_save.click()
+
+#TESTING THIS
+# all_jobs = driver.find_elements_by_css_selector(".job-card-list div a")
+#
+# # print(all_jobs)
+# for job in all_jobs:
+#     print(job.text)
