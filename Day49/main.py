@@ -35,3 +35,8 @@ find_save.click()
 # # print(all_jobs)
 # for job in all_jobs:
 #     print(job.text)
+
+#TEST
+list_jobs = driver.find_elements_by_css_selector(".job-card-list div")
+all_job_ids = [job.get_attribute("data-job-id") for job in list_jobs]
+print(all_job_ids
