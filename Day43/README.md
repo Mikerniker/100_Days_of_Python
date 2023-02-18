@@ -27,7 +27,9 @@
  
  - [Colorhunt](https://colorhunt.co/)
  - [Background color](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color)
+ - [Border-Style](https://developer.mozilla.org/en-US/docs/Web/CSS/border-style)
  - [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
+ - [CSS Default Values Reference](https://www.w3schools.com/cssref/css_default_values.php)
 
 ### What I learned
 - Inline, Internal and External CSS
