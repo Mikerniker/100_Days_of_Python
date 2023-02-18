@@ -23,9 +23,11 @@
 
 - HTML
 
-### Tools
+### Tools and References
  
  - [Colorhunt](https://colorhunt.co/)
+ - [Background color](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color)
+ - [Color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
 
 ### What I learned
 - Inline, Internal and External CSS
