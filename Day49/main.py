@@ -42,3 +42,7 @@ list_jobs = driver.find_elements_by_css_selector(".job-card-container")
 all_jobs = [job.text for job in list_jobs]
 print(all_jobs)
 
+#TEST 2
+time.sleep(5)
+apply_button = driver.find_element_by_css_selector(".jobs-s-apply button")
+apply_button.click()
