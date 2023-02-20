@@ -46,3 +46,12 @@ print(all_jobs)
 time.sleep(5)
 apply_button = driver.find_element_by_css_selector(".jobs-s-apply button")
 apply_button.click()
+
+#test 3 this works
+
+phone = driver.find_element_by_class_name("artdeco-text-input--input")
+#thisworks
+phone = driver.find_element_by_id("single-line-text-form-component-formElement-urn-li-jobs-applyformcommon-easyApplyFormElement-3362855988-75565821-phoneNumber-nationalNumber")
+# phone = driver.find_element_by_class_name("fb-single-line-text__input")
+if phone.text == "":
+    phone.send_keys("test")
