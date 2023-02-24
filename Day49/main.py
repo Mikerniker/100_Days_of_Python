@@ -35,7 +35,10 @@ find_save.click()
 intercepting_button = driver.find_elements_by_css_selector(".msg-overlay-bubble-header__control--new-convo-btn")
 intercepting_button[1].click()
 
-
+#This prints the follow button but gives an intercept error when clicked.
+# follow_button = driver.find_element_by_css_selector(".follow")
+# print(follow_button.text)
+# follow_button.click()
 
 
 #TESTING THIS
