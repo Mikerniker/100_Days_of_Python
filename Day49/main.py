@@ -29,6 +29,15 @@ time.sleep(6)
 find_save = driver.find_element_by_class_name("jobs-save-button")
 find_save.click()
 
+
+# TESTING FOR FOLLOW BUTTON
+#This button is intercepting my access to follow button
+intercepting_button = driver.find_elements_by_css_selector(".msg-overlay-bubble-header__control--new-convo-btn")
+intercepting_button[1].click()
+
+
+
+
 #TESTING THIS
 # all_jobs = driver.find_elements_by_css_selector(".job-card-list div a")
 #
