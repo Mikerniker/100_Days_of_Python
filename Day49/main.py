@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
 
 MY_EMAIL = "********************"
 MY_PASSWORD = "*****************"
@@ -35,7 +36,17 @@ find_save.click()
 intercepting_button = driver.find_elements_by_css_selector(".msg-overlay-bubble-header__control--new-convo-btn")
 intercepting_button[1].click()
 
-#This prints the follow button but gives an intercept error when clicked.
+#THIS IS another intercepting ERROR THAT OCCURS
+another_intercept = driver.find_element_by_css_selector(".msg-overlay-bubble-header__details")
+print(another_intercept.text)
+
+#Tried accessing another section that leads to the follow button
+locate_follow_section = driver.find_element_by_css_selector(".jobs-company__box")
+action = ActionChains(driver)
+action.move_to_element(locate_follow_section)
+
+
+#This prints the follow button but gives the aforementioned intercept errors when clicked.
 # follow_button = driver.find_element_by_css_selector(".follow")
 # print(follow_button.text)
 # follow_button.click()
