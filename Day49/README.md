@@ -34,6 +34,8 @@
 #### Resources
 
 - [Selenium Documentation](https://selenium-python.readthedocs.io/)
+- [Move to vs Scroll into view](https://stackoverflow.com/questions/34562095/scrollintoview-vs-movetoelement) - This resources explains the differences between move_to_element and scroll_into_view.
+- [move_to_element method – Action Chains](https://www.geeksforgeeks.org/move_to_element-method-action-chains-in-selenium-python/)
 
 #### Notes
 
@@ -45,3 +47,5 @@ print(linkedin_signin_window)
 linkedin = driver.switch_to.window(linkedin_signin_window)
 ```
 I'm not sure if I understood this part correctly. In Angela's code she doesn't use this but uses time.sleep(5) to wait for the new page to load.
+
+- Spent several days trying to resolve the ElementClickInterceptedException that appears when trying to click on the follow button. Came across several stack overflow and other resources to help me resolve it. While I understand what is causing the error, and have identified it, I can't seem to figure out how to make it switch to the desired button. So far, I have tried  
