@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.common.exceptions import NoSuchElementException, ElementClickInterceptedException
 
 MY_EMAIL = "********************"
 MY_PASSWORD = "*****************"
@@ -45,6 +46,15 @@ locate_follow_section = driver.find_element_by_css_selector(".jobs-company__box"
 action = ActionChains(driver)
 action.move_to_element(locate_follow_section)
 
+#Used try and except instead since spent several days trying to click follow but can't figure out how to make it click
+
+time.sleep(5)
+
+try:
+    get_follow_button = driver.find_element_by_css_selector(".follow")
+    get_follow_button.click()
+except ElementClickInterceptedException:
+    print("Cannot follow this company")
 
 #This prints the follow button but gives the aforementioned intercept errors when clicked.
 # follow_button = driver.find_element_by_css_selector(".follow")
