@@ -60,6 +60,14 @@ try:
 except ElementClickInterceptedException:
     print("Cannot follow this company")
 
+
+#GET ALL CLICKABLE JOBS
+all_jobs = driver.find_elements_by_css_selector(".job-card-container--clickable")
+for job in all_jobs:
+    # job.click()
+    print(job.text)
+
+
 #This prints the follow button but gives the aforementioned intercept errors when clicked.
 # follow_button = driver.find_element_by_css_selector(".follow")
 # print(follow_button.text)
