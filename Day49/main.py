@@ -31,6 +31,10 @@ time.sleep(6)
 find_save = driver.find_element_by_class_name("jobs-save-button")
 find_save.click()
 
+#FIND EASY APPLY BUTTON
+find_easy_apply = driver.find_element_by_class_name("jobs-apply-button--top-card")
+print(find_easy_apply.text)
+find_easy_apply.click()
 
 # TESTING FOR FOLLOW BUTTON
 #This button is intercepting my access to follow button
