@@ -44,6 +44,10 @@ actions.move_to_element(locate_follow_section).perform()
 
 time.sleep(2)
 
+#CLICK ON FOLLOW BUTTON
+get_follow_button = driver.find_element_by_css_selector(".follow")
+get_follow_button.click()
+
 #FIND EASY APPLY BUTTON
 find_easy_apply = driver.find_element_by_class_name("jobs-apply-button--top-card")
 print(find_easy_apply.text)
