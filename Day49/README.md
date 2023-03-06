@@ -36,6 +36,9 @@
 - [Selenium Documentation](https://selenium-python.readthedocs.io/)
 - [Move to vs Scroll into view](https://stackoverflow.com/questions/34562095/scrollintoview-vs-movetoelement) - This resources explains the differences between move_to_element and scroll_into_view.
 - [move_to_element method – Action Chains](https://www.geeksforgeeks.org/move_to_element-method-action-chains-in-selenium-python/)
+- [Scrolling with Selenium and Python](https://riptutorial.com/selenium-webdriver/example/28140/scrolling-using-python)
+- [Scrolling to Element](https://intellipaat.com/community/30985/python-selenium-scroll-to-element-scrolling-to-element-using-webdriver) - This resource is what helped me figure out how to finally move down the screen.
+
 
 #### Notes
 
