@@ -32,6 +32,10 @@ time.sleep(6)
 find_save = driver.find_element_by_class_name("jobs-save-button")
 find_save.click()
 
+#CLOSE POP UP WINDOW THAT APPEARS AFTER SAVING
+close_popup = driver.find_element_by_css_selector(".artdeco-toast-item__dismiss")
+close_popup.click()
+
 #FIND EASY APPLY BUTTON
 find_easy_apply = driver.find_element_by_class_name("jobs-apply-button--top-card")
 print(find_easy_apply.text)
