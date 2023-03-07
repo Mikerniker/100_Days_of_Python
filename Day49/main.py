@@ -36,6 +36,10 @@ find_save.click()
 close_popup = driver.find_element_by_css_selector(".artdeco-toast-item__dismiss")
 close_popup.click()
 
+#CLOSE MESSAGE POPUP that BLOCKS ACCESS TO FOLLOW BUTTON
+message_popup = driver.find_element_by_css_selector(".msg-overlay-bubble-header__details")
+message_popup.click()
+
 #MOVE TO BUTTON OF PAGE to CLICK FOLLOW BUTTON
 locate_follow_section = driver.find_element_by_css_selector(".jobs-company__footer")
 actions = ActionChains(driver)
