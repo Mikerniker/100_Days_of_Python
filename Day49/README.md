@@ -55,3 +55,17 @@ I'm not sure if I understood this part correctly. In Angela's code she doesn't u
 
 - [aria label reference](https://stackoverflow.com/questions/58734107/typeerror-webelement-object-is-not-subscriptable)
 - After so long I fnially figured out how to click the buttons I couldn't click. The steps I used to resolve it was first to maximize the window, then closed all overlaying buttons (i.e. the pop up message that appears when saving a job, and the messaging bar on the right) as these intercepted attempts to click on the buttons. Then I used action chains to move to the bottom of the page to access the follow button. 
+
+- Other things I learned: when using Actions chains I originally tried moving the screen to the section where the Follow button was :
+```
+locate_follow_section = driver.find_element_by_css_selector(".jobs-company__box")
+action = ActionChains(driver)
+action.move_to_element(locate_follow_section)
+```
+This didn't work because the messaging section was still overlaying / intercepting any clicks to the follow button. To work around that, I had to access something even lower, so changed it to the area near the footer so the screen would scroll down even more to make the follow button visible. This seemed to work:
+```
+locate_follow_section = driver.find_element_by_css_selector(".jobs-company__footer")
+actions = ActionChains(driver)
+actions.move_to_element(locate_follow_section).perform()
+```
+One error that I might have made was that the .perform() was not included in the first attempt, so that may have also been why it initially didn't work.

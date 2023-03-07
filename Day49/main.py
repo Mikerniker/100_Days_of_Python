@@ -57,19 +57,8 @@ find_easy_apply = driver.find_element_by_class_name("jobs-apply-button--top-card
 print(find_easy_apply.text)
 find_easy_apply.click()
 
-# TESTING FOR FOLLOW BUTTON
-#This button is intercepting my access to follow button
-intercepting_button = driver.find_elements_by_css_selector(".msg-overlay-bubble-header__control--new-convo-btn")
-intercepting_button[1].click()
 
-#THIS IS another intercepting ERROR THAT OCCURS
-another_intercept = driver.find_element_by_css_selector(".msg-overlay-bubble-header__details")
-print(another_intercept.text)
 
-#Tried accessing another section that leads to the follow button
-locate_follow_section = driver.find_element_by_css_selector(".jobs-company__box")
-action = ActionChains(driver)
-action.move_to_element(locate_follow_section)
 
 #Used try and except instead since spent several days trying to click follow but can't figure out how to make it click
 
