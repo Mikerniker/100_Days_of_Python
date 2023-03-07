@@ -43,7 +43,6 @@ message_popup.click()
 #MOVE TO BUTTON OF PAGE to CLICK FOLLOW BUTTON
 locate_follow_section = driver.find_element_by_css_selector(".jobs-company__footer")
 actions = ActionChains(driver)
-
 actions.move_to_element(locate_follow_section).perform()
 
 time.sleep(2)
@@ -57,25 +56,18 @@ find_easy_apply = driver.find_element_by_class_name("jobs-apply-button--top-card
 print(find_easy_apply.text)
 find_easy_apply.click()
 
-
-
-
-#Used try and except instead since spent several days trying to click follow but can't figure out how to make it click
-
 time.sleep(5)
-
-try:
-    get_follow_button = driver.find_element_by_css_selector(".follow")
-    get_follow_button.click()
-except ElementClickInterceptedException:
-    print("Cannot follow this company")
 
 
 #GET ALL CLICKABLE JOBS
 all_jobs = driver.find_elements_by_css_selector(".job-card-container--clickable")
 for job in all_jobs:
-    # job.click()
-    print(job.text)
+    job.click()
+    # print(job.text)
+    time.sleep(3)
+
+    find_easy_apply = driver.find_element_by_class_name("jobs-apply-button--top-card")
+    print(find_easy_apply.text)
 
 
 #This prints the follow button but gives the aforementioned intercept errors when clicked.
