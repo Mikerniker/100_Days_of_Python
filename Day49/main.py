@@ -74,7 +74,9 @@ for job in all_jobs:
         print(find_submit_application.text)
         close_easyapp_popup = driver.find_element_by_class_name("artdeco-modal__dismiss")
         close_easyapp_popup.click()
-        
+        time.sleep(2)
+        dismiss_popup = driver.find_element_by_class_name("artdeco-modal__confirm-dialog-btn")
+        dismiss_popup.click()
 
 
 #This prints the follow button but gives the aforementioned intercept errors when clicked.
