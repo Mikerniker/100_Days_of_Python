@@ -68,6 +68,13 @@ for job in all_jobs:
 
     find_easy_apply = driver.find_element_by_class_name("jobs-apply-button--top-card")
     print(find_easy_apply.text)
+    #TESTING THIS
+    try:
+        find_submit_application = driver.find_element_by_link_text("Submit Application")
+        print(find_submit_application.text)
+        close_easyapp_popup = driver.find_element_by_class_name("artdeco-modal__dismiss")
+        close_easyapp_popup.click()
+        
 
 
 #This prints the follow button but gives the aforementioned intercept errors when clicked.
