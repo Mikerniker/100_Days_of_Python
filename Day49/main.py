@@ -71,14 +71,13 @@ for job in all_jobs:
     find_easy_apply = driver.find_element_by_class_name("jobs-apply-button--top-card")
     # print(find_easy_apply.text)
     find_easy_apply.click()
-
+    close_easyapp_button = driver.find_element_by_class_name("artdeco-modal__dismiss")
     #TESTING THIS
     try:
         find_submit_application = driver.find_element(By.CSS_SELECTOR, '[aria-label="Submit application"]')
         # print(find_submit_application.text)
 
         if find_submit_application:
-            close_easyapp_button = driver.find_element_by_class_name("artdeco-modal__dismiss")
             close_easyapp_button.click()
             time.sleep(2)
             dismiss_button = driver.find_element(By.CSS_SELECTOR, '[data-control-name="discard_application_confirm_btn"]')
@@ -90,7 +89,7 @@ for job in all_jobs:
             find_save.click()
 
             time.sleep(5)
-            # CLOSE POP UP
+            # CLOSE this job has been saved pop up
             close_popup = driver.find_element_by_css_selector(".artdeco-toast-item__dismiss")
             close_popup.click()
 
@@ -98,7 +97,6 @@ for job in all_jobs:
         find_next_button = driver.find_element(By.CSS_SELECTOR, '[aria-label="Continue to next step"]')
         print(find_next_button.text)
         print("There are too many steps to this application. Don't save and skip to next job.")
-        close_easyapp_button= driver.find_element_by_class_name("artdeco-modal__dismiss")
         close_easyapp_button.click()
         time.sleep(2)
         dismiss_button = driver.find_element(By.CSS_SELECTOR, '[data-control-name="discard_application_confirm_btn"]')
