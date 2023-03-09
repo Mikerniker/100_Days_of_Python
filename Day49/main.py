@@ -95,38 +95,11 @@ for job in all_jobs:
             close_popup.click()
 
     except NoSuchElementException:
-        print("There are too many steps to this application.")
-
-
-#This prints the follow button but gives the aforementioned intercept errors when clicked.
-# follow_button = driver.find_element_by_css_selector(".follow")
-# print(follow_button.text)
-# follow_button.click()
-
-
-#TESTING THIS
-# all_jobs = driver.find_elements_by_css_selector(".job-card-list div a")
-#
-# # print(all_jobs)
-# for job in all_jobs:
-#     print(job.text)
-
-#TEST
-
-list_jobs = driver.find_elements_by_css_selector(".job-card-container")
-all_jobs = [job.text for job in list_jobs]
-print(all_jobs)
-
-#TEST 2
-time.sleep(5)
-apply_button = driver.find_element_by_css_selector(".jobs-s-apply button")
-apply_button.click()
-
-#test 3 this works
-
-phone = driver.find_element_by_class_name("artdeco-text-input--input")
-#thisworks
-phone = driver.find_element_by_id("single-line-text-form-component-formElement-urn-li-jobs-applyformcommon-easyApplyFormElement-3362855988-75565821-phoneNumber-nationalNumber")
-# phone = driver.find_element_by_class_name("fb-single-line-text__input")
-if phone.text == "":
-    phone.send_keys("test")
+        find_next_button = driver.find_element(By.CSS_SELECTOR, '[aria-label="Continue to next step"]')
+        print(find_next_button.text)
+        print("There are too many steps to this application. Don't save and skip to next job.")
+        close_easyapp_popup = driver.find_element_by_class_name("artdeco-modal__dismiss")
+        close_easyapp_popup.click()
+        time.sleep(2)
+        dismiss_button = driver.find_element(By.CSS_SELECTOR, '[data-control-name="discard_application_confirm_btn"]')
+        dismiss_button.click()
