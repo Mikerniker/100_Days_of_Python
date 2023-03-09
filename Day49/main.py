@@ -2,6 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import NoSuchElementException, ElementClickInterceptedException
+import time
+from selenium.webdriver.common.by import By
 
 MY_EMAIL = "********************"
 MY_PASSWORD = "*****************"
@@ -67,16 +69,31 @@ for job in all_jobs:
     time.sleep(3)
 
     find_easy_apply = driver.find_element_by_class_name("jobs-apply-button--top-card")
-    print(find_easy_apply.text)
+    # print(find_easy_apply.text)
+    find_easy_apply.click()
+
     #TESTING THIS
     try:
-        find_submit_application = driver.find_element_by_link_text("Submit Application")
-        print(find_submit_application.text)
-        close_easyapp_popup = driver.find_element_by_class_name("artdeco-modal__dismiss")
-        close_easyapp_popup.click()
-        time.sleep(2)
-        dismiss_popup = driver.find_element_by_class_name("artdeco-modal__confirm-dialog-btn")
-        dismiss_popup.click()
+        find_submit_application = driver.find_element(By.CSS_SELECTOR, '[aria-label="Submit application"]')
+        # print(find_submit_application.text)
+
+        if find_submit_application:
+            close_easyapp_button = driver.find_element_by_class_name("artdeco-modal__dismiss")
+            close_easyapp_button.click()
+            time.sleep(2)
+            dismiss_button = driver.find_element(By.CSS_SELECTOR, '[data-control-name="discard_application_confirm_btn"]')
+            dismiss_button.click()
+
+            #Save the job
+            time.sleep(2)
+            find_save = driver.find_element_by_class_name("jobs-save-button")
+            find_save.click()
+
+            time.sleep(5)
+            # CLOSE POP UP
+            close_popup = driver.find_element_by_css_selector(".artdeco-toast-item__dismiss")
+            close_popup.click()
+
     except NoSuchElementException:
         print("There are too many steps to this application.")
 
