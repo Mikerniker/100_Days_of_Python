@@ -18,6 +18,9 @@
     - Ignore complex, multi-step applications
   - Else, just save the job and follow the company.
 
+For the project, I opted to just save and follow the jobs that had the following conditions: apply to standard, 1-step applications and ignore complex, multi-step applications.
+At the time of doing this project, the option to ignore applications that require a note was not possible as the available jobs on LinkedIn did not have the option to write notes, so I could not identify the appropriate element for this.
+
 
 ## Table of contents
 
