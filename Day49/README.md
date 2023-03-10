@@ -4,8 +4,14 @@
 ## Overview
 
 
-## Automated Job Applications with Selenium
-- 
+### Automated Job Applications with Selenium
+### The challenge
+
+- Step 1 Setup LinkedIn
+- Step 2 Automatically Login
+- Step 3 Apply for a Job
+- Step 4 Apply for all the jobs
+
 
 ## Table of contents
 
