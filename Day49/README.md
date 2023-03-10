@@ -12,6 +12,11 @@
   - Use Selenium to apply to first job that only requires phone number
   - Alternative: Use Selenium to save (all) jobs(s) and follow the -company that posted the listing(s).
 - Step 4 Apply for all the jobs
+  - If applying for a job:
+    - Apply to standard, 1-step applications
+    - Ignore applications that require a note
+    - Ignore complex, multi-step applications
+  - Else, just save the job and follow the company.
 
 
 ## Table of contents
