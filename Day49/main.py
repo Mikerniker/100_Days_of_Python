@@ -30,42 +30,14 @@ signin_button.click()
 
 time.sleep(5)
 
-find_save = driver.find_element_by_class_name("jobs-save-button")
-find_save.click()
-
-#CLOSE POP UP WINDOW THAT APPEARS AFTER SAVING
-close_popup = driver.find_element_by_css_selector(".artdeco-toast-item__dismiss")
-close_popup.click()
-
-#CLOSE MESSAGE POPUP that BLOCKS ACCESS TO FOLLOW BUTTON
-message_popup = driver.find_element_by_css_selector(".msg-overlay-bubble-header__details")
-message_popup.click()
-
-#MOVE TO BUTTON OF PAGE to CLICK FOLLOW BUTTON
-locate_follow_section = driver.find_element_by_css_selector(".jobs-company__footer")
-actions = ActionChains(driver)
-actions.move_to_element(locate_follow_section).perform()
-
-time.sleep(2)
-
-#CLICK ON FOLLOW BUTTON
-get_follow_button = driver.find_element_by_css_selector(".follow")
-get_follow_button.click()
-
-#FIND EASY APPLY BUTTON
-find_easy_apply = driver.find_element_by_class_name("jobs-apply-button--top-card")
-print(find_easy_apply.text)
-find_easy_apply.click()
-
-time.sleep(5)
-
-#GET ALL CLICKABLE JOBS
+# Save and Follow all the clickable jobs that only have one step
 all_jobs = driver.find_elements_by_css_selector(".job-card-container--clickable")
 for job in all_jobs:
     job.click()
     # print(job.text)
     time.sleep(3)
 
+    #click on Easy apply
     find_easy_apply = driver.find_element_by_class_name("jobs-apply-button--top-card")
     # print(find_easy_apply.text)
     find_easy_apply.click()
