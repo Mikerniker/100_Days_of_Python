@@ -1,9 +1,9 @@
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
-from selenium.common.exceptions import NoSuchElementException, ElementClickInterceptedException
-import time
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+import time
 
 MY_EMAIL = "********************"
 MY_PASSWORD = "*****************"
@@ -17,7 +17,6 @@ sign_in_webpage = driver.find_element_by_link_text("Sign in")
 sign_in_webpage.click()
 
 linkedin_signin_window = driver.window_handles[0]
-print(linkedin_signin_window)
 
 linkedin = driver.switch_to.window(linkedin_signin_window)
 username = driver.find_element_by_id("username")
@@ -29,7 +28,7 @@ password.send_keys(MY_PASSWORD)
 signin_button = driver.find_element_by_class_name("btn__primary--large")
 signin_button.click()
 
-time.sleep(6)
+time.sleep(5)
 
 find_save = driver.find_element_by_class_name("jobs-save-button")
 find_save.click()
@@ -59,7 +58,6 @@ print(find_easy_apply.text)
 find_easy_apply.click()
 
 time.sleep(5)
-
 
 #GET ALL CLICKABLE JOBS
 all_jobs = driver.find_elements_by_css_selector(".job-card-container--clickable")
