@@ -49,6 +49,7 @@ At the time of doing this project, the option to ignore applications that requir
 - [move_to_element method – Action Chains](https://www.geeksforgeeks.org/move_to_element-method-action-chains-in-selenium-python/)
 - [Scrolling with Selenium and Python](https://riptutorial.com/selenium-webdriver/example/28140/scrolling-using-python)
 - [Scrolling to Element](https://intellipaat.com/community/30985/python-selenium-scroll-to-element-scrolling-to-element-using-webdriver) - This resource is what helped me figure out how to finally move down the screen.
+- [Find Aria Labels](https://www.reddit.com/r/selenium/comments/rnlpl5/how_to_click_on_a_button_in_python_using_selenium/) - This helped me figure out how to fine aria label elements as well as other elements/attributes that were not classes or ids.
 
 
 #### Notes
