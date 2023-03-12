@@ -34,18 +34,15 @@ time.sleep(5)
 all_jobs = driver.find_elements_by_css_selector(".job-card-container--clickable")
 for job in all_jobs:
     job.click()
-    # print(job.text)
     time.sleep(3)
 
-    #click on Easy apply
+    # Click on Easy apply
     find_easy_apply = driver.find_element_by_class_name("jobs-apply-button--top-card")
-    # print(find_easy_apply.text)
     find_easy_apply.click()
     close_easyapp_button = driver.find_element_by_class_name("artdeco-modal__dismiss")
-    #TESTING THIS
+   
     try:
         find_submit_application = driver.find_element(By.CSS_SELECTOR, '[aria-label="Submit application"]')
-        # print(find_submit_application.text)
 
         if find_submit_application:
             close_easyapp_button.click()
@@ -55,13 +52,26 @@ for job in all_jobs:
 
             #Save the job
             time.sleep(2)
-            find_save = driver.find_element_by_class_name("jobs-save-button")
-            find_save.click()
+            save_button = driver.find_element_by_class_name("jobs-save-button")
+            save_button.click()
 
             time.sleep(5)
-            # CLOSE this job has been saved pop up
+
+            # Close pop up that say the job has been saved 
             close_popup = driver.find_element_by_css_selector(".artdeco-toast-item__dismiss")
             close_popup.click()
+
+            # Click on Follow Button
+            locate_follow_section = driver.find_element_by_css_selector(".jobs-company__footer")
+
+            actions = ActionChains(driver)
+            actions.move_to_element(locate_follow_section).perform()
+
+            time.sleep(2)
+
+            get_follow_button = driver.find_element_by_css_selector(".follow")
+            get_follow_button.click()
+
 
     except NoSuchElementException:
         find_next_button = driver.find_element(By.CSS_SELECTOR, '[aria-label="Continue to next step"]')
