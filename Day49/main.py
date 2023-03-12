@@ -72,7 +72,6 @@ for job in all_jobs:
             get_follow_button = driver.find_element_by_css_selector(".follow")
             get_follow_button.click()
 
-
     except NoSuchElementException:
         find_next_button = driver.find_element(By.CSS_SELECTOR, '[aria-label="Continue to next step"]')
         print(find_next_button.text)
