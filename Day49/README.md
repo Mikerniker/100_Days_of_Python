@@ -80,3 +80,11 @@ actions = ActionChains(driver)
 actions.move_to_element(locate_follow_section).perform()
 ```
 One error that I might have made was that the .perform() was not included in the first attempt, so that may have also been why it initially didn't work.
+
+- Another thing I opted to do was to use other css labels or attributes to dismiss a popup. Originally, I used the class name: 
+```dismiss_button = driver.find_element_by_class_name("artdeco-modal__confirm-dialog-btn")```
+which works, but I wanted to try using "data-control-name" and "aria labels", which seemed more readable and so I could remember what I was looking for. This is what I used for the dismiss button:
+```dismiss_button = driver.find_element(By.CSS_SELECTOR, '[data-control-name="discard_application_confirm_btn"]')```
+and this is what I used to find the Submit Application button with an aria label:
+```find_submit_application = driver.find_element(By.CSS_SELECTOR, '[aria-label="Submit application"]')```
+Not entirely sure if this is the right way to go, but I found it more helpful in remembering what I was trying to do.
