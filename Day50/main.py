@@ -2,7 +2,7 @@ from selenium import webdriver
 import time
 
 chrome_driver_path = "D:\DEVELOPMENT\chromedriver.exe"
-driver = webdriver.Chrome(executable_path=chrome_driver_path)
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver.get("https://tinder.com/")
 
 
