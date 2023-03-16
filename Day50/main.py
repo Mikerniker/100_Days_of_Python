@@ -22,4 +22,9 @@ for item in log_in:
     if item.text == "Log in":
         item.click()
 
-time.sleep(10)
+time.sleep(5)
+
+signin_popup = driver.window_handles[0]
+tinder_signin = driver.switch_to.window(signin_popup)
+
+time.sleep(20)
