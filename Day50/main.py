@@ -28,3 +28,13 @@ signin_popup = driver.window_handles[0]
 tinder_signin = driver.switch_to.window(signin_popup)
 
 time.sleep(20)
+
+#Click on Google to Sign In
+
+continue_with_google = driver.find_element(By.ID, "q494877495")  
+continue_with_google.click()
+
+time.sleep(20)
+
+google_popup = driver.window_handles[1]
+google_signin = driver.switch_to.window(google_popup)
