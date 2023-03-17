@@ -38,3 +38,19 @@ time.sleep(20)
 
 google_popup = driver.window_handles[1]
 google_signin = driver.switch_to.window(google_popup)
+
+time.sleep(3)
+
+username = driver.find_element(By.NAME, "identifier")
+username.send_keys(MY_EMAIL)
+
+next_button1 = driver.find_element(By.CLASS_NAME, "VfPpkd-LgbsSe-OWXEXe-k8QpJ")
+next_button1.click()
+
+time.sleep(3)
+
+password = driver.find_element(By.NAME, "Passwd")
+password.send_keys(MY_PASSWORD)
+
+next_button2 = driver.find_element(By.CLASS_NAME, "VfPpkd-LgbsSe-OWXEXe-k8QpJ")
+next_button2.click()
