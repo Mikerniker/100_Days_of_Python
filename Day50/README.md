@@ -64,3 +64,12 @@ driver = webdriver.Chrome(service=service)
 driver.get("https://tinder.com/")
 ```
 From this YT video https://www.youtube.com/watch?v=NJTNeXofbps
+
+- Notes 3/18/2022, some helpful tutorials that helped me bypass the chrome bot detection
+1. I imported ```import undetected_chromedriver as uc``` to replace ```from selenium import webdriver```
+2. after activating my venv I: pip install undetected-chromedriver
+3. The original tutorial I watched was from [xtekky](https://www.youtube.com/watch?v=GcTGurNyf6Y) on youTube. I had to refer to the original documentation on by [ultrafunkamsterdam's github](https://github.com/ultrafunkamsterdam/undetected-chromedriver/blob/master/README.md#important-note) and used this:
+```
+import undetected_chromedriver as uc
+driver = uc.Chrome()
+``` which worked until the point at which I was asked for two-factor authentication, which I will have to temporarily remove for easier testing.
