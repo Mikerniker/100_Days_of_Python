@@ -1,15 +1,19 @@
-from selenium import webdriver
+#I used this to replace selenium import webdriver:
+import undetected_chromedriver as uc
+# from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
 
-
-service = Service(executable_path=chrome_driver_path)
-driver = webdriver.Chrome(service=service)
+#I replaced the following with uc.Chrome
+# service = Service(executable_path=chrome_driver_path)
+# driver = webdriver.Chrome(service=service)
+driver = uc.Chrome() #THis is what I used instead to go undetected
 driver.get("https://tinder.com/")
-wait = WebDriverWait(driver, 20)
+wait = WebDriverWait(driver, 10)
+
 
 #ALTERNATIVE driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
@@ -54,3 +58,5 @@ password.send_keys(MY_PASSWORD)
 
 next_button2 = driver.find_element(By.CLASS_NAME, "VfPpkd-LgbsSe-OWXEXe-k8QpJ")
 next_button2.click()
+
+time.sleep(999)  #At this point I'm able to login but it asks for two-step verification 
