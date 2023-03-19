@@ -74,3 +74,4 @@ import undetected_chromedriver as uc
 driver = uc.Chrome()
 ``` which worked until the point at which I was asked for two-factor authentication, which I will have to temporarily remove for easier testing.
 - Notes 3/19 Just got banned from Tinder for following Angela's instructions. Note the intention was to swipe to not match with anyone and to delete the account after since it was mainly for this project. Currently looking for an alternative project. 
+- 3/20/2023 Alternative project is to try this with OkCupid instead, since they also have a desktop option. Currently was able to access site and used selenium to login with username and password. 
