@@ -31,4 +31,18 @@ password.send_keys(MY_PASSWORD)
 next_button = driver.find_element(By.CLASS_NAME, "login-actions-button")
 next_button.click()
 
-time.sleep(50)
+
+time.sleep(160)
+
+"""
+During this time a OTP password is sent, which at the time of this posting,
+can only be done manually before the rest of the code continues
+"""
+
+pass_button = driver.find_element(By.CSS_SELECTOR, '[aria-label="Pass and view the next profile"]')
+
+view_next = 0
+while view_next < 10:
+    pass_button.click()
+    time.sleep(3)
+    view_next += 1
