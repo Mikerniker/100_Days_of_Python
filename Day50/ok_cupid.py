@@ -41,8 +41,6 @@ can only be done manually before the rest of the code continues
 
 pass_button = driver.find_element(By.CSS_SELECTOR, '[aria-label="Pass and view the next profile"]')
 
-view_next = 0
-while view_next < 10:
+for i in range(10):
     pass_button.click()
     time.sleep(3)
-    view_next += 1
