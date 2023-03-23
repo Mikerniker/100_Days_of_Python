@@ -4,8 +4,6 @@
 
 ### The challenge
 
-
-
 ## Table of contents
 
 - [Overview](#overview)
@@ -14,7 +12,6 @@
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-
 
 ### Links
 
