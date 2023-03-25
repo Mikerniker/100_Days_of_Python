@@ -13,7 +13,9 @@ class InternetSpeedTwitterBot:
     def __init__(self):
         self.promised_down = PROMISED_DOWN
         self.promised_up = PROMISED_UP
-        self.chrome_driver_path = CHROME_DRIVER_PATH
+        self.service = Service(executable_path=CHROME_DRIVER_PATH)
+        self.driver = webdriver.Chrome(service=self.service)
+
 
     def get_driver(self):
         service = Service(executable_path=self.chrome_driver_path)
