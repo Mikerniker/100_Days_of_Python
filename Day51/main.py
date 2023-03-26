@@ -49,6 +49,15 @@ class InternetSpeedTwitterBot:
         login_button.click()
         time.sleep(5)
 
+        
+        twitter_signin_popup = self.driver.window_handles[0]
+        signin = self.driver.switch_to.window(twitter_signin_popup)
+
+        time.sleep(3)
+        sign_in_popup = self.driver.find_element(By.CLASS_NAME, "S9gUrf-YoZ4jf")
+        sign_in_popup.click()
+
+
 
 test = InternetSpeedTwitterBot()
 driver = test.get_driver()
