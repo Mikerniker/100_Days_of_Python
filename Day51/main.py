@@ -41,7 +41,13 @@ class InternetSpeedTwitterBot:
 
 
     def tweet_at_provider(self):
-        pass
+        self.driver.get("https://twitter.com")
+
+        time.sleep(40)
+
+        login_button = self.driver.find_element(By.CSS_SELECTOR, '[href="/login"]')
+        login_button.click()
+        time.sleep(5)
 
 
 test = InternetSpeedTwitterBot()
