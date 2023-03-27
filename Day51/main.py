@@ -6,8 +6,9 @@ import time
 PROMISED_DOWN = 150
 PROMISED_UP = 10
 CHROME_DRIVER_PATH = "D:\DEVELOPMENT\chromedriver.exe"
-TWITTER_EMAIL = "milqueecode@gmail.com"
-TWITTER_PASSWORD = "@ng3l@Pyth0n"
+TWITTER_EMAIL = "************"
+TWITTER_PASSWORD = "************"
+GOOGLE_PASSWORD = "*************"
 
 class InternetSpeedTwitterBot:
 
@@ -71,10 +72,13 @@ class InternetSpeedTwitterBot:
         google_password = self.driver.find_element(By.NAME, "Passwd")
         google_password.send_keys(password)
 
-        next_button = self.driver.find_element(By.CLASS_NAME, 
+        next_button = self.driver.find_element(By.CLASS_NAME, "VfPpkd-LgbsSe-OWXEXe-k8QpJ")
+        next_button.click()
+
 
 test = InternetSpeedTwitterBot()
-driver = test.get_driver()
-driver.get("https://twitter.com/home")
+# driver = test.get_driver()
+# driver.get("https://twitter.com")
+test.tweet_at_provider(TWITTER_EMAIL, GOOGLE_PASSWORD)
 
 time.sleep(50)
