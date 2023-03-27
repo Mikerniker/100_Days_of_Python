@@ -66,6 +66,12 @@ class InternetSpeedTwitterBot:
         next_button = self.driver.find_element(By.CLASS_NAME, "VfPpkd-LgbsSe-OWXEXe-k8QpJ")
         next_button.click()
 
+        time.sleep(3)
+        
+        google_password = self.driver.find_element(By.NAME, "Passwd")
+        google_password.send_keys(password)
+
+        next_button = self.driver.find_element(By.CLASS_NAME, 
 
 test = InternetSpeedTwitterBot()
 driver = test.get_driver()
