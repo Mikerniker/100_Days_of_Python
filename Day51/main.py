@@ -57,6 +57,9 @@ class InternetSpeedTwitterBot:
         sign_in_popup = self.driver.find_element(By.CLASS_NAME, "S9gUrf-YoZ4jf")
         sign_in_popup.click()
 
+        google_popup = self.driver.window_handles[1]
+        self.driver.switch_to.window(google_popup)
+
 
 
 test = InternetSpeedTwitterBot()
