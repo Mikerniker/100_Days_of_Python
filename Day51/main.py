@@ -60,6 +60,11 @@ class InternetSpeedTwitterBot:
         google_popup = self.driver.window_handles[1]
         self.driver.switch_to.window(google_popup)
 
+        google_username = self.driver.find_element(By.NAME, "identifier")
+        google_username.send_keys(email)
+
+        next_button = self.driver.find_element(By.CLASS_NAME, "VfPpkd-LgbsSe-OWXEXe-k8QpJ")
+        next_button.click()
 
 
 test = InternetSpeedTwitterBot()
