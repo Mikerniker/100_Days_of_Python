@@ -1,4 +1,6 @@
-from selenium import webdriver
+#Replace webdriver with this:
+import undetected_chromedriver as uc
+# from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 import time
@@ -16,7 +18,8 @@ class InternetSpeedTwitterBot:
         self.promised_down = PROMISED_DOWN
         self.promised_up = PROMISED_UP
         self.service = Service(executable_path=CHROME_DRIVER_PATH)
-        self.driver = webdriver.Chrome(service=self.service)
+        # self.driver = webdriver.Chrome(service=self.service)
+        self.driver = uc.Chrome()  #Replaced above with this
 
 
     def get_driver(self):
