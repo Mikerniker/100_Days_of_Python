@@ -61,7 +61,12 @@ class InternetSpeedTwitterBot:
         login = self.driver.find_element(By.NAME, "text")
         login.send_keys(email)
         # print(login.text)
+        next_button = self.driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div/div[6]")
+        next_button.click()
 
+        time.sleep(5)
+        password_input = self.driver.find_element(By.NAME, "password")
+        password_input.send_keys(password)
 
 
 
