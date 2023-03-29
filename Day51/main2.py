@@ -57,6 +57,11 @@ class InternetSpeedTwitterBot:
         twitter_signin_popup = self.driver.window_handles[0]
         self.driver.switch_to.window(twitter_signin_popup)
 
+        time.sleep(3)
+        login = self.driver.find_element(By.NAME, "text")
+        login.send_keys(email)
+        # print(login.text)
+
 
 
 
