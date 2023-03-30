@@ -3,6 +3,7 @@ import undetected_chromedriver as uc
 # from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from selenium.common.exceptions import NoSuchElementException 
 import time
 
 PROMISED_DOWN = 150
@@ -64,11 +65,14 @@ class InternetSpeedTwitterBot:
         next_button = self.driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div/div[6]")
         next_button.click()
 
-        time.sleep(5)
-        password_input = self.driver.find_element(By.NAME, "password")
-        password_input.send_keys(password)
+        try:
+            password_input = self.driver.find_element(By.NAME, "password")
+            password_input.send_keys(password)
 
-
+            next_button2 = self.driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div/div")
+            next_button2.click()
+        except NoSuchElementException:
+            pass
 
 test = InternetSpeedTwitterBot()
 # driver = test.get_driver()
