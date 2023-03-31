@@ -4,6 +4,7 @@ import undetected_chromedriver as uc
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException 
+from selenium.webdriver.common.keys import Keys
 import time
 
 PROMISED_DOWN = 150
