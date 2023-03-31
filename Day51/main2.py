@@ -72,7 +72,19 @@ class InternetSpeedTwitterBot:
             next_button2 = self.driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div/div")
             next_button2.click()
         except NoSuchElementException:
-            pass
+            unusual_login_alert = self.driver.find_element(By.NAME, "text")
+            unusual_login_alert.send_keys(twitter_user)
+            unusual_login_alert.send_keys(Keys.ENTER)
+
+            time.sleep(6)
+
+            password_input = self.driver.find_element(By.NAME, "password")
+            password_input.send_keys(password)
+
+            next_button2 = self.driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div/div")
+            next_button2.click()
+
+
 
 test = InternetSpeedTwitterBot()
 # driver = test.get_driver()
