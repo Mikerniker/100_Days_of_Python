@@ -85,6 +85,12 @@ class InternetSpeedTwitterBot:
             next_button2 = self.driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div/div")
             next_button2.click()
 
+            time.sleep(15)
+
+            tweet = self.driver.find_element(By.CSS_SELECTOR, '[aria-label="Tweet"]')
+            tweet.click()
+
+            time.sleep(5)
 
 
 test = InternetSpeedTwitterBot()
