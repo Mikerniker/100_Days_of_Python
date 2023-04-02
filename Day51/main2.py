@@ -106,7 +106,7 @@ class InternetSpeedTwitterBot:
             time.sleep(5)
 
             write_tweet = self.driver.find_element(By.CLASS_NAME, "public-DraftStyleDefault-ltr")
-            write_tweet.send_keys("my first tweet test message")
+            write_tweet.send_keys(message)
 
             tweet_button = self.driver.find_element(By.CSS_SELECTOR, '[data-testid="tweetButton"]')
             tweet_button.click()
