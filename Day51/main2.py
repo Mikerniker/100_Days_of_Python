@@ -30,13 +30,15 @@ class InternetSpeedTwitterBot:
         go_button = self.driver.find_element(By.CLASS_NAME, "js-start-test")
         go_button.click()
 
-        time.sleep(90)
+        time.sleep(70)
 
         results = self.driver.find_elements(By.CLASS_NAME, "result-data")
     
         self.download = results[3].text
         self.upload = results[4].text
-        print(f"download: {results[3].text} \nupload: {results[4].text}")
+        return f"Hey Internet Provider, why is my internet speed {self.download} down/{self.upload} up " \
+               f"when I pay for {self.promised_down}down/{self.promised_up}up?"
+
        
 
 
