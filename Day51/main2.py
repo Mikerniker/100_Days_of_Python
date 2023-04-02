@@ -12,6 +12,7 @@ PROMISED_UP = 10
 CHROME_DRIVER_PATH = "D:\DEVELOPMENT\chromedriver.exe"
 TWITTER_EMAIL = "************"
 TWITTER_PASSWORD = "************"
+TWITTER_USERNAME = "************"
 GOOGLE_PASSWORD = "*************"
 
 class InternetSpeedTwitterBot:
@@ -114,8 +115,6 @@ class InternetSpeedTwitterBot:
 
 
 test = InternetSpeedTwitterBot()
-# driver = test.get_driver()
-# driver.get("https://twitter.com")
-test.tweet_at_provider(TWITTER_EMAIL, TWITTER_PASSWORD)
+test.tweet_at_provider(TWITTER_EMAIL, TWITTER_PASSWORD, TWITTER_USERNAME, test.get_internet_speed())
 
 time.sleep(50)
