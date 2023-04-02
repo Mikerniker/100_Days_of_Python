@@ -37,13 +37,13 @@ class InternetSpeedTwitterBot:
         self.download = results[3].text
         self.upload = results[4].text
         return f"Hey Internet Provider, why is my internet speed {self.download} down/{self.upload} up " \
-               f"when I pay for {self.promised_down}down/{self.promised_up}up?"
+               f"when I pay for {self.promised_down} down/{self.promised_up} up?"
 
        
 
 
 #LOG IN WITH TEXT BOX
-    def tweet_at_provider(self, email, password): # email, password
+    def tweet_at_provider(self, email, password, twitter_user, message): 
         self.driver.get("https://twitter.com")
 
         time.sleep(35)
@@ -63,12 +63,28 @@ class InternetSpeedTwitterBot:
         next_button = self.driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div/div[6]")
         next_button.click()
 
+        time.sleep(10)
+
         try:
             password_input = self.driver.find_element(By.NAME, "password")
             password_input.send_keys(password)
 
             next_button2 = self.driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div/div")
             next_button2.click()
+
+            time.sleep(15)
+
+            tweet = self.driver.find_element(By.CSS_SELECTOR, '[aria-label="Tweet"]')
+            tweet.click()
+
+            time.sleep(5)
+
+            write_tweet = self.driver.find_element(By.CLASS_NAME, "public-DraftStyleDefault-ltr")
+            write_tweet.send_keys(message)
+
+            tweet_button = self.driver.find_element(By.CSS_SELECTOR, '[data-testid="tweetButton"]')
+            tweet_button.click()
+
         except NoSuchElementException:
             unusual_login_alert = self.driver.find_element(By.NAME, "text")
             unusual_login_alert.send_keys(twitter_user)
