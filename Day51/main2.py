@@ -24,11 +24,6 @@ class InternetSpeedTwitterBot:
         self.driver = uc.Chrome()  #Replaced above with this
 
 
-    def get_driver(self):
-        service = Service(executable_path=self.chrome_driver_path)
-        driver = webdriver.Chrome(service=service)
-        return driver
-
     def get_internet_speed(self):
         self.driver.get("https://www.speedtest.net/")
 
@@ -91,6 +86,13 @@ class InternetSpeedTwitterBot:
             tweet.click()
 
             time.sleep(5)
+
+            write_tweet = self.driver.find_element(By.CLASS_NAME, "public-DraftStyleDefault-ltr")
+            write_tweet.send_keys("my first tweet test message")
+
+            tweet_button = self.driver.find_element(By.CSS_SELECTOR, '[data-testid="tweetButton"]')
+            tweet_button.click()
+
 
 
 test = InternetSpeedTwitterBot()
