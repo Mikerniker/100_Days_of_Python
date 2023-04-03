@@ -90,6 +90,16 @@ class InternetSpeedTwitterBot:
 
 
 post_tweet = InternetSpeedTwitterBot()
-post_tweet.tweet_at_provider(TWITTER_EMAIL, TWITTER_PASSWORD, TWITTER_USERNAME, post_tweet.get_internet_speed())
+
+tweet_message = post_tweet.get_internet_speed()
+
+post_tweet.tweet_at_provider(TWITTER_EMAIL)
+
+try:
+    post_tweet.twitter_password_access(TWITTER_PASSWORD, tweet_message)
+except NoSuchElementException:
+    post_tweet.unusual_login(TWITTER_USERNAME)
+    time.sleep(6)
+    post_tweet.twitter_password_access(TWITTER_PASSWORD, tweet_message)
 
 time.sleep(50)
