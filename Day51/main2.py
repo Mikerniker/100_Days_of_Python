@@ -40,11 +40,8 @@ class InternetSpeedTwitterBot:
         return f"Hey Internet Provider, why is my internet speed {self.download} down/{self.upload} up " \
                f"when I pay for {self.promised_down} down/{self.promised_up} up?"
 
-       
-
-
 #LOG IN WITH TEXT BOX
-    def tweet_at_provider(self, email, password, twitter_user, message): 
+    def tweet_at_provider(self, email): 
         self.driver.get("https://twitter.com")
 
         time.sleep(35)
@@ -66,7 +63,7 @@ class InternetSpeedTwitterBot:
 
         time.sleep(10)
 
-        try:
+    def twitter_password_access(self, password, message):
             password_input = self.driver.find_element(By.NAME, "password")
             password_input.send_keys(password)
 
