@@ -41,7 +41,7 @@ class InternetSpeedTwitterBot:
                f"when I pay for {self.promised_down} down/{self.promised_up} up?"
 
 #LOG IN WITH TEXT BOX
-    def tweet_at_provider(self, email): 
+    def twitter_login(self, email): 
         self.driver.get("https://twitter.com")
 
         time.sleep(35)
@@ -63,7 +63,7 @@ class InternetSpeedTwitterBot:
 
         time.sleep(10)
 
-    def twitter_password_access(self, password, message):
+    def tweet_at_provider(self, password, message):
             password_input = self.driver.find_element(By.NAME, "password")
             password_input.send_keys(password)
 
@@ -93,13 +93,13 @@ post_tweet = InternetSpeedTwitterBot()
 
 tweet_message = post_tweet.get_internet_speed()
 
-post_tweet.tweet_at_provider(TWITTER_EMAIL)
+post_tweet.twitter_login(TWITTER_EMAIL)
 
 try:
-    post_tweet.twitter_password_access(TWITTER_PASSWORD, tweet_message)
+    post_tweet.tweet_at_provider(TWITTER_PASSWORD, tweet_message)
 except NoSuchElementException:
     post_tweet.unusual_login(TWITTER_USERNAME)
     time.sleep(6)
-    post_tweet.twitter_password_access(TWITTER_PASSWORD, tweet_message)
+    post_tweet.tweet_at_provider(TWITTER_PASSWORD, tweet_message)
 
 time.sleep(50)
