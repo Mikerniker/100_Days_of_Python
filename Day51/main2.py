@@ -83,7 +83,7 @@ class InternetSpeedTwitterBot:
             tweet_button = self.driver.find_element(By.CSS_SELECTOR, '[data-testid="tweetButton"]')
             tweet_button.click()
 
-        except NoSuchElementException:
+    def unusual_login():
             unusual_login_alert = self.driver.find_element(By.NAME, "text")
             unusual_login_alert.send_keys(twitter_user)
             unusual_login_alert.send_keys(Keys.ENTER)
