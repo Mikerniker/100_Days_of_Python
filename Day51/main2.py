@@ -83,35 +83,13 @@ class InternetSpeedTwitterBot:
             tweet_button = self.driver.find_element(By.CSS_SELECTOR, '[data-testid="tweetButton"]')
             tweet_button.click()
 
-    def unusual_login():
+    def unusual_login(self, twitter_user):
             unusual_login_alert = self.driver.find_element(By.NAME, "text")
             unusual_login_alert.send_keys(twitter_user)
             unusual_login_alert.send_keys(Keys.ENTER)
 
-            time.sleep(6)
 
-            password_input = self.driver.find_element(By.NAME, "password")
-            password_input.send_keys(password)
-
-            next_button2 = self.driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div/div")
-            next_button2.click()
-
-            time.sleep(15)
-
-            tweet = self.driver.find_element(By.CSS_SELECTOR, '[aria-label="Tweet"]')
-            tweet.click()
-
-            time.sleep(5)
-
-            write_tweet = self.driver.find_element(By.CLASS_NAME, "public-DraftStyleDefault-ltr")
-            write_tweet.send_keys(message)
-
-            tweet_button = self.driver.find_element(By.CSS_SELECTOR, '[data-testid="tweetButton"]')
-            tweet_button.click()
-
-
-
-test = InternetSpeedTwitterBot()
-test.tweet_at_provider(TWITTER_EMAIL, TWITTER_PASSWORD, TWITTER_USERNAME, test.get_internet_speed())
+post_tweet = InternetSpeedTwitterBot()
+post_tweet.tweet_at_provider(TWITTER_EMAIL, TWITTER_PASSWORD, TWITTER_USERNAME, post_tweet.get_internet_speed())
 
 time.sleep(50)
