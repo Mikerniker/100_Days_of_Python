@@ -19,9 +19,7 @@ class InternetSpeedTwitterBot:
         self.promised_down = PROMISED_DOWN
         self.promised_up = PROMISED_UP
         self.service = Service(executable_path=CHROME_DRIVER_PATH)
-        # self.driver = webdriver.Chrome(service=self.service)
-        self.driver = uc.Chrome()  #Replaced above with this
-
+        self.driver = webdriver.Chrome(service=self.service)
 
     def get_internet_speed(self):
         self.driver.get("https://www.speedtest.net/")
@@ -30,7 +28,6 @@ class InternetSpeedTwitterBot:
         go_button.click()
 
         time.sleep(70)
-
         results = self.driver.find_elements(By.CLASS_NAME, "result-data")
     
         self.download = results[3].text
@@ -38,7 +35,6 @@ class InternetSpeedTwitterBot:
         return f"Hey Internet Provider, why is my internet speed {self.download} down/{self.upload} up " \
                f"when I pay for {self.promised_down} down/{self.promised_up} up?"
 
-#LOG IN WITH TEXT BOX
     def twitter_login(self, email): 
         self.driver.get("https://twitter.com")
 
@@ -86,11 +82,8 @@ class InternetSpeedTwitterBot:
             unusual_login_alert.send_keys(twitter_user)
             unusual_login_alert.send_keys(Keys.ENTER)
 
-
 post_tweet = InternetSpeedTwitterBot()
-
 tweet_message = post_tweet.get_internet_speed()
-
 post_tweet.twitter_login(TWITTER_EMAIL)
 
 try:
