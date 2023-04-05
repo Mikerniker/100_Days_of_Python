@@ -1,4 +1,3 @@
-#IN PROGRESS
 # Day 51 Project: Twitter Bot
 
 ## Overview
