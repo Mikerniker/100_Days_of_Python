@@ -22,7 +22,7 @@
 
 ### Links
 
-- Solution URL: [Tinder Swiper](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day51)
+- Solution URL: [Instagram Follower Bot](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day52)
 
 ### Built with
 
