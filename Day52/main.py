@@ -27,10 +27,24 @@ class Instafollower:
         password.send_keys(PASSWORD)
         password.send_keys(Keys.ENTER)
 
-        time.sleep(50)
+        time.sleep(10)
     
     def find_followers(self):
-        pass
+        try:
+            self.driver.get("https://www.instagram.com/selfcareisforeveryone/")
+            time.sleep(3)
+            followers = self.driver.find_element(By.CSS_SELECTOR, '[href="/selfcareisforeveryone/followers/"]')
+            followers.click()
+
+            time.sleep(8)
+
+            follower_names = self.driver.find_element(By.CLASS_NAME, "_aano")
+            print(follower_names.text)
+
+            time.sleep(40)
+        except:
+            pass
+
     
     def follow(self):
         pass
