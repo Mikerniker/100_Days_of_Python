@@ -38,8 +38,13 @@ class Instafollower:
 
             time.sleep(8)
 
-            follower_names = self.driver.find_element(By.CLASS_NAME, "_aano")
-            print(follower_names.text)
+            followers_popup = self.driver.window_handles[0]
+            self.driver.switch_to.window(followers_popup)
+
+            follow_button = self.driver.find_elements(By.TAG_NAME, "button")
+            for button in follow_button:
+                print(button.text)
+
 
             time.sleep(40)
         except:
