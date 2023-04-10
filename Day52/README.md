@@ -31,3 +31,5 @@
 
 
 #### Notes
+[How to Scroll Down in a PopUp](https://stackoverflow.com/questions/45961116/selenium-python-how-to-scroll-down-in-a-pop-up-window)
+[Scroll Down](https://stackoverflow.com/questions/38041974/selenium-scroll-inside-of-popup-div)
