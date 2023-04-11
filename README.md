@@ -148,3 +148,6 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 
 **Day 47 Project: [Amazon Price Tracker](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day47)**
 - Topics: Scraping the Web with Beautiful Soup, strip() method, smtplib module, requests module
+
+**Day 48 Project: [Cookie Game Playing Bot](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day48)**
+- Topics: Scraping with Selenium: Webdriver, Finding and Selecting Elements on a website, automate forms, clicking buttons; Advanced Web Scraping

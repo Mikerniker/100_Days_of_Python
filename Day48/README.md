@@ -39,7 +39,7 @@ Day 48 Project: Cookie Game Playing Bot
 
 
 #### Resources
-- [XPath Turotiral](https://www.w3schools.com/xml/xpath_intro.asp)
+- [XPath Tutorial](https://www.w3schools.com/xml/xpath_intro.asp)
 - [Selenium Documentation](https://selenium-python.readthedocs.io/)
 
 #### Notes
