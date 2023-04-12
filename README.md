@@ -151,3 +151,6 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 
 **Day 48 Project: [Cookie Game Playing Bot](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day48)**
 - Topics: Scraping with Selenium: Webdriver, Finding and Selecting Elements on a website, automate forms, clicking buttons; Advanced Web Scraping
+
+**Day 49 Project: [LinkedIn Automated Job Applications with Selenium](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day49)**
+- Topics: Scraping with Selenium: Webdriver, Finding and Selecting Elements on a website; Exception Handling: NoSuchElementException
