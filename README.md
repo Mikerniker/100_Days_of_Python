@@ -156,4 +156,4 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 - Topics: Scraping with Selenium: Webdriver, Finding and Selecting Elements on a website; Exception Handling: NoSuchElementException
 
 **Day 50 Project: [Auto Dating Swiping Bot](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day50)**
-- Topics: Selenium (Xpath, window_handles, switch_to_window) and Python
+- Topics: Selenium (Xpath, window_handles, switch_to_window, ElementClickInterceptedException) and Python
