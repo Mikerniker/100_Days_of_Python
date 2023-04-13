@@ -154,3 +154,6 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 
 **Day 49 Project: [LinkedIn Automated Job Applications with Selenium](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day49)**
 - Topics: Scraping with Selenium: Webdriver, Finding and Selecting Elements on a website; Exception Handling: NoSuchElementException
+
+**Day 50 Project: [Auto Dating Swiping Bot](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day50)**
+- Topics: Selenium (Xpath, window_handles, switch_to_window) and Python
