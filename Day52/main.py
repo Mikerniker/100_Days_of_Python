@@ -30,26 +30,21 @@ class Instafollower:
         time.sleep(10)
     
     def find_followers(self):
-        try:
-            self.driver.get("https://www.instagram.com/selfcareisforeveryone/")
-            time.sleep(3)
-            followers = self.driver.find_element(By.CSS_SELECTOR, '[href="/selfcareisforeveryone/followers/"]')
-            followers.click()
+        self.driver.get("https://www.instagram.com/selfcareisforeveryone/")
+        time.sleep(3)
+        followers = self.driver.find_element(By.CSS_SELECTOR, '[href="/selfcareisforeveryone/followers/"]')
+        followers.click()
 
-            time.sleep(8)
+        time.sleep(8)
 
-            followers_popup = self.driver.window_handles[0]
-            self.driver.switch_to.window(followers_popup)
+        followers_popup = self.driver.window_handles[0]
+        self.driver.switch_to.window(followers_popup)
 
-            follow_button = self.driver.find_elements(By.TAG_NAME, "button")
-            for button in follow_button:
-                print(button.text)
+        follow_button = self.driver.find_elements(By.TAG_NAME, "button")
+        for button in follow_button:
+            print(button.text)
 
-
-            time.sleep(40)
-        except:
-            pass
-
+        time.sleep(40)
     
     def follow(self):
         pass
