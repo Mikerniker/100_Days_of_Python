@@ -48,3 +48,7 @@ class Instafollower:
     
     def follow(self):
         pass
+
+instagram = Instafollower()
+instagram.login()
+instagram.find_followers()
