@@ -43,8 +43,20 @@ class Instafollower:
         time.sleep(5)
 
     def follow(self):
-        pass
+        for i in range(5):
+            follow_button = self.driver.find_elements(By.TAG_NAME, "button")
+            for button in follow_button:
+                button.click() 
+                time.sleep(2)
+            # Scroll down
+            follower_names = self.driver.find_element(By.CLASS_NAME, "_aano")
+            self.driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", follower_names)
+            time.sleep(2)
+
+        time.sleep(40)
+    
 
 instagram = Instafollower()
 instagram.login()
 instagram.find_followers()
+instagram.follow()
