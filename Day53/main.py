@@ -7,3 +7,9 @@ zillow = "https://www.zillow.com/homes/for_rent/?searchQueryState=%7B%22paginati
 
 response = requests.get(zillow)
 zillow_page = response.text
+
+
+soup = BeautifulSoup(zillow_page, "html.parser")
+
+all_sites = soup.find_all(name="a")
+print(all_sites)
