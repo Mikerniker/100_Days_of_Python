@@ -13,7 +13,7 @@ headers={
     "upgrade-insecure-requests":"1"
 }
 
-response = requests.get(zillow)
+response = requests.get(zillow, headers=headers)
 zillow_page = response.text
 
 print(zillow_page)
@@ -22,3 +22,5 @@ soup = BeautifulSoup(zillow_page, "html.parser")
 
 all_sites = soup.find_all(name="a")
 print(all_sites)
+
+properties = soup.find_all("div", {"class": "search-page-container"})
