@@ -23,4 +23,10 @@ soup = BeautifulSoup(zillow_page, "html.parser")
 all_sites = soup.find_all(name="a")
 print(all_sites)
 
-properties = soup.find_all("div", {"class": "search-page-container"})
+# properties = soup.find_all("div", {"class": "search-page-container"})
+
+#Links to th property
+links = soup.find_all("a", {"class": "property-card-link"})
+# print(links2)
+
+all_property_links = [link.get("href") for link in links]
