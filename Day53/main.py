@@ -44,3 +44,11 @@ for price in all_prices:
         # print(item.text)
 
 print(price_list)
+
+prices = []
+for thing in price_list:
+    new_list = thing.replace('/', '+').split('+')
+    # print(new_list)
+    prices.append(new_list[0])
+
+print(prices)
