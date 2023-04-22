@@ -41,3 +41,5 @@ headers={
 response = requests.get(zillow, headers=headers)
 ```
 Reference for headers: [Source 1](https://morioh.com/p/e23b427aabde) [Source 2](https://www.scrapingdog.com/blog/scrape-zillow/)
+- 4/23/2023 Had to find a resource on how to split a string with multiple characters. Found some different options such as the re method ```import re``` but opted to use 
+the str.replace() method to replace the first delimiter with the second, then using the str.split() mthod to split the string. [Source 1](https://bobbyhadz.com/blog/python-split-string-multiple-delimiters) []
