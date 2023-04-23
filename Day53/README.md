@@ -44,3 +44,4 @@ Reference for headers: [Source 1](https://morioh.com/p/e23b427aabde) [Source 2](
 - 4/23/2023 Had to find a resource on how to split a string with multiple characters. Found some different options such as the re method ```import re``` but opted to use 
 the str.replace() method to replace the first delimiter with the second, then using the str.split() mthod to split the string. [Source 1](https://bobbyhadz.com/blog/python-split-string-multiple-delimiters)
 - Found a resource on how to get a span using Beautiful soup and ended up using ```price.find_all('span')``` [Source](https://pytutorial.com/find-span-element-python-beautifulsoup/)
+- 4/24/2023 Was a bit confused on how to make a list comprehension for a double for loop. Was able to figure it out after a while. This resource helped [Source](https://stackoverflow.com/questions/1198777/double-iteration-in-list-comprehension)
