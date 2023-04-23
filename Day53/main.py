@@ -35,15 +35,20 @@ all_property_links = [link.get("href") for link in links]
 all_prices = soup.find_all("div", {"class": "StyledPropertyCardDataArea-c11n-8-85-1__sc-yipmu-0"})
 print(all_prices)
 
-price_list = []
-for price in all_prices:
-    all_spans = price.find_all('span')
-    # print(all_spans)
-    for item in all_spans:
-        price_list.append(item.text)
-        # print(item.text)
+
+price_list = [item.text for price in all_prices for item in price.find_all('span')]
 
 print(price_list)
+
+# price_list = []
+# for price in all_prices:
+#     all_spans = price.find_all('span')
+#     # print(all_spans)
+#     for item in all_spans:
+#         price_list.append(item.text)
+#         # print(item.text)
+
+# print(price_list)
 
 prices = []
 for thing in price_list:
