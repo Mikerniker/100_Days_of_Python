@@ -56,3 +56,14 @@ to this:
 ```
 price_list = [item.text for price in all_prices for item in price.find_all('span')]
 ```
+Also shortened this:
+```
+prices = []
+for thing in price_list:
+    new_list = thing.replace('/', '+').split('+')
+    prices.append(new_list[0])
+```
+to
+```
+prices = [price.replace('/', '+').split('+')[0] for price in price_list]  
+```
