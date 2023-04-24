@@ -31,31 +31,12 @@ links = soup.find_all("a", {"class": "property-card-link"})
 
 all_property_links = [link.get("href") for link in links]
 
-#GET PRICE
+#GET PRICES
 all_prices = soup.find_all("div", {"class": "StyledPropertyCardDataArea-c11n-8-85-1__sc-yipmu-0"})
 print(all_prices)
 
-
 price_list = [item.text for price in all_prices for item in price.find_all('span')]
-
-print(price_list)
-
-# price_list = []
-# for price in all_prices:
-#     all_spans = price.find_all('span')
-#     # print(all_spans)
-#     for item in all_spans:
-#         price_list.append(item.text)
-#         # print(item.text)
-
 # print(price_list)
 
-prices = [price.replace('/', '+').split('+')[0] for price in price_list]  #TO FIX
-print(prices)
-# prices = []
-# for thing in price_list:
-#     new_list = thing.replace('/', '+').split('+')
-#     # print(new_list)
-#     prices.append(new_list[0])
-
+prices = [price.replace('/', '+').split('+')[0] for price in price_list] 
 # print(prices)
