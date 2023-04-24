@@ -50,10 +50,12 @@ print(price_list)
 
 # print(price_list)
 
-prices = []
-for thing in price_list:
-    new_list = thing.replace('/', '+').split('+')
-    # print(new_list)
-    prices.append(new_list[0])
-
+prices = [price.replace('/', '+').split('+')[0] for price in price_list]  #TO FIX
 print(prices)
+# prices = []
+# for thing in price_list:
+#     new_list = thing.replace('/', '+').split('+')
+#     # print(new_list)
+#     prices.append(new_list[0])
+
+# print(prices)
