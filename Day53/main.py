@@ -27,7 +27,7 @@ print(all_sites)
 
 #Links to th property
 links = soup.find_all("a", {"class": "property-card-link"})
-# print(links2)
+# print(links)
 
 all_property_links = [link.get("href") for link in links]
 
@@ -40,3 +40,8 @@ price_list = [item.text for price in all_prices for item in price.find_all('span
 
 prices = [price.replace('/', '+').split('+')[0] for price in price_list] 
 # print(prices)
+
+# GET ADDDRESS
+find_addresses = soup.find_all(name="address")
+addresses = [adds.text for adds in find_addresses]
+print(addresses)
