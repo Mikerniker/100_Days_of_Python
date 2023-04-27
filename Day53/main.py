@@ -45,3 +45,8 @@ prices = [price.replace('/', '+').split('+')[0] for price in price_list]
 find_addresses = soup.find_all(name="address")
 addresses = [adds.text for adds in find_addresses]
 print(addresses)
+
+#SELENIUM
+service = Service(executable_path=CHROME_DRIVER_PATH)
+driver = webdriver.Chrome(service=service)
+driver.get("https://docs.google.com/forms/d/e/1FAIpQLSdgf9wgrDe1E_GtfgL1NdfM-VQhL6bw1Md_qS3-T3lxELCLSA/viewform?usp=sf_link")
