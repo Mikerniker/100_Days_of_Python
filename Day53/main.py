@@ -28,11 +28,12 @@ print(all_sites)
 
 # properties = soup.find_all("div", {"class": "search-page-container"})
 
-#Links to th property
+#Links to the property
 links = soup.find_all("a", {"class": "property-card-link"})
 # print(links)
 
 all_property_links = [link.get("href") for link in links]
+new_property_links = ["https://www.zillow.com" + link for link in all_property_links if "https://www.zillow.com" not in link]
 
 #GET PRICES
 all_prices = soup.find_all("div", {"class": "StyledPropertyCardDataArea-c11n-8-85-1__sc-yipmu-0"})
