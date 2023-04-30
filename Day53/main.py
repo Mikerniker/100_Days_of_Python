@@ -53,14 +53,19 @@ print(addresses)
 #SELENIUM
 service = Service(executable_path=CHROME_DRIVER_PATH)
 driver = webdriver.Chrome(service=service)
-driver.get("https://docs.google.com/forms/d/e/1FAIpQLSdgf9wgrDe1E_GtfgL1NdfM-VQhL6bw1Md_qS3-T3lxELCLSA/viewform?usp=sf_link")
 
-for item in range(2):
+for item in range(3):
     driver.get("https://docs.google.com/forms/d/e/1FAIpQLSdgf9wgrDe1E_GtfgL1NdfM-VQhL6bw1Md_qS3-T3lxELCLSA/viewform?usp=sf_link")
 
     time.sleep(5)
-    all_fields = driver.find_elements(By.CLASS_NAME, "whsOnd.zHQkBf")
-    # all_fields = driver.find_element(By.XPATH, "/html/body/div/div[3]/form/div[2]/div/div[2]/div[1]/div/div/div[2]/div/div[1]/div/div[1]/input")
-    # print(all_fields)
-    for item in all_fields:
-        item.send_keys("attempt1")
+    google_form = driver.find_elements(By.CLASS_NAME, "whsOnd.zHQkBf")
+
+    google_form[0].send_keys(addresses[item])
+    google_form[1].send_keys(prices[item])
+    google_form[2].send_keys(new_property_links[item])
+
+    time.sleep(2)
+    submit_button = driver.find_element(By.CSS_SELECTOR, '[jsname="M2UYVd"]')
+    submit_button.click()
+
+time.sleep(10)
