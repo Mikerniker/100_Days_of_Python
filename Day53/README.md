@@ -1,11 +1,10 @@
-# IN PROGRESS
 # Day 53 CAPSTONE Project: Data Entry Job Automation
 
 ## Overview
 
 ### The challenge
-
-
+- Use Beautiful soup to find the addresses, prices, and links to home listings
+- Use Selenium to add the data into a Google form to be used in a spreadsheet
 
 ## Table of contents
 
