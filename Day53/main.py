@@ -54,7 +54,7 @@ print(addresses)
 service = Service(executable_path=CHROME_DRIVER_PATH)
 driver = webdriver.Chrome(service=service)
 
-for item in range(3):
+for item in range(len(addresses)):
     driver.get("https://docs.google.com/forms/d/e/1FAIpQLSdgf9wgrDe1E_GtfgL1NdfM-VQhL6bw1Md_qS3-T3lxELCLSA/viewform?usp=sf_link")
 
     time.sleep(5)
@@ -67,5 +67,7 @@ for item in range(3):
     time.sleep(2)
     submit_button = driver.find_element(By.CSS_SELECTOR, '[jsname="M2UYVd"]')
     submit_button.click()
+
+    time.sleep(3)
 
 time.sleep(10)
