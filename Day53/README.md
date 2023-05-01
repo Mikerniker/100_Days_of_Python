@@ -66,4 +66,4 @@ to
 ```
 prices = [price.replace('/', '+').split('+')[0] for price in price_list]  
 ```
-Take me a while to make though, it also feels like I made it less readable. But will just use this as practice for list comprehensions.
+Takes me a while to make though, it also feels like I made it less readable. But will just use this as practice for list comprehensions.
