@@ -25,3 +25,6 @@
 
 
 #### Notes
+- Tools:
+[Python visualize](https://pythontutor.com/visualize.html#mode=edit)
+
