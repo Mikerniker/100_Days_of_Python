@@ -4,6 +4,8 @@
 
 ### The challenge
 
+- Create a python decorator.
+
 ## Table of contents
 
 - [Overview](#overview)
