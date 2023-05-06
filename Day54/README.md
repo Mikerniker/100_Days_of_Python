@@ -29,5 +29,5 @@
 #### Notes
 - Tools:
 [Python visualize](https://pythontutor.com/visualize.html#mode=edit)
-- Got a little confused by the instructions for the speed calculator. Math isn't my favorite so didn't fully understand what I had to calculate. Reviewed the concept for decorators a few times, it's a bit clearer now. Just a matter of remembering how to create them and use them properly. It's relation to Flask is clear though and helped clarify it's use.
+- Got a little confused by the instructions for the speed calculator. Math isn't my favorite so didn't fully understand what I had to calculate. Reviewed the concept for decorators a few times, it's a bit clearer now. Just a matter of remembering how to create them and use them properly. It's relation to Flask is clear though and helped clarify its use.
 
