@@ -1,7 +1,8 @@
-# Day 56 HTML & URL Parsing in Flask and the Higher Lower Game
+# Day 56 Personal Site with Flask, HTML, CSS and Static Files
 
 ## Overview
 
+- Static files, HTML/CSS File Rendering and a Personal Site
 
 ### The challenge
 
