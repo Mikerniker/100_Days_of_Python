@@ -6,8 +6,7 @@
 
 ### The challenge
 
-- Create a python decorator (main.py).
-- Create a basic flask app (hello.py)
+- Recreate the higher lower game using Flask, Create a route that can detect the number entered by the user and checks that number against a generated random number between 0 and 9. If the number is too low, tell the user it's too low, same with too high or if they found the correct number. Try to make the <h1> text a different colour for each page. 
 
 ## Table of contents
 
@@ -35,4 +34,5 @@ Topics:
 - Use Python Decorators to Style HTML Tags
 - Decorators with *args and **kwargs
 
-- Had some initial difficulties with "Not Found The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again." - This happened because the site wasstill running on the previous server so (on Windows) you had to do a ctrl+alt+delete to restart everything. Then the code started working properly.
+Other Notes
+- Debugging: Had some initial difficulties with "Not Found The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again." - This happened because the site wasstill running on the previous server so (on Windows) you had to do a ctrl+alt+delete to restart everything. Then the code started working properly.
