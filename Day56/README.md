@@ -19,7 +19,7 @@
 
 ### Links
 
-- Solution URL: [Flask and the Higher Lower Game](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day56)
+- Solution URL: [Personal Site with Flask](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day56)
 
 ### Built with
 
