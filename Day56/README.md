@@ -1,5 +1,4 @@
-# IN PROGRESS
-# Day 56 Personal Site with Flask, HTML, CSS and Static Files
+# Day 56 Name Card Website Template with Flask, HTML, CSS and Static Files
 
 ## Overview
 
@@ -19,17 +18,18 @@
 
 ### Links
 
-- Solution URL: [Personal Site with Flask](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day56)
+- Solution URL: [Name Card Website Template](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day56)
 
 ### Built with
 
 - Python
 - Flask
 
-
 #### Notes
 Topics:
--
+- Rendering HTML Files with Flask
+- Serving Static Files using Flask
+- Use Website Templates 
 
 Tools: 
 - [HTML5UP](https://html5up.net/)
