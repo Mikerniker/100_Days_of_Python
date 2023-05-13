@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="top">
+        <div class="title"><h1>My Blog</h1></div>
+    </div>
+
+    {% for blog_post in posts: %}
+    <div class="content">
+        <div class="card">
+            <h2>{{ blog_post["title"] }}</h2>
+            <p>{{ blog_post["subtitle"] }}</p>
+            <a href="#">Read</a>
+        </div>
+    </div>
+    {% endfor %}
+
+        </div>
+    </div>
+</div>
+</body>
+<footer>
+    <p>Made with ♥️ in the Philippines.</p>
+</footer>
+</html>
