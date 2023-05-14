@@ -12,19 +12,18 @@
         <div class="title"><h1>My Blog</h1></div>
     </div>
 
-    {% for blog_post in posts: %}
+    {% for post in posts: %}
     <div class="content">
         <div class="card">
-            <h2>{{ blog_post["title"] }}</h2>
-            <p>{{ blog_post["subtitle"] }}</p>
-            <a href="#">Read</a>
+            <h2>{{ post["title"] }}</h2>
+            <p>{{ post["subtitle"] }}</p>
+            <a href="{{ url_for('blog_post', blog_id=post['id']) }}">Read</a>
         </div>
     </div>
     {% endfor %}
 
-        </div>
-    </div>
 </div>
+
 </body>
 <footer>
     <p>Made with ♥️ in the Philippines.</p>
