@@ -2,10 +2,11 @@
 
 ## Overview
 
-
+- URL Building and Templating with Jinja in a Flask Application
 
 ### The challenge
 
+- Create a blog with Flask and Jinja
 
 ## Table of contents
 
@@ -26,3 +27,7 @@
 - Flask
 
 #### Notes
+Tools:
+- [Jinja Documentation](https://jinja.palletsprojects.com/en/2.11.x/templates/)
+- [N:point](https://www.npoint.io/) - JSON storage bins
+- Notes: Was able to create a workable solution, it wasn't as straightforward as Angela's but happy I made it work.
