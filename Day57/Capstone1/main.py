@@ -11,11 +11,8 @@ def get_blogs():
 
 @app.route('/')
 def home():
-    blog_url = "https://api.npoint.io/188d478a1aceaa6a6e0f"
-    response = requests.get(blog_url)
-    all_posts = response.json()
-    return render_template("index.html", posts=all_posts)
-
+    return render_template("index.html", posts=get_blogs())
+    
 @app.route('/post/<blog_id>')
 def blog_post(blog_id):
     blog_url = "https://api.npoint.io/188d478a1aceaa6a6e0f"
