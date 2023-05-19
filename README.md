@@ -157,3 +157,13 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 
 **Day 50 Project: [Auto Dating Swiping Bot](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day50)**
 - Topics: Selenium (Xpath, window_handles, switch_to_window, ElementClickInterceptedException) and Python
+
+**Day 51 Project: [Twitter Bot](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day51)**
+- Topics: Selenium (Xpath), Python, Review Classes and methods
+
+
+
+## Advanced
+
+**Day 59 Project: [Twitter Bot](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day51)**
+- Topics: 
