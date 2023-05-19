@@ -2,10 +2,11 @@
 
 ## Overview
 
-
+- Bootstrap layout, Bootstrap Components
 
 ### The challenge
 
+- Make a startup website using Bootstrap
 
 ## Table of contents
 
@@ -24,5 +25,3 @@
 
 - Bootstrap
 
-#### Notes
-- Notes: 
