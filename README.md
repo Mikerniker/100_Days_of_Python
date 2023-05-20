@@ -161,9 +161,10 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 **Day 51 Project: [Twitter Bot](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day51)**
 - Topics: Selenium (Xpath), Python, Review Classes and methods
 
-
+**Day 52 Project: [Instagram Follower Bot](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day51)**
+- Topics: Selenium, Python, Classes, Exception Handling
 
 ## Advanced
 
-**Day 59 Project: [Twitter Bot](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day51)**
+**Day 59 Project: [Blog Capstone Part 2](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day51)**
 - Topics: 
