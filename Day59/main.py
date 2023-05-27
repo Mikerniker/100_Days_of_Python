@@ -28,7 +28,9 @@ def post_blog(blog_id):
     author = post["author"]
     date = post["date"]
     content = post["body"]
-    return render_template("post.html", title=title, subtitle=subtitle, author=author, date=date, content=content)
+    image = post["image"]
+    return render_template("post.html", title=title, subtitle=subtitle, author=author,
+                           date=date, content=content, image=image)
 
 if __name__ == "__main__":
     app.run(debug=True)
