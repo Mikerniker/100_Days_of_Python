@@ -2,7 +2,7 @@
 
 ## Overview
 
-- POST requests, Flask, HTML Forms
+- POST requests with Flask, HTML Forms, send emails with smtplib
 
 ### The challenge
 
