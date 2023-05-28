@@ -6,7 +6,10 @@
 
 ### The challenge
 
-
+- HTML Forms -Revision - Creating a Form from Scratch
+- Handle POST Requests with Flask Servers
+- Get the Contact Form from Day 59 to work
+- Sending Emails with SMTPLIB
 
 ## Table of contents
 
