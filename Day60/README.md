@@ -13,9 +13,9 @@
 
 Tasks
 - Add a route in main.py to receive data from the form from Day 59
-- Update the code in contact.html and main.py so that the information the user has entered into the form and return a <h1> that says "Successfully sent your message".
+- Update the code in contact.html and main.py so that the information the user has entered into the form and return a ```<h1>``` that says "Successfully sent your message".
 - Combine the "/contact" route with "/form-entry" so that they are both under the route "/contact" but depending on which method (GET/POST) that triggered the route, handle it appropriately.
-- Instead of returning a <h1> that says "Successfully sent message", update the contact.html file so that the <h1> on the contact.html file becomes "Successfully sent message".
+- Instead of returning a ```<h1>``` that says "Successfully sent message", update the contact.html file so that the ```<h1>``` on the contact.html file becomes "Successfully sent message".
 - Send form contents as an email using smtplib.
 
 ## Table of contents
