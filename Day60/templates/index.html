@@ -1,0 +1,44 @@
+{% include "header.html" %}
+
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('../static/assets/img/food.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Mikster's Blog</h1>
+                            <span class="subheading">Random Thoughts that Aren't Mine</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    {% for post in posts: %}
+                    <!-- Post preview-->
+                    <div class="post-preview">
+                        <a href="{{ url_for('post_blog', blog_id=post['id']) }}">
+                            <h2 class="post-title">{{ post.title }}</h2>
+                            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+                        </a>
+                        <p class="post-meta">
+                            Posted by
+                            <a href="{{ url_for('about') }}">{{ post.author }}</a>
+                            on {{ post.date }}
+                        </p>
+                    </div>
+                    <!-- Divider-->
+                    <hr class="my-4" />
+
+                    <!-- Pager-->
+                    {% endfor %}
+                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
+                </div>
+            </div>
+        </div>
+
+{% include "footer.html" %}
