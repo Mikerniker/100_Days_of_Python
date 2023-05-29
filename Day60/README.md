@@ -37,7 +37,7 @@ Tasks
 
 
 ### Notes
-- Had a hard time returning an <h1> that says "Successfully sent message", update the contact.html file so that the <h1> on the contact.html file becomes "Successfully sent message". using the Jinja docs, had to check Angelas guide since I was stuck on this particular task for a while. 
+- Had a hard time returning an ```<h1>``` that says "Successfully sent message", update the contact.html file so that the ```<h1>``` on the contact.html file becomes "Successfully sent message". using the Jinja docs, had to check Angelas guide since I was stuck on this particular task for a while. 
 This is the final code in contact.html:
 ```
                          {% if msg_sent: %}
