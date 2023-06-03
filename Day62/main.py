@@ -19,3 +19,19 @@ class CafeForm(FlaskForm):
     wifi_rating = SelectField(u'Wifi Rating', choices=[('💪'), ('💪', '💪'), ('💪', '💪', '💪'), ('💪', '💪', '💪', '💪'), ('💪', '💪', '💪', '💪', '💪')], validators=[DataRequired()])
     outlet_rating = SelectField(u'Power Outlet Rating', choices=[('🔌'), ('🔌', '🔌'), ('🔌', '🔌', '🔌'), ('🔌', '🔌', '🔌', '🔌'), ('🔌', '🔌', '🔌', '🔌', '🔌')], validators=[DataRequired()])
     submit = SubmitField('Submit')
+
+# all Flask routes below
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+
+@app.route('/add')
+def add_cafe():
+    form = CafeForm()
+    if form.validate_on_submit():
+        print("True")
+    # Exercise:
+    # Make the form write a new row into cafe-data.csv
+    # with   if form.validate_on_submit()
+    return render_template('add.html', form=form)
