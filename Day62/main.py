@@ -15,9 +15,9 @@ class CafeForm(FlaskForm):
     location = StringField('Location URL', validators=[DataRequired(), URL()])
     opening_time = StringField('Opening Time', validators=[DataRequired()])
     closing_time = StringField('Closing Time', validators=[DataRequired()])
-    coffee_rating = SelectField(u'Coffee Rating', choices=[('☕'), ('☕', '☕'), ('☕', '☕', '☕'), ('☕', '☕', '☕', '☕'), ('☕', '☕', '☕', '☕', '☕')], validators=[DataRequired()])
-    wifi_rating = SelectField(u'Wifi Rating', choices=[('💪'), ('💪', '💪'), ('💪', '💪', '💪'), ('💪', '💪', '💪', '💪'), ('💪', '💪', '💪', '💪', '💪')], validators=[DataRequired()])
-    outlet_rating = SelectField(u'Power Outlet Rating', choices=[('🔌'), ('🔌', '🔌'), ('🔌', '🔌', '🔌'), ('🔌', '🔌', '🔌', '🔌'), ('🔌', '🔌', '🔌', '🔌', '🔌')], validators=[DataRequired()])
+    coffee_rating = SelectField(u'Coffee Rating', choices=[('☕'), ('☕☕'), ('☕☕☕'), ('☕☕☕☕'), ('☕☕☕☕☕')], validators=[DataRequired()])
+    wifi_rating = SelectField(u'Wifi Rating', choices=[('💪'), ('💪💪'), ('💪💪💪'), ('💪💪💪💪'), ('💪💪💪💪💪')], validators=[DataRequired()])
+    outlet_rating = SelectField(u'Power Outlet Rating', choices=[('🔌'), ('🔌🔌'), ('🔌🔌🔌'), ('🔌🔌🔌🔌'), ('🔌🔌🔌🔌🔌')], validators=[DataRequired()])
     submit = SubmitField('Submit')
 
 # all Flask routes below
