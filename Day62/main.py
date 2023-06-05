@@ -30,7 +30,6 @@ def home():
 def add_cafe():
     form = CafeForm()
     if form.validate_on_submit():
-        # print("True")
         new_data = f"\n{form.cafe.data}, {form.location.data}, {form.opening_time.data}," \
                    f" {form.closing_time.data}, {form.coffee_rating.data}, {form.wifi_rating.data}, " \
                    f"{form.outlet_rating.data}"
