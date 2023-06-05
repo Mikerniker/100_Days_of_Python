@@ -30,7 +30,7 @@
 ```
     with open('cafe-data.csv', newline='', encoding="utf8") as csv_file:
 ```
-to fix errors reading the file
+to fix Unicode errors reading the file
 - Note 2: Couldn't figure out why my Flask debugger wasn't working, finally found 
 ```$env:FLASK_DEBUG = "1"``` to type in my Windows power shell, which fixed the issue.
 - Note 3: Added Redirect AND Url_For which wasn't in the original instructions
@@ -52,3 +52,7 @@ def add_cafe():
         return redirect(url_for('cafes'))
     return render_template('add.html', form=form)
 ```
+- Note 4: To add a link to the table I added:
+```
+<li><a href="{{ href }}">{{ caption }}</a></li> ```
+
