@@ -20,21 +20,25 @@ class CafeForm(FlaskForm):
     outlet_rating = SelectField('Power Outlet Rating', choices=[('✘'), ('🔌'), ('🔌🔌'), ('🔌🔌🔌'), ('🔌🔌🔌🔌'), ('🔌🔌🔌🔌🔌')], validators=[DataRequired()])
     submit = SubmitField('Submit')
 
-
 # all Flask routes below
 @app.route("/")
 def home():
     return render_template("index.html")
 
 
-@app.route('/add')
+@app.route('/add', methods=["GET", "POST"])
 def add_cafe():
     form = CafeForm()
     if form.validate_on_submit():
-        print("True")
-    # Exercis
-    # Make the form write a new row into cafe-data.csv
-    # with   if form.validate_on_submit()
+        # print("True")
+        new_data = f"\n{form.cafe.data}, {form.location.data}, {form.opening_time.data}," \
+                   f" {form.closing_time.data}, {form.coffee_rating.data}, {form.wifi_rating.data}, " \
+                   f"{form.outlet_rating.data}"
+
+        with open('cafe-data.csv', "a", newline='', encoding="utf8") as csv_file:
+            csv_file.write(new_data)
+            csv_file.close()
+        return redirect(url_for('cafes'))
     return render_template('add.html', form=form)
 
 
