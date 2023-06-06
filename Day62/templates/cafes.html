@@ -14,23 +14,21 @@
         <tbody>
           {% for cafe in cafes: %}
           <tr>
-               	{% for item in cafe %}
-				{% if item[0:4] == "http" %}
-				<td><a href="{{ item }}">Maps Link</a></td>
-				{% else %}
-				<td>{{ item }}</td>
-				{% endif %}
-			{% endfor %}
-        </tr>
+            {% for item in cafe %}
+            {% if item[0:4] == "http" %}
+            <td><a href="{{ item }}">Maps Link</a></td>
+            {% else %}
+            <td>{{ item }}</td>
+            {% endif %}
+            {% endfor %}
+          </tr>
           {% endfor %}
         </tbody>
       </table>
-      </div>
-
-
-      <p><a href="{{ url_for('home') }}">Return to index page</a></p>
-
     </div>
+    
+    <p><a href="{{ url_for('home') }}">Return to index page</a></p>
   </div>
+</div>
 
 {% endblock %}
