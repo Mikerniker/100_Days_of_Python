@@ -5,6 +5,15 @@
 
 ### The challenge
 
+TASKS
+- Add css using jinja 
+- Make sure routes are correct 
+- Make a Bootstrap table which shows all the data from the cafe-data.csv
+- Location URL should be rendered as an anchor tag and should have the link text "Maps Link" and the href should be the actual link.
+- Buttons and navigations links should function and lead to correct pages 
+-  Use WTForms to create a quick_form in the add.html page
+- Use validators
+- Append added data via add.html to the csv file
 
 ## Table of contents
 
@@ -56,3 +65,11 @@ def add_cafe():
 ```<li><a href="{{ href }}">{{ caption }}</a></li>```
 - Not 5: Had difficulties figuring out how to not add "Maps Link" text to the first row for "Location" had to check after a while. Just needed another for loop.
 
+References:
+
+- [Bootstrap blocks](https://pythonhosted.org/Flask-Bootstrap/basic-usage.html#templates)
+- [Super Blocks](https://pythonhosted.org/Flask-Bootstrap/basic-usage.html#examples)
+- [WTF Forms Flask Bootstrap](https://pythonhosted.org/Flask-Bootstrap/forms.html)
+- [WTF Validators](https://wtforms.readthedocs.io/en/2.3.x/validators/)
+- [Disable Client Side Validation](https://stackoverflow.com/questions/41300647/wtforms-disable-client-side-validation-on-cancel/61166621#61166621)
+- [Write Files](https://www.w3schools.com/python/python_file_write.asp)
