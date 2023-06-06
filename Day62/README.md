@@ -64,7 +64,7 @@ def add_cafe():
 - Note 4: To add a link to the table I added:
 ```<li><a href="{{ href }}">{{ caption }}</a></li>```
 - Note 5: Had difficulties figuring out how to not add "Maps Link" text to the first row for "Location" had to check after a while. Just needed another for loop.
-- Note 6: Initially got confused what item[0:4] referred to (i.e. list index or the string index) in Angela's code but slowly realized it referredd to the string index and the reason I got errors in showing the "Map Link" text was because there was an extra space in the csv file I created when appending new cafes.
+- Note 6: Initially got confused what item[0:4] referred to (i.e. list index or the string index) in Angela's code but slowly realized it referred to the string index and the reason I got errors in showing the "Map Link" text was because there was an extra space in the csv file I created when appending new cafes.
 ```
   {% for cafe in cafes: %}
           <tr>
