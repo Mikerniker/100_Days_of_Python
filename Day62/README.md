@@ -53,6 +53,6 @@ def add_cafe():
     return render_template('add.html', form=form)
 ```
 - Note 4: To add a link to the table I added:
-```
-<li><a href="{{ href }}">{{ caption }}</a></li> ```
+```<li><a href="{{ href }}">{{ caption }}</a></li>```
+- Not 5: Had difficulties figuring out how to not add "Maps Link" text to the first row for "Location" had to check after a while. Just needed another for loop.
 
