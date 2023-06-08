@@ -27,3 +27,5 @@
 ### Notes
 
 References:
+- [SQL COMMANDS](https://www.codecademy.com/article/sql-commands)
+- [SQL Create Table](https://www.w3schools.com/sql/sql_ref_create_table.asp)
