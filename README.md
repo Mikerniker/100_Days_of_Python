@@ -170,6 +170,9 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 **Day 54 Project: [Web Development with Flask](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day54)**
 - Topics: Python, Flask Framework
 
+**Day 55 Project: [HTML & URL Parsing in Flask and the Higher Lower Game](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day55)**
+- Topics: Advanced Decorators, Rendering HTML, Parsing URLs and Flask Debugging
+
 ## Advanced
 
 **Day 59 Project: [Blog Capstone Part 2](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day51)**
