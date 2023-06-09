@@ -167,6 +167,9 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 **Day 53 Project: [CAPSTONE Project: Data Entry Job Automation](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day53)**
 - Topics: Selenium, Python, Selenium
 
+**Day 54 Project: [Web Development with Flask](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day54)**
+- Topics: Python, Flask Framework
+
 ## Advanced
 
 **Day 59 Project: [Blog Capstone Part 2](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day51)**
