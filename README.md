@@ -176,6 +176,9 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 **Day 56 Project: [Name Card Website Template](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day56)**
 - Topics: Static files, HTML/CSS File Rendering and a Flask Personal Site
 
+**Day 57: [Templating with Jinja on Flask Apps](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day57)**
+- Topics: URL Building and Templating with Jinja in a Flask Application
+
 ## Advanced
 
 **Day 59 Project: [Blog Capstone Part 2](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day51)**
