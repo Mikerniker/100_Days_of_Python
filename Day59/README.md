@@ -2,11 +2,17 @@
 
 ## Overview
 
-- Bootstrap layout, Bootstrap Components
+- Bootstrap templates, Multi-page Website, Dynamically generate pages, Interactive and adaptive Nav bars, Mobile responsiveness, API, Jinja to render templates
 
 ### The challenge
 
 - Make a blog website using Clean Bootstrap template
+- Create a Multi-page website with an interactive navigation bar
+- Dynamically generate blog post pages
+- Make it fully mobile responsive with an adaptive navigation bar
+- Fetch and render data from an API
+- Use Jinja to render templaetes
+
 Tasks:
 - Get home page to work with Bootstrap
 - Fix header and footer using Jinja, use dynamic urls

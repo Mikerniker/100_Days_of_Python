@@ -184,5 +184,5 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 
 ## Advanced
 
-**Day 59 Project: [Blog Capstone Part 2](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day51)**
-- Topics: 
+**Day 59 Project: [Blog Capstone Part 2](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day59)**
+- Topics: Bootstrap templates for a multi-page Website, Dynamically generate pages, Interactive and adaptive Nav bars, Mobile responsiveness, API, Jinja to render templates
