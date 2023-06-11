@@ -179,6 +179,9 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 **Day 57: [Templating with Jinja on Flask Apps](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day57)**
 - Topics: URL Building and Templating with Jinja in a Flask Application
 
+**Day 58: [Startup Website with Bootstrap](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day58)**
+- Topics: Bootstrap layout, Bootstrap Components
+
 ## Advanced
 
 **Day 59 Project: [Blog Capstone Part 2](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day51)**
