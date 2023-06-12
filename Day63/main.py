@@ -17,6 +17,7 @@ db.create_all()
 
 @app.route('/')
 def home():
+    all_books = db.session.query(Books).all()
     return render_template("index.html", book_list=all_books)
 
 
