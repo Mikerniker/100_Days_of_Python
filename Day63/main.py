@@ -29,7 +29,10 @@ def add():
             "author": request.form['author'],
             "rating": request.form['rating'],
         }
-        all_books.append(book_to_add)
+
+        data = Books(title=book_to_add["title"], author=book_to_add["author"], rating=book_to_add["rating"])
+        db.session.add(data)
+        db.session.commit()
         return redirect(url_for('home'))
     return render_template("add.html")
 
