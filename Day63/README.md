@@ -2,8 +2,11 @@
 
 ## Overview
 
+- Topics: Flask, SQLite Databases (SQLite3; SQLAlchemy), CRUD Operations with SQLAlchemy
 
 ### The challenge
+
+- Create an SQLite database for a Virtual Bookshelf and create, read, update and delete data in the database, connect it with a Flask app to serve data.
 
 
 ## Table of contents
@@ -22,7 +25,8 @@
 ### Built with
 - Flask
 - HTML
-
+- SQL 
+- Python
 
 ### Notes
 - Note 1: you got an error because you forgot to put book_id in the edit.html form action like you did in the index.html function.
