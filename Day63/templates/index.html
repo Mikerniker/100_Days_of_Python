@@ -13,7 +13,9 @@
             {% for book in book_list: %}
             <li>
                 <a href="{{ url_for('delete', book_id=book.id) }}">Delete</a>
-                {{ book.title }} - {{ book.author }} - {{ book.rating }}/10 </li>
+                {{ book.title }} - {{ book.author }} - {{ book.rating }}/10
+                <a href="{{ url_for('edit_rating', book_id=book.id) }}">Edit Rating</a> 
+            </li>
             {% endfor %}
         </ul>
     {% endif %}
