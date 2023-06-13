@@ -24,13 +24,9 @@ def home():
 @app.route("/add", methods=["GET", "POST"])
 def add():
     if request.method == 'POST':
-        book_to_add =  {
-            "title": request.form['title'],
-            "author": request.form['author'],
-            "rating": request.form['rating'],
-        }
-
-        data = Books(title=book_to_add["title"], author=book_to_add["author"], rating=book_to_add["rating"])
+        data = Books(title=request.form['title'].title(),
+                     author=request.form['author'].title(),
+                     rating=request.form['rating'].title())
         db.session.add(data)
         db.session.commit()
         return redirect(url_for('home'))
