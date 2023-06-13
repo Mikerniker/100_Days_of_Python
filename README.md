@@ -1,6 +1,6 @@
 Hello,
 
-This is a repository of my final projects for Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2023. I am currently on Day 59, but slowly putting my finished projects (Days 1-58) into Github for my reference. This repository is still a work in progress, thank you for visiting!
+This is a repository of my final projects for Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2023. I am currently on Day 64, but slowly putting my finished projects (Days 1-58) into Github for my reference. This repository is still a work in progress, thank you for visiting!
 
 ## Beginner
 **Day 1 Project: [Band Name Generator](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day01)**
@@ -189,3 +189,6 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 
 **Day 60 Project: [POST Requests with Flask and HTML Forms](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day60)**
 - Topics: POST requests with Flask, HTML Forms, send emails with smtplib
+
+**Day 61 Project: [Advanced Forms with Flask-WTForms](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day61)**
+- Topics: Flask-Bootstrap, Flask-WTF extension to create Forms, Form Validation, Jinja and Flask-Bootstrap Template Inheritance
