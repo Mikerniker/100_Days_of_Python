@@ -36,7 +36,13 @@ def add():
 @app.route("/edit/<int:book_id>", methods=["GET", "POST"])
 def edit_rating(book_id):
     book = Books.query.filter_by(id=book_id).first()
+    if request.method == 'POST':
+        book.rating = request.form['new_rating']
+        db.session.commit()
+        return redirect(url_for('home'))
     return render_template("edit.html", book=book)
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
