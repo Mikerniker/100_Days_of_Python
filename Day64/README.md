@@ -28,6 +28,12 @@
 - Python
 
 ### Notes
+- NOTE 1 6/15/2023: You got a "METHOD not Allowed error because you did not put
+``` methods=["GET", "POST"] ``` to your decorator: 
+```
+@app.route('/add', methods=["GET", "POST"])
+def add_movie():
+```
 
 
 ### References:
