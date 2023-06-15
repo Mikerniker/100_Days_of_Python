@@ -78,8 +78,7 @@ def add_movie():
     form = AddMovieForm()
     if form.validate_on_submit():
         movie_title = form.title.data
-        results = find_movie(movie_title)
-        # print(results)
+        results = find_movie(movie_title)["results"]
         return render_template("select.html", movies=results)
     return render_template("add.html", form=form)
 
