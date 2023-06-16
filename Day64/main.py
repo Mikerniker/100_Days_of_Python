@@ -99,5 +99,27 @@ def find_movie(movie):
     data = response.json()
     return data
 
+
+@app.route('/add_selected/<int:movie_id>', methods=["GET", "POST"])
+def add_selected_movie(movie_id):
+    url = f"https://api.themoviedb.org/3/movie/{movie_id}"
+
+    headers = {
+        "accept": "application/json",
+        "Authorization": f"Bearer {TMDB_TOKEN}"
+    }
+
+    response = requests.get(url, headers=headers)
+    response.raise_for_status()
+    data = response.json()
+    movie_data = Movie(title=data["title"].title(),
+                 img_url=f"https://image.tmdb.org/t/p/w500/{data['poster_path']}",
+                 year=data["release_date"].split("-")[0],
+                 description=data["overview"])
+    db.session.add(movie_data)
+    db.session.commit()
+    return redirect(url_for('edit_rating', movie_id=movie_id))
+
+
 if __name__ == '__main__':
     app.run(debug=True)
