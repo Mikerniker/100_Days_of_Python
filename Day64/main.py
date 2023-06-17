@@ -120,7 +120,7 @@ def add_selected_movie(movie_id):
                  description=data["overview"])
     db.session.add(movie_data)
     db.session.commit()
-    return redirect(url_for('edit_rating', movie_id=movie_id))
+    return redirect(url_for('edit_rating', movie_title=data["title"]))
 
 
 if __name__ == '__main__':
