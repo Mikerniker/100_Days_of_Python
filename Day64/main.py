@@ -56,10 +56,10 @@ def home():
         movie_rank.ranking = index
     return render_template("index.html", movies=all_movies)
 
-@app.route("/edit/<int:movie_id>", methods=["GET", "POST"])
-def edit_rating(movie_id):
+@app.route("/edit/<movie_title>", methods=["GET", "POST"])
+def edit_rating(movie_title):
     form = RateMovieForm()
-    movie_to_edit = Movie.query.get(movie_id)
+    movie_to_edit = db.session.execute(db.select(Movie).where(Movie.title == movie_title)).scalar()
     if form.validate_on_submit():
         movie_to_edit.rating = form.rating.data
         movie_to_edit.review = form.review.data
