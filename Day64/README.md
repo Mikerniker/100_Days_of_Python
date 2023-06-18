@@ -34,6 +34,30 @@
 @app.route('/add', methods=["GET", "POST"])
 def add_movie():
 ```
+- NOTE 2 6/19/2023 Angelas code was a littl different, for the final home function task she used:
+```
+@app.route("/")
+def home():
+    #This line creates a list of all the movies sorted by rating
+    all_movies = Movie.query.order_by(Movie.rating).all()
+    
+    #This line loops through all the movies
+    for i in range(len(all_movies)):
+        #This line gives each movie a new ranking reversed from their order in all_movies
+        all_movies[i].ranking = len(all_movies) - i
+    db.session.commit()
+    return render_template("index.html", movies=all_movies)
+```
+I used enumerate:
+```
+@app.route("/")
+def home():
+    all_movies = db.session.query(Movie).order_by(Movie.rating.desc())
+    for index, movie_rank in enumerate(all_movies, 1):
+        movie_rank.ranking = index
+    db.session.commit()
+    return render_template("index.html", movies=all_movies)
+```
 
 
 ### References:

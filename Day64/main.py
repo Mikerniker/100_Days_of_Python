@@ -54,6 +54,7 @@ def home():
     all_movies = db.session.query(Movie).order_by(Movie.rating.desc())
     for index, movie_rank in enumerate(all_movies, 1):
         movie_rank.ranking = index
+    db.session.commit()
     return render_template("index.html", movies=all_movies)
 
 @app.route("/edit/<movie_title>", methods=["GET", "POST"])
