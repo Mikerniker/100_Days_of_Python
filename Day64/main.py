@@ -6,7 +6,7 @@ from wtforms import StringField, FloatField, SubmitField
 from wtforms.validators import DataRequired
 import requests
 
-TMDB_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMTNkMTUyYzJmZjY4MDdjNmIwMDhhZTNmZGYzMjM4MyIsInN1YiI6IjY0OGExODNkOTkyNTljMDEzOTJkY2M5YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.pjrHEQ7kLNI6qiPqUOmypfkSnbimedT36kELqjG4fY0"
+TMDB_TOKEN = "***********************************"
 
 
 app = Flask(__name__)
