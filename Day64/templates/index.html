@@ -15,15 +15,10 @@
 <div class="container">
   <h1 class="heading">My Top 10 Movies</h1>
   <p class="description">These are my all time favourite movies.</p>
-
-    {% if movies == []: %}
-    <div class="container text-center add">
-        <a href="{{ url_for('add_movie') }}" class="button">Add Movie</a>
-    </div>
-    {% else: %}
-
+    
+    {% for movie in movies: %}
     <div class="card" >
-        {% for movie in movies: %}
+
         <div class="front" style="background-image: url({{ movie.img_url }});">
             <p class="large">{{ movie.ranking }}</p>
         </div>
@@ -35,19 +30,17 @@
                     <i class="fas fa-star star"></i>
                 </div>
                 <p class="review">{{ movie.review }}</p>
-                <p class="overview">
-                    {{ movie.description }}
-                </p>
-                <a href="{{ url_for('edit_rating', movie_id=movie.id) }}" class="button">Update</a>
+                <p class="overview">{{ movie.description }}</p>
+                <a href="{{ url_for('edit_rating', movie_title=movie.title) }}" class="button">Update</a>
                 <a href="{{ url_for('delete', movie_id=movie.id) }}" class="button delete-button">Delete</a>
             </div>
-            {% endfor %}
         </div>
     </div>
-    {% endif %}
+    {% endfor %}
+
+    <div class="container text-center add">
+        <a href="{{ url_for('add_movie') }}" class="button">Add Movie</a>
+    </div>
 </div>
 
-
 {% endblock %}
-
-
