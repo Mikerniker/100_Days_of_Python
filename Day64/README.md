@@ -2,11 +2,16 @@
 
 ## Overview
 
-- Topics: Flask, SQLite Databases (SQLite3; SQLAlchemy), CRUD Operations with SQLAlchemy
+- Topics: Flask, SQLite Databases (SQLite3; SQLAlchemy), CRUD Operations with SQLAlchemy, requests module
 
 ### The challenge
 
-- 
+Make a database and Flask application that shows a list of your favorite movies the app should:
+- View Movie List items
+- Edit a Movies Rating and Review
+- Delete movies from a database
+- Add new movies via the Add page
+- Sort and Rank movies by rating
 
 ## Table of contents
 
