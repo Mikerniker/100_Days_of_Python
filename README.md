@@ -192,3 +192,6 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 
 **Day 61 Project: [Advanced Forms with Flask-WTForms](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day61)**
 - Topics: Flask-Bootstrap, Flask-WTF extension to create Forms, Form Validation, Jinja and Flask-Bootstrap Template Inheritance
+
+**Day 62 Project: [Coffee and Wifi Project](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day62)**
+- Topics: Advanced Flask, WTForms, Bootstrap, Jinja, CSS and CSV
