@@ -1,8 +1,8 @@
-# Day 64 Top 10 Movies Website
+# Day 65 Hotel Website Design with Canva
 
 ## Overview
 
-- Topics: Flask, SQLite Databases (SQLite3; SQLAlchemy), CRUD Operations with SQLAlchemy, requests module
+- Topics: Color Theory, Typography, User Interface (UI) Design, User Experience (UX) Design, Daily UI 
 
 ### The challenge
 
