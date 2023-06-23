@@ -8,9 +8,10 @@
 
 - Design a website on Canva
 
-## Table of contents
-
-  - [Links](#links)
+### Screenshots
+![](.1.jpg)
+![](./2.PNG)
+![](./3.PNG)
 
 
 ### Links
@@ -20,4 +21,3 @@
 ### Built with
 
 - Canva
-
