@@ -197,4 +197,4 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 - Topics: Advanced Flask, WTForms, Bootstrap, Jinja, CSS and CSV
 
 **Day 63 Project: [Virtual Bookshelf](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day63)**
-Topics: Flask, SQLite Databases (SQLite3; SQLAlchemy), CRUD Operations with SQLAlchemy
+- Topics: Flask, SQLite Databases (SQLite3; SQLAlchemy), CRUD Operations with SQLAlchemy
