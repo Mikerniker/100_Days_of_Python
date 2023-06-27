@@ -32,3 +32,7 @@ class Cafe(db.Model):
         for column in self.__table__.columns:
             dictionary[column.name] = getattr(self, column.name)
         return dictionary
+    
+@app.route("/")
+def home():
+    return render_template("index.html")
