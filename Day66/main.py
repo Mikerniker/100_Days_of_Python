@@ -53,3 +53,11 @@ def random_cafe():
                    "map_url":random_cafe.map_url,
                    "name":random_cafe.name,
                    "seats":random_cafe.seats})
+
+@app.route("/all", methods=["GET"])
+def all_cafes():
+    with app.app_context():
+        shops = db.session.execute(db.select(Cafe)).scalars().all()
+        # cafes = [cafe.to_dict() for cafe in shops]
+        # all_places = {"cafes": cafes}
+        return jsonify(cafes=[cafe.to_dict() for cafe in shops])
