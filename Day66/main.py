@@ -61,3 +61,13 @@ def all_cafes():
         # cafes = [cafe.to_dict() for cafe in shops]
         # all_places = {"cafes": cafes}
         return jsonify(cafes=[cafe.to_dict() for cafe in shops])
+    
+@app.route("/search")
+def search_cafe_location():
+    with app.app_context():
+        query_location = request.args.get("loc")
+        cafe = db.session.execute(db.select(Cafe).where(Cafe.location == query_location)).scalar()
+        if cafe:
+            return jsonify(cafe.to_dict())
+        else:
+            return jsonify(error={"Not Found": "Sorry, we don't have a cafe at that location."})
