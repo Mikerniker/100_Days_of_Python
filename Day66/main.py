@@ -71,3 +71,7 @@ def search_cafe_location():
             return jsonify(cafe.to_dict())
         else:
             return jsonify(error={"Not Found": "Sorry, we don't have a cafe at that location."})
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
