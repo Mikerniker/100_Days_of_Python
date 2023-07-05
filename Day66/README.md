@@ -1,11 +1,12 @@
-# Day 65 REST APIs
+# Day 66 Build an API with RESTful Routing
 
 ## Overview
 
-- Topics: REST APIs 
+- Topics: REST APIs, HTTP GET, POST PUT, PATCH, DELETE, (CRUD), API Documentation, Postman (API Testing Tool)
 
 ### The challenge
 
+- Create an API that shows collected data on cafes in a particular city and see available amenities.
 
 
 ### Links
@@ -14,3 +15,5 @@
 
 ### Built with
 
+- Python
+- Postman

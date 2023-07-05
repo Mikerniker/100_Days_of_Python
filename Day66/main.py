@@ -121,7 +121,5 @@ def delete_cafe(cafe_id):
             return jsonify(error={"Forbidden": "Sorry that's not allowed. Make sure you have the correct api_key."}), 403
 
 
-
-
 if __name__ == '__main__':
     app.run(debug=True)
