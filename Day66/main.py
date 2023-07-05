@@ -99,9 +99,9 @@ def update_price(cafe_id):
         if price_to_edit:
             price_to_edit.coffee_price = request.args.get("new_price")
             db.session.commit()
-            return jsonify(response={"success": "Successfully updated the price."})
+            return jsonify(response={"success": "Successfully updated the price."}), 200
         else:
-            return jsonify(response={"error": "Sorry a cafe with that id was not found in the database."})
+            return jsonify(response={"error": "Sorry a cafe with that id was not found in the database."}), 404
 
 ## HTTP DELETE - Delete Record
 @app.route("/report-closed/<int:cafe_id>", methods=["DELETE"])
