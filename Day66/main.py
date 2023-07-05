@@ -1,6 +1,5 @@
 from flask import Flask, jsonify, render_template, request
 from flask_sqlalchemy import SQLAlchemy
-import requests
 from flask import jsonify
 import random
 
@@ -26,13 +25,13 @@ class Cafe(db.Model):
     can_take_calls = db.Column(db.Boolean, nullable=False)
     coffee_price = db.Column(db.String(250), nullable=True)
 
-
     def to_dict(self):
         dictionary = {}
         for column in self.__table__.columns:
             dictionary[column.name] = getattr(self, column.name)
         return dictionary
-    
+
+
 @app.route("/")
 def home():
     return render_template("index.html")
@@ -58,8 +57,6 @@ def random_cafe():
 def all_cafes():
     with app.app_context():
         shops = db.session.execute(db.select(Cafe)).scalars().all()
-        # cafes = [cafe.to_dict() for cafe in shops]
-        # all_places = {"cafes": cafes}
         return jsonify(cafes=[cafe.to_dict() for cafe in shops])
     
 @app.route("/search")
