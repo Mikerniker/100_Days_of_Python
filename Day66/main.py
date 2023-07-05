@@ -67,7 +67,7 @@ def search_cafe_location():
         if cafe:
             return jsonify(cafe.to_dict())
         else:
-            return jsonify(error={"Not Found": "Sorry, we don't have a cafe at that location."})
+            return jsonify(error={"Not Found": "Sorry, we don't have a cafe at that location."}), 404
 
 
 ## HTTP POST - Create Record
