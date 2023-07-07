@@ -35,3 +35,9 @@ class CreatePostForm(FlaskForm):
     img_url = StringField("Blog Image URL", validators=[DataRequired(), URL()])
     body = StringField("Blog Content", validators=[DataRequired()])
     submit = SubmitField("Submit Post")
+
+
+@app.route('/')
+def get_all_posts():
+    posts = BlogPost.query.all()
+    return render_template("index.html", all_posts=posts)
