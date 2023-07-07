@@ -47,3 +47,12 @@ def get_all_posts():
 def show_post(index):
     requested_post = BlogPost.query.get(index)
     return render_template("post.html", post=requested_post)
+
+
+
+
+
+
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5000)
