@@ -17,3 +17,7 @@
 - Python
 - MySQL 
 - SQLAlchemy
+
+### References
+- [WTForms support](https://pythonhosted.org/Flask-Bootstrap/forms.html)
+- [CKEditor](https://flask-ckeditor.readthedocs.io/en/latest/basic.html)
