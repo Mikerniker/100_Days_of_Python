@@ -17,6 +17,7 @@
 - Python
 - MySQL 
 - SQLAlchemy
+- WTForms
 
 ### References
 - [WTForms support](https://pythonhosted.org/Flask-Bootstrap/forms.html)
