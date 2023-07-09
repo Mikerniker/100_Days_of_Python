@@ -2,7 +2,7 @@
 
 ## Overview
 
-- Topics:
+- Topics:  SQLAlchemy, WTForms, Datetime module, Jinja 
 
 ### The challenge
 

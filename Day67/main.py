@@ -5,7 +5,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired, URL
 from flask_ckeditor import CKEditor, CKEditorField
-
+import datetime
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
@@ -58,6 +58,19 @@ def about():
 def contact():
     return render_template("contact.html")
 
+
+@app.route("/new-post", methods=["GET", "POST"])
+def new_post():
+    form = CreatePostForm()
+    date_today = datetime.datetime.now()
+    date = date_today.strftime("%B %d, %Y")
+    if form.validate_on_submit():
+        post = BlogPost(title=form.title.data, subtitle=form.subtitle.data, date=date,
+                        body=form.body.data, author=form.author.data, img_url=form.img_url.data)
+        db.session.add(post)
+        db.session.commit()
+        return redirect(url_for('get_all_posts'))
+    return render_template("make-post.html", form=form)
 
 
 if __name__ == "__main__":
