@@ -22,3 +22,4 @@
 ### References
 - [WTForms support](https://pythonhosted.org/Flask-Bootstrap/forms.html)
 - [CKEditor](https://flask-ckeditor.readthedocs.io/en/latest/basic.html)
+- [Button Map](https://pythonhosted.org/Flask-Bootstrap/forms.html#form-macro-reference) - used to change the color of the button on wtf form
