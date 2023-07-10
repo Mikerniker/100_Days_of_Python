@@ -73,5 +73,12 @@ def new_post():
     return render_template("make-post.html", form=form)
 
 
+@app.route("/edit-post/<post_id>", methods=["GET", "POST"]) 
+def edit_post(post_id):
+    form = CreatePostForm()
+    requested_post = BlogPost.query.get(post_id)
+    return render_template("make-post.html", form=form, is_edit=True)
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
