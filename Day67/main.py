@@ -82,6 +82,16 @@ def edit_post(post_id):
         img_url=requested_post.img_url,
         author=requested_post.author,
         body=requested_post.body)
+    
+    if form.validate_on_submit():
+        requested_post.title = form.title.data
+        requested_post.subtitle = form.subtitle.data
+        requested_post.body = form.body.data
+        requested_post.author = form.author.data
+        requested_post.img_url = form.img_url.data
+        db.session.commit()
+        return redirect(url_for('show_post', index=requested_post.id))
+
     return render_template("make-post.html", form=form, is_edit=True)
 
 
