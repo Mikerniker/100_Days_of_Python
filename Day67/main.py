@@ -75,8 +75,13 @@ def new_post():
 
 @app.route("/edit-post/<post_id>", methods=["GET", "POST"]) 
 def edit_post(post_id):
-    form = CreatePostForm()
     requested_post = BlogPost.query.get(post_id)
+    form = CreatePostForm(
+        title=requested_post.title,
+        subtitle=requested_post.subtitle,
+        img_url=requested_post.img_url,
+        author=requested_post.author,
+        body=requested_post.body)
     return render_template("make-post.html", form=form, is_edit=True)
 
 
