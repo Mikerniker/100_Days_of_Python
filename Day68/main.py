@@ -23,3 +23,18 @@ class User(UserMixin, db.Model):
 @app.route('/')
 def home():
     return render_template("index.html")
+
+@app.route('/register', methods=["GET", "POST"])
+def register():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        password = request.form['password']
+        new_user = User(name=name,
+                        email=email,
+                        password=password)
+        db.session.add(new_user)
+        db.session.commit()
+        return render_template("secrets.html", user_name=name)
+    else:
+        return render_template("register.html")
