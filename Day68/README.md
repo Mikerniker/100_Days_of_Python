@@ -17,7 +17,7 @@
 - Python
 
 ### References
-
+- [flask.send__from_directory](https://flask.palletsprojects.com/en/2.3.x/api/#flask.send_from_directory)
 
 ### Notes
 
