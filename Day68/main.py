@@ -43,3 +43,9 @@ def register():
 @app.route('/login')
 def login():
     return render_template("login.html")
+
+
+@app.route('/secrets')
+def secrets():
+    return render_template("secrets.html")
+
