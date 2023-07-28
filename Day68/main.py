@@ -49,3 +49,7 @@ def login():
 def secrets():
     return render_template("secrets.html")
 
+
+@app.route('/logout')
+def logout():
+    pass
