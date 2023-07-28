@@ -53,3 +53,7 @@ def secrets():
 @app.route('/logout')
 def logout():
     pass
+
+@app.route('/download')
+def download():
+    return send_from_directory('static', path="files/cheat_sheet.pdf", as_attachment=True)
