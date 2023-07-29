@@ -40,6 +40,12 @@ def register():
         return render_template("register.html")
 
 
+@login_manager.user_loader
+def load_user(id):
+    user_id = db.session.execute(db.select(User).where(User.id == id)).scalar()
+    return user_id.id
+
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
