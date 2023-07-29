@@ -18,6 +18,8 @@
 
 ### References
 - [flask.send__from_directory](https://flask.palletsprojects.com/en/2.3.x/api/#flask.send_from_directory)
+- [generate_password_hash](https://werkzeug.palletsprojects.com/en/2.3.x/utils/#module-werkzeug.security)
+
 
 ### Notes
 
