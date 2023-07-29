@@ -40,8 +40,18 @@ def register():
         return render_template("register.html")
 
 
-@app.route('/login')
+
+@app.route('/login', methods=['GET', 'POST'])
 def login():
+    if request.method == 'POST':
+        email = request.form['email']
+        user = db.session.execute(db.select(User).where(User.email == email)).scalar()
+        user_id = user.id
+        login_user(user)
+        load_user(user_id)
+        
+        return render_template("secrets.html", current_user=user)
+
     return render_template("login.html")
 
 
