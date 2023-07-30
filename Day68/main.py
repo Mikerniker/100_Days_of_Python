@@ -37,9 +37,11 @@ def register():
         password = request.form['password']
         new_user = User(name=name,
                         email=email,
-                        password=password)
+                        password=generate_password_hash(password, method='pbkdf2:sha256', salt_length=8))
+
         db.session.add(new_user)
         db.session.commit()
+        login_user(new_user)
         return render_template("secrets.html", user_name=name)
     else:
         return render_template("register.html")
