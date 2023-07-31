@@ -198,3 +198,6 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 
 **Day 63 Project: [Virtual Bookshelf](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day63)**
 - Topics: Flask, SQLite Databases (SQLite3; SQLAlchemy), CRUD Operations with SQLAlchemy
+
+**Day 64 Project: [Top 10 Movies Website](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day64)**
+- Topics: Flask, SQLite Databases (SQLite3; SQLAlchemy), CRUD Operations with SQLAlchemy, requests module
