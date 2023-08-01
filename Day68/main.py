@@ -32,19 +32,20 @@ def home():
 @app.route('/register', methods=["GET", "POST"])
 def register():
     if request.method == 'POST':
-        name = request.form['name']
         email = request.form['email']
-        password = request.form['password']
-        new_user = User(name=name,
-                        email=email,
-                        password=generate_password_hash(password, method='pbkdf2:sha256', salt_length=8))
+        user = db.session.execute(db.select(User).where(User.email == email)).scalar()
+        if user:
+            flash('This email is already registered, try logging in instead.')
+            return redirect(url_for('register'))
 
+        new_user = User(name=request.form['name'],
+                        email=request.form['email'],
+                        password=generate_password_hash(request.form['password'], method='pbkdf2:sha256', salt_length=8))
         db.session.add(new_user)
         db.session.commit()
         login_user(new_user)
-        return render_template("secrets.html", user_name=name)
-    else:
-        return render_template("register.html")
+        return redirect(url_for('secrets'))
+    return render_template("register.html")
 
 
 @login_manager.user_loader
