@@ -43,5 +43,5 @@ def load_user(user_id):
  "db.get_or_404()", which is a new function for me. Reference from flask-sqlalchemy describes "get_or_404(ident, description=None) as: Like get() but aborts with 404 if not found instead of returning None." [Reference 1](https://flask-sqlalchemy.palletsprojects.com/en/2.x/api/)
 
 2. Another new function ```check_password_hash()```
-```werkzeug.check_password_hash(pwhash, password)[source]```
+```werkzeug.check_password_hash(pwhash, password)```
 Definition: This checks a password against a given salted and hashed password value. In order to support unsalted legacy passwords this method supports plain text passwords, md5 and sha1 hashes (both salted and unsalted). Returns True if the password matched, False otherwise. From: [Reference 2](https://tedboy.github.io/flask/generated/werkzeug.check_password_hash.html)
