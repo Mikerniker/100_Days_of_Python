@@ -40,7 +40,7 @@
 def load_user(user_id):
     return db.get_or_404(User, user_id)
 ```    
-The "db.get_or_404()" is a new function for me. Reference from flask-sqlalchemy "get_or_404(ident, description=None) defined as: Like get() but aborts with 404 if not found instead of returning None." [Reference 1](https://flask-sqlalchemy.palletsprojects.com/en/2.x/api/)
+ "db.get_or_404()", which is a new function for me. Reference from flask-sqlalchemy describes "get_or_404(ident, description=None) as: Like get() but aborts with 404 if not found instead of returning None." [Reference 1](https://flask-sqlalchemy.palletsprojects.com/en/2.x/api/)
 
 2. Another new function ```check_password_hash()```
 ```werkzeug.check_password_hash(pwhash, password)[source]```
