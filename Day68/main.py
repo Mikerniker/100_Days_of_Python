@@ -73,13 +73,18 @@ def login():
 
 
 @app.route('/secrets')
+@login_required
 def secrets():
+    # print(current_user.name)  
     return render_template("secrets.html")
-
+    
 
 @app.route('/logout')
+@login_required
 def logout():
-    pass
+    logout_user()
+    return redirect(url_for('home'))
+
 
 @app.route('/download')
 def download():
