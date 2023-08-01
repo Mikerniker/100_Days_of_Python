@@ -51,21 +51,24 @@ def register():
 @login_manager.user_loader
 def load_user(id):
     user_id = db.session.execute(db.select(User).where(User.id == id)).scalar()
-    return user_id.id
-
+    return user_id
 
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         email = request.form['email']
+        password = request.form['password']
         user = db.session.execute(db.select(User).where(User.email == email)).scalar()
-        user_id = user.id
-        login_user(user)
-        load_user(user_id)
-        
-        return render_template("secrets.html", current_user=user)
-
+        if not user:
+            flash('This email does not exist. Please try again.')
+            return redirect(url_for('login'))
+        elif not check_password_hash(user.password, password):
+            flash('Password incorrect,please try again.')
+            return redirect(url_for('login'))
+        else:
+            login_user(user)
+            return redirect(url_for('secrets'))
     return render_template("login.html")
 
 
