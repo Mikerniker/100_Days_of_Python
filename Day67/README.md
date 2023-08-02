@@ -1,4 +1,4 @@
-# Day 67
+# Day 67 Building a RESTful Blog with Editing
 
 ## Overview
 
@@ -10,7 +10,7 @@
 
 ### Links
 
-- Solution URL: [REST APIs](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day67)
+- Solution URL: [Building a RESTful Blog with Editing](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day67)
 
 ### Built with
 

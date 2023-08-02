@@ -22,3 +22,15 @@
 
 
 ### Notes
+- Notes 8/3/2023
+1. wtf form in Bootstrap 5 is different
+The following were added on register.html
+```
+{% from "bootstrap5/form.html" import render_form %}
+```
+and to main.py
+```
+<div class="col-lg-8 col-md-10 mx-auto">
+  {{ render_form(form) }}
+</div>
+```
