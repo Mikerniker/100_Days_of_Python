@@ -2,11 +2,14 @@
 
 ## Overview
 
-- Topics:  SQLAlchemy, WTForms, Datetime module, Jinja 
+- Topics:  SQLAlchemy, WTForms, Datetime module, Jinja Templating
 
 ### The challenge
 
-- 
+1. GET Blog post items
+2. POST new blog posts
+3. Edit existing blog posts
+4. ELETE blog posts
 
 ### Links
 
