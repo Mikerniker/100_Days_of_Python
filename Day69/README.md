@@ -34,3 +34,4 @@ and to main.py
   {{ render_form(form) }}
 </div>
 ```
+2. Reminder used  ```app.app_context().push()```
