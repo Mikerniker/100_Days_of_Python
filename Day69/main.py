@@ -58,13 +58,19 @@ class User(UserMixin, db.Model):
 def register():
     form = RegisterForm()
     if form.validate_on_submit():
+        email = form.email.data
+        user = db.session.execute(db.select(User).where(User.email == email)).scalar()
+        if user:
+            flash("You have already registered this email, try logging in instead.")
+            return redirect(url_for('login'))
         new_user = User(name=form.name.data,
-                        email=form.email.data,
+                        email=email,
                         password=generate_password_hash(form.password.data,
                                                         method='pbkdf2:sha256',
                                                         salt_length=8))
         db.session.add(new_user)
         db.session.commit()
+        login_user(new_user)
         return redirect(url_for("get_all_posts")) 
     return render_template("register.html", form=form)
 
