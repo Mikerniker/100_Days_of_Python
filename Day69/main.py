@@ -45,7 +45,7 @@ class BlogPost(db.Model):
 
 
 class User(UserMixin, db.Model):
-    __tablename__ = "users" 
+    __tablename__ = "user" 
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(100), unique=True)
     password = db.Column(db.String(100))
@@ -74,3 +74,22 @@ def register():
         return redirect(url_for("get_all_posts")) 
     return render_template("register.html", form=form)
 
+
+# Retrieve a user from the database based on their email. 
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        email = form.email.data
+        password = form.password.data
+        user = db.session.execute(db.select(User).where(User.email == email)).scalar()
+        if not user:
+            flash('This email does not exist. Please try again.')
+            return redirect(url_for('login'))
+        elif not check_password_hash(user.password, password):
+            flash('Password incorrect, please try again.')
+            return redirect(url_for('login'))
+        else:
+            login_user(user)
+            return redirect(url_for("get_all_posts"))
+    return render_template("login.html", form=form)
