@@ -100,3 +100,10 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('get_all_posts'))
+
+
+@app.route('/')
+def get_all_posts():
+    result = db.session.execute(db.select(BlogPost))
+    posts = result.scalars().all()
+    return render_template("index.html", all_posts=posts)
