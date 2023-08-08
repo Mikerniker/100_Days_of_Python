@@ -20,6 +20,8 @@
 
 ### References
 
+- [One to Many relationship SQL](https://docs.sqlalchemy.org/en/20/orm/basic_relationships.html#one-to-many)
+- [SQL Basic Relationship Patterns](https://docs.sqlalchemy.org/en/20/orm/basic_relationships.html)
 
 ### Notes
 - Notes 8/3/2023
@@ -35,3 +37,6 @@ and to main.py
 </div>
 ```
 2. Reminder used  ```app.app_context().push()```
+
+- Notes 8/9/2023
+3. 
