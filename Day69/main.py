@@ -65,6 +65,14 @@ class User(UserMixin, db.Model):
 # db.create_all()
 
 
+# Create a COMMENT TABLE
+class Comment(db.Model):
+    __tablename__ = "comments"
+    id = db.Column(db.Integer, primary_key=True)
+    text = db.Column(db.Text, nullable=False)
+
+
+
 @app.route('/register', methods=["GET", "POST"])
 def register():
     form = RegisterForm()
