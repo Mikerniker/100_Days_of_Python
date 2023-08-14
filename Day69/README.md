@@ -2,7 +2,7 @@
 
 ## Overview
 
-- Topics: 
+- Topics: Flask, SQL, Gravatar
 
 ### The challenge
 
@@ -16,12 +16,14 @@
 
 - Python
 - Flask
-
+- SQL
 
 ### References
 
 - [One to Many relationship SQL](https://docs.sqlalchemy.org/en/20/orm/basic_relationships.html#one-to-many)
 - [SQL Basic Relationship Patterns](https://docs.sqlalchemy.org/en/20/orm/basic_relationships.html)
+- [Flask-Gravatar](https://flask-gravatar.readthedocs.io/en/latest/)
+- [Gravatar](https://en.gravatar.com/)
 
 ### Notes
 - Notes 8/3/2023
@@ -55,7 +57,7 @@ def admin_only(function):
             return abort(403)
     return decorated_function
 ```
-Angela's code is simpler, used it instead for future reference
+Angela's code is simpler/easier, used it instead for future reference
 ```
 def admin_only(function):
     @wraps(function)
@@ -68,3 +70,4 @@ def admin_only(function):
 
     return decorated_function
 ```
+5. Note to self: Add note here about one to many relationship when your brain is not fried.
