@@ -2,11 +2,17 @@
 
 ## Overview
 
-- Topics: Flask, SQL, Gravatar
+- Topics: Flask, Get/POST requests, flask-gravatar, Relational Databases(SQLAlchemy)
+CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gravatar
+
 
 ### The challenge
 
- 
+- Tasks Register New Users
+- Login Registered Users
+- Protect Routes
+- Create Relational Databases
+- Allow Registered Users to Add Comments to BlogPosts
 
 ### Links
 
@@ -16,7 +22,7 @@
 
 - Python
 - Flask
-- SQL
+- SQLAlchemy
 
 ### References
 
@@ -24,6 +30,8 @@
 - [SQL Basic Relationship Patterns](https://docs.sqlalchemy.org/en/20/orm/basic_relationships.html)
 - [Flask-Gravatar](https://flask-gravatar.readthedocs.io/en/latest/)
 - [Gravatar](https://en.gravatar.com/)
+- [Flask login_required() decorator](https://flask.palletsprojects.com/en/2.3.x/patterns/viewdecorators/)
+- [Bootstrap Flask render_form()](https://bootstrap-flask.readthedocs.io/en/stable/basic/#macros)
 
 ### Notes
 - Notes 8/3/2023
@@ -108,5 +116,3 @@ post_comments = relationship("Comment", back_populates="blog_commenter")
 blog_id = db.Column(db.Integer, db.ForeignKey("blog_posts.id"))
 blog_commenter = relationship("BlogPost", back_populates="post_comments")
 ```
-
-
