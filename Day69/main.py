@@ -74,17 +74,21 @@ class User(UserMixin, db.Model):
     comment = relationship("Comment", back_populates="commenter")
 
 
-
-# Line below only required once, when creating DB.
-# db.create_all()
-
-
 # Create a COMMENT TABLE
 class Comment(db.Model):
     __tablename__ = "comments"
     id = db.Column(db.Integer, primary_key=True)
     text = db.Column(db.Text, nullable=False)
+    # Create a ONE TO MANY relationship for USER Class; Create Foreign Key, "user.id" the users refers to the tablename of User.
+    author_id = db.Column(db.Integer, db.ForeignKey("user.id"))
+    #Create reference to the User object, the "comment" refers to the comment property in the User class.
+    commenter = relationship("User", back_populates="comment")
+    # Create a ONE TO MANY relationship for BlogPost Class
+    blog_id = db.Column(db.Integer, db.ForeignKey("blog_posts.id"))
+    blog_commenter = relationship("BlogPost", back_populates="post_comments")
 
+# Line below only required once, when creating DB.
+# db.create_all()
 
 
 @app.route('/register', methods=["GET", "POST"])
