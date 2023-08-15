@@ -48,18 +48,18 @@ gravatar = Gravatar(app,
 class BlogPost(db.Model):
     __tablename__ = "blog_posts"
     id = db.Column(db.Integer, primary_key=True)
-
-    # For relational db Create Foreign Key, "user.id" the user refers to the tablename of User.
-    author_id = db.Column(db.Integer, db.ForeignKey("user.id"))
-    
-    #Create reference to the User object, the "posts" refers to the posts property in the User class.
-    author = relationship("User", back_populates="posts")
-
     title = db.Column(db.String(250), unique=True, nullable=False)
     subtitle = db.Column(db.String(250), nullable=False)
     date = db.Column(db.String(250), nullable=False)
     body = db.Column(db.Text, nullable=False)
     img_url = db.Column(db.String(250), nullable=False)
+
+    # For relational db Create Foreign Key, "user.id" the user refers to the tablename of User.
+    author_id = db.Column(db.Integer, db.ForeignKey("user.id"))
+    # CHILD for User Create reference to the User object, the "posts" refers to the posts property in the User class.
+    author = relationship("User", back_populates="posts")
+    #PARENT for Comment
+    post_comments = relationship("Comment", back_populates="blog_commenter")
 
 
 class User(UserMixin, db.Model):
