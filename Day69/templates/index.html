@@ -10,7 +10,7 @@
       <div class="col-md-10 col-lg-8 col-xl-7">
         <div class="site-heading">
           <h1>Mikster's Blog</h1>
-          <span class="subheading">A collection of random ponderings.</span>
+          <span class="subheading">The things I ponder.</span>
         </div>
       </div>
     </div>
@@ -31,7 +31,7 @@
           Posted by
           <a href="#">{{post.author.name}}</a>
           on {{post.date}}
-          <!-- TODO: Only show delete button if user id is 1 (admin user) -->
+          <!-- Only show delete button if user id is 1 (admin user) -->
           {% if current_user.id == 1: %}
           <a href="{{url_for('delete_post', post_id=post.id) }}">✘</a>
           {% endif %}
