@@ -8,7 +8,7 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 
 ### The challenge
 
-- Tasks Register New Users
+- Register New Users
 - Login Registered Users
 - Protect Routes
 - Create Relational Databases
