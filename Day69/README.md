@@ -70,4 +70,43 @@ def admin_only(function):
 
     return decorated_function
 ```
-5. Note to self: Add note here about one to many relationship when your brain is not fried.
+5. Note to self: You got a bit confused when creating the One to Many Relationships for BlogPost,
+User, and Comment
+
+Because you're forgetful, this is to remind your future self about what you did for Parent-Child Relationship between BlogPost and User:
+
+  - For BlogPost Class (the CHILD), you created a Foreign Key, where "user.id" --> 'user' refers to the tablename of User. You also created a reference to the User object (author), where "posts" refers to the posts property in the User class.
+```
+    author_id = db.Column(db.Integer, db.ForeignKey("user.id"))
+    author = relationship("User", back_populates="posts")
+```
+
+  - For User Class (the PARENT), you created "posts" which will act like a List of BlogPost objects attached to each User. The "author" refers to the author property in the BlogPost class you created.
+```posts = relationship("BlogPost", back_populates="author")```
+
+Similarly, this is what you did for Parent-Child Relationship between Comment and User:     
+
+  - For the User Class (the PARENT), you created "comment", where "commenter" refers to the commenter property in the Comment class.
+
+```comment = relationship("Comment", back_populates="commenter")```
+
+  - For Comment Class (the CHILD), you created a Foreign Key, where "user.id" --> 'user' refers to the tablename of User. You also created a reference to the User object (commenter), where "comment" refers to the comment property in the User class.
+
+```
+author_id = db.Column(db.Integer, db.ForeignKey("user.id"))
+commenter = relationship("User", back_populates="comment")
+```
+- Finally, you also created a One to Many Relationship between Blogpost and Comment
+
+  - BlogPost (the PARENT), you created post_comments where "blog_commenter" refers to the blog_commenter property in the Comment class.
+```
+post_comments = relationship("Comment", back_populates="blog_commenter")
+```
+  - Comment Class (the CHILD), you created a Foreign Key, where "blog_posts.id" --> 'blog_posts' refers to the tablename of BlogPost. You also created a reference to the BlogPost object (blog_commenter), where "post_comments" refers to the post_comments property in the BlogPost class.
+
+```
+blog_id = db.Column(db.Integer, db.ForeignKey("blog_posts.id"))
+blog_commenter = relationship("BlogPost", back_populates="post_comments")
+```
+
+
