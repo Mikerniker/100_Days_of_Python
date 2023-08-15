@@ -91,6 +91,7 @@ class Comment(db.Model):
 # db.create_all()
 
 
+# Use Werkzeug to hash the user's password when creating a new user.
 @app.route('/register', methods=["GET", "POST"])
 def register():
     form = RegisterForm()
