@@ -68,9 +68,11 @@ class User(UserMixin, db.Model):
     email = db.Column(db.String(100), unique=True)
     password = db.Column(db.String(100))
     name = db.Column(db.String(1000))
-    posts = relationship("BlogPost", back_populates="author")
     # Posts will act like a List of BlogPost objects attached to each User.
     # The "author" refers to the author property in the BlogPost class.
+    posts = relationship("BlogPost", back_populates="author")    
+    comment = relationship("Comment", back_populates="commenter")
+
 
 
 # Line below only required once, when creating DB.
