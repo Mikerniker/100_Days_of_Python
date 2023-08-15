@@ -1,6 +1,6 @@
 Hello,
 
-This is a repository of my final projects for Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2023. I am currently on Day 64, but slowly putting my finished projects (Days 1-58) into Github for my reference. This repository is still a work in progress, thank you for visiting!
+This is a repository of my final projects for Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2023. I am currently on Day 70, but slowly putting my finished projects (Days 1-69) into Github for my reference. This repository is still a work in progress, thank you for visiting!
 
 ## Beginner
 **Day 1 Project: [Band Name Generator](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day01)**
@@ -204,3 +204,6 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 
 **Day 65 Project: [Hotel Website Design with Canva](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day65)**
 - Topics: Color Theory, Typography, User Interface (UI) Design, User Experience (UX) Design, Daily UI
+
+**Day 66 Project: [Build an API with RESTful Routing](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day66)**
+- Topics: REST APIs, HTTP GET, POST PUT, PATCH, DELETE, (CRUD), API Documentation, Postman (API Testing Tool)
