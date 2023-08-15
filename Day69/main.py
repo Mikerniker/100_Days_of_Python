@@ -220,3 +220,18 @@ def edit_post(post_id):
         db.session.commit()
         return redirect(url_for("show_post", post_id=post.id))
     return render_template("make-post.html", form=edit_form, is_edit=True)
+
+
+# Use a decorator so only an admin user can delete a post
+@app.route("/delete/<int:post_id>")
+@admin_only
+def delete_post(post_id):
+    post_to_delete = db.get_or_404(BlogPost, post_id)
+    db.session.delete(post_to_delete)
+    db.session.commit()
+    return redirect(url_for('get_all_posts'))
+
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
