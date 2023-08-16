@@ -25,7 +25,13 @@ Git Commands (Windows)
 - ```git status```
 - ```git init```
 - ```git add .```
+- ```git commit -m```
+- ```git push```
 - ```git rm --cached -r .```  Use this to remove files from my staging area / undo the last step. 
+
+Create Remote Repository
+- ```git remote add <name> <url>```
+- ```git push -u <remote name>  <branch name>```  Pushes local repository to the remote repository. 
 
 To Create a GitIgnore File:
 - ```touch .gitignore```
