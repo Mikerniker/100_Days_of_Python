@@ -26,8 +26,10 @@ Git Commands (Windows)
 - ```git init```
 - ```git add .```
 - ```git commit -m```
-- ```git push```
+- ```git push```  Pushes to github
 - ```git rm --cached -r .```  Use this to remove files from my staging area / undo the last step. 
+- ```git log```  This lets you see what commits you have made
+- ```clear``` (to clear terminal)
 
 Create Remote Repository
 - ```git remote add <name> <url>```
@@ -45,3 +47,6 @@ BRANCH
 
 MERGE
 - git merge name-of-branch
+
+To SWITCH to BRANCH
+- git checkout name-of-branch
