@@ -49,13 +49,13 @@ To Create a GitIgnore File:
 To Clone a repository
   - ```git clone url```
 
-BRANCH
+To Create a BRANCH
 - git branch name-of-branch
 - git branch (Use this to see which branch you are on)
 
-MERGE
+TO MERGE the branches
 - git merge name-of-branch
-Steps:
+- Steps:
 1. Go back to the main branch
 git checkout main
 2. Merge
