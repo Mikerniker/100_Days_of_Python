@@ -37,5 +37,11 @@ To Create a GitIgnore File:
 - ```touch .gitignore```
 - ```code .gitignore```  (Open GitIgnore for Windows)
 
-- To Clone a repository
-- ```git clone url```
+To Clone a repository
+  - ```git clone url```
+
+BRANCH
+- git branch name-of-branch
+
+MERGE
+- git merge name-of-branch
