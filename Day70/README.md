@@ -18,7 +18,9 @@
 
 ### References
 - [Github GitIgnore](github.com/gitHub/gitignore) a repository owned by the GitHub team for Git Ignore, which is a pre-made collection of useful git ignore templates.
-
+- [Beginner Friendly Repos](https://github.com/MunGell/awesome-for-beginners)
+- [Wordle Game Repo](https://github.com/ritik48/Wordle-Game)
+- [Git Exercises](https://learngitbranching.js.org/) Complete the challenges here to dive deeper into Git, including learning about Cherry-Picking, Git Rebase, and more. 
 
 ### Notes
 Git Commands (Windows)
@@ -59,8 +61,6 @@ git checkout main
 2. Merge
 git merge name-of-branch
 Note: if VIM comes out, type ```:q!```  (to save and quit)
-
-
 
 To SWITCH to BRANCH
 - git checkout name-of-branch
