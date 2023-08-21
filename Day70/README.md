@@ -27,13 +27,18 @@ Git Commands (Windows)
 - ```git add .```
 - ```git commit -m```
 - ```git push```  Pushes to github
+- ```git push origin main -u```  Pushes to github
 - ```git rm --cached -r .```  Use this to remove files from my staging area / undo the last step. 
 - ```git log```  This lets you see what commits you have made
 - ```clear``` (to clear terminal)
+- To exit the “git log” operation, press the “q” key
 
 Create Remote Repository
 - ```git remote add <name> <url>```
 - ```git push -u <remote name>  <branch name>```  Pushes local repository to the remote repository. 
+
+To Create a file:
+- ```touch name-of-file.filetype```
 
 To Create a GitIgnore File:
 - ```touch .gitignore```
@@ -44,9 +49,18 @@ To Clone a repository
 
 BRANCH
 - git branch name-of-branch
+- git branch (Use this to see which branch you are on)
 
 MERGE
 - git merge name-of-branch
+Steps:
+1. Go back to the main branch
+git checkout main
+2. Merge
+git merge name-of-branch
+Note: if VIM comes out, type ```:q!```  (to save and quit)
+
+
 
 To SWITCH to BRANCH
 - git checkout name-of-branch
