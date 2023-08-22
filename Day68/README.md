@@ -11,7 +11,9 @@
 3. Authenticating users with Flask-Login, limit access if they aren't logged in
 4. Use Flask Messages to give user feedback on their actions (Topics reviewed: conditionals)
 5. Use Template Inheritance to hide/show login/register buttons to Users
- 
+
+ ![Dayy68](https://github.com/Mikerniker/100_Days_of_Python/assets/63586831/59e24e1c-d2e8-407f-8717-4583d9fea95a)
+
 
 ### Links
 
