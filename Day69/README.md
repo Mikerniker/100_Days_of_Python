@@ -14,6 +14,12 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 - Create Relational Databases
 - Allow Registered Users to Add Comments to BlogPosts
 
+
+
+https://github.com/Mikerniker/100_Days_of_Python/assets/63586831/7b6053b7-c4bd-483d-ad13-6243548cccf7
+
+
+
 ### Links
 
 - Solution URL: [Blog Capstone Project Part 4: Adding Users](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day69)
