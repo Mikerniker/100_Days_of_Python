@@ -2,19 +2,13 @@
 
 ## Overview
 
-- Topics: Git, Github, and Version Control 
+- Topics: Summary of Git, Github, and Version Control 
 
-### The challenge
-
- 
 
 ### Links
 
 - Solution URL: [Git, Github, and Version Control](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day70)
-
-### Built with
-
-
+- No exercise except for the Project folder to practice some of the commands.
 
 ### References
 - [Github GitIgnore](github.com/gitHub/gitignore) a repository owned by the GitHub team for Git Ignore, which is a pre-made collection of useful git ignore templates.
@@ -64,3 +58,14 @@ Note: if VIM comes out, type ```:q!```  (to save and quit)
 
 To SWITCH to BRANCH
 - git checkout name-of-branch
+
+GIT CLONE vs FORKING
+- Git clone is  grabbing at the entirety of the repository and then cloning it to your local work environment. Git clone is useful with a trusted team that has read and write permissions, they can work on it locally/ push it and resolve conflicts 
+- Forking is copying / duplicating a remote repository that's hosted on GitHub and keeping the copy under your own GitHub account where you can make changes to it. Once you've forked a remote repository, then you can do whatever you want to it.
+- Forking allows an external user to do what they want: add features / improve code base, add more code etc.
+
+PULL REQUESTS
+- If external user wants the original creator of the repo to incorporate any changes they made, then make a pull request. Original owner decides whether or not to incorporate aka "merge" those requests.
+
+vs PUSH REQUESTS
+- You can do this with your own repository or your own copy of a repository
