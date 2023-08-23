@@ -15,9 +15,7 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 - Allow Registered Users to Add Comments to BlogPosts
 
 
-
-https://github.com/Mikerniker/100_Days_of_Python/assets/63586831/7b6053b7-c4bd-483d-ad13-6243548cccf7
-
+![Day69 new (1)](https://github.com/Mikerniker/100_Days_of_Python/assets/63586831/42b20c8f-ae50-4c8b-ab00-e29e01cf95d4)
 
 
 ### Links
