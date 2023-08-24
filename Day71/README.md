@@ -7,9 +7,15 @@
 
 [Live Site](https://my-adventure-blog.onrender.com/)
 
-### The challenge
+### Tasks
 
-
+- Add a .gitignore file 
+- Use git to add version control to project
+- Use environment variables to store sensitive information
+- Set up a WSGI server with gunicorn
+- Push to remote on Github
+- Host on web service provider
+- Upgrade SQLite Database to PostgreSQL
 
 
 ### Links
