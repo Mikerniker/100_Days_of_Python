@@ -26,7 +26,7 @@ for page in range(1, 35):
 
 headers = ["Rank", "Major", "Degree Type", "Early Career Pay", "Mid-Career Pay", "% High Meaning"]
 
-with open("salaries.csv", "w", newline="") as csvfile:
+with open("salaries2023.csv", "w", newline="") as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=headers)
     writer.writeheader()
     for major in final_majors:

@@ -17,8 +17,8 @@ Challenge 2
 2. Find the degrees with the greatest spread in salaries. Which majors have the largest difference between high and low earners after graduation?
 
 Mini-Challenge 3:\
-Use web scraping to scrape more updated data in Payscale. (My solution: main.py)\ 
-References Used for mini-challenge:
+Use web scraping to scrape more updated data in Payscale. (My solution: main.py) 
+\References Used for mini-challenge:
 - [Beautiful Soup getting Tags](https://www.geeksforgeeks.org/find-the-text-of-the-given-tag-using-beautifulsoup/)
 - [Beautiful Soup Extracting Tables](https://www.pluralsight.com/guides/extracting-data-html-beautifulsoup)
 - [Scrape Multiple Pages with BS](https://proxyway.com/knowledge-base/how-to-scrape-multiple-pages-using-beautifulsoup)
