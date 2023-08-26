@@ -2,7 +2,7 @@
 
 ## Overview
 
-- Topics: Pandas
+- Topics: Pandas, Python, Beautiful Soup (Web Scraping)
 
 ### The challenge
 
@@ -23,6 +23,8 @@ Use web scraping to scrape more updated data in Payscale. (My solution: main.py)
 - [Beautiful Soup Extracting Tables](https://www.pluralsight.com/guides/extracting-data-html-beautifulsoup)
 - [Scrape Multiple Pages with BS](https://proxyway.com/knowledge-base/how-to-scrape-multiple-pages-using-beautifulsoup)
 - [Lists and Dicts to CSV](https://blog.enterprisedna.co/how-to-write-a-list-to-csv-in-python/)
+
+![pandasrev](https://github.com/Mikerniker/100_Days_of_Python/assets/63586831/01f1b27d-afd1-45ca-8272-03823a57b93d)
 
 ## Table of contents
 
