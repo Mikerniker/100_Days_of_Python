@@ -16,8 +16,12 @@ Challenge 2
 1. Use the .sort_values() method to find the degrees with the highest potential. Find the top 5 degrees with the highest values in the 90th percentile. 
 2. Find the degrees with the greatest spread in salaries. Which majors have the largest difference between high and low earners after graduation?
 
-Mini-Challenge
-Use web scraping to scrape more updated data in Payscale and to answer the questions. 
+Mini-Challenge 3
+Use web scraping to scrape more updated data in Payscale. (My solution: main.py) 
+References Used for mini-challenge:
+[Beautiful soup tag](https://www.geeksforgeeks.org/find-the-text-of-the-given-tag-using-beautifulsoup/)
+[Scrape Multiple Pages with BS](https://proxyway.com/knowledge-base/how-to-scrape-multiple-pages-using-beautifulsoup)
+[]()
 
 ## Table of contents
 
@@ -73,7 +77,7 @@ clean_df.tail()
 ##### To find the largest and smallest values (and their positions)
 - Use the following methods 
 - ```.max()```
-- ``` .min()```
+- ```.min()```
 - ```.idxmax()```
 - ```.idxmin()```
 
