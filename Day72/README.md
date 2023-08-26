@@ -2,7 +2,7 @@
 
 ## Overview
 
-- Topics: Pandas
+- Topics: Pandas, Python, Beautiful Soup (Web Scraping)
 
 ### The challenge
 
@@ -19,6 +19,8 @@ Challenge 2
 Mini-Challenge 3:\
 Use web scraping to scrape more updated data in Payscale. (My solution: main.py) 
 
+
+![pandasrev](https://github.com/Mikerniker/100_Days_of_Python/assets/63586831/01f1b27d-afd1-45ca-8272-03823a57b93d)
 
 ## Table of contents
 
@@ -89,8 +91,11 @@ clean_df.tail()
 
 ### References:
 - [.sort_values](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.sort_values.html)
+<<<<<<< HEAD
 References Used for mini-challenge:
 - [Beautiful Soup getting Tags](https://www.geeksforgeeks.org/find-the-text-of-the-given-tag-using-beautifulsoup/)
 - [Beautiful Soup Extracting Tables](https://www.pluralsight.com/guides/extracting-data-html-beautifulsoup)
 - [Scrape Multiple Pages with BS](https://proxyway.com/knowledge-base/how-to-scrape-multiple-pages-using-beautifulsoup)
 - [Lists and Dicts to CSV](https://blog.enterprisedna.co/how-to-write-a-list-to-csv-in-python/)
+=======
+>>>>>>> 781c55a5050ae8fea431cd0ee8c692a017155cbd
