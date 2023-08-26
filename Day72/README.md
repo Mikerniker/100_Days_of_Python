@@ -6,7 +6,7 @@
 
 ### The challenge
 
-Challenge 1
+Challenge 1\
 With the given data find the following:
 1. What college major has the highest mid-career salary? How much do graduates with this major earn? 
 2. Which college major has the lowest starting salary and how much do graduates earn after university?
@@ -16,8 +16,8 @@ Challenge 2
 1. Use the .sort_values() method to find the degrees with the highest potential. Find the top 5 degrees with the highest values in the 90th percentile. 
 2. Find the degrees with the greatest spread in salaries. Which majors have the largest difference between high and low earners after graduation?
 
-Mini-Challenge 3
-Use web scraping to scrape more updated data in Payscale. (My solution: main.py) 
+Mini-Challenge 3:\
+Use web scraping to scrape more updated data in Payscale. (My solution: main.py)\ 
 References Used for mini-challenge:
 - [Beautiful Soup getting Tags](https://www.geeksforgeeks.org/find-the-text-of-the-given-tag-using-beautifulsoup/)
 - [Beautiful Soup Extracting Tables](https://www.pluralsight.com/guides/extracting-data-html-beautifulsoup)
