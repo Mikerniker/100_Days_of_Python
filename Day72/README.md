@@ -17,7 +17,9 @@ Challenge 2
 2. Find the degrees with the greatest spread in salaries. Which majors have the largest difference between high and low earners after graduation?
 
 Mini-Challenge 3:\
-Use web scraping to scrape more updated data in Payscale. (My solution: main.py) 
+Use web scraping to scrape more updated data in Payscale. 
+(My Extra Credit solution: main.py and Salaries2023.ipynb) 
+
 
 
 ![pandasrev](https://github.com/Mikerniker/100_Days_of_Python/assets/63586831/01f1b27d-afd1-45ca-8272-03823a57b93d)
@@ -96,3 +98,20 @@ References Used for mini-challenge:
 - [Beautiful Soup Extracting Tables](https://www.pluralsight.com/guides/extracting-data-html-beautifulsoup)
 - [Scrape Multiple Pages with BS](https://proxyway.com/knowledge-base/how-to-scrape-multiple-pages-using-beautifulsoup)
 - [Lists and Dicts to CSV](https://blog.enterprisedna.co/how-to-write-a-list-to-csv-in-python/)
+
+## Additional Notes for Extra Credit
+8/29/2023
+Initially had a hard time figuring out why I kept getting a value error for the scraped salaries2023 data set whenever I tried using ```.astype()``` Slowly realized I had to remove the following symbols 
+```$",``` (quotation marks AND comma) but ended up doing it at different points in time, so the code is longer than necessary: 
+```
+clean_early_career = df['Early Career Pay'].str.replace('$', '')
+df.insert(1, 'Early Career New', clean_early_career)
+df['Early Career New'].str.replace('"', '')
+df['Mid-Career New'] = df['Mid-Career New'].str.replace(',', '').astype(float)
+df.head()
+```
+
+Some references used:
+- [Pandas String to Float](https://sparkbyexamples.com/pandas/pandas-convert-string-to-float-type-dataframe/)
+- [Pandas ValueError Could not Conver str to Float](https://bobbyhadz.com/blog/python-valueerror-could-not-convert-string-to-float)
+- [Delete a column with Pandas](https://www.educative.io/answers/how-to-delete-a-column-in-pandas)
