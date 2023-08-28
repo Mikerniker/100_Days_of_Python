@@ -107,7 +107,7 @@ Initially had a hard time figuring out why I kept getting a value error for the 
 clean_early_career = df['Early Career Pay'].str.replace('$', '')
 df.insert(1, 'Early Career New', clean_early_career)
 df['Early Career New'].str.replace('"', '')
-df['Early Career New'] = df['Mid-Career New'].str.replace(',', '').astype(float)
+df['Early Career New'] = df['Early Career New'].str.replace(',', '').astype(float)
 df.head()
 ```
 
