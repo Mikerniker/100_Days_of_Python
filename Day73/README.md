@@ -9,6 +9,9 @@
 - Get raw data and create some charts using Pandas and Matplotlib.
 - Analyze the the popularity of different programming languages over the years.
 
+![matplotlib](https://github.com/Mikerniker/100_Days_of_Python/assets/63586831/eabc2da0-d7a9-47ed-b3b7-4d5b42f146c4)
+
+
 ## Table of contents
 
 - [Overview](#overview)
