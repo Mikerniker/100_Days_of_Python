@@ -2,12 +2,12 @@
 
 ## Overview
 
-- Topics: Pandas, Python, Beautiful Soup (Web Scraping)
+- Topics: Matplotlib, Pandas, Python,  
 
 ### The challenge
 
-Challenge 1\
-
+- Get raw data and create some charts using Pandas and Matplotlib.
+- Analyze the the popularity of different programming languages over the years.
 
 ## Table of contents
 
@@ -25,6 +25,28 @@ Challenge 1\
 
 ### Notes
 
-- ```.count()``` To count the number of entries in each column, this tells the number of non-NaN values in each column.
+### To import pandas and matplotlib
 
-### References:
+```
+import pandas as pd
+import matplotlib.pyplot as plt
+```
+
+- ```.count()``` To count the number of entries in each column, this tells the number of non-NaN values in each column.
+- Use ```.groupby()``` to explore the entries per column.
+- Use ```to_datetime()``` to convert strings to Datetime objects for easier plotting.
+- Use ```.pivot()``` to reshape DataFrame by converting categories to columns.
+- Use ```.count()``` and ```isna().values.any()``` to look for NaN values in DataFrame
+- Use ```.fillna()``` to replace NaN values.
+- Use ```.plot()``` to create (multiple) line charts, can also be used with a for-loop.
+- Charts can be styled by changing the size, the labels, and the upper and lower bounds of the axis. Example:
+```   
+plt.figure(figsize=(16,10))
+plt.xticks(fontsize=14)
+plt.yticks(fontsize=14)
+plt.xlabel('Date', fontsize=14)
+plt.ylabel('Number of Posts', fontsize=14)
+plt.ylim(0, 35000)
+```
+- Use ```.legend()``` example: ```plt.legend(fontsize=16)``` to tell lines apart by colour
+- Use ```.rolling().mean()``` to smooth out the time-series observations and better identify trends over time.
