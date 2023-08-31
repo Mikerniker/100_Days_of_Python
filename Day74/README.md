@@ -44,3 +44,21 @@ import pandas as pd
 import matplotlib.pyplot as plt
 ```
 
+
+
+
+Can exclude data with slicing, example: ```plt.plot(sets_by_year.index[:-2], sets_by_year.set_num[:-2])```
+- Pandas .agg() function
+
+When you need to summarize data, the .groupby() function comes in handy. However, if you want to run even more operations based on a particular DataFrame column, the .agg() method comes in.
+Example: Calculate the number of different themes by calendar year. This means grouping the data by year and then counting the number of unique theme_ids for that year, so chain the .groupby() and the .agg() functions together: ```themes_by_year = sets.groupby('year').agg({'theme_id': pd.Series.nunique})```
+- The .agg() method takes a dictionary as an argument. In this dictionary, specify which operation to apply to each column. In the example, calculate the number of unique entries in the theme_id column by the .nunique() method.
+```
+themes_by_year = sets.groupby('year').agg({'theme_id': pd.Series.nunique})
+themes_by_year.rename(columns = {'theme_id':'nr_themes'}, inplace = True)
+themes_by_year.head()
+themes_by_year.tail()
+```
+
+
+
