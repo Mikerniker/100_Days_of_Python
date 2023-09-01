@@ -1,4 +1,4 @@
-# Day 67 Building a RESTful Blog with Editing
+# Day 67 Blog Capstone Part 3: Building a RESTful Blog with Editing
 
 ## Overview
 
@@ -13,7 +13,7 @@
 
 ### Links
 
-- Solution URL: [Building a RESTful Blog with Editing](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day67)
+- Solution URL: [Blog Capstone Part 3](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day67)
 
 ### Built with
 

@@ -207,3 +207,6 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 
 **Day 66 Project: [Build an API with RESTful Routing](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day66)**
 - Topics: REST APIs, HTTP GET, POST PUT, PATCH, DELETE, (CRUD), API Documentation, Postman (API Testing Tool)
+
+**Day 67 Project: [Blog Capstone Part 3: Building a RESTful Blog with Editing](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day67)**
+- Topics:  SQLAlchemy, WTForms, Datetime module, Jinja Templating
