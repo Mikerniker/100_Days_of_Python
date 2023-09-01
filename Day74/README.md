@@ -2,11 +2,16 @@
 
 ## Overview
 
-- Topics: Matplotlib (Create line, bar charts, scatter plot), Use relational databases by using primary and foreign keys, Pandas, Python,  
+- Topics: Matplotlib (Create line, bar charts, scatter plot), Use relational databases by using primary and foreign keys, Pandas (.agg(), .groupby(), .merge(), .sort_values(), .value_counts(), .rename()), Python  
 
 ### The challenge
 
-
+- Analyze a LEGO dataset to find the following: 
+  - What is the most enormous LEGO set ever created and how many parts did it have?
+  - What year were the first LEGO sets released and how many sets did the company sell when it first launched?
+  - Which LEGO theme has the most sets?
+  - When did the LEGO company really take-off based on its product offering? How many themes and sets did it release every year?
+  - Did LEGO sets grow in size and complexity over time? Do older LEGO sets tend to have more or fewer parts than newer sets?
 
 ## Table of contents
 
@@ -70,4 +75,3 @@ import matplotlib.pyplot as plt
 - To create a line chart: ```plt.plot(x, y)```
 - To create a scatter plot: ```plt.scatter(x, y)``` 
 - To create a bar chart: ```plt.bar(x, y)```
-
