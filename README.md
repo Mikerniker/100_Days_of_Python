@@ -1,6 +1,6 @@
 Hello,
 
-This is a repository of my final projects for Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2023. I am currently on Day 70, but slowly putting my finished projects (Days 1-69) into Github for my reference. This repository is still a work in progress, thank you for visiting!
+This is a repository of my final projects for Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2023. I am currently on Day 75, but slowly putting my finished projects (Days 1-74) into Github for my reference. This repository is still a work in progress, thank you for visiting!
 
 ## Beginner
 **Day 1 Project: [Band Name Generator](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day01)**
@@ -210,3 +210,13 @@ Dialogue boxes and pop-ups, Reviewed list comprehensions, and join() method
 
 **Day 67 Project: [Blog Capstone Part 3: Building a RESTful Blog with Editing](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day67)**
 - Topics:  SQLAlchemy, WTForms, Datetime module, Jinja Templating
+
+**Day 68 Project: [Authentication with Flask](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day68)**
+- Topics: Authentication, Encryption and Hashing, Salting Passwords, Hashing and Salting using Wekzeug, Flask-Login, Flask Flash Messages Passing Authentication Status to Templates (Template Inheritance) 
+
+**Day 69 Project: [Blog Capstone Project Part 4: Adding Users](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day69)**
+- Topics: Flask, Get/POST requests, flask-gravatar, Relational Databases(SQLAlchemy)
+CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gravatar
+
+**Day 70: [Git, Github, and Version Control](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day70)**
+- Topics: Git, Github, and Version Control: Git Commands, Creating a Remote Repository, Creating Files (.gitignore), Branching, Merging, Cloning, Forking, Pull vs Push Requests

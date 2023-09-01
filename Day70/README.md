@@ -3,7 +3,7 @@
 ## Overview
 
 - Topics: Summary of Git, Github, and Version Control 
-
+- Git Commands, Creating a Remote Repository, Creating Files (.gitignore), Branching, Merging, Cloning, Forking, Pull vs Push Requests
 
 ### Links
 
