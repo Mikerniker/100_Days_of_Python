@@ -22,4 +22,5 @@
 - Solution URL: [Google Trends Data](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day75)
 
 
-### Notes
+### Pandas Notes
+- ```.describe()```  - Generate descriptive statistics. Descriptive statistics include those that summarize the central tendency, dispersion and shape of a dataset’s distribution, excluding NaN values.
