@@ -24,3 +24,6 @@
 
 ### Pandas Notes
 - ```.describe()```  - Generate descriptive statistics. Descriptive statistics include those that summarize the central tendency, dispersion and shape of a dataset’s distribution, excluding NaN values.
+- Use [.grid()](https://matplotlib.org/3.2.1/api/_as_gen/matplotlib.pyplot.grid.html) to help visually identify seasonality in a time series.
+- [.markers](https://matplotlib.org/3.2.1/api/markers_api.html)
+- [].resample()] 
