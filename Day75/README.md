@@ -38,9 +38,11 @@ This can be chained with ```.values.any()``` to see if any value in the series i
 Example: ```df_tesla.isna().values.any()```
 - Missing values can be found by using .sum() to add up the number of occurrences of True in the series. and to find the row where the missing values occur, create a subset of the DataFrame using ```.isna()```. Use ```.dropna()``` to remove a missing value :
 Example: 
-```df_btc_price.isna().values.sum()
+```
+df_btc_price.isna().values.sum()
 df_btc_price[df_btc_price.CLOSE.isna()]
-df_btc_price.dropna(inplace=True)```
+df_btc_price.dropna(inplace=True)
+```
 
 ##### Converting Strings to DateTime Objects
 
