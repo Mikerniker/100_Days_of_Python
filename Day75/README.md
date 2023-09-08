@@ -2,10 +2,14 @@
 
 ## Overview
 
-- Topics:  Data Cleaning, Resampling Time Series Data, Converting to Datetime, Data Visualisation - Tesla Line Charts in Matplotlib
+- Topics: Pandas and Matplotlib: Data Cleaning, Resampling Time Series Data, Converting to Datetime, Data Visualisation (Line Charts, Locators, DateFormatters, Line Style, and Markers)
 
 ### The challenge
 
+Identify the Following with Pandas and Matplotlib:
+1. How search volume for "Bitcoin" relates to the price of Bitcoin
+2. How search volume for a hot stock like Telsa relates to that stock's price and
+3. How searches for "Unemployment Benefits" vary with the actual unemployment rate in the United States
 
 
 ## Table of contents
@@ -17,6 +21,7 @@
   - [Built with](#built-with)
   - [Notes](#notes)
 
+
 ### Links
 
 - Solution URL: [Google Trends Data](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day75)
@@ -24,9 +29,6 @@
 
 ### Pandas Notes
 - ```.describe()```  - Generate descriptive statistics. Descriptive statistics include those that summarize the central tendency, dispersion and shape of a dataset’s distribution, excluding NaN values.
-- Use [.grid()](https://matplotlib.org/3.2.1/api/_as_gen/matplotlib.pyplot.grid.html) to help visually identify seasonality in a time series.
-- [.markers](https://matplotlib.org/3.2.1/api/markers_api.html)
-- [].resample()] 
 
 
 ##### Data Cleaning - Resampling Time Series Data
@@ -77,7 +79,7 @@ Example ```years = mdates.YearLocator()```
          color='skyblue', linewidth=3, marker='o')```
  
 - To Add a Grid Example: ```ax1.grid(color='grey', linestyle='--')```
-
+- Use [.grid()](https://matplotlib.org/3.2.1/api/_as_gen/matplotlib.pyplot.grid.html) to help visually identify seasonality in a time series.
 
 # Resources
 - [HEX codes](https://htmlcolorcodes.com/color-picker/)
