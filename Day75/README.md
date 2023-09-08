@@ -63,7 +63,24 @@ OR if you need the average price over the course of the month:
   - ```x1.set_ylabel('TSLA Stock Price', color='#E6232E')``` # HEX 
   - ```ax2.set_ylabel('Search Trend', color='skyblue')``` # named colour
 
+##### Using Locators and DateFormatters to generate Tick Marks on a Time Line
+- import matplotlib.dates as mdates
+- objects: YearLocator(), MonthLocator(), DateFormatter()
+Example ```years = mdates.YearLocator()```
+- Format the ticks where the major and minor ticks should be using the Locators:
+   - ```ax1.xaxis.set_major_locator(years)```
+
+- Line Style and Markers Example:
+  - ```ax1.plot(df_btc_monthly.index, df_btc_monthly.CLOSE, 
+         color='#F08F2E', linewidth=3, linestyle='--')```
+  - ```ax2.plot(df_btc_monthly.index, df_btc_search.BTC_NEWS_SEARCH, 
+         color='skyblue', linewidth=3, marker='o')```
+ 
+- To Add a Grid Example: ```ax1.grid(color='grey', linestyle='--')```
+
 
 # Resources
 - [HEX codes](https://htmlcolorcodes.com/color-picker/)
 - [Matplotlib Color Names](https://matplotlib.org/3.1.1/gallery/color/named_colors.html)
+- [Matplotlib Markers](https://matplotlib.org/3.2.1/api/markers_api.html)
+- [Matplotlib Linestyles](https://matplotlib.org/3.2.1/api/_as_gen/matplotlib.pyplot.plot.html)
