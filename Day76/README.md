@@ -2,7 +2,8 @@
 
 ## Overview
 
-- Topics: 
+- Topics: Pandas (Data Cleaning: Removing NaN Values, Finding and Removing Duplicates, Dropping Unused Columns, Removing NaN Values, Converting Data to Numeric Types, Working with Nested Column Data) and  Plotly ( Pie, Donut, Bar Charts, Box Plots, Scatter Plots, Colour Scales)
+
 
 ### The challenge
 
@@ -114,7 +115,7 @@ fig.show()
 df_apps_clean.Installs.describe()
 df_apps_clean.info()
 ```
--Python can't recognize data as numbers if there are comma (,) characters.
+- Python can't recognize data as numbers if there are comma (,) characters.
 - To remove the comma (,) character - or any character - from a DataFrame use the string’s ```.replace()``` method. Then you can convert data to a number using ```.to_numeric()```.
 
 ```
@@ -123,7 +124,7 @@ df_apps_clean.Installs = pd.to_numeric(df_apps_clean.Installs)
 df_apps_clean[['App', 'Installs']].groupby('Installs').count()
 ```
 
-- To remove rows of unnecessary data, e xample remove prices over $250:
+- To remove rows of unnecessary data, example remove prices over $250:
 ```
 df_apps_clean = df_apps_clean[df_apps_clean['Price'] < 250]
 df_apps_clean.sort_values('Price', ascending=False).head(5)
@@ -147,7 +148,7 @@ bar = px.bar(x = top10_category.index, # index = category name
  
 bar.show()
 ```
--To group all our apps by category and sum the number of installations:
+- To group all our apps by category and sum the number of installations:
 ```
 category_installs = df_apps_clean.groupby('Category').agg({'Installs': pd.Series.sum})
 category_installs.sort_values('Installs', ascending=True, inplace=True)
