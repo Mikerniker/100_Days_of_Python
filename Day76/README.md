@@ -173,7 +173,6 @@ h_bar.show()
 ###### Create a scatter plot with Plotly
 
 - To work out the number of apps in each category:
-
 ```cat_number = df_apps_clean.groupby('Category').agg({'App': pd.Series.count})````
 - To combine two DataFrames use ```.merge()``` 
 ```
@@ -181,7 +180,7 @@ cat_merged_df = pd.merge(cat_number, category_installs, on='Category', how="inne
 print(f'The dimensions of the DataFrame are: {cat_merged_df.shape}')
 cat_merged_df.sort_values('Installs', ascending=False)
 ```
-- To create the chart. 
+- To create the chart: 
 ```
 scatter = px.scatter(cat_merged_df, # data
                     x='App', # column name
@@ -198,16 +197,15 @@ scatter.update_layout(xaxis_title="Number of Apps (Lower=More Concentrated)",
 scatter.show()
 ```
 
+#### Extracting Nested Column Data using .stack()
 
-### Extracting Nested Column Data using .stack()
-#### Working with Nested Column Data
+###### Working with Nested Column Data
 
 - Use ```.value_counts()```  to look at the values that just have a single entry. (There we see that the semi-colon (;) separates the genre names.)
-df_apps_clean.Genres.value_counts().sort_values(ascending=True)[:5]
+```df_apps_clean.Genres.value_counts().sort_values(ascending=True)[:5]```
+- To separate the genre names use string’s ```.split()``` method. After separating genre names based on the semi-colon,  add them all into a single column with ```.stack()``` and then use ```.value_counts()```.
 
-- To separate the genre names use string’s .split() method. After separating genre names based on the semi-colon,  add them all into a single column with .stack() and then use .value_counts().
-
-# Split the strings on the semi-colon and then .stack them.
+- Split the strings on the semi-colon and then .stack them.
 ```
 stack = df_apps_clean.Genres.str.split(';', expand=True).stack()
 print(f'We now have a single column with shape: {stack.shape}')
@@ -215,7 +213,7 @@ num_genres = stack.value_counts()
 print(f'Number of genres: {len(num_genres)}')
 ```
 
-##### Working with Colour Scales in Plotly
+###### Working with Colour Scales in Plotly
 
 - Set the colour scale use the color_continuous_scale parameter.
 - To make the colour axis disappear use coloraxis_showscale.
@@ -232,7 +230,7 @@ bar.update_layout(xaxis_title='Genre', yaxis_title='Number of Apps', coloraxis_s
 bar.show()
 ```
 
-### Grouped Bar Charts and Box Plots with Plotly
+###### Grouped Bar Charts and Box Plots with Plotly
 - To group our data first by Category and then by Type, add up the number of apps per each type. Using as_index=False pushes all the data into columns rather than end up with Categories as the index.
 ```
 df_free_vs_paid = df_apps_clean.groupby(["Category", "Type"], as_index=False).agg({'App': pd.Series.count})
@@ -255,7 +253,7 @@ g_bar.update_layout(xaxis_title='Category',
 g_bar.show()
 ```
 
-##### Box Plots
+###### Box Plots
 - Box plots can show descriptive statistics in a graph - things like the median value, the maximum value, the minimum value, and some quartiles. 
 - Example box plot:
 ```box = px.box(df_apps_clean,
@@ -300,14 +298,6 @@ box.update_layout(xaxis_title='Category',
  
 box.show()
 ```
-
-
-///
-#### Panda Notes
-
-#### Plotly Notes
-- Use ```.update_traces()```  to configure other aspects of the chart that you can’t see in the list of parameters.
-- “traces” (in plotly lingo) refer to graphical marks on a figure, like collections of attributes.
 
 
 References
