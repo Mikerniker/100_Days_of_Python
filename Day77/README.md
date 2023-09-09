@@ -130,7 +130,8 @@ from PIL import Image  # for reading image files
 print(a1)
 print('a1 array rotated:')
 np.rot90(a1)
-```  or
+```  
+or
 ```
 plt.imshow(np.rot90(img))
 ```
