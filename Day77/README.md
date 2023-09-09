@@ -137,7 +137,9 @@ plt.imshow(np.rot90(img))
 - To open an image and put it into a NumPy array:
 ```
 file_name = 'yummy_macarons.jpg'
+``````
 # Use PIL to open
+```
 my_img = Image.open(file_name)
 img_array = np.array(my_img)
 ```
