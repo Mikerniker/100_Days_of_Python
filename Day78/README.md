@@ -1,4 +1,4 @@
-# Day 78
+# Day 78 Linear Regression and Data Visualization with Seaborn
 
 ## Overview
 
@@ -19,7 +19,7 @@
 
 ### Links
 
-- Solution URL: [Computation with Numpy and N-dimensional Arrays](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day78)
+- Solution URL: [Linear Regression and Data Visualization with Seaborn](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day78)
 
 
 ###  Notes
