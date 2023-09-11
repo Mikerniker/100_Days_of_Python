@@ -23,3 +23,6 @@
 
 
 ###  Notes
+Concepts reviewed
+- .describe()
+- .sort_values()
