@@ -81,54 +81,12 @@ ax.set(ylim=(0, 3000000000),
        ylabel='Revenue in $ billions',
        xlabel='Budget in $100 millions',)
  
-plt.show()```
+plt.show()
+```
 
-- To set the styling on a single chart (as opposed to all the charts in the entire notebook) Use Python's with keyword. 
+- Seaborn has different built-in themes to style chart very quickly, examples: 'whitegrid', 'dark', 'darkgrid', or 'ticks'. 
 
-plt.figure(figsize=(8,4), dpi=200)
- 
-# To set the styling on a single chart (as opposed to all the charts in the entire notebook) Use Python's with keyword. 
-with sns.axes_style('darkgrid'):
-  ax = sns.scatterplot(data=data_clean,
-                       x='USD_Production_Budget', 
-                       y='USD_Worldwide_Gross',
-                       hue='USD_Worldwide_Gross',
-                       size='USD_Worldwide_Gross')
- 
-  ax.set(ylim=(0, 3000000000),
-        xlim=(0, 450000000),
-        ylabel='Revenue in $ billions',
-        xlabel='Budget in $100 millions')
-
-In addition to 'darkgrid', Seaborn has a number of built-in themes. so you can style your chart very quickly. Try out 'whitegrid', 'dark',  or 'ticks' for example.
-
-Challenge
-Now that you've seen how to create a beautiful bubble chart in Seaborn, it's time to create your own. Can you write the code to replicate this chart? Notice how we are actually representing THREE dimensions in this chart: the budget, the release date, and the worldwide revenue. This is what makes bubble charts so awesomely informative.
-
-Solution: Movie Budgets over Time
-
-Alright, I hope that was fairly straightforward. All you needed to do is change a few arguments:
-
-plt.figure(figsize=(8,4), dpi=200)
- 
-with sns.axes_style("darkgrid"):
-    ax = sns.scatterplot(data=data_clean, 
-                    x='Release_Date', 
-                    y='USD_Production_Budget',
-                    hue='USD_Worldwide_Gross',
-                    size='USD_Worldwide_Gross',)
- 
-    ax.set(ylim=(0, 450000000),
-           xlim=(data_clean.Release_Date.min(), data_clean.Release_Date.max()),
-           xlabel='Year',
-           ylabel='Budget in $100 millions')
- 
-Analysis
-
-What do we see here? What is this chart telling us? Well, first off, movie budgets have just exploded in the last 40 years or so. Up until the 1970s, the film industry appears to have been in an entirely different era. Budgets started growing fast from the 1980s onwards and continued to grow through the 2000s. Also, the industry has grown massively, producing many more films than before. The number of data points is so dense from 2000 onwards that they are overlapping.
-
-
-611. Floor Division: A Trick to Convert Years to Decades
+#### Floor Division: A Trick to Convert Years to Decades
 
 Floor Division: A Trick to Convert Years to Decades
 In our bubble charts, we've seen how massively the industry has changed over time, especially from the 1970s onwards. This makes me think it makes sense to separate our films out by decade. Here's what I'm after:
