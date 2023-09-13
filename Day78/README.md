@@ -2,7 +2,7 @@
 
 ## Overview
 
-- Topics: Numpy
+- Topics: Seaborn
 
 
 ### The challenge
