@@ -102,3 +102,61 @@ data_clean['Decade'] = decades
 ```
 
 #### Plotting Linear Regressions with Seaborn
+
+- Linear regression with Seaborn, use ```.regplot()``` function to create a scatter plot and draw a linear regression line together with the confidence interval.
+
+```sns.regplot(data=old_films, 
+            x='USD_Production_Budget',
+            y='USD_Worldwide_Gross')```
+
+- To style the chart , use Matplotlib layer and supply keyword arguments as dictionaries. Can also add limits, labels, and general style. Example:
+
+```plt.figure(figsize=(8,4), dpi=200)
+with sns.axes_style('darkgrid'):
+  ax = sns.regplot(data=new_films,
+                   x='USD_Production_Budget',
+                   y='USD_Worldwide_Gross',
+                   color='#2f4b7c',
+                   scatter_kws = {'alpha': 0.3},
+                   line_kws = {'color': '#ff7c43'})
+  
+  ax.set(ylim=(0, 3000000000),
+         xlim=(0, 450000000),
+         ylabel='Revenue in $ billions',
+         xlabel='Budget in $100 millions') ```
+
+#### Scikit-learn to Run Regression
+- Univariate regression. This is a regression with a single explanatory variable (movie BUDGET). Explanatory variables are also referred to as ```features``` in machine learning terminology.
+
+Using our data on budgets, the linear regression estimates the best possible line to fit our movie revenues. The regression line has the following structure:
+
+REVENUE = y-axis intercept + slope(budget)
+- y-intercept ("theta zero") 
+-  slope ("theta one"). 
+
+- To import scikit-learn: ```from sklearn.linear_model import LinearRegression```
+- To run run a LinearRegression. First, create a LinearRegression object: ```regression = LinearRegression()```
+- Specify features (capital X ) and targets (lower case y) (i.e., response variable). 
+```# Explanatory Variable(s) or Feature(s)
+X = pd.DataFrame(new_films, columns=['USD_Production_Budget'])
+# Response Variable or Target
+y = pd.DataFrame(new_films, columns=['USD_Worldwide_Gross']) ```
+
+- Find the best-fit line
+```regression.fit(X, y)```
+- Theta zero
+```regression.intercept_```
+- Theta one
+```regression.coef_```
+
+#### R-Squared: Goodness of Fit
+
+- One measure of figuring out how well our model fits our data is by looking at a metric called r-squared. 
+- R-squared
+```regression.score(X, y)```
+
+- Make a prediction example: 
+```revenue_estimate = regression.intercept_[0] + regression.coef_[0,0]*budget
+revenue_estimate = round(revenue_estimate, -6)
+print(f'The estimated revenue for a $350 film is around ${revenue_estimate:.10}.')```
+- (The colon : and dot . in a print statement helps control the number of digits you'd like to show up in the output)	
