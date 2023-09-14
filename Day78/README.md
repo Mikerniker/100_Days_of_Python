@@ -7,6 +7,7 @@
 
 ### The challenge
 
+- Analyze the given cost revenue dataset to assess whether higher film budgets lead to more revenue in the box office? (i.e., should a movie studio spend more on a film to make more?) using Seaborn, Matplotlib, Pandas, and Sklearn.
 
 
 ## Table of contents
@@ -93,7 +94,7 @@ plt.show()
 
 #### Floor Division: Converting Years to Decades
 
-- To create a DatetimeIndex, call the constructor and provide the Release_date column as an argument to initialise the DatetimeIndex object. Then extract all the years from the DatetimeIndex, example
+- To create a DatetimeIndex, call the constructor and provide the Release_date column as an argument to initialise the DatetimeIndex object. Then extract all the years from the DatetimeIndex, example:
 
 ```
 dt_index = pd.DatetimeIndex(data_clean.Release_Date)
