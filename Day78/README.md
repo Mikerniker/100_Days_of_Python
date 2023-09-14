@@ -31,19 +31,26 @@ Concepts reviewed
 #### Filter on Multiple Conditions
 
 - One approach use the .loc[] property combined with the bitwise and & operator. Example:
-```international_releases = data.loc[(data.USD_Domestic_Gross == 0) & 
-                                  (data.USD_Worldwide_Gross != 0)]```
+```
+international_releases = data.loc[(data.USD_Domestic_Gross == 0) & 
+                                  (data.USD_Worldwide_Gross != 0)]
+```
 
 - Other options is to use the Pandas ```.query()``` function: 
 ```international_releases = data.query('USD_Domestic_Gross == 0 and USD_Worldwide_Gross != 0')```
 - pandas Timestamp = ```scrape_date = pd.Timestamp('2018-5-1')```
 - To drop a subset of data example: ```data_clean = data.drop(future_releases.index)```
 - To calculate the percentage examples with loc or query:
-```money_losing = data_clean.loc[data_clean.USD_Production_Budget > data_clean.USD_Worldwide_Gross]
-len(money_losing)/len(data_clean)```
+```
+money_losing = data_clean.loc[data_clean.USD_Production_Budget > data_clean.USD_Worldwide_Gross]
+len(money_losing)/len(data_clean)
+```
+
 or
-```money_losing = data_clean.query('USD_Production_Budget > USD_Worldwide_Gross')
-money_losing.shape[0]/data_clean.shape[0]```
+```
+money_losing = data_clean.query('USD_Production_Budget > USD_Worldwide_Gross')
+money_losing.shape[0]/data_clean.shape[0]
+```
 
 #### Seaborn Data Visualisation: Bubble Charts
 
@@ -62,11 +69,11 @@ sns.scatterplot(data=data_clean,
 
 - Seaborn has hue and size parameters that make it easy to create a bubble chart. These parameters colour the data and change their size according to one of the columns in the DataFrame.
 
-# increase the size of figure:
+- To increase the size of figure:
 ```plt.figure(figsize=(8,4), dpi=200)```
 
-# style chart, configure the Axes object that is returned from sns.scatterplot().
-# To set the styling on a single chart (as opposed to all the charts in the entire notebook) Use Python's with keyword. 
+- To style chart, configure the Axes object that is returned from sns.scatterplot().
+- To set the styling on a single chart (as opposed to all the charts in the entire notebook) Use Python's with keyword. 
 ```
 with sns.axes_style('darkgrid'):
   ax = sns.scatterplot(data=data_clean,
@@ -74,7 +81,6 @@ with sns.axes_style('darkgrid'):
                        y='USD_Worldwide_Gross',
                        hue='USD_Worldwide_Gross',
                        size='USD_Worldwide_Gross')
-
 
 ax.set(ylim=(0, 3000000000),
        xlim=(0, 450000000),
