@@ -2,7 +2,7 @@
 
 ## Overview
 
-- Topics: Seaborn
+- Topics: Seaborn (Regression a scatter plot, Bubble charts), Matplotlib, Pandas, Linear regression with scikit-learn, convert data with floor division.
 
 
 ### The challenge
