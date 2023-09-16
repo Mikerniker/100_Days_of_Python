@@ -15,8 +15,7 @@
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Links](#links)
-- [My process](#my-process)
-  - [Notes](#notes)
+- [Notes](#notes)
 
 ### Links
 
