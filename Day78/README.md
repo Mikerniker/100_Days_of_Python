@@ -30,13 +30,13 @@ Concepts reviewed
 
 #### Filter on Multiple Conditions
 
-- One approach use the .loc[] property combined with the bitwise and & operator. Example:
+- Option 1: Use the .loc[] property combined with the bitwise and & operator. Example:
 ```
 international_releases = data.loc[(data.USD_Domestic_Gross == 0) & 
                                   (data.USD_Worldwide_Gross != 0)]
 ```
 
-- Other options is to use the Pandas ```.query()``` function: 
+- Option 2: Use the Pandas ```.query()``` function: 
 ```international_releases = data.query('USD_Domestic_Gross == 0 and USD_Worldwide_Gross != 0')```
 - pandas Timestamp = ```scrape_date = pd.Timestamp('2018-5-1')```
 - To drop a subset of data example: ```data_clean = data.drop(future_releases.index)```
@@ -100,7 +100,7 @@ dt_index = pd.DatetimeIndex(data_clean.Release_Date)
 years = dt_index.year
 ```
 - To convert the years to decades, use floor division (aka integer division) vs regular division, the result is rounded down.
-- To conver to decade: Use the floor division by 10 and then multiplication by 10 to convert the release year to the release decade:
+- To convert to decade: Use the floor division by 10 and then multiplication by 10 to convert the release year to the release decade:
 ```
 decades = years//10*10
 data_clean['Decade'] = decades
@@ -160,8 +160,8 @@ y = pd.DataFrame(new_films, columns=['USD_Worldwide_Gross'])
 ```regression.coef_```
 
 #### R-Squared: Goodness of Fit
-- One measure of figuring out how well our model fits our data is by looking at a metric called r-squared. 
-- R-squared
+ 
+- R-squared - a metric that measures how well a model fits the data 
 ```regression.score(X, y)```
 
 - Make a prediction example: 
@@ -170,4 +170,4 @@ revenue_estimate = regression.intercept_[0] + regression.coef_[0,0]*budget
 revenue_estimate = round(revenue_estimate, -6)
 print(f'The estimated revenue for a $350 film is around ${revenue_estimate:.10}.')
 ```
-- (The colon : and dot . in a print statement helps control the number of digits you'd like to show up in the output)	
+- (The colon : and dot . in a print statement helps control the number of digits that shows up in the output)	
