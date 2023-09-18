@@ -36,3 +36,14 @@ df_data.loc[df_data.birth_date.isna()][col_subset]
 ```df_data[df_data.sex == 'Female'].sort_values('year', ascending=True)[:3]``` 
 - ```.groupby()``` and ```.agg()``` and ```.count()``` can be combined
 - Review .color the parameter in the ```.bar()``` function
+
+#### Matplotlib to Visualise Trends over Time
+
+- Review functions: .figure(), the .title(), the .xticks(), and .yticks() to fine-tune the chart
+
+#### [Chloropeth Map](https://plotly.com/python/choropleth-maps/)
+- [Plotly color scales](https://plotly.com/python/builtin-colorscales/)
+- [Plotly line chart](https://plotly.com/python/line-charts/)
+- .cumsum() function (cumulutative sum)
+
+#### [Sunburst Charts](https://plotly.com/python/sunburst-charts/)
