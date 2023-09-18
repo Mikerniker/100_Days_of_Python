@@ -22,3 +22,17 @@
 
 
 ###  Notes
+
+- To updated a package in Google Colab: ```%pip install --upgrade plotly```
+- To filter a subset if the data:
+```
+col_subset = ['year','category', 'laureate_type',
+              'birth_date','full_name', 'organization_name']
+df_data.loc[df_data.birth_date.isna()][col_subset]
+```
+- A column can be split and sliced to get certain items or perform operations on items of that column
+- Review: Plotly (donut chart, bar chart)
+- To filter a column based on an item then sort according to another column:
+```df_data[df_data.sex == 'Female'].sort_values('year', ascending=True)[:3]``` 
+- ```.groupby()``` and ```.agg()``` and ```.count()``` can be combined
+- Review .color the parameter in the ```.bar()``` function
