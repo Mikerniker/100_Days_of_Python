@@ -7,8 +7,7 @@
 
 ### The challenge
 
-- Analyze the Nobel Prize data set to answer the following questions:
-
+- Analyze a dataset on the past winners of the Nobel Prize to uncover patterns among the past Nobel laureates and glean other insights on the Nobel prize and the world in general.
 
 ## Table of contents
 
