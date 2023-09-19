@@ -41,6 +41,8 @@ df_data.loc[df_data.birth_date.isna()][col_subset]
 
 - Review functions: .figure(), the .title(), the .xticks(), and .yticks() to fine-tune the chart
 
+- To extract the year as a number from a datetime column, example: ```birth_years = df_data.birth_date.dt.year```
+
 #### References
 - [Chloropeth Map](https://plotly.com/python/choropleth-maps/)
 - [Plotly color scales](https://plotly.com/python/builtin-colorscales/)
@@ -57,6 +59,5 @@ df_data.loc[df_data.birth_date.isna()][col_subset]
   - row parameter
   - lowess parameter
 
-- To extract the year as a number from a datetime column, example: ```birth_years = df_data.birth_date.dt.year```
 - [Panda .nlargest()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.nlargest.html)
 - [Panda .nsmallest](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.nsmallest.html)
