@@ -41,7 +41,8 @@ df_data.loc[df_data.birth_date.isna()][col_subset]
 
 - Review functions: .figure(), the .title(), the .xticks(), and .yticks() to fine-tune the chart
 
-#### [Chloropeth Map](https://plotly.com/python/choropleth-maps/)
+#### References
+- [Chloropeth Map](https://plotly.com/python/choropleth-maps/)
 - [Plotly color scales](https://plotly.com/python/builtin-colorscales/)
 - [Plotly line chart](https://plotly.com/python/line-charts/)
 - .cumsum() function (cumulutative sum)
