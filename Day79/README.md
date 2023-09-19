@@ -22,7 +22,7 @@
 
 
 ###  Notes
-
+- Review: .value_counts(), .groupby(), .merge(), .sort_values() and .agg().
 - To updated a package in Google Colab: ```%pip install --upgrade plotly```
 - To filter a subset if the data:
 ```
@@ -50,3 +50,12 @@ df_data.loc[df_data.birth_date.isna()][col_subset]
 - [Seaborn Histogram](https://seaborn.pydata.org/generated/seaborn.histplot.html)
 - [Seaborn .histplot() function](https://seaborn.pydata.org/generated/seaborn.histplot.html)
 - [Seaborn .regplot ](https://seaborn.pydata.org/generated/seaborn.regplot.html?highlight=regplot#seaborn.regplot)
+- [Seaborn .boxplot()](https://seaborn.pydata.org/generated/seaborn.boxplot.html?highlight=boxplot#seaborn.boxplot)
+- [Seaborn .lmplot()](https://seaborn.pydata.org/generated/seaborn.lmplot.html?highlight=lmplot#seaborn.lmplot)
+  - hue parameter
+  - row parameter
+  - lowess parameter
+
+- To extract the year as a number from a datetime column, example: ```birth_years = df_data.birth_date.dt.year```
+- [Panda .nlargest()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.nlargest.html)
+- [Panda .nsmallest](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.nsmallest.html)
