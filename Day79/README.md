@@ -46,4 +46,7 @@ df_data.loc[df_data.birth_date.isna()][col_subset]
 - [Plotly line chart](https://plotly.com/python/line-charts/)
 - .cumsum() function (cumulutative sum)
 
-#### [Sunburst Charts](https://plotly.com/python/sunburst-charts/)
+- [Sunburst Charts](https://plotly.com/python/sunburst-charts/)
+- [Seaborn Histogram](https://seaborn.pydata.org/generated/seaborn.histplot.html)
+- [Seaborn .histplot() function](https://seaborn.pydata.org/generated/seaborn.histplot.html)
+- [Seaborn .regplot ](https://seaborn.pydata.org/generated/seaborn.regplot.html?highlight=regplot#seaborn.regplot)
