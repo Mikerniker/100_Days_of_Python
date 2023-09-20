@@ -7,7 +7,7 @@
 
 ### The challenge
 
-- Analyze a dataset on different clinics
+- Analyze a dataset on the number of births and maternal deaths throughout the 1840s.
 
 ## Table of contents
 
@@ -22,6 +22,6 @@
 
 
 ###  Notes
-
+- Review of Matplotlib (mdates, .twinx(), .grid(), color, linewidth, and linestyle parameters) 
 
 #### References
