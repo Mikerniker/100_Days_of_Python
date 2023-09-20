@@ -2,7 +2,7 @@
 
 ## Overview
 
-- Topics: Seaborn , Matplotlib, Plotly
+- Topics: Matplotlib, Plotly, Numpy, Scipy, T-tests
 
 
 ### The challenge
