@@ -7,7 +7,11 @@
 
 ### The challenge
 
-- Analyze a housing dataset 
+- Analyze a housing dataset and build a model that can provide a price estimate based on a home's characteristics such as:
+  - The number of rooms
+  - The distance to employment centres
+  - How rich or poor the area is
+  - How many students there are per teacher in local schools etc
 
 ## Table of contents
 
