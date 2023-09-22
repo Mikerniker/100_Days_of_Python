@@ -2,7 +2,7 @@
 
 ## Overview
 
-- Topics: Seaborn, Plotly, 
+- Topics: Seaborn, Plotly 
 
 
 ### The challenge
@@ -26,3 +26,4 @@
 
 
 ###  Notes
+- This was tougher than the other activities. Data science isn't my main interest nor is it my strongest suit. I had to refer to Angela's code for some sections of the exercise since I didn't fully understand how to approach the solution. I think I'll be sticking more to web development (Flask / Django etc/) rather than data science/analytics for the future. 
