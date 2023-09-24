@@ -4,21 +4,15 @@
 
 - Topics: Python Scripting
 
-
 ### The challenge
 
-- 
-
-## Table of contents
-
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Links](#links)
-- [Notes](#notes)
+- Build a text-based Python program to convert Strings into Morse Code.
 
 ### Links
 
 - Solution URL: [Text to Morse Code Converter](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day82)
 
-
-###  Notes
+## Notes
+- To build the project, I used the following:
+  - dictionaries
+  - functions
