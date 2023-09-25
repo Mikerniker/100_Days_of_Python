@@ -2,7 +2,7 @@
 
 ## Overview
 
-- Topics: Python Scripting
+- Topics: Flask, HTML
 
 ### The challenge
 
@@ -13,3 +13,6 @@
 - Solution URL: [Portfolio Website](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day83)
 
 ## Notes
+- Built with HTML 5 Template 
+- Flask
+- SMTPLIB
