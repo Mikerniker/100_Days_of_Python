@@ -3,7 +3,7 @@
 
 ## Overview
 
-- Topics: Numpy
+- Topics: Numpy: Generating and Manipulating ndarrays, Broadcasting, Scalars and Matrix Multiplication, Linear Algebra with Vectors, Manipulating Images as ndarrays
 
 
 ### The challenge
