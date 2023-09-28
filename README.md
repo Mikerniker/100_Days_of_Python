@@ -220,3 +220,6 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 
 **Day 70: [Git, Github, and Version Control](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day70)**
 - Topics: Git, Github, and Version Control: Git Commands, Creating a Remote Repository, Creating Files (.gitignore), Branching, Merging, Cloning, Forking, Pull vs Push Requests
+
+**Day 71: [Deploying the Web Application](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day71)**
+- Topics: Flask, Web Hosting (Render), .gitignore, Version Control, Environment Variables, Gunicorn, PostgreSQL
