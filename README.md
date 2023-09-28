@@ -232,3 +232,6 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 
 **Day 74: [Analyze Lego Data Set (Aggregate and Merge Data with Pandas)](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day74)**
 - Topics: Matplotlib (Create line, bar charts, scatter plot), Use relational databases by using primary and foreign keys, Pandas (.agg(), .groupby(), .merge(), .sort_values(), .value_counts(), .rename()), Python
+
+**Day 75: [Google Trends Data: Resampling and Visualizing Time Series](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day75)**
+- Topics: Pandas and Matplotlib: Data Cleaning, Resampling Time Series Data, Converting to Datetime, Data Visualisation (Line Charts, Locators, DateFormatters, Line Style, and Markers)
