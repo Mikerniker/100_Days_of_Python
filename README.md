@@ -227,3 +227,5 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 **Day 72: [Data Exploration with Pandas](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day72)**
 - Topics: Pandas, Python, Beautiful Soup (Web Scraping)
 
+**Day 73: [Data Visualization with Matplotlib](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day73)**
+- Topics: Matplotlib, Pandas, Python

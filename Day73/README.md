@@ -2,7 +2,7 @@
 
 ## Overview
 
-- Topics: Matplotlib, Pandas, Python,  
+- Topics: Matplotlib, Pandas, Python  
 
 ### The challenge
 
