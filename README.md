@@ -1,6 +1,6 @@
 Hello,
 
-This is a repository of my final projects for Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2023. I am currently on Day 75, but slowly putting my finished projects (Days 1-74) into Github for my reference. This repository is still a work in progress, thank you for visiting!
+This is a repository of my final projects for Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2023. I am currently on Day 84, but slowly putting some of my finished projects (Days 1-83) into Github for my reference. This repository is still a work in progress, thank you for visiting!
 
 ## Beginner
 **Day 1 Project: [Band Name Generator](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day01)**
