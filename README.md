@@ -229,3 +229,6 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 
 **Day 73: [Data Visualization with Matplotlib](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day73)**
 - Topics: Matplotlib, Pandas, Python
+
+**Day 74: [Analyze Lego Data Set (Aggregate and Merge Data with Pandas)](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day74)**
+- Topics: Matplotlib (Create line, bar charts, scatter plot), Use relational databases by using primary and foreign keys, Pandas (.agg(), .groupby(), .merge(), .sort_values(), .value_counts(), .rename()), Python
