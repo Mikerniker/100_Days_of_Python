@@ -235,3 +235,6 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 
 **Day 75: [Google Trends Data: Resampling and Visualizing Time Series](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day75)**
 - Topics: Pandas and Matplotlib: Data Cleaning, Resampling Time Series Data, Converting to Datetime, Data Visualisation (Line Charts, Locators, DateFormatters, Line Style, and Markers)
+
+**Day 76: [Analyze Android App Store (with Plotly)](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day76)**
+- Topics: Pandas (Data Cleaning: Removing NaN Values, Finding and Removing Duplicates, Dropping Unused Columns, Removing NaN Values, Converting Data to Numeric Types, Working with Nested Column Data) and  Plotly ( Pie, Donut, Bar Charts, Box Plots, Scatter Plots, Colour Scales)
