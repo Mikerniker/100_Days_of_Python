@@ -223,3 +223,7 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 
 **Day 71: [Deploying the Web Application](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day71)**
 - Topics: Flask, Web Hosting (Render), .gitignore, Version Control, Environment Variables, Gunicorn, PostgreSQL
+
+**Day 72: [Data Exploration with Pandas](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day72)**
+- Topics: Pandas, Python, Beautiful Soup (Web Scraping)
+
