@@ -244,3 +244,9 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 
 **Day 78: [Linear Regression and Data Visualization with Seaborn](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day78)**
 - Topics: Seaborn (Regression a scatter plot, Bubble charts), Matplotlib, Pandas, Linear regression with scikit-learn, convert data with floor division.
+
+**Day 79: [Analyzing the Nobel Prize with Plotly, Matplotlib, and Seaborn](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day79)**
+- Topics: Seaborn , Matplotlib, Plotly
+
+**Day 80: [T-Tests & Distributions: Analyzing a Hospital Data Set](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day80)**
+- Topics: Matplotlib, Plotly, Numpy, Scipy, T-tests
