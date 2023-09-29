@@ -239,5 +239,8 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 **Day 76: [Analyze Android App Store (with Plotly)](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day76)**
 - Topics: Pandas (Data Cleaning: Removing NaN Values, Finding and Removing Duplicates, Dropping Unused Columns, Removing NaN Values, Converting Data to Numeric Types, Working with Nested Column Data) and  Plotly ( Pie, Donut, Bar Charts, Box Plots, Scatter Plots, Colour Scales)
 
-**Day 77: [Computation with Numpy and N-dimensional Arrays)](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day77)**
+**Day 77: [Computation with Numpy and N-dimensional Arrays](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day77)**
 - Topics: Numpy: Generating and Manipulating ndarrays, Broadcasting, Scalars and Matrix Multiplication, Linear Algebra with Vectors, Manipulating Images as ndarrays
+
+**Day 78: [Linear Regression and Data Visualization with Seaborn](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day78)**
+- Topics: Seaborn (Regression a scatter plot, Bubble charts), Matplotlib, Pandas, Linear regression with scikit-learn, convert data with floor division.
