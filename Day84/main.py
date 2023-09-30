@@ -20,6 +20,15 @@ def update_board(position, player):
         print("That's not available.")
 
 
+def choose_player():
+    player = input("Select Player, type 'X' or 'O': ").upper()
+    if player != "X" and player != "O":
+        print("Please make sure to type X or O")
+        return choose_player()
+    else:
+        return player
+    
+
 def check(list, player):
     return all(i == player for i in list)
 
