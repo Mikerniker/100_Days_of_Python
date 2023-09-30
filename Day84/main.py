@@ -39,3 +39,10 @@ def check_winner(player):
         if check(item, player):
             print(f"Player: {player} wins!")
             return True
+        
+
+def game_play(player):
+    player_move = input(f"Player {player}, Choose your position (Type numbers 1-9): ")
+    update_board(player_move, player)
+    for i in board:
+        print(i)
