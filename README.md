@@ -250,3 +250,6 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 
 **Day 80: [T-Tests & Distributions: Analyzing a Hospital Data Set](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day80)**
 - Topics: Matplotlib, Plotly, Numpy, Scipy, T-tests
+
+**Day 81: [Capstone Project: Predict Housing Prices](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day81)**
+- Topics: Seaborn, Plotly
