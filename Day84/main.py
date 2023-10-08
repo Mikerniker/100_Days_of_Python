@@ -55,3 +55,8 @@ def game_play(player):
     update_board(player_move, player)
     for i in board:
         print(i)
+
+
+player = choose_player()
+print(f"You selected player {player}")
+play_game = True
