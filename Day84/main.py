@@ -42,7 +42,6 @@ def check_winner(player):
     check_board = [row1, row2, row3, column1, column2, column3, diag_left_right, diag_right_left]
     for item in check_board:
         if check(item, player):
-            # print(f"Player: {player} wins!")
             return True
 
 
