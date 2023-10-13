@@ -8,7 +8,14 @@ from PIL import Image, ImageDraw, ImageFont
 window = tkinter.Tk()
 window.title("Mik's Watermark")
 window.minsize(width=800, height=500)
+window.config(padx=20, pady=20)
 
+#Canvas
+canvas = Canvas(width=650, height=450, highlightthickness=0)
+burger_img = PhotoImage(file="hamburger.png")
+canvas.create_image(100, 112, image=burger_img)
+canvas.create_text(100, 130, fill="white", font=("Arial", 35, "bold"))
+canvas.grid(column=0, row=0, columnspan=2)
 
 #Label
 my_label = tkinter.Label(text="Add Image to watermark", font=("Arial", 24, "bold"))
