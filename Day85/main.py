@@ -32,5 +32,9 @@ my_label.grid(column=0, row=1)
 input = Entry(width=30)
 input.grid(column=1, row=1)
 
+#Button
+button = Button(text="Click me", command=add_watermark)
+button.grid(column=2, row=1)
+
 
 window.mainloop()
