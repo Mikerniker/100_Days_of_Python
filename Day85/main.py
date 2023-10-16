@@ -1,6 +1,6 @@
 # This is in progress
 
-import tkinter
+from tkinter import *
 import sys
 from PIL import Image, ImageDraw, ImageFont
 
@@ -23,9 +23,14 @@ def add_watermark():
     watermark = input.get()
     canvas.itemconfig(watermark_text, text=watermark)
 
+
 #Label
-my_label = tkinter.Label(text="Add Image to watermark", font=("Arial", 24, "bold"))
-my_label.pack(expand=True)  #mylabel takes up whole space
+my_label = Label(text="Add name", font=("Arial", 14))
+my_label.grid(column=0, row=1)
+
+#Entry
+input = Entry(width=30)
+input.grid(column=1, row=1)
 
 
 window.mainloop()
