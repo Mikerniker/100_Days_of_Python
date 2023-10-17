@@ -11,6 +11,11 @@ window.minsize(width=800, height=500)
 window.config(padx=20, pady=20)
 
 
+# Ask the user to select a file
+file_path = filedialog.askopenfilename()
+
+image = Image.open(file_path)
+
 #Canvas
 canvas = Canvas(width=650, height=450, highlightthickness=0)
 burger_img = PhotoImage(file="hamburger.png")
