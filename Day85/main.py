@@ -18,8 +18,9 @@ image = Image.open(file_path)
 
 #Canvas
 canvas = Canvas(width=650, height=450, highlightthickness=0)
-burger_img = PhotoImage(file="hamburger.png")
-canvas.create_image(325, 225, image=burger_img)
+# Convert the Pillow image to a PhotoImage object
+photo_img = ImageTk.PhotoImage(image)
+canvas.create_image(325, 225, image=photo_img)
 watermark_text = canvas.create_text(325, 225, text="", fill="white", font=("Arial", 35)) #adds watermark
 canvas.grid(column=0, row=0, columnspan=2)
 
