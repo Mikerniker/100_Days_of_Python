@@ -18,9 +18,8 @@ image = Image.open(file_path)
 
 #Canvas
 canvas = Canvas(width=650, height=450, highlightthickness=0)
-# Convert the Pillow image to a PhotoImage object
-photo_img = ImageTk.PhotoImage(image)
-canvas.create_image(325, 225, image=photo_img)
+watermark_holder = PhotoImage(file="Watermarkme.png")
+image_to_watermark = canvas.create_image(325, 225, image=watermark_holder)  #image=photo_img
 watermark_text = canvas.create_text(325, 225, text="", fill="white", font=("Arial", 35)) #adds watermark
 canvas.grid(column=0, row=0, columnspan=2)
 
