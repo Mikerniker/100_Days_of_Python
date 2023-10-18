@@ -23,6 +23,13 @@ image_to_watermark = canvas.create_image(325, 225, image=watermark_holder)  #ima
 watermark_text = canvas.create_text(325, 225, text="", fill="white", font=("Arial", 35)) #adds watermark
 canvas.grid(column=0, row=0, columnspan=2)
 
+def add_image():
+    file_path = filedialog.askopenfilename()
+    if file_path:
+        image = Image.open(file_path)
+        photo_img = ImageTk.PhotoImage(image)
+        canvas.itemconfig(image_to_watermark, image=photo_img)
+        add_image.photo_img = photo_img
 
 def add_watermark():
     watermark = input.get()
