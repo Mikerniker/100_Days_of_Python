@@ -45,8 +45,14 @@ input = Entry(width=30)
 input.grid(column=1, row=1)
 
 #Button
-button = Button(text="Click me", command=add_watermark)
-button.grid(column=2, row=1)
+button1 = Button(text="Select Image", command=add_image)
+button1.grid(column=1, row=1)
+
+button2 = Button(text="Click me", command=add_watermark)
+button2.grid(column=2, row=2)
+
+button3 = Button(text="Download Image", command=add_watermark)
+button3.grid(column=2, row=3)
 
 
 window.mainloop()
