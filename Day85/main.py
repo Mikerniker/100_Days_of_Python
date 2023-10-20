@@ -24,8 +24,6 @@ watermark_text = canvas.create_text(325, 225, text="", fill="white", font=("Aria
 canvas.grid(row=0, column=0, columnspan=3, sticky="nsew")
 
 
-
-
 def add_image():
     file_path = filedialog.askopenfilename()
     if file_path:
