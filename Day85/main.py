@@ -5,7 +5,7 @@ import sys
 from PIL import Image, ImageDraw, ImageFont
 
 # Tktinter
-window = tkinter.Tk()
+window = Tk()
 window.title("Mik's Watermark")
 window.minsize(width=800, height=500)
 window.config(padx=20, pady=20)
