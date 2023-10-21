@@ -28,6 +28,8 @@ def add_image():
     file_path = filedialog.askopenfilename()
     if file_path:
         image = Image.open(file_path)
+        max_size = (350, 350)  
+        image.thumbnail(max_size) 
         photo_img = ImageTk.PhotoImage(image)
         canvas.itemconfig(image_to_watermark, image=photo_img)
         add_image.photo_img = photo_img
