@@ -38,6 +38,13 @@ def add_watermark():
     watermark = input.get()
     canvas.itemconfig(watermark_text, text=watermark)
 
+# Get the available font families
+font_families = font.families()
+print(type(font_families))
+all_fonts = []
+for family in font_families:
+    all_fonts.append(family)
+print(all_fonts)
 
 #Label
 my_label = Label(text="Add name", font=("Arial", 14))
