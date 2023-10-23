@@ -50,6 +50,14 @@ for family in font_families:
     all_fonts.append(family)
 print(all_fonts)
 
+# Datatype of menu text
+clicked = StringVar()
+
+# initial menu text
+clicked.set(all_fonts[11])
+
+
+
 #Label
 my_label = Label(text="Add name", font=("Arial", 14))
 my_label.grid(column=0, row=1)
