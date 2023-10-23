@@ -24,7 +24,7 @@ image = Image.open(file_path)
 canvas = Canvas(width=650, height=450, highlightthickness=0)
 watermark_holder = PhotoImage(file="Watermarkme.png")
 image_to_watermark = canvas.create_image(325, 225, image=watermark_holder)  #image=photo_img
-watermark_text = canvas.create_text(325, 225, text="", fill="white", font=("Arial", 35)) #adds watermark
+watermark_text = canvas.create_text(325, 225, text="", fill="", font=("", 35)) #adds watermark
 canvas.grid(row=0, column=0, columnspan=3, sticky="nsew")
 
 
