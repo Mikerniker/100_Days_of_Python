@@ -2,7 +2,11 @@
 
 from tkinter import *
 import sys
-from PIL import Image, ImageDraw, ImageFont
+from tkinter import filedialog
+from tkinter import font, colorchooser
+from tkinter.font import Font
+from PIL import Image, ImageDraw, ImageFont, ImageTk
+
 
 # Tktinter
 window = Tk()
