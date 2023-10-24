@@ -54,13 +54,16 @@ clicked = StringVar()
 # initial menu text
 clicked.set(all_fonts[11])
 
+selected_color = None
+
 # COLORS
 def choose_color():
+    global selected_color
     color = colorchooser.askcolor()  # This will open a color selection dialog
     if color:
         selected_color = color[1]
         print("Selected color:", selected_color)
-        return selected_color
+       
 
 
 #Label
