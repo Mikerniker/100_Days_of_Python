@@ -11,20 +11,18 @@ from PIL import Image, ImageDraw, ImageFont, ImageTk
 # Tktinter
 window = Tk()
 window.title("Mik's Watermark")
-window.minsize(width=800, height=500)
 window.config(padx=20, pady=20)
 
 
 # Ask the user to select a file
 file_path = filedialog.askopenfilename()
-
 image = Image.open(file_path)
 
 #Canvas
-canvas = Canvas(width=650, height=450, highlightthickness=0)
+canvas = Canvas(width=800, height=500, highlightthickness=0)
 watermark_holder = PhotoImage(file="Watermarkme.png")
-image_to_watermark = canvas.create_image(325, 225, image=watermark_holder)  #image=photo_img
-watermark_text = canvas.create_text(325, 225, text="", fill="", font=("", 35)) #adds watermark
+image_to_watermark = canvas.create_image(400, 250, image=watermark_holder)  #image=photo_img
+watermark_text = canvas.create_text(325, 225, text="", fill="") #adds watermark
 canvas.grid(row=0, column=0, columnspan=3, sticky="nsew")
 
 
