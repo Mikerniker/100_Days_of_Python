@@ -36,9 +36,19 @@ def add_image():
         canvas.itemconfig(image_to_watermark, image=photo_img)
         add_image.photo_img = photo_img
 
-def add_watermark():
-    watermark = input.get()
-    canvas.itemconfig(watermark_text, text=watermark)
+def add_watermark(event):
+    if selected_color is not None:  # Check if a color has been selected
+        watermark = input.get()
+        selected_font_family = clicked.get()
+        selected_font_size = 25
+        # selected_font_color = selected_color or "black"
+        x, y = event.x, event.y  # Get the coordinates of the click  ADDED
+        font_specs = Font(family=selected_font_family, size=selected_font_size)
+        canvas.itemconfig(watermark_text, text=watermark, fill=selected_color,  font=font_specs)
+        canvas.coords(watermark_text, x, y)  # Update the position of the text element  # ADDED
+#     print("I got clicked")
+    else:
+        print("Please choose a color first.")
 
 # Get the available font families
 font_families = font.families()
