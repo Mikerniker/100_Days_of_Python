@@ -36,6 +36,7 @@ def add_image():
         canvas.itemconfig(image_to_watermark, image=photo_img)
         add_image.photo_img = photo_img
 
+
 def add_watermark(event):
     if selected_color is not None:  # Check if a color has been selected
         watermark = input.get()
@@ -77,8 +78,9 @@ def choose_color():
 
 
 #Label
-my_label = Label(text="Add name", font=("Arial", 14))
-my_label.grid(column=0, row=1)
+label1 = Label(text="Select Image", font=("Arial", 12))
+label1.grid(column=0, row=1)
+label1.config(padx=5, pady=5)
 
 #Entry
 input = Entry(width=30)
