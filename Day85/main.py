@@ -82,6 +82,15 @@ label1 = Label(text="Select Image", font=("Arial", 12))
 label1.grid(column=0, row=1)
 label1.config(padx=5, pady=5)
 
+label2 = Label(text="Add Text", font=("Arial", 12))
+label2.grid(column=0, row=2)
+label2.config(padx=5, pady=5)
+
+label3 = Label(text="Add Watermark", font=("Arial", 12))
+label3.grid(column=0, row=3)
+label3.config(padx=5, pady=5)
+
+
 #Entry
 input = Entry(width=30)
 input.grid(column=1, row=1)
