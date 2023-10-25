@@ -90,6 +90,15 @@ label3 = Label(text="Add Watermark", font=("Arial", 12))
 label3.grid(column=0, row=3)
 label3.config(padx=5, pady=5)
 
+label4 = Label(text="Download", font=("Arial", 12))
+label4.grid(column=0, row=4)
+label4.config(padx=5, pady=5)
+
+label5 = Label(text="Choose Font", font=("Arial", 10))
+label5.grid(column=2, row=1)
+
+label6 = Label(text="Choose Color", font=("Arial", 10))
+label6.grid(column=2, row=2)
 
 #Entry
 input = Entry(width=30)
