@@ -50,7 +50,7 @@ def add_watermark(event):
 #     print("I got clicked")
     else:
         messagebox.showwarning(title="Add Color", message="Please choose a color first.")
-        print("Please choose a color first.")
+        # print("Please choose a color first.")
 
 # Get the available font families
 font_families = font.families()
@@ -103,7 +103,8 @@ label6.grid(column=2, row=2)
 
 #Entry
 input = Entry(width=30)
-input.grid(column=1, row=1)
+input.grid(column=1, row=2)
+
 
 #Button
 button1 = Button(text="Select Image", command=add_image)
