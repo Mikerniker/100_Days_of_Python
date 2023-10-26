@@ -3,7 +3,7 @@
 from tkinter import *
 import sys
 from tkinter import filedialog
-from tkinter import font, colorchooser
+from tkinter import font, colorchooser, messagebox
 from tkinter.font import Font
 from PIL import Image, ImageDraw, ImageFont, ImageTk
 
@@ -49,6 +49,7 @@ def add_watermark(event):
         canvas.coords(watermark_text, x, y)  # Update the position of the text element  # ADDED
 #     print("I got clicked")
     else:
+        messagebox.showwarning(title="Add Color", message="Please choose a color first.")
         print("Please choose a color first.")
 
 # Get the available font families
