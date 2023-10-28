@@ -41,8 +41,7 @@ def add_watermark(event):
     if selected_color is not None:  # Check if a color has been selected
         watermark = input.get()
         selected_font_family = clicked.get()
-        selected_font_size = 25
-        # selected_font_color = selected_color or "black"
+        selected_font_size = change_font_size() 
         x, y = event.x, event.y  # Get the coordinates of the click  ADDED
         font_specs = Font(family=selected_font_family, size=selected_font_size)
         canvas.itemconfig(watermark_text, text=watermark, fill=selected_color,  font=font_specs)
