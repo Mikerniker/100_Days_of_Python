@@ -73,8 +73,10 @@ font_size_options = [size for size in range(8, 96)]
 
 selected_color = None
 
-
-selected_color = None
+def change_font_size():
+    """Function to change the text font size"""
+    selected_size = int(font_size_var.get())
+    return selected_size
 
 # COLORS
 def choose_color():
