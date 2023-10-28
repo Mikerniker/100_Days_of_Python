@@ -66,6 +66,14 @@ clicked = StringVar()
 # initial menu text
 clicked.set(all_fonts[11])
 
+# FONT SIZE: Create a font size variable and a dropdown menu
+font_size_var = StringVar()
+font_size_var.set("12")  # Default font size
+font_size_options = [size for size in range(8, 96)]
+
+selected_color = None
+
+
 selected_color = None
 
 # COLORS
