@@ -126,6 +126,10 @@ button2.grid(column=1, row=3)
 font_options = OptionMenu(window, select_font, *all_fonts)
 font_options.grid(column=3, row=1)
 
+button3 = Button(text="Download Image", command=save_watermark)
+button3.grid(column=1, row=4)
 
+font_size_menu = OptionMenu(window, font_size_var, *font_size_options)
+font_size_menu.grid(column=3, row=2)
 
 window.mainloop()
