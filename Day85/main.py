@@ -122,6 +122,9 @@ button1.grid(column=1, row=1)
 button2 = Button(text="Add Watermark", command=add_watermark)
 button2.grid(column=1, row=3)
 
+# Create Dropdown menu
+font_options = OptionMenu(window, select_font, *all_fonts)
+font_options.grid(column=3, row=1)
 
 
 
