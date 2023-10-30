@@ -17,9 +17,33 @@ window.config(padx=20, pady=20)
 canvas_width = 800
 canvas_height = 500
 
-# Ask the user to select a file
-file_path = filedialog.askopenfilename()
-image = Image.open(file_path)
+
+def load_image():
+    """Function to ask the user to select a file"""
+    file_path = filedialog.askopenfilename()
+    if file_path:
+        image = Image.open(file_path)
+        original_width, original_height = image.size  
+       
+        # Calculate new dimensions to fit within the canvas while maintaining the aspect ratio
+        new_width = canvas_width
+        new_height = (original_height * new_width) // original_width  #ADDED
+
+        if new_height > canvas_height:
+            new_height = canvas_height
+            new_width = (original_width * new_height) // original_height
+
+        resized_image = image.resize((new_width, new_height), Image.LANCZOS)
+
+        # Calculate the position to center the image on the canvas
+        x = (canvas_width - new_width) // 2
+        y = (canvas_height - new_height) // 2
+
+        photo_img = ImageTk.PhotoImage(resized_image)
+        return photo_img, x, y
+
+
+
 
 #Canvas
 canvas = Canvas(width=800, height=500, highlightthickness=0)
