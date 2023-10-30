@@ -53,15 +53,15 @@ watermark_text = canvas.create_text(325, 225, text="", fill="") #adds watermark
 canvas.grid(row=0, column=0, columnspan=5, sticky="nsew")
 
 
-def add_image():
-    file_path = filedialog.askopenfilename()
-    if file_path:
-        image = Image.open(file_path)
-        max_size = (350, 350)  
-        image.thumbnail(max_size) 
-        photo_img = ImageTk.PhotoImage(image)
-        canvas.itemconfig(image_to_watermark, image=photo_img)
-        add_image.photo_img = photo_img
+# def add_image():
+#     file_path = filedialog.askopenfilename()
+#     if file_path:
+#         image = Image.open(file_path)
+#         max_size = (350, 350)  
+#         image.thumbnail(max_size) 
+#         photo_img = ImageTk.PhotoImage(image)
+#         canvas.itemconfig(image_to_watermark, image=photo_img)
+#         add_image.photo_img = photo_img
 
 
 def add_watermark(event):
@@ -98,6 +98,11 @@ font_size_var.set("12")  # Default font size
 font_size_options = [size for size in range(8, 96)]
 
 selected_color = None
+
+# Global variables to store cursor coordinates
+cursor_x = 325
+cursor_y = 200
+
 
 def change_font_size():
     """Function to change the text font size"""
