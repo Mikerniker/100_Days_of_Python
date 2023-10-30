@@ -13,6 +13,9 @@ window = Tk()
 window.title("Mik's Watermark")
 window.config(padx=20, pady=20)
 
+# Get the size of the canvas
+canvas_width = 800
+canvas_height = 500
 
 # Ask the user to select a file
 file_path = filedialog.askopenfilename()
