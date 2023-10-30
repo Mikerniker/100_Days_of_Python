@@ -53,15 +53,13 @@ watermark_text = canvas.create_text(325, 225, text="", fill="") #adds watermark
 canvas.grid(row=0, column=0, columnspan=5, sticky="nsew")
 
 
-# def add_image():
-#     file_path = filedialog.askopenfilename()
-#     if file_path:
-#         image = Image.open(file_path)
-#         max_size = (350, 350)  
-#         image.thumbnail(max_size) 
-#         photo_img = ImageTk.PhotoImage(image)
-#         canvas.itemconfig(image_to_watermark, image=photo_img)
-#         add_image.photo_img = photo_img
+def add_image(photo_img=None, x=None, y=None):
+    """Function to add an image to the canvas"""
+    if photo_img:
+        canvas.itemconfig(image_to_watermark, image=photo_img)
+        if x is not None and y is not None:
+            canvas.coords(image_to_watermark, x, y)
+        add_image.photo_img = photo_img  # Store the PhotoImage to prevent it from being garbage collected
 
 
 def add_watermark(event):
@@ -115,7 +113,7 @@ def choose_color():
     color = colorchooser.askcolor()  # This will open a color selection dialog
     if color:
         selected_color = color[1]
-        print("Selected color:", selected_color)
+        #print("Selected color:", selected_color)
        
 
 
