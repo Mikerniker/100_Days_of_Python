@@ -46,11 +46,11 @@ def load_image():
 
 
 #Canvas
-canvas = Canvas(width=800, height=500, highlightthickness=0)
-watermark_holder = PhotoImage(file="Watermarkme.png")
-image_to_watermark = canvas.create_image(400, 250, image=watermark_holder)  #image=photo_img
+canvas = Canvas(width=canvas_width, height=canvas_height, highlightthickness=0)
+placeholder_image = PhotoImage(file="Watermarkme.png")
+image_to_watermark = canvas.create_image(400, 250, anchor=CENTER, image=placeholder_image)  
 watermark_text = canvas.create_text(325, 225, text="", fill="") #adds watermark
-canvas.grid(row=0, column=0, columnspan=3, sticky="nsew")
+canvas.grid(row=0, column=0, columnspan=5, sticky="nsew")
 
 
 def add_image():
