@@ -162,4 +162,7 @@ button3.grid(column=1, row=4)
 font_size_menu = OptionMenu(window, font_size_var, *font_size_options)
 font_size_menu.grid(column=3, row=2)
 
+apply_color_button = Button(window, text="Apply", command=change_font_size)
+apply_color_button.grid(column=4, row=2)
+
 window.mainloop()
