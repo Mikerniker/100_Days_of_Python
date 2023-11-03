@@ -116,10 +116,16 @@ def choose_color():
         #print("Selected color:", selected_color)
 
 def move_up():
-    """Function to move button cursor when arrow keys are pressed"""
+    """Function to move button cursor up when arrow buttons keys are pressed"""
     global cursor_x, cursor_y
     canvas.move(watermark_text, 0, -5)
     cursor_y -= 5
+
+def move_down():
+    """Function to move button cursor down when arrow buttons are pressed"""
+    global cursor_x, cursor_y
+    canvas.move(watermark_text, 0, 5)
+    cursor_y += 5
 
 
 #Label
