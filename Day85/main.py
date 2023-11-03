@@ -127,6 +127,17 @@ def move_down():
     canvas.move(watermark_text, 0, 5)
     cursor_y += 5
 
+def move_left():
+    """Function to move button cursor when arrow keys are pressed"""
+    global cursor_x, cursor_y
+    canvas.move(watermark_text, -5, 0)
+    cursor_x -= 5
+
+def move_right():
+    """Function to move button cursor when arrow keys are pressed"""
+    global cursor_x, cursor_y
+    canvas.move(watermark_text, 5, 0)
+    cursor_x += 5
 
 #Label
 label1 = Label(text="Select Image", font=("Arial", 12))
