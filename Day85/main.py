@@ -114,7 +114,12 @@ def choose_color():
     if color:
         selected_color = color[1]
         #print("Selected color:", selected_color)
-       
+
+def move_up():
+    """Function to move button cursor when arrow keys are pressed"""
+    global cursor_x, cursor_y
+    canvas.move(watermark_text, 0, -5)
+    cursor_y -= 5
 
 
 #Label
