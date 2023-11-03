@@ -1,5 +1,7 @@
 # Day 63 Virtual Bookshelf
 
+https://github.com/Mikerniker/100_Days_of_Python/assets/63586831/c1bf6596-d1af-45ac-9b4c-5e004306706f
+
 ## Overview
 
 - Topics: Flask, SQLite Databases (SQLite3; SQLAlchemy), CRUD Operations with SQLAlchemy
