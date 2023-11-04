@@ -34,7 +34,6 @@ font_families = font.families()
 all_fonts = []
 for family in font_families:
     all_fonts.append(family)
-# print(all_fonts)
 
 # Datatype of menu text
 select_font = StringVar()
@@ -48,32 +47,25 @@ font_size_var.set("12")  # Default font size
 font_size_options = [size for size in range(8, 96)]
 
 
-
-
 def load_image():
-    """Function to ask the user to select a file"""
+    global file_path
     file_path = filedialog.askopenfilename()
-    if file_path:
-        image = Image.open(file_path)
-        original_width, original_height = image.size  
-       
-        # Calculate new dimensions to fit within the canvas while maintaining the aspect ratio
-        new_width = canvas_width
-        new_height = (original_height * new_width) // original_width  #ADDED
 
-        if new_height > canvas_height:
-            new_height = canvas_height
-            new_width = (original_width * new_height) // original_height
 
-        resized_image = image.resize((new_width, new_height), Image.LANCZOS)
+def replace_placeholder_image():
+    global photo_img
+    # Load the filepath
+    load_image()
+    new_image = Image.open(file_path)
 
-        # Calculate the position to center the image on the canvas
-        x = (canvas_width - new_width) // 2
-        y = (canvas_height - new_height) // 2
+    if new_image:
+        resized_new_image = new_image.resize((CANVAS_WIDTH, CANVAS_HEIGHT),
+                                             Image.LANCZOS)
+        photo_img = ImageTk.PhotoImage(resized_new_image)
+        canvas.itemconfig(image_to_watermark, image=photo_img)
 
-        photo_img = ImageTk.PhotoImage(resized_image)
-        return photo_img, x, y
 
+## CONTINUE
 
 def add_image(photo_img=None, x=None, y=None):
     """Function to add an image to the canvas"""
