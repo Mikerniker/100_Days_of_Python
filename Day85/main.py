@@ -64,17 +64,7 @@ def replace_placeholder_image():
         photo_img = ImageTk.PhotoImage(resized_new_image)
         canvas.itemconfig(image_to_watermark, image=photo_img)
 
-
-## CONTINUE
-
-def add_image(photo_img=None, x=None, y=None):
-    """Function to add an image to the canvas"""
-    if photo_img:
-        canvas.itemconfig(image_to_watermark, image=photo_img)
-        if x is not None and y is not None:
-            canvas.coords(image_to_watermark, x, y)
-        add_image.photo_img = photo_img  # Store the PhotoImage to prevent it from being garbage collected
-
+# NOtE TO SELF REVIEW FROM HERE
 
 def add_watermark(event):
     if selected_color is not None:  # Check if a color has been selected
