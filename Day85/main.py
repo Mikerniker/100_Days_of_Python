@@ -6,14 +6,21 @@ from tkinter.font import Font
 from PIL import Image, ImageTk, ImageGrab
 
 
-# Tktinter
+# Tkinter
 window = Tk()
 window.title("Mik's Watermark")
 window.config(padx=20, pady=20)
+window['background'] ='#16425D'
 
-# Get the size of the canvas
-canvas_width = 800
-canvas_height = 500
+# Global Variables
+CANVAS_WIDTH = 800
+CANVAS_HEIGHT = 500
+file_path = ""
+photo_img = None
+selected_color = None
+cursor_x = 325
+cursor_y = 200
+
 
 
 def load_image():
