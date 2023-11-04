@@ -21,6 +21,13 @@ selected_color = None
 cursor_x = 325
 cursor_y = 200
 
+#Canvas
+canvas = Canvas(width=CANVAS_WIDTH, height=CANVAS_HEIGHT, highlightthickness=0)
+placeholder_image = PhotoImage(file="Watermarkme.png")
+image_to_watermark = canvas.create_image(CANVAS_WIDTH/2, CANVAS_HEIGHT/2,
+                                         anchor=CENTER, image=placeholder_image)
+watermark_text = canvas.create_text(325, 200, text="", fill="") #adds text watermark
+canvas.grid(row=0, column=0, columnspan=5, sticky="nsew")
 
 
 def load_image():
@@ -46,16 +53,6 @@ def load_image():
 
         photo_img = ImageTk.PhotoImage(resized_image)
         return photo_img, x, y
-
-
-
-
-#Canvas
-canvas = Canvas(width=canvas_width, height=canvas_height, highlightthickness=0)
-placeholder_image = PhotoImage(file="Watermarkme.png")
-image_to_watermark = canvas.create_image(400, 250, anchor=CENTER, image=placeholder_image)  
-watermark_text = canvas.create_text(325, 225, text="", fill="") #adds watermark
-canvas.grid(row=0, column=0, columnspan=5, sticky="nsew")
 
 
 def add_image(photo_img=None, x=None, y=None):
