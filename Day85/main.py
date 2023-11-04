@@ -29,6 +29,26 @@ image_to_watermark = canvas.create_image(CANVAS_WIDTH/2, CANVAS_HEIGHT/2,
 watermark_text = canvas.create_text(325, 200, text="", fill="") #adds text watermark
 canvas.grid(row=0, column=0, columnspan=5, sticky="nsew")
 
+# FONT FAMILY: Create font family menu dropdown options
+font_families = font.families()
+all_fonts = []
+for family in font_families:
+    all_fonts.append(family)
+# print(all_fonts)
+
+# Datatype of menu text
+select_font = StringVar()
+
+# initial menu text
+select_font.set(all_fonts[11])
+
+# FONT SIZE: Create a font size variable and a dropdown menu
+font_size_var = StringVar()
+font_size_var.set("12")  # Default font size
+font_size_options = [size for size in range(8, 96)]
+
+
+
 
 def load_image():
     """Function to ask the user to select a file"""
@@ -77,31 +97,6 @@ def add_watermark(event):
     else:
         messagebox.showwarning(title="Add Color", message="Please choose a color first.")
         # print("Please choose a color first.")
-
-# Get the available font families
-font_families = font.families()
-print(type(font_families))
-all_fonts = []
-for family in font_families:
-    all_fonts.append(family)
-print(all_fonts)
-
-# Datatype of menu text
-clicked = StringVar()
-
-# initial menu text
-clicked.set(all_fonts[11])
-
-# FONT SIZE: Create a font size variable and a dropdown menu
-font_size_var = StringVar()
-font_size_var.set("12")  # Default font size
-font_size_options = [size for size in range(8, 96)]
-
-selected_color = None
-
-# Global variables to store cursor coordinates
-cursor_x = 325
-cursor_y = 200
 
 
 def change_font_size():
