@@ -1,11 +1,9 @@
 # This is in progress
 
 from tkinter import *
-import sys
-from tkinter import filedialog
-from tkinter import font, colorchooser, messagebox
+from tkinter import filedialog, font, colorchooser, messagebox
 from tkinter.font import Font
-from PIL import Image, ImageDraw, ImageFont, ImageTk
+from PIL import Image, ImageTk, ImageGrab
 
 
 # Tktinter
