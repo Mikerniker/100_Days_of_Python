@@ -1,5 +1,3 @@
-# This is in progress
-
 from tkinter import *
 from tkinter import filedialog, font, colorchooser, messagebox
 from tkinter.font import Font
