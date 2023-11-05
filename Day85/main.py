@@ -170,36 +170,54 @@ font_size_label.grid(column=2, row=2, sticky="E", pady=6)
 font_color_label = Label(text="Font Color", font=("Arial", 10), fg="white", bg="#16425D")
 font_color_label.grid(column=2, row=3, sticky="E", pady=6)
 
-# NOtE TO SELF REVIEW FROM HERE
 
+# Entry
+watermark_entry = Entry(width=30)
+watermark_entry.grid(column=1, row=2, sticky="W", padx=6)
 
+# Button
+choose_image_btn = Button(text="Select Image", command=replace_placeholder_image)
+choose_image_btn.grid(column=1, row=1, sticky="W", padx=6)
 
-#Entry
-input = Entry(width=30)
-input.grid(column=1, row=2)
+show_text_btn = Button(text="Show Text", command=add_watermark)
+show_text_btn.grid(column=1, row=3, sticky="W", padx=6)
 
+# Create a Font dropdown menu
+font_options_btn = OptionMenu(window, select_font, *all_fonts)
+font_options_btn.grid(column=3, row=1, sticky="W", padx=6)
 
-#Button
-button1 = Button(text="Select Image", command=add_image)
-button1.grid(column=1, row=1)
+download_btn = Button(text="Download Image", command=save_watermark)
+download_btn.grid(column=1, row=4, sticky="W", padx=6)
 
-button2 = Button(text="Add Watermark", command=add_watermark)
-button2.grid(column=1, row=3)
-
-# Create Dropdown menu
-font_options = OptionMenu(window, select_font, *all_fonts)
-font_options.grid(column=3, row=1)
-
-button3 = Button(text="Download Image", command=save_watermark)
-button3.grid(column=1, row=4)
-
-font_size_menu = OptionMenu(window, font_size_var, *font_size_options)
-font_size_menu.grid(column=3, row=2)
-
-apply_color_button = Button(window, text="Apply", command=change_font_size)
-apply_color_button.grid(column=4, row=2)
+font_size_btn = OptionMenu(window, font_size_var, *font_size_options)
+font_size_btn.grid(column=3, row=2, sticky="W", padx=6)
 
 color_button = Button(window, text="Choose Color", command=choose_color)
-color_button.grid(column=3, row=3)
+color_button.grid(column=3, row=3, sticky="W", padx=6)
+
+# Arrow buttons
+up_img = Image.open("uparrow.png")
+up_img = up_img.resize((20, 20), Image.LANCZOS)
+up_button_img = ImageTk.PhotoImage(up_img)
+up_button = Button(window, image=up_button_img, command=move_up, bg="#16425D")
+up_button.grid(column=3, row=4)
+
+down_img = Image.open("downarrow.png")
+down_img = down_img.resize((20, 20), Image.LANCZOS)
+down_button_img = ImageTk.PhotoImage(down_img)
+down_button = Button(window, image=down_button_img, command=move_down, bg="#16425D")
+down_button.grid(column=3, row=6)
+
+left_img = Image.open("leftarrow.png")
+left_img = left_img.resize((20, 20), Image.LANCZOS)
+left_button_img = ImageTk.PhotoImage(left_img)
+left_button = Button(window, image=left_button_img, command=move_left, bg="#16425D")
+left_button.grid(column=2, row=5, sticky="E")
+
+right_img = Image.open("rightarrow.png")
+right_img = right_img.resize((20, 20), Image.LANCZOS)
+right_button_img = ImageTk.PhotoImage(right_img)
+right_button = Button(window, image=right_button_img, command=move_right, bg="#16425D")
+right_button.grid(column=4, row=5, sticky="W")
 
 window.mainloop()
