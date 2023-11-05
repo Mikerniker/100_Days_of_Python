@@ -64,35 +64,66 @@ def replace_placeholder_image():
         photo_img = ImageTk.PhotoImage(resized_new_image)
         canvas.itemconfig(image_to_watermark, image=photo_img)
 
-# NOtE TO SELF REVIEW FROM HERE
-
-def add_watermark(event):
-    if selected_color is not None:  # Check if a color has been selected
-        watermark = input.get()
-        selected_font_family = clicked.get()
-        selected_font_size = change_font_size() 
-        x, y = event.x, event.y  # Get the coordinates of the click  ADDED
-        font_specs = Font(family=selected_font_family, size=selected_font_size)
-        canvas.itemconfig(watermark_text, text=watermark, fill=selected_color,  font=font_specs)
-        canvas.coords(watermark_text, x, y)  # Update the position of the text element  # ADDED
-#     print("I got clicked")
-    else:
-        messagebox.showwarning(title="Add Color", message="Please choose a color first.")
-        # print("Please choose a color first.")
-
 
 def change_font_size():
     """Function to change the text font size"""
     selected_size = int(font_size_var.get())
     return selected_size
 
-# COLORS
+
 def choose_color():
+    """Function to change the text color"""
     global selected_color
-    color = colorchooser.askcolor()  # This will open a color selection dialog
+    color = colorchooser.askcolor()
     if color:
         selected_color = color[1]
-        #print("Selected color:", selected_color)
+        print("Selected color:", selected_color)
+
+
+def add_watermark():
+    """Function to add a watermark """
+    if selected_color is not None:
+        watermark = watermark_entry.get()
+        selected_font_family = select_font.get()
+        selected_font_size = change_font_size() #25
+        font_specs = Font(family=selected_font_family, size=selected_font_size)
+        canvas.itemconfig(watermark_text, text=watermark,
+                          fill=selected_color, font=font_specs)
+        canvas.coords(watermark_text, cursor_x, cursor_y)  # Set text position
+    else:
+        messagebox.showwarning(title="Add Color",
+                               message="Please choose a color first.")
+        print("Please choose a color first.")
+
+
+def save_watermark():
+    """Saves final watermark image"""
+    # Get the coordinates of the canvas
+    x0 = canvas.winfo_rootx()
+    y0 = canvas.winfo_rooty()
+    x1 = x0 + canvas.winfo_width()
+    y1 = y0 + canvas.winfo_height()
+
+    screenshot = ImageGrab.grab(bbox=(x0, y0, x1, y1))
+
+    # Ask the user for the file path to save the image
+    file_path = filedialog.asksaveasfilename(
+        confirmoverwrite=True,
+        defaultextension=".png",
+        filetypes=[("JPEG", ".jpg"), ("PNG", ".png"),
+                   ("Bitmap", ".bmp"), ("GIF", ".gif")])
+
+    if file_path:
+        screenshot.save(file_path)
+        messagebox.showinfo("Success",
+                            f"The watermarked image has been saved as"
+                            f" {file_path}")
+
+# NOtE TO SELF REVIEW FROM HERE
+
+
+
+
 
 def move_up():
     """Function to move button cursor up when arrow buttons keys are pressed"""
