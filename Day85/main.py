@@ -119,35 +119,41 @@ def save_watermark():
                             f"The watermarked image has been saved as"
                             f" {file_path}")
 
+
+def move_up():
+    """Function to move button up when arrow button is pressed"""
+    global cursor_x, cursor_y
+    canvas.move(watermark_text, 0, -5)
+    cursor_y -= 5
+
+
+def move_down():
+    """Function to move button down when arrow button is pressed"""
+    global cursor_x, cursor_y
+    canvas.move(watermark_text, 0, 5)
+    cursor_y += 5
+
+
+def move_left():
+    """Function to move button left when arrow button is pressed"""
+    global cursor_x, cursor_y
+    canvas.move(watermark_text, -5, 0)
+    cursor_x -= 5
+
+
+def move_right():
+    """Function to move button right when arrow button is pressed"""
+    global cursor_x, cursor_y
+    canvas.move(watermark_text, 5, 0)
+    cursor_x += 5
+
 # NOtE TO SELF REVIEW FROM HERE
 
 
 
 
 
-def move_up():
-    """Function to move button cursor up when arrow buttons keys are pressed"""
-    global cursor_x, cursor_y
-    canvas.move(watermark_text, 0, -5)
-    cursor_y -= 5
 
-def move_down():
-    """Function to move button cursor down when arrow buttons are pressed"""
-    global cursor_x, cursor_y
-    canvas.move(watermark_text, 0, 5)
-    cursor_y += 5
-
-def move_left():
-    """Function to move button cursor when arrow keys are pressed"""
-    global cursor_x, cursor_y
-    canvas.move(watermark_text, -5, 0)
-    cursor_x -= 5
-
-def move_right():
-    """Function to move button cursor when arrow keys are pressed"""
-    global cursor_x, cursor_y
-    canvas.move(watermark_text, 5, 0)
-    cursor_x += 5
 
 #Label
 label1 = Label(text="Select Image", font=("Arial", 12))
