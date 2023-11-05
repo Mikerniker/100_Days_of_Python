@@ -147,36 +147,32 @@ def move_right():
     canvas.move(watermark_text, 5, 0)
     cursor_x += 5
 
+
+# Labels
+image_label = Label(text="Select Image", font=("Arial", 12), fg="white", bg="#16425D")
+image_label.grid(column=0, row=1, sticky="E", pady=6)
+
+add_text_label = Label(text="Add Text", font=("Arial", 12), fg="white", bg="#16425D")
+add_text_label.grid(column=0, row=2, sticky="E", pady=6)
+
+show_text_label = Label(text="Show Text", font=("Arial", 12), fg="white", bg="#16425D")
+show_text_label.grid(column=0, row=3, sticky="E", pady=6)
+
+download_label = Label(text="Download", font=("Arial", 12), fg="white", bg="#16425D")
+download_label.grid(column=0, row=4, sticky="E", pady=6)
+
+font_family_label = Label(text="Font Family", font=("Arial", 10), fg="white", bg="#16425D")
+font_family_label.grid(column=2, row=1, sticky="E", pady=6)
+
+font_size_label = Label(text="Font Size", font=("Arial", 10), fg="white", bg="#16425D")
+font_size_label.grid(column=2, row=2, sticky="E", pady=6)
+
+font_color_label = Label(text="Font Color", font=("Arial", 10), fg="white", bg="#16425D")
+font_color_label.grid(column=2, row=3, sticky="E", pady=6)
+
 # NOtE TO SELF REVIEW FROM HERE
 
 
-
-
-
-
-
-#Label
-label1 = Label(text="Select Image", font=("Arial", 12))
-label1.grid(column=0, row=1)
-label1.config(padx=5, pady=5)
-
-label2 = Label(text="Add Text", font=("Arial", 12))
-label2.grid(column=0, row=2)
-label2.config(padx=5, pady=5)
-
-label3 = Label(text="Add Watermark", font=("Arial", 12))
-label3.grid(column=0, row=3)
-label3.config(padx=5, pady=5)
-
-label4 = Label(text="Download", font=("Arial", 12))
-label4.grid(column=0, row=4)
-label4.config(padx=5, pady=5)
-
-label5 = Label(text="Choose Font", font=("Arial", 10))
-label5.grid(column=2, row=1)
-
-label6 = Label(text="Choose Color", font=("Arial", 10))
-label6.grid(column=2, row=2)
 
 #Entry
 input = Entry(width=30)
