@@ -23,4 +23,10 @@ I would like to add more features in the future, like the ability to adjust opac
 **Biggest learning:**
 - I learned how to resize an image to a desired size, using the Python Imaging Library (PIL) and the `resize` method. Also found that the 'ANTIALIAS' filter is no longer available (ChatGPT recommended), so I used the 'LANCZOS' filter instead.
 
+- Reviewed how to save a file with  `file dialog` in Tkinter, which allows users to specify the format and location for saving the watermarked image. 
 
+- Learned how to align text or buttons on the GUI using the 'sticky' parameter in the grid layout.
+
+- Reviewed how to change the background color of the Tkinter window, ie set the background color with the `.bg` property.
+
+- Learned how to capture a screenshot of the entire window or a specific portion of the screen using the `ImageGrab.grab()` method from the PIL library. 
