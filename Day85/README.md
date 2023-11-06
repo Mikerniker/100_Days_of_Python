@@ -21,3 +21,6 @@ This took me some time to build, and had to use ChatGPT to help me debug as well
 I would like to add more features in the future, like the ability to adjust opacity and rotation of the watermark. I would also like to improve on the user-friendliness and intuitiveness of the interface, making it easier for users to navigate and use the application.
 
 **Biggest learning:**
+- I learned how to resize an image to a desired size, using the Python Imaging Library (PIL) and the `resize` method. Also found that the 'ANTIALIAS' filter is no longer available (ChatGPT recommended), so I used the 'LANCZOS' filter instead.
+
+
