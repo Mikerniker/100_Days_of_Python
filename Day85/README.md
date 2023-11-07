@@ -25,8 +25,8 @@ I would like to add more features in the future, like the ability to adjust opac
 
 - Reviewed how to save a file with  `file dialog` in Tkinter, which allows users to specify the format and location for saving the watermarked image. 
 
-- Learned how to align text or buttons on the GUI using the 'sticky' parameter in the grid layout.
+- Learned how to align text or buttons on the GUI using the 'sticky' parameter in the grid layout. Example: `font_family_label.grid(column=2, row=1, sticky="E", pady=6)`
 
-- Reviewed how to change the background color of the Tkinter window, ie set the background color with the `.bg` property.
+- Reviewed how to change the background color of the Tkinter window, ie set the background color with the `.bg` property. Example: `show_text_label = Label(text="Show Text", font=("Arial", 12), fg="white", bg="#16425D")`
 
 - Learned how to capture a screenshot of the entire window or a specific portion of the screen using the `ImageGrab.grab()` method from the PIL library. 
