@@ -1,5 +1,10 @@
 # Day 85 Image Watermarking App
 
+
+https://github.com/Mikerniker/100_Days_of_Python/assets/63586831/a7ea6114-37ee-4e68-a511-8cad5af18634
+
+Note: My screen recorder doesn't record the pop-ups. :(
+
 ## Overview
 
 - Topics: Tkinter, PIL library
