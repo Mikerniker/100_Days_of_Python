@@ -25,4 +25,14 @@ typwriter_background = canvas.create_image(CANVAS_WIDTH/2, CANVAS_HEIGHT/4,
                                            image=typewriter)
 canvas.grid(row=0, column=0)
 
+
+
+typed_words = []
+
+def save_entry():
+    text = user_entry.get()
+    if text:
+        typed_words.append(text)
+        user_entry.delete(0, END) 
+
 window.mainloop()
