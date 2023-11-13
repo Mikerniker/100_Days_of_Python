@@ -25,7 +25,9 @@ typwriter_background = canvas.create_image(CANVAS_WIDTH/2, CANVAS_HEIGHT/4,
                                            image=typewriter)
 canvas.grid(row=0, column=0)
 
-
+# Entry
+user_entry = Entry(width=30)
+user_entry.grid(column=0, row=6, pady=10, ipadx=90, ipady=10)
 
 typed_words = []
 
