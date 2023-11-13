@@ -35,4 +35,10 @@ def save_entry():
         typed_words.append(text)
         user_entry.delete(0, END) 
 
+def on_space(event):
+    save_entry()
+
+# Bind the Enter key to the save_entry function
+user_entry.bind('<space>', on_space)
+
 window.mainloop()
