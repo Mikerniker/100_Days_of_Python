@@ -40,7 +40,13 @@ def save_entry():
 def on_space(event):
     save_entry()
 
+
+
 # Bind the Enter key to the save_entry function
 user_entry.bind('<space>', on_space)
+
+def highlight_words(self):
+    word_to_highlight = user_entry.get()
+    text_content = self.text_area.get("1.0", END)  #change
 
 window.mainloop()
