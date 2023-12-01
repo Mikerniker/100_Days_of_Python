@@ -256,3 +256,6 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 
 **Day 82: [Professional Portfolio Project: Text to Morse Code Converter](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day82)**
 - Topics:  Python Scripting
+
+**Day 83: [Professional Portfolio Project: Portfolio Website](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day83)**
+- Topics: HTML 5 Template, Flask, SMTPLIB
