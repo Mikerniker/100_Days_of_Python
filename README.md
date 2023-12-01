@@ -253,3 +253,6 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 
 **Day 81: [Capstone Project: Predict Housing Prices](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day81)**
 - Topics: Seaborn, Plotly
+
+**Day 82: [Professional Portfolio Project: Text to Morse Code Converter](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day82)**
+- Topics:  Python Scripting
