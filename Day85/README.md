@@ -19,8 +19,7 @@ Note: My screen recorder doesn't record the pop-ups. :(
 
 ## Notes
 **Approach**
-My approach to building a GUI watermark app with Python involves breaking down the problem into several parts. First, I create a graphical user interface using Tkinter. I then implemented the functionality for the user to select an image. Next, I added options for customizing the watermark, such as adding font size, font colors, and the ability to position the watermark. Finally, apply the watermark to the selected image and allow the user to save the resulting image. 
-This took me some time to build, and had to use ChatGPT to help me debug as well as lookup some methods in Tkinter and PIL. Even with this, there were several limitations since ChatGPT sometimes hallucinates and or has some outdated information on some of the libraries (at least for the free version). 
+First, I tried breaking down the problem into several parts. I created a graphical user interface using Tkinter. I then implemented the functionality for the user to select an image. Next, I added options for customizing the watermark, such as adding font size, font colors, and the ability to position the watermark. Finally,I  applied the watermark to the selected image and added an option for the user to save the resulting image. This took some time to build, even with the aid of ChatGPT, since it sometimes hallucinated and or had some outdated information on some of the libraries (at least for the free version). 
 
 **For Improvement:** 
 I would like to add more features in the future, like the ability to adjust opacity and rotation of the watermark. I would also like to improve on the user-friendliness and intuitiveness of the interface, making it easier for users to navigate and use the application.
