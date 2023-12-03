@@ -76,6 +76,7 @@ def countdown(time_sec):
         print("stop")
 
 
-
+time_label = Label(text="Time Left: 01:00", font=("Arial", 12), fg="white", bg=BACKGROUND_COLOR)
+time_label.grid(column=1, row=1, sticky="E", pady=6)
 
 window.mainloop()
