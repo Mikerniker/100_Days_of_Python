@@ -65,6 +65,17 @@ def compare_word():
         non_matched_words.append(non_matched)
 
 
+def countdown(time_sec):
+    if time_sec >= 0:
+        mins, secs = divmod(time_sec, 60)
+        timeformat = '{:02d}:{:02d}'.format(mins, secs)
+        time_label.config(text=f"Time Left: {timeformat}")
+        window.after(1000, countdown, time_sec - 1)
+       
+    else:
+        print("stop")
+
+
 
 
 window.mainloop()
