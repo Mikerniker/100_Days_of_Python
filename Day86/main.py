@@ -49,20 +49,41 @@ def highlight_words(self):
     word_to_highlight = user_entry.get()
     text_content = self.text_area.get("1.0", END)  #change
 
-def compare_word():
-    user_input = user_entry.get().strip().lower()  # Get user input and convert to lowercase for case-insensitive comparison
+# def compare_word():
+#     user_input = user_entry.get().strip().lower()  # Get user input and convert to lowercase for case-insensitive comparison
 
-    if words_to_type and user_input == words_to_type[0]:
-        text_area.tag_config("matched", foreground="green")
+#     if words_to_type and user_input == words_to_type[0]:
+#         text_area.tag_config("matched", foreground="green")
        
-        matched = words_to_type.pop(0) 
-        matched_words.append(matched)
+#         matched = words_to_type.pop(0) 
+#         matched_words.append(matched)
 
 
+#     else:
+#         text_area.tag_config("non_matched", foreground="red")
+#         non_matched = words_to_type.pop(0)  # Remove the matched word from the list
+#         non_matched_words.append(non_matched)
+
+def compare_word():
+    user_input = user_entry.get().strip().lower()
+    expected_word = words_to_type[0].lower()
+
+    current_line_start = text_area.search(expected_word, "1.0", stopindex="end", exact=True)
+    current_line_end = text_area.index(f"{current_line_start}+{len(expected_word)}c lineend")
+
+    text_area.tag_remove("matched", current_line_start, current_line_end)
+
+    if user_input == expected_word:
+        text_area.tag_add("matched", current_line_start, current_line_end)
+        text_area.tag_config("matched", foreground="green")
+        matched_words.append(expected_word)
     else:
-        text_area.tag_config("non_matched", foreground="red")
-        non_matched = words_to_type.pop(0)  # Remove the matched word from the list
-        non_matched_words.append(non_matched)
+        text_area.tag_add("matched", current_line_start, current_line_end)
+        text_area.tag_config("matched", foreground="red")
+        mistyped_words.append(expected_word)
+
+    words_to_type.pop(0)
+    user_entry.delete(0, END)
 
 
 def countdown(time_sec):
