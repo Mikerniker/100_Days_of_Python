@@ -17,10 +17,10 @@ window.config(padx=50, pady=50, bg=BACKGROUND_COLOR)
 #Canvas
 canvas = Canvas(width=CANVAS_WIDTH, height=CANVAS_HEIGHT,
                 highlightthickness=0, bg=BACKGROUND_COLOR)
-# typewriter = PhotoImage(file="typewriter.png")
-header_text = canvas.create_text(120, 90,
-                                 text="Speed Typing Test", fill="#fff",
-                                 font=("Georgia", 20, "bold"))
+typewriter = PhotoImage(file="typewriter.png")
+# header_text = canvas.create_text(120, 90,
+#                                  text="Speed Typing Test", fill="#fff",
+#                                  font=("Georgia", 20, "bold"))
 typwriter_background = canvas.create_image(CANVAS_WIDTH/2, CANVAS_HEIGHT/4,
                                            image=typewriter)
 canvas.grid(row=0, column=0)
@@ -87,7 +87,7 @@ def reset_labels():
     CPM_label.config(text=f"Corrected CPM: 0")
     words_per_minute_label.config(text=f"Words Per Minute: 0")
     score_label.config(text=f"Your Best Score: 0")
-    
+
 
 time_label = Label(text="Time Left: 01:00", font=("Arial", 12), fg="white", bg=BACKGROUND_COLOR)
 time_label.grid(column=1, row=1, sticky="E", pady=6)
