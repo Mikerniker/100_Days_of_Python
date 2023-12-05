@@ -25,6 +25,10 @@ typwriter_background = canvas.create_image(CANVAS_WIDTH/2, CANVAS_HEIGHT/4,
                                            image=typewriter)
 canvas.grid(row=0, column=0)
 
+# Words
+words = pandas.read_csv("common_english_words.csv")
+words_list = words['Common Words'].tolist()
+
 
 frame = Frame(window)
 
