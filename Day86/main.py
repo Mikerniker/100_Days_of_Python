@@ -49,20 +49,6 @@ def highlight_words(self):
     word_to_highlight = user_entry.get()
     text_content = self.text_area.get("1.0", END)  #change
 
-# def compare_word():
-#     user_input = user_entry.get().strip().lower()  # Get user input and convert to lowercase for case-insensitive comparison
-
-#     if words_to_type and user_input == words_to_type[0]:
-#         text_area.tag_config("matched", foreground="green")
-       
-#         matched = words_to_type.pop(0) 
-#         matched_words.append(matched)
-
-
-#     else:
-#         text_area.tag_config("non_matched", foreground="red")
-#         non_matched = words_to_type.pop(0)  # Remove the matched word from the list
-#         non_matched_words.append(non_matched)
 
 def compare_word():
     user_input = user_entry.get().strip().lower()
@@ -92,10 +78,16 @@ def countdown(time_sec):
         timeformat = '{:02d}:{:02d}'.format(mins, secs)
         time_label.config(text=f"Time Left: {timeformat}")
         window.after(1000, countdown, time_sec - 1)
-       
     else:
         print("stop")
 
+
+def reset_labels():
+    time_label.config(text="Time Left: 01:00")  # to fix
+    CPM_label.config(text=f"Corrected CPM: 0")
+    words_per_minute_label.config(text=f"Words Per Minute: 0")
+    score_label.config(text=f"Your Best Score: 0")
+    
 
 time_label = Label(text="Time Left: 01:00", font=("Arial", 12), fg="white", bg=BACKGROUND_COLOR)
 time_label.grid(column=1, row=1, sticky="E", pady=6)
