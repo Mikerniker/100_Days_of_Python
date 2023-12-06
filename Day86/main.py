@@ -45,6 +45,15 @@ text_area.tag_configure("matched", foreground="green")
 text_area.tag_configure("unmatched", foreground="red")
 text_area.grid(column=0, row=1, rowspan=4, sticky="nsew")
 
+text_area.grid(column=0, row=2, rowspan=4, sticky="nsew")
+
+scroll = Scrollbar(frame)
+
+scroll.grid(column=1, row=2, rowspan=4, sticky="ns")
+text_area.config(yscrollcommand=scroll.set)
+scroll.config(command=text_area.yview)
+frame.grid(column=0, row=2, rowspan=4, sticky="nsew")
+
 
 # Entry
 user_entry = Entry(width=30)
