@@ -35,14 +35,12 @@ text_area = Text(frame,
                  wrap='word',
                  font=("Georgia", 20, "bold"))
 words_to_type = [random.choice(words_list) for _ in range(150)]
-text_area.insert(INSERT, ' '.join(words_to_type))
-# for word in words_to_type:
-#     text_area.insert(INSERT, word + "\n")
+for word in words_to_type:
+    text_area.insert(INSERT, word + " ")
 text_area.tag_configure("matched", foreground="green")
 text_area.tag_configure("unmatched", foreground="red")
-text_area.grid(column=0, row=1, rowspan=4, sticky="nsew")
-
 text_area.grid(column=0, row=2, rowspan=4, sticky="nsew")
+
 
 scroll = Scrollbar(frame)
 
