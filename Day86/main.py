@@ -49,6 +49,18 @@ text_area.config(yscrollcommand=scroll.set)
 scroll.config(command=text_area.yview)
 frame.grid(column=0, row=2, rowspan=4, sticky="nsew")
 
+def select_first_word():
+    # Find the position of the first space after the starting index
+    first_space_index = text_area.search(" ", "1.0", stopindex=END, regexp=True)
+
+    if first_space_index:
+        # Select the word from the starting index to the first space
+        text_area.tag_add("SEL", "1.0", first_space_index)
+
+        # Get the word to be returned
+        selected_word = text_area.get("1.0", first_space_index)
+        return selected_word, "1.0", first_space_index
+
 
 # Entry
 user_entry = Entry(width=30)
