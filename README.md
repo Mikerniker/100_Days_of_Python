@@ -259,3 +259,6 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 
 **Day 83: [Professional Portfolio Project: Portfolio Website](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day83)**
 - Topics: HTML 5 Template, Flask, SMTPLIB
+
+**Day 84: [Professional Portfolio Project: Tic Tac Toe](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day84)**
+- Topics: Functions, list comprehensions, random module
