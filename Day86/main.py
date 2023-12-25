@@ -90,26 +90,57 @@ def highlight_words(self):
     text_content = self.text_area.get("1.0", END)  #change
 
 
-def compare_word():
+def compare_word(event):
+    global current_word_index
+
     user_input = user_entry.get().strip().lower()
-    expected_word = words_to_type[0].lower()
 
-    current_line_start = text_area.search(expected_word, "1.0", stopindex="end", exact=True)
-    current_line_end = text_area.index(f"{current_line_start}+{len(expected_word)}c lineend")
+    # text_area.tag_remove("matched", "1.0", "end")
+    # text_area.tag_remove("unmatched", "1.0", "end")
 
-    text_area.tag_remove("matched", current_line_start, current_line_end)
+    start = "1.0"
+    expected_word = words_to_type[current_word_index]
+    end = text_area.search(expected_word, start, stopindex="end")
 
-    if user_input == expected_word:
-        text_area.tag_add("matched", current_line_start, current_line_end)
-        text_area.tag_config("matched", foreground="green")
-        matched_words.append(expected_word)
-    else:
-        text_area.tag_add("matched", current_line_start, current_line_end)
-        text_area.tag_config("matched", foreground="red")
-        mistyped_words.append(expected_word)
+    if end:
+        end = f"{end}+{len(expected_word)}c"
 
-    words_to_type.pop(0)
+        word = text_area.get(start, end).strip().lower()
+
+        # Check existing tags of the word
+        existing_tags = text_area.tag_names(start)
+        if "matched" in existing_tags or "unmatched" in existing_tags:
+            # Preserve the existing color
+            color = existing_tags[0].split("-")[0]
+        else:
+            # Use default color if no existing tags
+            color = "black"
+
+        if user_input == expected_word:
+            # Apply "matched" tag to the correct word
+            text_area.tag_add(f"{color}-matched", start, end)
+
+            # Move the matched word to a new list
+            matched_words.append((expected_word, color))
+        else:
+            # Apply "unmatched" tag to the incorrect word
+            text_area.tag_add(f"{color}-unmatched", start, end)
+
+            # Move the unmatched word to a new list
+            unmatched_words.append((expected_word, color))
+        # Configure tags
+        text_area.tag_config(f"{color}-matched", foreground="green")
+        text_area.tag_config(f"{color}-unmatched", foreground="red")
+
+    # Move to the next word in the list
+    current_word_index += 1
+
+    if current_word_index >= len(words_to_type):
+        current_word_index = 0  # Start over if all words are typed
+
+    # Clear the user's input
     user_entry.delete(0, END)
+
 
 
 def countdown(time_sec):
