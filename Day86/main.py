@@ -95,9 +95,6 @@ def compare_word(event):
 
     user_input = user_entry.get().strip().lower()
 
-    # text_area.tag_remove("matched", "1.0", "end")
-    # text_area.tag_remove("unmatched", "1.0", "end")
-
     start = "1.0"
     expected_word = words_to_type[current_word_index]
     end = text_area.search(expected_word, start, stopindex="end")
