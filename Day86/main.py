@@ -99,6 +99,7 @@ def compare_word(event):
     expected_word = words_to_type[current_word_index]
     end = text_area.search(expected_word, start, stopindex="end")
 
+    unmatched_tag = None 
     if end:
         end = f"{end}+{len(expected_word)}c"
 
