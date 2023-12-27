@@ -118,8 +118,10 @@ def compare_word(event):
             text_area.tag_add(f"{color}-matched", start, end)
             matched_words.append((expected_word, color))
         else:
-            text_area.tag_add(f"{color}-unmatched", start, end)
-            unmatched_words.append((expected_word, color))
+            unmatched_tag = f"{color}-unmatched-{current_word_index}"
+            text_area.tag_add(unmatched_tag, start, end)
+            # text_area.tag_add(f"{color}-unmatched", start, end)
+            # unmatched_words.append((expected_word, color))
         # Configure tags
         text_area.tag_config(f"{color}-matched", foreground="green")
         text_area.tag_config(f"{color}-unmatched", foreground="red")
