@@ -115,16 +115,17 @@ def compare_word(event):
             color = "black"
 
         if user_input == expected_word:
-            text_area.tag_add(f"{color}-matched", start, end)
+            # Apply "matched" tag to the correct word
+            tag_name = f"{color}-matched"
+            text_area.tag_add(tag_name, start, end)
+            text_area.tag_config(tag_name, foreground="green")
             matched_words.append((expected_word, color))
         else:
-            unmatched_tag = f"{color}-unmatched-{current_word_index}"
-            text_area.tag_add(unmatched_tag, start, end)
-            # text_area.tag_add(f"{color}-unmatched", start, end)
-            # unmatched_words.append((expected_word, color))
-        # Configure tags
-        text_area.tag_config(f"{color}-matched", foreground="green")
-        text_area.tag_config(f"{color}-unmatched", foreground="red")
+            tag_name = f"{color}-unmatched"
+            text_area.tag_add(tag_name, start, end)
+            text_area.tag_config(tag_name, foreground="red")
+
+            unmatched_words.append((expected_word, color))
 
     # Move to the next word in the list
     current_word_index += 1
