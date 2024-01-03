@@ -169,3 +169,8 @@ for word in user_words:
 matched = 0
 for word in matched_words:
     matched += len(word)
+
+# WPM
+word_per_min = matched / 5
+print(f"User type words: {len(user_words)} All chars: {all_chars} "
+      f"CPM {matched} words per minute: {word_per_min}")
