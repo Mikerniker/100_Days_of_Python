@@ -159,3 +159,13 @@ time_label = Label(text="Time Left: 01:00", font=("Arial", 12), fg="white", bg=B
 time_label.grid(column=1, row=1, sticky="E", pady=6)
 
 window.mainloop()
+
+# RAW CPM
+all_chars = 0
+for word in user_words:
+    all_chars += len(word)
+
+# Corrected CPM
+matched = 0
+for word in matched_words:
+    matched += len(word)
