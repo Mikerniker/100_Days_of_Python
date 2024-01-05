@@ -139,13 +139,18 @@ def compare_word(event):
 
 
 def countdown(time_sec):
+    matched = 0
     if time_sec >= 0:
         mins, secs = divmod(time_sec, 60)
         timeformat = '{:02d}:{:02d}'.format(mins, secs)
         time_label.config(text=f"Time Left: {timeformat}")
         window.after(1000, countdown, time_sec - 1)
     else:
-        print("stop")
+        for word in matched_words:
+            matched += len(word)
+            word_per_min = matched / 5
+        print(f"User type words: {len(user_words)} "
+                  f"CPM {matched} words per minute: {word_per_min}")
 
 
 def reset_labels():
