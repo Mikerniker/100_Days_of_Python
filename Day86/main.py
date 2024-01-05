@@ -169,13 +169,3 @@ window.mainloop()
 all_chars = 0
 for word in user_words:
     all_chars += len(word)
-
-# Corrected CPM
-matched = 0
-for word in matched_words:
-    matched += len(word)
-
-# WPM
-word_per_min = matched / 5
-print(f"User type words: {len(user_words)} All chars: {all_chars} "
-      f"CPM {matched} words per minute: {word_per_min}")
