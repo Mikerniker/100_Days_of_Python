@@ -148,9 +148,12 @@ def countdown(time_sec):
     else:
         for word in matched_words:
             matched += len(word)
-            word_per_min = matched / 5
+
+        word_per_min = matched / 5
         print(f"User type words: {len(user_words)} "
                   f"CPM {matched} words per minute: {word_per_min}")
+        return matched, word_per_min
+
 
 
 def reset_labels():
