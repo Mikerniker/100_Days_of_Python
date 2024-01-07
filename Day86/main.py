@@ -153,7 +153,7 @@ def countdown(time_sec):
         print(f"User type words: {len(user_words)} "
                   f"CPM {matched} words per minute: {word_per_min}")
         CPM_label.config(text=f"Corrected CPM: {matched}")
-        
+        words_per_minute_label.config(text=f"Words Per Minute: {word_per_min}")    
         
 
 
