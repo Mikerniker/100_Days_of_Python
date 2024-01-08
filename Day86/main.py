@@ -105,14 +105,6 @@ def compare_word(event):
 
         word = text_area.get(start, end).strip().lower()
 
-        # Check existing tags of the word
-        existing_tags = text_area.tag_names(start)
-        if "matched" in existing_tags or "unmatched" in existing_tags:
-            # Preserve the existing color
-            color = existing_tags[0].split("-")[0]
-        else:
-            # Use default color if no existing tags
-            color = "black"
 
         if user_input == expected_word:
             # Apply "matched" tag to the correct word
