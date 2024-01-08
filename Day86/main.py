@@ -108,11 +108,13 @@ def compare_word(event):
 
         if user_input == expected_word:
             # Apply "matched" tag to the correct word
+            color = "green"
             tag_name = f"{color}-matched"
             text_area.tag_add(tag_name, start, end)
             text_area.tag_config(tag_name, foreground="green")
             matched_words.append((expected_word, color))
         else:
+            color = "red"
             tag_name = f"{color}-unmatched"
             text_area.tag_add(tag_name, start, end)
             text_area.tag_config(tag_name, foreground="red")
