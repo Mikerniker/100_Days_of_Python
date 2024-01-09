@@ -99,12 +99,8 @@ def compare_word(event):
     expected_word = words_to_type[current_word_index]
     end = text_area.search(expected_word, start, stopindex="end")
 
-    unmatched_tag = None 
     if end:
         end = f"{end}+{len(expected_word)}c"
-
-        word = text_area.get(start, end).strip().lower()
-
 
         if user_input == expected_word:
             # Apply "matched" tag to the correct word
