@@ -90,6 +90,11 @@ def highlight_words(self):
     text_content = self.text_area.get("1.0", END)  #change
 
 
+def justify_content():
+    # Justify the content to the center
+    text_widget.tag_configure("center", justify="center")
+    text_widget.tag_add("center", "1.0", "end")
+    
 def compare_word(event):
     global current_word_index
 
