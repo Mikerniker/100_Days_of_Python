@@ -16,3 +16,7 @@ window.config(padx=50, pady=50, bg=BACKGROUND_COLOR)
 text_widget = Text(window, height=4, width=28,
                    wrap='word', font=("Georgia", 20, "bold"),)
 text_widget.grid(column=0, row=2, rowspan=4, sticky="nsew")
+
+
+# Run the Tkinter event loop
+window.mainloop()
