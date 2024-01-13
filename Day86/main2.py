@@ -6,6 +6,12 @@ BACKGROUND_COLOR = "#16425d"
 MAX_LINE_LENGTH = 35  # Sets the maximum line length
 
 
+def insert_words():
+    # Words
+    words = pandas.read_csv("common_english_words.csv")
+    words_list = words['Common Words'].tolist()
+    words_to_type = [random.choice(words_list) for _ in range(150)]
+
 
 # Create the main window
 window = Tk()
