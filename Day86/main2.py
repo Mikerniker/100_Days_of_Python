@@ -12,6 +12,16 @@ def insert_words():
     words_list = words['Common Words'].tolist()
     words_to_type = [random.choice(words_list) for _ in range(150)]
 
+    current_line = ""
+    for word in words_to_type:
+        if len(current_line) + len(word) + 1 <= MAX_LINE_LENGTH:
+            # Add the word to the current line
+            current_line += f"{word} "
+        else:
+            # Insert the current line and start a new line with the word
+            text_widget.insert("end", current_line + "\n")
+            current_line = f"{word} "
+
 
 # Create the main window
 window = Tk()
