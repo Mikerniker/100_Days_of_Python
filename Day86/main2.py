@@ -26,6 +26,13 @@ def insert_words():
     if current_line:
         text_widget.insert("end", current_line + "\n")
 
+
+def justify_content():
+    # Justify the content to the center
+    text_widget.tag_configure("center", justify="center")
+    text_widget.tag_add("center", "1.0", "end")
+
+    
 # Create the main window
 window = Tk()
 window.title("Mik's Speed Typing Test")
