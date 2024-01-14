@@ -22,6 +22,9 @@ def insert_words():
             text_widget.insert("end", current_line + "\n")
             current_line = f"{word} "
 
+    # Insert the remaining words in the last line
+    if current_line:
+        text_widget.insert("end", current_line + "\n")
 
 # Create the main window
 window = Tk()
