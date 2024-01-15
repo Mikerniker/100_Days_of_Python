@@ -32,7 +32,11 @@ def justify_content():
     text_widget.tag_configure("center", justify="center")
     text_widget.tag_add("center", "1.0", "end")
 
-    
+current_word_index = 0
+current_line_index = 0
+user_words = []
+
+
 # Create the main window
 window = Tk()
 window.title("Mik's Speed Typing Test")
