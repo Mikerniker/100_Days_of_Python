@@ -36,7 +36,23 @@ current_word_index = 0
 current_line_index = 0
 user_words = []
 
+def update_word_colors():
+    # Iterate through each word and compare with user input
+    for i, expected_word in enumerate(expected_words):
+        # start = f"1.{len(' '.join(expected_words[:i])) + 1}"
+        # end = f"1.{len(' '.join(expected_words[:i + 1]))}"
 
+        start = f"{current_line_index + 1}.{len(' '.join(expected_words[:i])) + 1}"
+        end = f"{current_line_index + 1}.{len(' '.join(expected_words[:i + 1]))}"
+
+        if i < len(user_words) and user_words[i] == expected_word.lower():
+            print("match")
+            text_widget.tag_configure(f"match_{i}", foreground="green")
+            text_widget.tag_add(f"match_{i}", start, end)
+        elif i < len(user_words) and user_words[i] != expected_word.lower():
+            print("no match")
+            text_widget.tag_configure(f"no_match_{i}", foreground="red")
+            text_widget.tag_add(f"no_match_{i}", start, end)
 # Create the main window
 window = Tk()
 window.title("Mik's Speed Typing Test")
