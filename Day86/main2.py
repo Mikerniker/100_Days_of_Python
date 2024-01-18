@@ -8,23 +8,18 @@ MAX_LINE_LENGTH = 35  # Sets the maximum line length
 
 def insert_words():
     # Words
+    global current_line
     words = pandas.read_csv("common_english_words.csv")
     words_list = words['Common Words'].tolist()
     words_to_type = [random.choice(words_list) for _ in range(150)]
+    print(words_to_type)
 
-    current_line = ""
     for word in words_to_type:
-        if len(current_line) + len(word) + 1 <= MAX_LINE_LENGTH:
-            # Add the word to the current line
-            current_line += f"{word} "
-        else:
-            # Insert the current line and start a new line with the word
-            text_widget.insert("end", current_line + "\n")
-            current_line = f"{word} "
+        text_widget.insert("1.0", word + " ")
 
-    # Insert the remaining words in the last line
-    if current_line:
-        text_widget.insert("end", current_line + "\n")
+        text_widget.tag_configure("center", justify="center")
+        text_widget.tag_add("center", "1.0", "end")
+
 
 
 def justify_content():
