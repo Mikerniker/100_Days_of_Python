@@ -63,5 +63,9 @@ text_widget.grid(column=0, row=2, rowspan=4, sticky="nsew")
 
 insert_words()
 
+# Entry
+user_entry = Entry(width=30)
+user_entry.grid(column=0, row=6, pady=10, ipadx=90, ipady=10)
+
 # Run the Tkinter event loop
 window.mainloop()
