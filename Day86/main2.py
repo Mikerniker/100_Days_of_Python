@@ -21,6 +21,34 @@ def insert_words():
         text_widget.tag_add("center", "1.0", "end")
 
 
+def get_words(event):
+    content = text_widget.get("1.0", "end-1c")  # Remove trailing newline character
+    lines = content.split()
+
+    # Highlight the first word
+    end = text_widget.search(" ", "1.0", stopindex="end")
+    text_widget.tag_add("start", "1.0", end)
+    text_widget.tag_configure("start", background="#4d8f88",
+                              foreground="white")
+
+    if event.keysym == 'space':
+        user_input = user_entry.get().strip().lower()
+        target_word = lines[0]
+
+        if target_word == user_input:
+            text_widget.tag_configure("start", background="#58F139",
+                                      foreground="black")
+            correctly_typed.append(user_input)
+
+        else:
+            text_widget.tag_configure("start", background="red",
+                                      foreground="black")
+
+
+        # Delete the typed word from the text widget with a delay
+        text_widget.after(50 * len(user_input), lambda: text_widget.delete("1.0", f"1.{len(user_input) + 1}"))
+        user_entry.delete(0, END)  # Clear the entry for the next comparison
+
 
 current_word_index = 0
 current_line_index = 0
