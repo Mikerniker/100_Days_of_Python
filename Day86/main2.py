@@ -22,11 +22,6 @@ def insert_words():
 
 
 
-def justify_content():
-    # Justify the content to the center
-    text_widget.tag_configure("center", justify="center")
-    text_widget.tag_add("center", "1.0", "end")
-
 current_word_index = 0
 current_line_index = 0
 user_words = []
