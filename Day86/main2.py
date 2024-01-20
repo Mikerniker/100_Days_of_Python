@@ -69,6 +69,10 @@ text_widget.grid(column=0, row=3, rowspan=4, sticky="nsew")
 
 insert_words()
 
+instructions = "Test your typing speed by typing each word you see in order " \
+               "and clicking the space bar. When the one-minute timer " \
+               "runs out, your typing speed in Words Per Minute (WPM) and " \
+               "Characters Per Minute (CPM) will be displayed."
 # Entry
 user_entry = Entry(width=30)
 user_entry.grid(column=0, row=6, pady=10, ipadx=90, ipady=10)
