@@ -73,6 +73,17 @@ instructions = "Test your typing speed by typing each word you see in order " \
                "and clicking the space bar. When the one-minute timer " \
                "runs out, your typing speed in Words Per Minute (WPM) and " \
                "Characters Per Minute (CPM) will be displayed."
+
+
+# Load the image
+typewriter = PhotoImage(file="typewriter.png")
+
+# Create a Label for the image
+image_label = Label(image=typewriter, bg=BACKGROUND_COLOR)
+image_label.grid(column=1, row=2, pady=5, padx=10, sticky="W")
+
+
+
 # Entry
 user_entry = Entry(width=30)
 user_entry.grid(column=0, row=6, pady=10, ipadx=90, ipady=10)
