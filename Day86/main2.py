@@ -82,7 +82,11 @@ typewriter = PhotoImage(file="typewriter.png")
 image_label = Label(image=typewriter, bg=BACKGROUND_COLOR)
 image_label.grid(column=1, row=2, pady=5, padx=10, sticky="W")
 
-
+# Labels
+header_label = Label(text="S p e e d  T y p i n g  T e s t",
+                     font=("Georgia", 30, "bold"), fg="white",
+                     bg=BACKGROUND_COLOR)
+header_label.grid(column=0, row=1, pady=5)
 
 # Entry
 user_entry = Entry(width=30)
