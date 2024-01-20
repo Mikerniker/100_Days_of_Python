@@ -22,7 +22,11 @@ def insert_words():
 
 correctly_typed = []
 
-def get_words(event):
+correctly_typed = []
+wrong = []
+
+def compare_words(event):
+
     content = text_widget.get("1.0", "end-1c")  # Remove trailing newline character
     lines = content.split()
 
@@ -44,11 +48,13 @@ def get_words(event):
         else:
             text_widget.tag_configure("start", background="red",
                                       foreground="black")
+            wrong.append(user_input)
 
 
         # Delete the typed word from the text widget with a delay
-        text_widget.after(50 * len(user_input), lambda: text_widget.delete("1.0", f"1.{len(user_input) + 1}"))
+        text_widget.after(50 * len(user_input), lambda: text_widget.delete("1.0", f"1.{len(target_word) + 1}"))
         user_entry.delete(0, END)  # Clear the entry for the next comparison
+
 
 
 # Create the main window
