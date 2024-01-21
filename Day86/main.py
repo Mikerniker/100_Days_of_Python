@@ -101,12 +101,6 @@ text_widget.grid(column=0, row=3, rowspan=4, sticky="nsew")
 
 insert_words()
 
-instructions = "Test your typing speed by typing each word you see in order " \
-               "and clicking the space bar. When the one-minute timer " \
-               "runs out, your typing speed in Words Per Minute (WPM) and " \
-               "Characters Per Minute (CPM) will be displayed."
-
-
 # Load the image
 typewriter = PhotoImage(file="typewriter.png")
 
@@ -120,6 +114,10 @@ header_label = Label(text="S p e e d  T y p i n g  T e s t",
                      bg=BACKGROUND_COLOR)
 header_label.grid(column=0, row=1, pady=5)
 
+instructions_label = Label(text=instructions, font=("Arial", 11),
+                           wraplength=text_widget.winfo_reqwidth(),
+                           justify="center", fg="white", bg=BACKGROUND_COLOR)
+instructions_label.grid(column=0, row=2, pady=5)
 # Entry
 user_entry = Entry(width=30)
 user_entry.grid(column=0, row=6, pady=10, ipadx=90, ipady=10)
