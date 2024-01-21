@@ -4,7 +4,13 @@ import random
 
 BACKGROUND_COLOR = "#16425d"
 MAX_LINE_LENGTH = 35  # Sets the maximum line length
+correctly_typed = []
+wrong = []
 
+instructions = "Test your typing speed by typing each word you see in order " \
+               "and clicking the space bar. When the one-minute timer " \
+               "runs out, your typing speed in Words Per Minute (WPM) and " \
+               "Characters Per Minute (CPM) will be displayed."
 
 def insert_words():
     # Words
