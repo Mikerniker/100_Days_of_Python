@@ -13,8 +13,6 @@ instructions = "Test your typing speed by typing each word you see in order " \
                "Characters Per Minute (CPM) will be displayed."
 
 def insert_words():
-    # Words
-    global current_line
     words = pandas.read_csv("common_english_words.csv")
     words_list = words['Common Words'].tolist()
     words_to_type = [random.choice(words_list) for _ in range(150)]
@@ -26,13 +24,8 @@ def insert_words():
         text_widget.tag_configure("center", justify="center")
         text_widget.tag_add("center", "1.0", "end")
 
-correctly_typed = []
-
-correctly_typed = []
-wrong = []
 
 def compare_words(event):
-
     content = text_widget.get("1.0", "end-1c")  # Remove trailing newline character
     lines = content.split()
 
@@ -61,6 +54,39 @@ def compare_words(event):
         text_widget.after(50 * len(user_input), lambda: text_widget.delete("1.0", f"1.{len(target_word) + 1}"))
         user_entry.delete(0, END)  # Clear the entry for the next comparison
 
+
+def countdown(time_sec):
+    matched = 0
+
+    if time_sec >= 0:
+        mins, secs = divmod(time_sec, 60)
+        timeformat = '{:02d}:{:02d}'.format(mins, secs)
+        time_label.config(text=f"Time Left: {timeformat}")
+        window.after(1000, countdown, time_sec - 1)
+
+    else:
+        for word in correctly_typed:
+            matched += len(word)
+        word_per_min = matched / 5
+
+        CPM_label.config(text=f"Corrected CPM: {matched}")
+        words_per_minute_label.config(text=f"Words Per Minute: {word_per_min}")
+        errors_label.config(text=f"Total Errors: {len(wrong)}")
+
+        #INSTRUCTIONS LABEL
+        instructions_label.config(text="Your Typing Speed:",
+                                  font=("Georgia", 28, "bold"), fg="white",
+                                  bg=BACKGROUND_COLOR)
+
+
+        text_widget.delete('1.0', END)
+
+        final_scores = f"Corrected CPM: {matched} \n" \
+                       f"Words Per Minute: {word_per_min}\n" \
+                       f"Total Errors: {len(wrong)}"
+        text_widget.insert("1.0", final_scores)
+        text_widget.tag_configure("center", justify="center")
+        text_widget.tag_add("center", "1.0", "end")
 
 
 # Create the main window
