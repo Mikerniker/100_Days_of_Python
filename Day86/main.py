@@ -135,11 +135,16 @@ errors_label = Label(text="Total Errors: 0", font=("Arial", 12),
 errors_label.grid(column=1, row=6, sticky="E", pady=6)
 
 
-
-
 # Entry
 user_entry = Entry(width=30)
 user_entry.grid(column=0, row=6, pady=10, ipadx=90, ipady=10)
+
+
+# Bind the KeyRelease event to compare_word
+user_entry.bind("<KeyRelease>", compare_words) 
+
+
+
 
 # Run the Tkinter event loop
 window.mainloop()
