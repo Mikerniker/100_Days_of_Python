@@ -118,6 +118,25 @@ instructions_label = Label(text=instructions, font=("Arial", 11),
                            wraplength=text_widget.winfo_reqwidth(),
                            justify="center", fg="white", bg=BACKGROUND_COLOR)
 instructions_label.grid(column=0, row=2, pady=5)
+
+time_label = Label(text="Time Left: 01:00", font=("Arial", 12), fg="white", bg=BACKGROUND_COLOR)
+time_label.grid(column=1, row=3, sticky="E", pady=6)
+
+CPM_label = Label(text="Corrected CPM: 0", font=("Arial", 12), fg="white", bg=BACKGROUND_COLOR)
+CPM_label.grid(column=1, row=4, sticky="E", pady=6)
+
+words_per_minute_label = Label(text="Words Per Minute: 0",
+                               font=("Arial", 12), fg="white",
+                               bg=BACKGROUND_COLOR)
+words_per_minute_label.grid(column=1, row=5, sticky="E", pady=6)
+
+errors_label = Label(text="Total Errors: 0", font=("Arial", 12),
+                     fg="white", bg=BACKGROUND_COLOR)
+errors_label.grid(column=1, row=6, sticky="E", pady=6)
+
+
+
+
 # Entry
 user_entry = Entry(width=30)
 user_entry.grid(column=0, row=6, pady=10, ipadx=90, ipady=10)
