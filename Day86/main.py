@@ -143,6 +143,10 @@ user_entry.grid(column=0, row=6, pady=10, ipadx=90, ipady=10)
 # Bind the KeyRelease event to compare_word
 user_entry.bind("<KeyRelease>", compare_words) 
 
+# Button
+restart_btn = Button(text="Restart", command=reset_labels)
+restart_btn.grid(column=1, row=7, pady=10, ipadx=20, ipady=10, sticky="E")
+
 
 
 
