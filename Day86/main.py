@@ -31,13 +31,12 @@ def compare_words(event):
     content = text_widget.get("1.0", "end-1c")  # Remove trailing newline character
     lines = content.split()
 
-    # Highlight the first word
-    end = text_widget.search(" ", "1.0", stopindex="end")
-    text_widget.tag_add("start", "1.0", end)
-    text_widget.tag_configure("start", background="#4d8f88",
-                              foreground="white")
-
     if not countdown_ended:
+        # Highlight the first word
+        end = text_widget.search(" ", "1.0", stopindex="end")
+        text_widget.tag_add("start", "1.0", end)
+        text_widget.tag_configure("start", background="#4d8f88", foreground="white")
+        
         if event.keysym == 'space':
             user_input = user_entry.get().strip().lower()
             target_word = lines[0]
