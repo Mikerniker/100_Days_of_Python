@@ -147,7 +147,8 @@ user_entry.bind("<KeyRelease>", compare_words)
 restart_btn = Button(text="Restart", command=reset_labels)
 restart_btn.grid(column=1, row=7, pady=10, ipadx=20, ipady=10, sticky="E")
 
-
+# Call the countdown
+countdown(60)
 
 
 # Run the Tkinter event loop
