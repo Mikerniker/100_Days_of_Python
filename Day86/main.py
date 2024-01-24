@@ -100,6 +100,7 @@ def reset_labels():
     global countdown_ended
 
     countdown_ended = False
+    user_entry.delete(0, END)
     time_label.config(text="Time Left: 01:00")
     CPM_label.config(text=f"Corrected CPM: 0")
     words_per_minute_label.config(text=f"Words Per Minute: 0")
