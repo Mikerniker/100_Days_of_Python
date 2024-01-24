@@ -6,6 +6,8 @@ BACKGROUND_COLOR = "#16425d"
 MAX_LINE_LENGTH = 35  # Sets the maximum line length
 correctly_typed = []
 wrong = []
+countdown_ended = False
+
 
 instructions = "Test your typing speed by typing each word you see in order " \
                "and clicking the space bar. When the one-minute timer " \
@@ -35,24 +37,25 @@ def compare_words(event):
     text_widget.tag_configure("start", background="#4d8f88",
                               foreground="white")
 
-    if event.keysym == 'space':
-        user_input = user_entry.get().strip().lower()
-        target_word = lines[0]
+    if not countdown_ended:
+        if event.keysym == 'space':
+            user_input = user_entry.get().strip().lower()
+            target_word = lines[0]
 
-        if target_word == user_input:
-            text_widget.tag_configure("start", background="#58F139",
-                                      foreground="black")
-            correctly_typed.append(user_input)
+            if target_word == user_input:
+                text_widget.tag_configure("start", background="#58F139",
+                                        foreground="black")
+                correctly_typed.append(user_input)
 
-        else:
-            text_widget.tag_configure("start", background="red",
-                                      foreground="black")
-            wrong.append(user_input)
+            else:
+                text_widget.tag_configure("start", background="red",
+                                        foreground="black")
+                wrong.append(user_input)
 
 
-        # Delete the typed word from the text widget with a delay
-        text_widget.after(50 * len(user_input), lambda: text_widget.delete("1.0", f"1.{len(target_word) + 1}"))
-        user_entry.delete(0, END)  # Clear the entry for the next comparison
+            # Delete the typed word from the text widget with a delay
+            text_widget.after(50 * len(user_input), lambda: text_widget.delete("1.0", f"1.{len(target_word) + 1}"))
+            user_entry.delete(0, END)  # Clear the entry for the next comparison
 
 
 def countdown(time_sec):
