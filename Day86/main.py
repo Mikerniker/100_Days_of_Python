@@ -56,6 +56,8 @@ def compare_words(event):
 
 
 def countdown(time_sec):
+    global countdown_ended
+
     matched = 0
 
     if time_sec >= 0:
@@ -65,6 +67,7 @@ def countdown(time_sec):
         window.after(1000, countdown, time_sec - 1)
 
     else:
+        countdown_ended = True
         for word in correctly_typed:
             matched += len(word)
         word_per_min = matched / 5
