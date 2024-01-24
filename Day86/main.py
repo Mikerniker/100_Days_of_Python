@@ -89,6 +89,22 @@ def countdown(time_sec):
         text_widget.tag_add("center", "1.0", "end")
 
 
+def reset_labels():
+    """Resets all the labels"""
+    global countdown_ended
+
+    countdown_ended = False
+    time_label.config(text="Time Left: 01:00")
+    CPM_label.config(text=f"Corrected CPM: 0")
+    words_per_minute_label.config(text=f"Words Per Minute: 0")
+    instructions_label = Label(text=instructions, font=("Arial", 11),
+                               wraplength=text_widget.winfo_reqwidth(),
+                               justify="center", fg="white",
+                               bg=BACKGROUND_COLOR)
+    errors_label.config(text=f"Total Errors: 0")
+    insert_words()
+    countdown(60)
+
 # Create the main window
 window = Tk()
 window.title("Mik's Speed Typing Test")
@@ -137,7 +153,7 @@ errors_label.grid(column=1, row=6, sticky="E", pady=6)
 
 # Entry
 user_entry = Entry(width=30)
-user_entry.grid(column=0, row=6, pady=10, ipadx=90, ipady=10)
+user_entry.grid(column=0, row=7, pady=10, ipadx=90, ipady=10)
 
 
 # Bind the KeyRelease event to compare_word
