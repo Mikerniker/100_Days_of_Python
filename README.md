@@ -1,6 +1,6 @@
 Hello,
 
-This is a repository of my final projects for Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2023. I am currently on Day 84, but slowly putting some of my finished projects (Days 1-83) into Github for my reference. This repository is still a work in progress, thank you for visiting!
+This is a repository of my final projects for Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2023. I am currently on Day 87 and slowly putting the finished projects into Github for my reference. This repository is still a work in progress, thank you for visiting!
 
 ## Beginner
 **Day 1 Project: [Band Name Generator](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day01)**
@@ -262,3 +262,9 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 
 **Day 84: [Professional Portfolio Project: Tic Tac Toe](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day84)**
 - Topics: Functions, list comprehensions, random module
+
+**Day 85: [Professional Portfolio Project: Image Watermarking App](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day85)**
+- Topics: Tkinter, PIL library
+
+**Day 86: [Professional Portfolio Project: Speed Typing Test](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day86)**
+- Topics: Tkinter, Pandas
