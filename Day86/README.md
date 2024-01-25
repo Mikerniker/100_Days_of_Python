@@ -16,7 +16,7 @@ https://github.com/Mikerniker/100_Days_of_Python/assets/63586831/afe99723-53f6-4
 
 ## Notes
 **Approach**
-The project underwent multiple iterations. I encountered frequent challenges, causing the project to take longer than expected. There were recurring moments of confusion and difficulty. Eventually, I decided to completely discard all the previous work and break down it down to smaller steps, which eventually helped me achieve the functionality I wanted.
+The project took longer than expected. Though I approached it by trying to break it down, there were recurring moments of getting stuck and confused by the code I created. Eventually, I decided to completely discard all the previous work and break down it down into even smaller steps, which eventually helped me achieve the functionality I wanted. I had to remind myself that there is the potential for steps to be smaller compared to something that looks small enough.
 
 **Challenges:** 
 The most challenging aspect was determining how to compare the words to the user input. In the initial iterations, I overcomplicated the process but later found a simpler implementation.
