@@ -8,7 +8,7 @@ https://github.com/Mikerniker/100_Days_of_Python/assets/63586831/afe99723-53f6-4
 
 ### The challenge
 
-- Create a speed typing test
+- Create a speed typing test using Tkinter to assesses typing speed. Give the user some sample text and detect how many words they can type per minute.
 
 ### Links
 
