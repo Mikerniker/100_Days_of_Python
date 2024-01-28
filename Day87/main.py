@@ -16,4 +16,21 @@ paddle.penup()
 paddle.goto(0, -250)
 
 
+# Commands to move paddle
+def go_right():
+    new_x = paddle.xcor() + 20
+    paddle.goto(new_x, paddle.ycor())
+
+def go_left():
+    new_x = paddle.xcor() - 20
+    paddle.goto(new_x, paddle.ycor())
+
+screen.listen()
+
+screen.onkey(go_right, "Right")
+screen.onkey(go_left, "Left")
+
+
+
+
 screen.exitonclick()
