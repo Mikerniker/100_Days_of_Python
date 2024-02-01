@@ -21,7 +21,6 @@ ball = Ball()
 screen.listen()
 
 
-
 screen.onkey(paddle.go_right, "Right")
 screen.onkey(paddle.go_left, "Left")
 
