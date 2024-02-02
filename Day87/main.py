@@ -20,6 +20,19 @@ ball = Ball()
 
 screen.listen()
 
+# Test
+x = -360
+y = 0
+starting = []
+while y < 210:
+    create = [(x + 90 * i, y) for i in range(9)]
+    y += 35
+    starting.append(create)
+print(starting)
+
+for position in starting:
+    for pos in position:
+        bricked_wall = Wall(pos)
 
 screen.onkey(paddle.go_right, "Right")
 screen.onkey(paddle.go_left, "Left")
