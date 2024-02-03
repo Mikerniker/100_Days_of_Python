@@ -27,3 +27,12 @@ class Wall(Turtle):
             else:
                 new_brick.color("green")
             self.all_bricks.append(new_brick)
+
+    def create_position(self):
+        global x
+        global y
+        while y < 210:
+            coords = [(x + 90 * i, y) for i in range(9)]
+            y += 35
+            positions.append(coords)
+        print(positions)
