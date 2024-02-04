@@ -35,4 +35,8 @@ class Wall(Turtle):
             coords = [(x + 90 * i, y) for i in range(9)]
             y += 35
             positions.append(coords)
-       
+
+    def build_wall(self):
+        self.create_position()
+        for position in positions:
+            self.create_brick(position)
