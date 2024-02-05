@@ -24,14 +24,16 @@ class Wall(Turtle):
                 new_brick.color("yellow")
             elif 1 < positions.index(position) < 4:
                 new_brick.color("green")
-            else:
+            elif 3 < positions.index(position) < 6:
                 new_brick.color("orange")
+            else:
+                new_brick.color("red")
             self.all_bricks.append(new_brick)
 
     def create_position(self):
         global x
         global y
-        while y < 210:
+        while y < 280:
             coords = [(x + 90 * i, y) for i in range(9)]
             y += 35
             positions.append(coords)
