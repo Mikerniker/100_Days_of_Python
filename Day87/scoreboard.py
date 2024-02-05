@@ -30,19 +30,14 @@ class Scoreboard(Turtle):
 
         if ycor <= 35:
             self.score += 1
-            print("1 point")
         elif 35 < ycor <= 105:
             self.score += 3
-            print("3 points")
         elif 105 < ycor <= 175:
             self.score += 5
-            print("5 points")
         else:
             self.score += 7
-            print("7 points")
 
         self.update_scoreboard()
-
 
     def game_over(self):
         self.goto(0, 0)
