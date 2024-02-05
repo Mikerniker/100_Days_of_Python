@@ -46,4 +46,25 @@ while game_is_on:
     if ball.distance(paddle) < 40 and ball.ycor() > -250 or ball.ycor() > 250:
         ball.bounce_y()
         
+
+    # Detect collision with bricked wall:
+    for brick in bricked_wall.all_bricks:
+        if ball.distance(brick) < 35:
+            brick.hideturtle()
+            ball.bounce_y()
+            bricked_wall.all_bricks.remove(brick)
+            score.get_point(brick)
+        if bricked_wall.all_bricks == []:
+            game_is_on = False
+            score.game_over()
+    
+    # Detect if ball is out of bounds
+    if ball.ycor() < -280:
+        ball.reset_position()
+        score.lose_life()
+
+    if score.lives == 0:
+        game_is_on = False
+        score.game_over()
+
 screen.exitonclick()
