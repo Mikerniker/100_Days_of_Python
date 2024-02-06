@@ -10,7 +10,7 @@
 - Using Python Turtle, build a clone of the 80s hit game Breakout. 
 - Create eight rows of bricks, with two rows each of a different color. 
 - Objective: The player must knock down as many bricks as possible by using the walls and/or the paddle below to hit a ball against the bricks and eliminate them. If the player's paddle misses the ball's rebound, they will lose a turn. The player has three turns. 
-- SCoring: Yellow bricks earn one point each, green bricks earn three points, orange bricks earn five points and red bricks score seven points each.
+- Scoring: Yellow bricks earn one point each, green bricks earn three points, orange bricks earn five points and red bricks score seven points each.
 
 ### Links
 
