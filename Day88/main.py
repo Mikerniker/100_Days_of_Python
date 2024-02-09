@@ -42,3 +42,7 @@ def get_all_cafes():
     result = db.session.execute(db.select(Cafe).order_by(Cafe.name))
     all_cafes = result.scalars().all()
     return render_template('cafes.html', cafes=all_cafes)
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
