@@ -35,3 +35,10 @@ class Cafe(db.Model):
 @app.route("/")
 def home():
     return render_template("index.html")
+
+
+@app.route("/cafes")
+def get_all_cafes():
+    result = db.session.execute(db.select(Cafe).order_by(Cafe.name))
+    all_cafes = result.scalars().all()
+    return render_template('cafes.html', cafes=all_cafes)
