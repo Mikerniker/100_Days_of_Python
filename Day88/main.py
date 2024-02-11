@@ -1,7 +1,7 @@
 from flask import Flask, render_template, jsonify, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 import random
-
+from forms import CafeForm
 
 app = Flask(__name__)
 
@@ -43,6 +43,27 @@ def get_all_cafes():
     all_cafes = result.scalars().all()
     return render_template('cafes.html', cafes=all_cafes)
 
+
+@app.route("/add", methods=["GET", "POST"])
+def post_new_cafe():
+    form = CafeForm()
+    if form.validate_on_submit():
+        new_cafe = Cafe(
+            name=request.form.get("name"),
+            map_url=request.form.get("map_url"),
+            img_url=request.form.get("img_url"),
+            location=request.form.get("location"),
+            has_sockets=bool(request.form.get("has_sockets")),
+            has_toilet=bool(request.form.get("has_toilet")),
+            has_wifi=bool(request.form.get("has_wifi")),
+            can_take_calls=bool(request.form.get("can_take_calls")),
+            seats=request.form.get("seats"),
+            coffee_price=request.form.get("price")
+            )
+        db.session.add(new_cafe)
+        db.session.commit()
+        print("Added new cafe")
+    return render_template('add_cafe.html', form=form)
 
 if __name__ == '__main__':
     app.run(debug=True)
