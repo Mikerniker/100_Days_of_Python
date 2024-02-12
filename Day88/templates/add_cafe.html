@@ -1,0 +1,20 @@
+{% include 'header.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+
+
+{% block content %}
+<div class="container">
+  <div class="row ">
+    <div class="col-sm-12 col-md-8 mx-auto">
+
+      <h1 class="text-center mb-4">Suggest a new cafe</h1>
+
+       {{ render_form(form) }}
+
+	  <p class="space-abovetext-center mt-4"><a href="{{ url_for('get_all_cafes') }}">See all cafes</a></p>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
