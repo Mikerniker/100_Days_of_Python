@@ -1,35 +1,108 @@
 {% include 'header.html' %}
 
 
-  <!-- Main Content -->
+<!-- Main Content -->
 {% block content %}
 
 <hr>
 
 <div class="album py-5 bg-body-tertiary">
-    <div class="container">
-       <h1>All Cafes</h1>
+  <div class="container">
+    <h1>All Cafes</h1>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-         {% for cafe in cafes %}
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="{{ cafe['img_url'] }}" alt="coffee shop image"  width="100%" height="225" >
-<!--            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
-            <div class="card-body">
-              <h5 class="card-title text-center">{{ cafe['name'] }}</h5>
-              <div class="justify-content align-items-center">
-                 <p class="card-text">Location: {{ cafe['location'] }}</p>
-                 <p class="card-text">Price: {{ cafe['coffee_price'] }}</p>
+      {% for cafe in cafes %}
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="{{ cafe['img_url'] }}" alt="coffee shop image"  width="100%" height="225" >
+          <div class="card-body">
+            <h5 class="card-title text-center">{{ cafe['name'] }}</h5>
+            <div class="text-center">
+              <p class="card-text">{{ cafe['location'] }}</p>
+            </div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header ">
+                  <button class="accordion-button collapsed text-center" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ cafe.id }}" aria-expanded="false" aria-controls="flush-collapse{{ cafe.id }}">
+                    Amenities
+                  </button>
+                </h2>
+                <div id="flush-collapse{{ cafe.id }}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <table class="table">
+                      <tbody>
+                        <tr>
+                          <th scope="row">Coffee Price: </th>
+                          <td>{{ cafe.coffee_price }}</td>
+                          <th>Available Seats: </th>
+                          <td>{{ cafe.seats }}</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Has Wifi: </th>
+                          <td>
+                            {% if cafe.has_wifi %}
+                            <p>✅</p>
+                            {% else %}
+                            <p>❌</p>
+                            {% endif %}
+                          </td>
+                          <th>Has Sockets: </th>
+                          <td>
+                              {% if cafe.has_sockets %}
+                              <p>✅</p>
+                              {% else %}
+                              <p>❌</p>
+                              {% endif %}
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Has Toilet: </th>
+                            <td>
+                              {% if cafe.has_toilet %}
+                              <p>✅</p>
+                              {% else %}
+                              <p>❌</p>
+                              {% endif %}
+                            </td>
+                            
+                            <th>Takes Calls: </th>
+                            <td>
+                              {% if cafe.can_take_calls %}
+                              <p>✅</p>
+                              {% else %}
+                              <p>❌</p>
+                              {% endif %}
+                            </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  <table class="table">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <a class="btn btn-primary" href="{{ cafe.map_url }}" role="button">Map</a>
+                          </td>
+                          <td>
+                              <a class="btn btn-primary" href="" role="button">Update Price</a>
+                          </td>
+                          <td>
+                              <a class="btn btn-primary" role="button" href="{{url_for('delete_post', cafe_id=cafe.id) }}">Delete Cafe</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        {% endfor %}
-        <p><a href="">Return to index page</a></p>
       </div>
+      {% endfor %}
     </div>
+    <p class="mt-5 text-center"><a href="{{ url_for('home') }}">Return to index page</a></p>
   </div>
+</div>
 {% endblock %}
 
 
