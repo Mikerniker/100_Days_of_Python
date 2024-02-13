@@ -2,9 +2,10 @@ from flask import Flask, render_template, jsonify, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 import random
 from forms import CafeForm
+from flask_bootstrap import Bootstrap5
 
 app = Flask(__name__)
-
+bootstrap = Bootstrap5(app)
 
 ##Connect to Database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///cafes.db'
@@ -64,6 +65,15 @@ def post_new_cafe():
         db.session.commit()
         print("Added new cafe")
     return render_template('add_cafe.html', form=form)
+
+@app.route("/delete/<int:cafe_id>")
+def delete_post(cafe_id):
+    cafe_to_delete = db.get_or_404(Cafe, cafe_id)
+    db.session.delete(cafe_to_delete)
+    db.session.commit()
+    return redirect(url_for('get_all_cafes'))
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
