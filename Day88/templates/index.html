@@ -17,6 +17,10 @@
         <a class="btn btn-primary px-4 gap-3" href="{{ url_for('get_all_cafes') }}" role="button">All Cafes</a>
         <a class="btn btn-primary px-4 py-1 gap-3" href="{{ url_for('post_new_cafe') }}" role="button">Add Cafe</a>
       </div>
+      <form class="form-inline d-flex justify-content-center">
+        <input class="form-control my-4 w-75 me-2" type="search" placeholder="Search for a cafe" aria-label="Search">
+        <button class="btn btn-primary btn-md" type="submit">Search</button>
+      </form>
     </div>
   </div>
 </header>
