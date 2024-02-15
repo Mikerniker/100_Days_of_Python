@@ -14,3 +14,8 @@ class CafeForm(FlaskForm):
     has_sockets = BooleanField('Has Outlets')
     can_take_calls = BooleanField('Takes Calls')
     submit = SubmitField('Submit')
+
+
+class SearchForm(FlaskForm):
+    search_item = StringField('', validators=[DataRequired()], render_kw={"placeholder": "Search for a cafe"})
+    submit = SubmitField('Submit')
