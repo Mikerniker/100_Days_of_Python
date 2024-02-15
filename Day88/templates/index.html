@@ -1,13 +1,13 @@
 {% include "header.html" %}
-
+{% from 'bootstrap5/form.html' import render_form %}
 
 <!-- Page Header-->
 <header>
   <div class="px-4 py-5 my-5 text-center">
     <img src="{{ url_for('static', filename='assets/img/coffeeandwifi.gif') }}" alt="coffee and wifi" style="border-radius: 50px;">
-    <h1 class="display-5 fw-bold text-body-emphasis">Coffee and Wifi</h1>
+    <h1 class="display-5 fw-bold">Coffee and Wifi</h1>
     <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">
+      <p class="mb-4">
         Find the top cafes, restaurants, libraries,
         and hotel lobbies that are perfect for work and study.
         Discover places with free and reliable Wi-Fi, plenty of power outlets,
@@ -17,12 +17,15 @@
         <a class="btn btn-primary px-4 gap-3" href="{{ url_for('get_all_cafes') }}" role="button">All Cafes</a>
         <a class="btn btn-primary px-4 py-1 gap-3" href="{{ url_for('post_new_cafe') }}" role="button">Add Cafe</a>
       </div>
-      <form class="form-inline d-flex justify-content-center">
+      <form class="form-group">
+        {{ render_form(form) }}
+       </form>
+      <!-- <form class="form-inline d-flex justify-content-center">
         <input class="form-control my-4 w-75 me-2" type="search" placeholder="Search for a cafe" aria-label="Search">
         <button class="btn btn-primary btn-md" type="submit">Search</button>
-      </form>
+      </form> -->
     </div>
   </div>
 </header>
 
-  
+{% include "footer.html" %}
