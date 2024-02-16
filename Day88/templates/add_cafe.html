@@ -10,6 +10,17 @@
       <h1 class="text-center mb-4">Suggest a new cafe</h1>
 
        {{ render_form(form) }}
+       
+      <br>
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+
+        {% for message in messages %}
+        <p>{{ message }}</p>
+        {% endfor %}
+
+      {% endif %}
+      {% endwith %}
 
 	  <p class="space-abovetext-center mt-4"><a href="{{ url_for('get_all_cafes') }}">See all cafes</a></p>
 
