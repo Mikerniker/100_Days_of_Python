@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request, redirect, url_for
+from flask import Flask, render_template, jsonify, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 import random
 from forms import CafeForm
@@ -63,7 +63,8 @@ def post_new_cafe():
             )
         db.session.add(new_cafe)
         db.session.commit()
-        print("Added new cafe")
+        flash("Added new cafe")
+        return redirect(url_for('post_new_cafe'))
     return render_template('add_cafe.html', form=form)
 
 @app.route("/delete/<int:cafe_id>")
