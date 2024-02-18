@@ -17,5 +17,5 @@ class CafeForm(FlaskForm):
 
 
 class SearchForm(FlaskForm):
-    search_item = StringField('', validators=[DataRequired()], render_kw={"placeholder": "Search for a cafe"})
+    search_item = StringField(label='', validators=[DataRequired()], render_kw={"placeholder": "Search for a cafe"})
     submit = SubmitField('Submit')
