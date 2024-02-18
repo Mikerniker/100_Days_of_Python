@@ -1,7 +1,7 @@
 from flask import Flask, render_template, jsonify, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 import random
-from forms import CafeForm
+from forms import CafeForm, SearchForm
 from flask_bootstrap import Bootstrap5
 
 app = Flask(__name__)
@@ -35,7 +35,14 @@ class Cafe(db.Model):
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    search_form = SearchForm()
+    if search_form.validate_on_submit():
+        cafe_loc = request.args.get("search_item")
+        result = db.session.execute(db.select(Cafe).where(Cafe.location == cafe_loc))
+        all_cafes = result.scalars().all()
+        if all_cafes:
+            pass
+    return render_template("index.html", form=search_form)
 
 
 @app.route("/cafes")
