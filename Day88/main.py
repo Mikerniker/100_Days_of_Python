@@ -33,16 +33,24 @@ class Cafe(db.Model):
         return dictionary
     
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def home():
     search_form = SearchForm()
     if search_form.validate_on_submit():
-        cafe_loc = request.args.get("search_item")
+        cafe_loc = request.form.get("search_item").title()
         result = db.session.execute(db.select(Cafe).where(Cafe.location == cafe_loc))
         all_cafes = result.scalars().all()
+
         if all_cafes:
-            pass
+            flash(f"See cafes in {cafe_loc} below.")
+            return render_template("index.html", form=search_form,
+                                   cafes=all_cafes, display_result=True)
+        else:
+            flash("Cafes in this area are not currently available.")
+            return redirect(url_for('home'))
+      
     return render_template("index.html", form=search_form)
+
 
 
 @app.route("/cafes")
