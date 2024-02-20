@@ -1,0 +1,42 @@
+body {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-style: bold;
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  h1 {
+   font-family: "Pacifico", cursive;
+  
+  
+    font-style: normal;
+    letter-spacing: 4px;
+    color: #75358b;
+  
+  }
+  
+  .accordion-button {
+      display: initial;
+      background-color: #CCB6F8;
+  }
+  
+  .btn-primary {
+      --bs-btn-bg: #75358b;
+      --bs-btn-border-color: #75358b;
+  
+      --bs-btn-hover-bg: #986bf4;
+      --bs-btn-hover-border-color: #986bf4;
+  }
+  
+  .form-control {
+      background-color: #CCB6F8;
+  }
+  
+  .error {
+      color: #C21292;
+  }
+  
+  .no_error {
+      color: #492E87;
+  }
