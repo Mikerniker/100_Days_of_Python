@@ -42,14 +42,15 @@ def home():
         all_cafes = result.scalars().all()
 
         if all_cafes:
-            flash(f"See cafes in {cafe_loc} below.")
+            flash(f"See cafes in {cafe_loc} below.", 'no_error')
             return render_template("index.html", form=search_form,
-                                   cafes=all_cafes, display_result=True)
+                                    cafes=all_cafes, display_result=True)
         else:
-            flash("Cafes in this area are not currently available.")
+            flash("Cafes in this area are not currently available.", 'error')
             return redirect(url_for('home'))
-      
+    
     return render_template("index.html", form=search_form)
+
 
 
 
