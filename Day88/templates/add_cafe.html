@@ -1,26 +1,34 @@
 {% extends 'header.html' %}
 {% from 'bootstrap5/form.html' import render_form %}
 
+{% block body %}
 
-{% block content %}
 <div class="container">
   <div class="row ">
     <div class="col-sm-12 col-md-8 mx-auto">
 
+      {% if is_edit: %}
+      <h1 class="text-center mb-4">Edit cafe</h1>
+      {% else: %}
       <h1 class="text-center mb-4">Suggest a new cafe</h1>
+      {% endif %}
+
+
 
        {{ render_form(form) }}
-       
+
       <br>
-      {% with messages = get_flashed_messages() %}
+      {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}
 
-        {% for message in messages %}
-        <p>{{ message }}</p>
-        {% endfor %}
+      {% for category, message in messages %}
+      <p  class="{{ category }}">{{ message }}</p>
+
+      {% endfor %}
 
       {% endif %}
       {% endwith %}
+
 
 	  <p class="space-abovetext-center mt-4"><a href="{{ url_for('get_all_cafes') }}">See all cafes</a></p>
 
