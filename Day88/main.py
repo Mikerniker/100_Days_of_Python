@@ -83,6 +83,7 @@ def post_new_cafe():
         return redirect(url_for('post_new_cafe'))
     return render_template('add_cafe.html', form=form)
 
+
 @app.route("/delete/<int:cafe_id>")
 def delete_post(cafe_id):
     cafe_to_delete = db.get_or_404(Cafe, cafe_id)
@@ -90,6 +91,36 @@ def delete_post(cafe_id):
     db.session.commit()
     return redirect(url_for('get_all_cafes'))
 
+
+@app.route("/edit/<int:cafe_id>", methods=["GET", "POST"])
+def edit_cafe(cafe_id):
+    cafe = db.get_or_404(Cafe, cafe_id)
+    edit_cafe_form = CafeForm(
+        name=cafe.name,
+        location=cafe.location,
+        price=cafe.coffee_price,
+        map_url=cafe.map_url,
+        img_url=cafe.img_url,
+        seats=cafe.seats,
+        has_toilet=cafe.has_toilet,
+        has_wifi=cafe.has_wifi,
+        has_sockets=cafe.has_sockets,
+        can_take_calls=cafe.can_take_calls
+    )
+    if edit_cafe_form.validate_on_submit():
+        cafe.name = edit_cafe_form.name.data
+        cafe.location = edit_cafe_form.location.data
+        cafe.coffee_price = edit_cafe_form.price.data
+        cafe.map_url = edit_cafe_form.map_url.data
+        cafe.img_url = edit_cafe_form.img_url.data
+        cafe.seats = edit_cafe_form.seats.data
+        cafe.has_wifi = edit_cafe_form.has_wifi.data
+        cafe.has_toilet = edit_cafe_form.has_toilet.data
+        cafe.has_sockets = edit_cafe_form.has_sockets.data
+        cafe.can_take_calls = edit_cafe_form.can_take_calls.data
+        db.session.commit()
+        return redirect(url_for("get_all_cafes"))
+    return render_template("add_cafe.html", form=edit_cafe_form, is_edit=True)
 
 
 if __name__ == '__main__':
