@@ -54,8 +54,6 @@ def home():
     return render_template("index.html", form=search_form)
 
 
-
-
 @app.route("/cafes")
 def get_all_cafes():
     result = db.session.execute(db.select(Cafe).order_by(Cafe.name))
@@ -81,7 +79,7 @@ def post_new_cafe():
             )
         db.session.add(new_cafe)
         db.session.commit()
-        flash("Added new cafe")
+        flash(f"Successfully added new cafe", 'no_error')
         return redirect(url_for('post_new_cafe'))
     return render_template('add_cafe.html', form=form)
 
