@@ -1,16 +1,18 @@
-from flask import Flask, render_template, jsonify, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
-import random
-from forms import CafeForm, SearchForm
 from flask_bootstrap import Bootstrap5
+from forms import CafeForm, SearchForm
+
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'add-secret-key-here'
 bootstrap = Bootstrap5(app)
 
-##Connect to Database
+## Connect to Database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///cafes.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+
 
 ## Configured Cafe Table
 class Cafe(db.Model):
@@ -44,11 +46,11 @@ def home():
         if all_cafes:
             flash(f"See cafes in {cafe_loc} below.", 'no_error')
             return render_template("index.html", form=search_form,
-                                    cafes=all_cafes, display_result=True)
+                                   cafes=all_cafes, display_result=True)
         else:
             flash("Cafes in this area are not currently available.", 'error')
             return redirect(url_for('home'))
-    
+
     return render_template("index.html", form=search_form)
 
 
