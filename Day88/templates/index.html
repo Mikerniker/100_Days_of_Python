@@ -1,5 +1,5 @@
 {% extends "header.html" %}
-{% from 'bootstrap5/form.html' import render_form %}
+{% from 'bootstrap5/form.html' import render_form, render_field %}
 
 <!-- Page Header-->
 {% block body %}
@@ -8,7 +8,7 @@
   <div class="px-4 py-5 text-center">
     <img src="{{ url_for('static', filename='assets/img/coffeeandwifi.gif') }}" alt="coffee and wifi" style="border-radius: 50px;">
 
-    <h1 class="display-5 fw-bold ">Coffee and Wifi</h1>
+    <h1 class="display-5 fw-bold ">Cafes and Wifi</h1>
     <div class="col-lg-6 mx-auto">
       <p class="mb-4">
         Find the top cafes, restaurants, libraries,
@@ -22,123 +22,132 @@
         <a class="btn btn-primary px-4 py-1 gap-3" href="{{ url_for('post_new_cafe') }}" role="button">Add Cafe</a>
       </div>
 
-        {{ render_form(form) }}
 
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
+        {{ render_form(form, form_type='inline', form_inline_classes="my-2 row row-cols-lg-auto g-2 justify-content-center") }}
 
-            {% for message in messages %}
-            <p>{{ message }}</p>
+
+
+
+        <div class="mt-3">
+            {% with messages = get_flashed_messages(with_categories=true)  %}
+            {% if messages %}
+            {% for category, message in messages %}
+            <p  class="{{ category }}">{{ message }}</p>
             {% endfor %}
 
-        {% endif %}
-        {% endwith %}
-
+            {% endif %}
+            {% endwith %}
+        </div>
     </div>
-
   </div>
 
+<!--Search Results Section -->
 
 {% if display_result: %}
 <div class="album py-5 bg-body-tertiary">
   <div class="container">
     <h1>Cafes</h1>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        {% for cafe in cafes %}
+         {% for cafe in cafes %}
         <div class="col">
-            <div class="card shadow-sm">
-                <img src="{{ cafe['img_url'] }}" alt="coffee shop image"  width="100%" height="225" >
-                <div class="card-body">
-                    <h5 class="card-title text-center">{{ cafe['name'] }}</h5>
-                    <div class="text-center">
-                        <p class="card-text">{{ cafe['location'] }}</p>
-                    </div>
-                    <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header ">
-                                <button class="accordion-button collapsed text-center" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ cafe.id }}" aria-expanded="false" aria-controls="flush-collapse{{ cafe.id }}">
-                                    Amenities
-                                </button>
-                            </h2>
-                            <div id="flush-collapse{{ cafe.id }}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <table class="table">
-                                        <tbody>
-                                        <tr>
-                                            <th scope="row">Coffee Price: </th>
-                                            <td>{{ cafe.coffee_price }}</td>
-                                            <th>Available Seats: </th>
-                                            <td>{{ cafe.seats }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Has Wifi: </th>
-                                            <td>
-                                                {% if cafe.has_wifi %}
-                                                <p>✅</p>
-                                                {% else %}
-                                                <p>❌</p>
-                                                {% endif %}
-                                            </td>
-                                            <th>Has Sockets: </th>
-                                            <td>
-                                                {% if cafe.has_sockets %}
-                                                <p>✅</p>
-                                                {% else %}
-                                                <p>❌</p>
-                                                {% endif %}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Has Toilet: </th>
-                                            <td>
-                                                {% if cafe.has_toilet %}
-                                                <p>✅</p>
-                                                {% else %}
-                                                <p>❌</p>
-                                                {% endif %}
-                                            </td>
-                                            <th>Takes Calls: </th>
-                                            <td>
-                                                {% if cafe.can_take_calls %}
-                                                <p>✅</p>
-                                                {% else %}
-                                                <p>❌</p>
-                                                {% endif %}
-                                            </td>
-                                        </tr>
+          <div class="card shadow-sm">
+            <img src="{{ cafe['img_url'] }}" alt="coffee shop image"  width="100%" height="225" >
 
-                                        </tbody>
-                                    </table>
-                                    <table class="table">
-                                        <tbody>
-                                        <tr>
-                                            <td>
-                                                <a class="btn btn-primary" href="{{ cafe.map_url }}" role="button">Map</a>
-                                            </td>
-                                            <td>
-                                                <a class="btn btn-primary" href="" role="button">Update</a>
-                                            </td>
-                                            <td>
-                                                <a class="btn btn-primary" role="button" href="{{url_for('delete_post', cafe_id=cafe.id) }}">Delete</a>
-            <!--                                <a class="btn btn-primary" href="" role="button">Delete Cafe</a>-->
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+            <div class="card-body">
+              <h5 class="card-title text-center">{{ cafe['name'] }}</h5>
+              <div class="text-center">
+                 <p class="card-text">{{ cafe['location'] }}</p>
+              </div>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header ">
+                      <button class="accordion-button collapsed text-center" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ cafe.id }}" aria-expanded="false" aria-controls="flush-collapse{{ cafe.id }}">
+                        Amenities
+                      </button>
+                    </h2>
+                    <div id="flush-collapse{{ cafe.id }}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                            <table class="table small align-middle">
+                              <tbody>
+                                <tr>
+                                  <th scope="row">Coffee Price: </th>
+                                  <td>{{ cafe.coffee_price }}</td>
+                                </tr>
+                                <tr>
+                                  <th>Available Seats: </th>
+                                  <td>{{ cafe.seats }}</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">Has Wifi: </th>
+                                      <td>
+                                          {% if cafe.has_wifi %}
+                                          <p>✔️</p>
+                                          {% else %}
+                                          <p>❌</p>
+                                          {% endif %}
+                                      </td>
+                                </tr>
+                                <tr>
+                                  <th>Has Sockets: </th>
+                                      <td>
+                                          {% if cafe.has_sockets %}
+                                          <p>✔️</p>
+                                          {% else %}
+                                          <p>❌</p>
+                                          {% endif %}
+                                      </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">Has Toilet: </th>
+                                    <td>
+                                      {% if cafe.has_toilet %}
+                                      <p>✔️</p>
+                                      {% else %}
+                                      <p>❌</p>
+                                      {% endif %}
+                                    </td>
+                                </tr>
+                                <tr>
+                                  <th>Takes Calls: </th>
+                                    <td>
+                                      {% if cafe.can_take_calls %}
+                                      <p>✔️</p>
+                                      {% else %}
+                                      <p>❌</p>
+                                      {% endif %}
+                                    </td>
+                                </tr>
+
+                              </tbody>
+                            </table>
+                          <table class="table">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                      <a class="btn btn-primary" href="{{ cafe.map_url }}" role="button">Map</a>
+                                  </td>
+                                  <td>
+                                      <a class="btn btn-primary" href="{{url_for('edit_cafe', cafe_id=cafe.id)}}" role="button">Update</a>
+                                  </td>
+                                  <td>
+                                      <a class="btn btn-primary" role="button" href="{{url_for('delete_post', cafe_id=cafe.id) }}">Delete</a>
+                                  </td>
+                                </tr>
+
+                              </tbody>
+                            </table>
+                      </div>
                     </div>
+                  </div>
                 </div>
             </div>
+          </div>
         </div>
-         {% endfor %}
+          {% endfor %}
     </div>
-  </div>
+ </div>
+ </div>
 
-</div>
 {% endif %}
 
 {% endblock %}
-
-{% include "footer.html" %}
