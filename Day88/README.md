@@ -1,14 +1,14 @@
-# IN PROGRESS
-
 # Day 88 Professional Portfolio Project: Cafe and Wifi Website
 
 
 ## Overview
 
-- Topics: Python 
+- Topics: Python, Flask, SQLAlchemy, REST APIs, Web Development  
 
 ### The challenge
 
+- Build a website that lists cafes with wifi and power for remote working.
+- Use an SQLite database called cafes.db that lists cafe data and build a fully-fledged website to display the information in the database. It should display the cafes (optional: it could also allow people to add new cafes or delete cafes).
 
 ### Links
 
