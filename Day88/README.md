@@ -32,7 +32,6 @@ The biggest learnings include becoming more familiar with WTF Flask and reviewin
 ```
 .accordion-button {
     display: initial;
-    /* Other styles if needed */
 }
 ``` 
 - The ```me-2``` class adds margin to the right side of the input field/ creates space between the input field and the button.
