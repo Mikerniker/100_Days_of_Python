@@ -1,6 +1,11 @@
 # Day 88 Professional Portfolio Project: Cafe and Wifi Website
 
 
+
+https://github.com/Mikerniker/100_Days_of_Python/assets/63586831/463e3dc9-9b99-4b7f-acb6-c377bfe97d2a
+
+
+
 ## Overview
 
 - Topics: Python, Flask, SQLAlchemy, REST APIs, Web Development  
@@ -48,6 +53,6 @@ class SearchForm(FlaskForm):
 - [Render WTF without Label](https://stackoverflow.com/questions/49037015/is-posible-to-render-wtf-form-field-with-out-label)
 - [Change color of Flask messages](https://stackoverflow.com/questions/44569040/change-color-of-flask-flash-messages)
 - [Formatting Bootstrap WTF Forms](https://bootstrap-flask.readthedocs.io/en/stable/macros/)
-[Bootstrap Utilities Sizing](https://getbootstrap.com/docs/5.0/utilities/sizing/)  - used this to adjust length of the search (input) bar in initial design (but was later modified to render_form)
+- [Bootstrap Utilities Sizing](https://getbootstrap.com/docs/5.0/utilities/sizing/)  - used this to adjust length of the search (input) bar in initial design (but was later modified to render_form)
 examples ```w-50 , w-75 , w-100 , or w-auto``` . This is all called Bootstrap Utilities Sizing
 to adjust length of the search (input) bar
