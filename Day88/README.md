@@ -14,7 +14,7 @@
 
 - Solution URL: [Cafe and Wifi Website](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day88)
 
-## Notes
+## Reflection
 **Approach & Challenges:** 
 Designing the website was fun. The biggest challenge was resolving some initial errors, particularly getting Flash in Flask to work and formatting the tables to correctly display the information.
 
