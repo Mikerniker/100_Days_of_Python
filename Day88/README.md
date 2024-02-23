@@ -15,12 +15,17 @@
 - Solution URL: [Cafe and Wifi Website](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day88)
 
 ## Notes
-**Approach** 
-
-**Challenges:** 
+**Approach & Challenges:** 
+Designing the website was fun. The biggest challenge was resolving some initial errors, particularly getting Flash in Flask to work and formatting the tables to correctly display the information.
 
 **Biggest learning:**
 
+The biggest learnings include becoming more familiar with WTF Flask and reviewing Bootstrap 5 and its classes. Also, reviewing how to access and render the database information.
+
+**Future Improvements:**
+- Fix error handling.
+- Add a check to verify if a cafe inputted by the user already exists in the database.
+- Figure out how to adjust the width of the input box with render_form for a better UI. (I got a bit stuck here and couldn't seem to figure out how to fix this).
 
 ## Notes:
 - Chanded accordion button by adding css; Did this to align it to the center and remove the arrow):
