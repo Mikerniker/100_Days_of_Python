@@ -22,3 +22,9 @@ def home():
                                start = start_time, end = end_field)
 
     return render_template("home.html", form=todo_form,)
+
+
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
