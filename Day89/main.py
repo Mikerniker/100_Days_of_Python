@@ -1,11 +1,33 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_bootstrap import Bootstrap5
-
+from forms import TodoForm
+from datetime import datetime
+from sqlalchemy.exc import IntegrityError
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'add-secret-key-here'
 bootstrap = Bootstrap5(app)
+
+## Connect to Database
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todos.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
+
+## Configured Cafe Table
+class Todo(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    todo_item = db.Column(db.String(250), nullable=False)
+    due_date = db.Column(db.Date())
+    start_time = db.Column(db.Time())
+    end_field = db.Column(db.Time())
+    status = db.Column(db.String(250))
+
+# with app.app_context():
+#     db.create_all()
+
+
 
 @app.route("/", methods=["GET", "POST"])
 def home():
