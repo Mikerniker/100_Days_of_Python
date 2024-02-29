@@ -32,18 +32,39 @@ class Todo(db.Model):
 @app.route("/", methods=["GET", "POST"])
 def home():
     todo_form = TodoForm()
+    todos = get_all_todos()
     # search_form = SearchForm()
     if todo_form.validate_on_submit():
-        todo_item = request.form.get("todo_item").title()
-        due_date = request.form.get("due_date")
-        start_time = request.form.get("start_time")
-        end_field = request.form.get("end_field")
-        status = request.form.get("status")
-        print(todo_item, due_date, start_time, end_field, status)
-        return render_template("home.html", form=todo_form, todo=todo_item,
-                               start = start_time, end = end_field)
+        due_date_str = request.form.get("due_date")
+        due_date = datetime.strptime(due_date_str, '%Y-%m-%d').date()
 
-    return render_template("home.html", form=todo_form,)
+        start_time_str = request.form.get("start_time")
+        end_field_str = request.form.get("end_field")
+        start_time = datetime.strptime(start_time_str, '%H:%M').time()
+        end_field = datetime.strptime(end_field_str, '%H:%M').time()
+
+        new_todo = Todo(
+            todo_item=request.form.get("todo_item"),
+            due_date=due_date,
+            start_time=start_time,
+            end_field=end_field,
+            status=request.form.get("status"))
+
+        try:
+            db.session.add(new_todo)
+            db.session.commit()
+
+            todos = get_all_todos()
+            return redirect(url_for('home'))
+            # return render_template("home.html", form=todo_form, todos=todos)
+
+        except IntegrityError:
+            db.session.rollback()
+            flash('Todo item already exists.', 'error')
+            return redirect(url_for('home'))
+
+    return render_template("home.html", form=todo_form, todos=todos)
+
 
 
 
