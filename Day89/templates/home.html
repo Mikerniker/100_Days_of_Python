@@ -9,30 +9,23 @@
 <div class="container py-5  justify-content-center">
     <h1 class="text-center"> My Tasks </h1>
 
-    <!--MODAL-->
-    <div class="container d-grid gap-2 col-6 mx-auto">
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-lg mx-auto text-white" data-bs-toggle="modal" data-bs-target="#todoModal">
-            Add a To-Do
-        </button>
-
         <!-- Modal -->
         <div class="modal fade" id="todoModal" tabindex="-1" aria-labelledby="todoModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-header text-center">
                         <h3 class="modal-title fs-5 text-white" id="todoModalLabel">Add a Todo</h3>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form method="post">
-                            <div class="row text-white text-center">
+                            <div class="row text-white">
                                 {{ form.csrf_token() }}
                                 <div class="col">
                                     {{ render_field(form.todo_item, class='toDo') }}
                                 </div>
                             </div>
-                            <div class="row text-white">
+                            <div class="row text-white text-center">
                                 <div class="col-6">
                                     {{ render_field(form.due_date) }}
                                 </div>
@@ -45,7 +38,7 @@
                                 <div class="col-6">
                                     {{ render_field(form.end_field) }}
                                 </div>
-                                <div class="col-4 align-self-center justify-content-center">
+                                <div class="col-4 mx-auto">
                                     {{ render_field(form.submit) }}
                                 </div>
                             </div>
@@ -55,4 +48,3 @@
             </div>
         </div>
     </div>
-<!--END MODAL-->
