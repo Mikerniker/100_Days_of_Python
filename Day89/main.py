@@ -66,6 +66,11 @@ def home():
     return render_template("home.html", form=todo_form, todos=todos)
 
 
+def get_all_todos():
+    result = db.session.execute(db.select(Todo))
+    all_todos = result.scalars().all()
+    return all_todos
+
 
 
 
