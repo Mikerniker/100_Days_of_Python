@@ -9,5 +9,5 @@ class TodoForm(FlaskForm):
     due_date = DateField('Due date')
     start_time = TimeField("Start")
     end_field = TimeField("End Time")
-    status = SelectField(u'Status', validators=[DataRequired()], choices=[('To Do'), ('Doing'), ('Done')])
+    status = SelectField(u'Schedule', validators=[DataRequired()], choices=[('Today'), ('Tomorrow'), ('Upcoming')])
     submit = SubmitField('Submit')
