@@ -29,19 +29,23 @@ class Todo(db.Model):
 
 
 
-@app.route("/", methods=["GET", "POST"])
-def home():
+@app.route("/mytodo", methods=["GET", "POST"])
+def mytodo():
     todo_form = TodoForm()
     todos = get_all_todos()
     # search_form = SearchForm()
     if todo_form.validate_on_submit():
         due_date_str = request.form.get("due_date")
-        due_date = datetime.strptime(due_date_str, '%Y-%m-%d').date()
+        due_date = datetime.strptime(due_date_str,
+                                     '%Y-%m-%d').date() if due_date_str else None
 
         start_time_str = request.form.get("start_time")
+        start_time = datetime.strptime(start_time_str,
+                                       '%H:%M').time() if start_time_str else None
+
         end_field_str = request.form.get("end_field")
-        start_time = datetime.strptime(start_time_str, '%H:%M').time()
-        end_field = datetime.strptime(end_field_str, '%H:%M').time()
+        end_field = datetime.strptime(end_field_str,
+                                      '%H:%M').time() if end_field_str else None
 
         new_todo = Todo(
             todo_item=request.form.get("todo_item"),
