@@ -59,16 +59,14 @@ def mytodo():
             db.session.commit()
 
             todos = get_all_todos()
-            return redirect(url_for('home'))
-            # return render_template("home.html", form=todo_form, todos=todos)
+            return redirect(url_for('mytodo'))
 
         except IntegrityError:
             db.session.rollback()
             flash('Todo item already exists.', 'error')
-            return redirect(url_for('home'))
+            return redirect(url_for('mytodo'))
 
-    return render_template("home.html", form=todo_form, todos=todos)
-
+    return render_template("todo.html", form=todo_form, todos=todos)
 
 def get_all_todos():
     result = db.session.execute(db.select(Todo))
