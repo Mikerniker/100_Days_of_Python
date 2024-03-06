@@ -11,3 +11,10 @@ class TodoForm(FlaskForm):
     end_field = TimeField("End Time")
     status = SelectField(u'Schedule', validators=[DataRequired()], choices=[('Today'), ('Tomorrow'), ('Upcoming')])
     submit = SubmitField('Submit')
+
+
+class RegisterForm(FlaskForm):
+    email = EmailField(label="Email", validators=[DataRequired()])
+    name = StringField(label="Name", validators=[DataRequired()])
+    password = PasswordField(label="Password", validators=[DataRequired()])
+    submit = SubmitField('Sign Me Up')
