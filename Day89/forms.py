@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, SelectField, BooleanField, DateTimeField, DateField, TimeField
+from wtforms import StringField, SubmitField, SelectField, EmailField, PasswordField, BooleanField, DateTimeField, DateField, TimeField
 from wtforms.validators import DataRequired, URL
 
 class TodoForm(FlaskForm):
