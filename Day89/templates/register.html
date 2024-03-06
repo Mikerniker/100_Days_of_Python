@@ -1,0 +1,27 @@
+
+{% extends "base.html" %}
+{% from 'bootstrap5/form.html' import render_field %}
+
+{% block body %}
+<div class="container w-50 pt-5">
+    <div class="row text-white text-center">
+        <h3>Sign up to continue</h3>
+        <form method="post">
+            {{ form.csrf_token() }}
+            <div class="col">
+                {{ render_field(form.name) }}
+            </div>
+            <div class="col">
+                {{ render_field(form.email) }}
+            </div>
+            <div class="col">
+                {{ render_field(form.password) }}
+            </div>
+            <div class="col-4 mx-auto">
+                {{ render_field(form.submit) }}
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
