@@ -28,6 +28,20 @@ class Todo(db.Model):
 #     db.create_all()
 
 
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    register_form = RegisterForm()
+    if register_form.validate_on_submit():
+        name = request.form.get("name")
+        email = request.form.get("email")
+        password = request.form.get("password")
+        print(name, email, password)
+        return redirect(url_for('register'))
+            # db.session.add(new_todo)
+            # db.session.commit()
+    return render_template("register.html", form=register_form)
+
+
 
 @app.route("/mytodo", methods=["GET", "POST"])
 def mytodo():
