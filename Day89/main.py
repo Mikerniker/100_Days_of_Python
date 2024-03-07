@@ -1,9 +1,12 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_bootstrap import Bootstrap5
-from forms import TodoForm
+from flask_login import UserMixin, login_user, LoginManager, current_user, logout_user, login_required
+from forms import TodoForm, RegisterForm, LoginForm
 from datetime import datetime
 from sqlalchemy.exc import IntegrityError
+from werkzeug.security import generate_password_hash, check_password_hash
+from flask_login import LoginManager
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'add-secret-key-here'
