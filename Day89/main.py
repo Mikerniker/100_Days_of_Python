@@ -31,6 +31,14 @@ class Todo(db.Model):
     end_field = db.Column(db.Time())
     status = db.Column(db.String(250))
 
+
+class User(UserMixin, db.Model):
+    __tablename__ = "user"
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(100), unique=True)
+    password = db.Column(db.String(100))
+    name = db.Column(db.String(1000))
+
 # with app.app_context():
 #     db.create_all()
 
@@ -64,6 +72,11 @@ def logout():
     logout_user()
     return redirect(url_for('home'))
 
+
+
+@app.route("/", methods=["GET", "POST"])
+def home():
+    return render_template("home.html")
 
 
 
