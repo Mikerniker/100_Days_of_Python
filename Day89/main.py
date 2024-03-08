@@ -22,7 +22,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 
-
 ## Configured Cafe Table
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -151,13 +150,13 @@ def get_all_todos():
     return all_todos
 
 
-
 @app.route("/delete/<int:todo_id>")
 def delete_todo(todo_id):
     todo_to_delete = db.get_or_404(Todo, todo_id)
     db.session.delete(todo_to_delete)
     db.session.commit()
     return redirect(url_for('mytodo'))
+
 
 
 if __name__ == '__main__':
