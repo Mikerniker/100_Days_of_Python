@@ -99,35 +99,18 @@ def logout():
     return redirect(url_for('home'))
 
 
-
-
 @app.route("/", methods=["GET", "POST"])
 def home():
-    return render_template("home.html")
-
-
-
-@app.route("/register", methods=["GET", "POST"])
-def register():
-    register_form = RegisterForm()
-    if register_form.validate_on_submit():
-        name = request.form.get("name")
-        email = request.form.get("email")
-        password = request.form.get("password")
-        print(name, email, password)
-        return redirect(url_for('register'))
-            # db.session.add(new_todo)
-            # db.session.commit()
-    return render_template("register.html", form=register_form)
-
+    return render_template("home.html", logged_in=current_user.is_authenticated)
 
 
 @app.route("/mytodo", methods=["GET", "POST"])
+@login_required
 def mytodo():
     todo_form = TodoForm()
     todos = get_all_todos()
-    # search_form = SearchForm()
     if todo_form.validate_on_submit():
+
         due_date_str = request.form.get("due_date")
         due_date = datetime.strptime(due_date_str,
                                      '%Y-%m-%d').date() if due_date_str else None
@@ -159,12 +142,14 @@ def mytodo():
             flash('Todo item already exists.', 'error')
             return redirect(url_for('mytodo'))
 
-    return render_template("todo.html", form=todo_form, todos=todos)
+    return render_template("todo.html", form=todo_form, todos=todos, logged_in=True)
+
 
 def get_all_todos():
     result = db.session.execute(db.select(Todo))
     all_todos = result.scalars().all()
     return all_todos
+
 
 
 @app.route("/delete/<int:todo_id>")
