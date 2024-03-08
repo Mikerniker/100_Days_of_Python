@@ -6,6 +6,7 @@ from forms import TodoForm, RegisterForm, LoginForm
 from datetime import datetime
 from sqlalchemy.exc import IntegrityError
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask_login import LoginManager
 
 
 app = Flask(__name__)
@@ -15,11 +16,11 @@ bootstrap = Bootstrap5(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 
-
 ## Connect to Database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todos.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+
 
 
 ## Configured Cafe Table
@@ -39,8 +40,6 @@ class User(UserMixin, db.Model):
     password = db.Column(db.String(100))
     name = db.Column(db.String(1000))
 
-# with app.app_context():
-#     db.create_all()
 
 @login_manager.user_loader
 def load_user(id):
@@ -56,21 +55,49 @@ def login():
         user = db.session.execute(
             db.select(User).where(User.email == email)).scalar()
         if not user:
-            flash('This email does not exist. Please try again.')
+            flash('This email does not exist. Please try again.', 'error')
             return redirect(url_for('login'))
         elif not check_password_hash(user.password, password):
-            flash('Password incorrect,please try again.')
+            flash('Password incorrect, please try again.', 'error')
             return redirect(url_for('login'))
         else:
             login_user(user)
             return redirect(url_for('mytodo'))
-    return render_template('login.html', form=form)
+    return render_template('login.html', form=form, logged_in=current_user.is_authenticated)
+
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    register_form = RegisterForm()
+    if register_form.validate_on_submit():
+        email = request.form.get('email')
+        user = db.session.execute(db.select(User).where(User.email == email)).scalar()
+        if user:
+            flash("You've already signed up with that email, log in instead!", 'error')
+            return redirect(url_for('login'))
+
+
+        hash_and_salted_password = generate_password_hash(
+            request.form.get('password'),
+            method='pbkdf2:sha256',
+            salt_length=8
+        )
+        new_user = User(name=request.form.get("name"),
+                        email=request.form.get("email"),
+                        password=hash_and_salted_password,)
+        db.session.add(new_user)
+        db.session.commit()
+        login_user(new_user)
+
+        return redirect(url_for('mytodo'))
+    return render_template("register.html", form=register_form, logged_in=current_user.is_authenticated)
 
 
 @app.route('/logout')
 def logout():
     logout_user()
     return redirect(url_for('home'))
+
 
 
 
