@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% from 'bootstrap5/form.html' import render_field %}
 
@@ -9,13 +8,13 @@
         <form method="post">
             {{ form.csrf_token() }}
             <div class="col">
-                {{ render_field(form.name) }}
+                {{ render_field(form.name, form_type="horizontal", horizontal_columns=('lg', 2, 8)) }}
             </div>
             <div class="col">
-                {{ render_field(form.email) }}
+                {{ render_field(form.email, form_type="horizontal", horizontal_columns=('lg', 2, 8)) }}
             </div>
             <div class="col">
-                {{ render_field(form.password) }}
+                {{ render_field(form.password, form_type="horizontal", horizontal_columns=('lg', 2, 8)) }}
             </div>
             <div class="col-4 mx-auto">
                 {{ render_field(form.submit) }}
