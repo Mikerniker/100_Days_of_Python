@@ -158,6 +158,28 @@ def delete_todo(todo_id):
     return redirect(url_for('mytodo'))
 
 
+@app.route("/edit/<int:todo_id>", methods=["GET", "POST"])
+def edit_todo(todo_id):
+    todo_to_edit = db.get_or_404(Todo, todo_id)
+    print(todo_id)
+    edit_todo_form = TodoForm(
+        todo_item=todo_to_edit.todo_item,
+        due_date=todo_to_edit.due_date,
+        start_time=todo_to_edit.start_time,
+        end_field=todo_to_edit.end_field,
+        status=todo_to_edit.status)
+
+    if edit_todo_form.validate_on_submit():
+        todo_to_edit.todo_item = edit_todo_form.todo_item.data
+        todo_to_edit.due_date = edit_todo_form.due_date.data
+        todo_to_edit.start_time = edit_todo_form.start_time.data
+        todo_to_edit.end_field = edit_todo_form.end_field.data
+        todo_to_edit.status = edit_todo_form.status.data
+
+        db.session.commit()
+        return redirect(url_for("mytodo"))
+    return render_template("edit_todo.html", form=edit_todo_form, is_edit=True)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
