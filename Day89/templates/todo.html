@@ -135,57 +135,48 @@
                                         </div>
                                     </div>
                         
-
                                     <!-- Card for upcoming -->
-<!--UPCOMING-->
-
-<div class="col">
-    <div class="card mb-4 rounded-3 shadow-sm">
-        <div class="card-body">
-            <h5 class="card-header upcoming text-white text-center">Upcoming</h5>
-            <div class="align-items-center">
-                <div class="list-group">
-                    {% for todo in todos %}
-                    {% if todo.status == "Upcoming" %}
-                    <form method="post" action="{{ url_for('edit_todo', todo_id=todo.id)  }}">
-                        <label class="list-group-item d-flex gap-3">
-                            <span class="pt-1 form-checked-content" id="editable-todo" contenteditable="true">
-<!--                                            <input type="text" name="todo_edit" value="{{ todo['todo_item'] }}">-->
-                               <strong >{{ todo['todo_item'] }}</strong>
-
-                                <small class="d-block text-body-secondary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
-                                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
-                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
-                                    </svg>
-                                    {{  todo["due_date"].strftime('%Y-%m-%d') if todo.due_date else '' }}
-                                </small> <br>
-                                <small class="d-block text-body-secondary">
-                                    {{ todo["start_time"].strftime('%H:%M') if todo.start_time else '' }}-{{ todo["end_field"].strftime('%H:%M') if todo.end_field else '' }}
-                                </small>
-                            </span>
-                            <a href="{{url_for('edit_todo', todo_id=todo.id)}}" role="button" >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-                                </svg>
-                            </a>
-                            <a href="{{url_for('delete_todo', todo_id=todo.id) }}">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-                                    <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
-                                </svg>
-                            </a>
-                        </label>
-                        {% endif %}
-                        {% endfor %}
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-</div>
+                                    <div class="col">
+                                        <div class="card mb-4 rounded-3 shadow-sm">
+                                            <div class="card-body">
+                                                <h5 class="card-header upcoming text-white text-center">Upcoming</h5>
+                                                <div class="align-items-center">
+                                                    <div class="list-group">
+                                                        {% for todo in todos %}
+                                                        {% if todo.status == "Upcoming" %}
+                                                        <label class="list-group-item d-flex gap-3">
+                                                            <span class="pt-1">
+                                                                <strong>{{ todo['todo_item'] }}</strong>
+                                                                <small class="d-block text-body-secondary">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                                                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                                                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+                                                                    </svg>
+                                                                    {{  todo["due_date"].strftime('%Y-%m-%d') if todo.due_date else '' }}
+                                                                    {{ todo["start_time"].strftime('%H:%M') if todo.start_time else '' }}-{{ todo["end_field"].strftime('%H:%M') if todo.end_field else '' }}
+                                                                </small>
+                                                            </span>
+                                                             <a href="{{url_for('edit_todo', todo_id=todo.id)}}" role="button" >
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="{{url_for('delete_todo', todo_id=todo.id) }}">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                                                                    <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+                                                                </svg>
+                                                            </a>
+                                                        </label>
+                                                        {% endif %}
+                                                        {% endfor %}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 {% endblock %}
 
 {% endif %}
