@@ -7,6 +7,7 @@ from datetime import datetime
 from sqlalchemy.exc import IntegrityError
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager
+from sqlalchemy.orm import relationship
 
 
 app = Flask(__name__)
