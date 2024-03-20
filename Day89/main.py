@@ -23,14 +23,18 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 
-## Configured Cafe Table
+## Configured Todo Table
 class Todo(db.Model):
+    __tablename__ = "all_todos"  #new
     id = db.Column(db.Integer, primary_key=True)
+    owner_id = db.Column(db.Integer, db.ForeignKey("user.id"))
+    owner = relationship("User", back_populates="todos")
     todo_item = db.Column(db.String(250), nullable=False)
     due_date = db.Column(db.Date())
     start_time = db.Column(db.Time())
     end_field = db.Column(db.Time())
     status = db.Column(db.String(250))
+
 
 
 class User(UserMixin, db.Model):
