@@ -151,9 +151,11 @@ def mytodo():
 
 
 def get_all_todos():
-    result = db.session.execute(db.select(Todo))
-    all_todos = result.scalars().all()
-    return all_todos
+    if current_user.is_authenticated:
+        user_todos = Todo.query.filter_by(owner_id=current_user.id)
+        return user_todos
+    else:
+        return []
 
 
 @app.route("/delete/<int:todo_id>")
