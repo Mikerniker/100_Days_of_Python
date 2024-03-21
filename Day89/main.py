@@ -133,7 +133,9 @@ def mytodo():
             due_date=due_date,
             start_time=start_time,
             end_field=end_field,
-            status=request.form.get("status"))
+            status=request.form.get("status"),
+            owner_id=current_user.id,
+            owner=current_user,)
 
         try:
             db.session.add(new_todo)
@@ -146,8 +148,7 @@ def mytodo():
             db.session.rollback()
             flash('Todo item already exists.', 'error')
             return redirect(url_for('mytodo'))
-
-    return render_template("todo.html", form=todo_form, todos=todos, logged_in=True)
+    return render_template("todo.html", form=todo_form, todos=todos, current_user=current_user))
 
 
 def get_all_todos():
