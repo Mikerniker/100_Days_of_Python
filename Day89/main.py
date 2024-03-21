@@ -186,7 +186,8 @@ def edit_todo(todo_id):
 
         db.session.commit()
         return redirect(url_for("mytodo"))
-    return render_template("edit_todo.html", form=edit_todo_form, is_edit=True)
+    return render_template("edit_todo.html", form=edit_todo_form, 
+                           is_edit=True, current_user=current_user)
 
 
 if __name__ == '__main__':
