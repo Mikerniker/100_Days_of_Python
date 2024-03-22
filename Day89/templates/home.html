@@ -1,51 +1,46 @@
-
 {% extends "base.html" %}
-{% from 'bootstrap5/form.html' import render_form, render_field %}
 
 {% block body %}
 
-<!--Body-->
 
-<div class="container py-5  justify-content-center">
-    <h1 class="text-center"> My Tasks </h1>
-
-        <!-- Modal -->
-        <div class="modal fade" id="todoModal" tabindex="-1" aria-labelledby="todoModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header text-center">
-                        <h3 class="modal-title fs-5 text-white" id="todoModalLabel">Add a Todo</h3>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form method="post">
-                            <div class="row text-white">
-                                {{ form.csrf_token() }}
-                                <div class="col">
-                                    {{ render_field(form.todo_item, class='toDo') }}
-                                </div>
-                            </div>
-                            <div class="row text-white text-center">
-                                <div class="col-6">
-                                    {{ render_field(form.due_date) }}
-                                </div>
-                                <div class="col-6">
-                                    {{ render_field(form.status) }}
-                                </div>
-                                <div class="col-6">
-                                    {{ render_field(form.start_time) }}
-                                </div>
-                                <div class="col-6">
-                                    {{ render_field(form.end_field) }}
-                                </div>
-                                <div class="col-4 mx-auto">
-                                    {{ render_field(form.submit) }}
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+<main>
+  <div class="container col-xxl-8 px-4 py-5 text-center">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img class="d-block mx-lg-auto img-fluid" src="{{ url_for('static', filename='images/taskcheck.PNG') }}" width="700" height="500" alt="to do list" loading="lazy">
         </div>
+        <div class="col-lg-6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-brilliance" viewBox="0 0 16 16">
+            <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16M1 8a7 7 0 0 0 7 7 3.5 3.5 0 1 0 0-7 3.5 3.5 0 1 1 0-7 7 7 0 0 0-7 7"/>
+          </svg>
+          <h1 class="display-2 fw-bold text-white lh-1 mb-3">TaskCheck</h1>
+          <h3 class="fw-normal text-white mb-3">Your Ultimate Task Companion!</h3>
+
+          <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Learn More</button>
+            <a class="btn btn-outline-light btn-lg px-4" href="{{ url_for('register') }}" role="button">Sign Up</a>
+          </div>
+        </div>
+      </div>
     </div>
-<!-- Modal End -->
+</main>
+
+
+<!--Second Section-->
+
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img class="d-block mx-lg-auto img-fluid" src="{{ url_for('static', filename='images/upcoming.png') }}"  style="max-width: 60%; height: auto; border-radius: 15px;" alt="to do list" loading="lazy">
+      </div>
+      <div class="description col-lg-6 p-5 rounded">
+        <h2 class="display-5 fw-bold lh-1 mb-3">Unlock Your Productivity: <br> Stay on Track with <br> TaskCheck!</h2>
+        <p class="lead text-white">Start each day with clarity. Whether structuring your day or organizing tasks,
+          our To-do app provides a transparent view of your upcoming days,
+          empowering you to plan your week seamlessly.</p>
+      </div>
+    </div>
+</div>
+
+
+{% endblock %}
