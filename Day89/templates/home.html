@@ -17,7 +17,7 @@
           <h3 class="fw-normal text-white mb-3">Your Ultimate Task Companion!</h3>
 
           <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Learn More</button>
+            <a class="btn btn-primary btn-lg px-4 me-md-2" href="#learn-more" role="button">Learn More</a>
             <a class="btn btn-outline-light btn-lg px-4" href="{{ url_for('register') }}" role="button">Sign Up</a>
           </div>
         </div>
@@ -33,7 +33,7 @@
       <div class="col-10 col-sm-8 col-lg-6">
         <img class="d-block mx-lg-auto img-fluid" src="{{ url_for('static', filename='images/upcoming.png') }}"  style="max-width: 60%; height: auto; border-radius: 15px;" alt="to do list" loading="lazy">
       </div>
-      <div class="description col-lg-6 p-5 rounded">
+      <div id="learn-more" class="description col-lg-6 p-5 rounded">
         <h2 class="display-5 fw-bold lh-1 mb-3">Unlock Your Productivity: <br> Stay on Track with <br> TaskCheck!</h2>
         <p class="lead text-white">Start each day with clarity. Whether structuring your day or organizing tasks,
           our To-do app provides a transparent view of your upcoming days,
