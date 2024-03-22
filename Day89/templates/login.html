@@ -2,6 +2,7 @@
 {% from 'bootstrap5/form.html' import render_field %}
 
 {% block body %}
+
 <div class="container w-50 pt-5">
     <div class="row text-white text-center">
         <h3>Log In</h3>
@@ -22,7 +23,7 @@
             <div class="col">
                 {{ render_field(form.password, form_type="horizontal", horizontal_columns=('lg', 2, 8)) }}
             </div>
-            <div class="col-4 mx-auto">
+            <div class="col-4 mx-auto mb-5">
                 {{ render_field(form.submit) }}
             </div>
         </form>
@@ -30,3 +31,4 @@
 </div>
 
 {% endblock %}
+
