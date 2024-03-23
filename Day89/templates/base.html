@@ -16,6 +16,8 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
     {% endblock %}
+
+
 </head>
 <body>
 
@@ -40,6 +42,7 @@
               </a>
             </li>
               {% if not current_user.is_authenticated: %}
+
 
               <li>
                   <a href="{{ url_for('login') }}" class="nav-link text-white">
