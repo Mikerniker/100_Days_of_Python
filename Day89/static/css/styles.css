@@ -1,0 +1,49 @@
+body {
+    background: #9AD0C2;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  h1, h2 {
+    color: #FFFFFF;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: bold;
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+  }
+  
+  .todo-form {
+    background: #2D9596;
+  }
+   
+.btn {
+    background-color: #265073;
+}
+  
+.modal-content {
+    background-color: #2D9596;
+}
+  
+.navbar-color {
+    background: #265073;
+}
+  
+.card-header.today {
+    background-color: #FB88B4;
+}
+  
+.card-header.tomorrow {
+    background-color: #FDAE15;
+}
+  
+.card-header.upcoming {
+    background-color:  #9195F6;
+}
+ 
+.error {
+    color: red
+}
+  
+.description {
+    background-color:  #265073;
+}
