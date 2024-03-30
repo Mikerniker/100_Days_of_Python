@@ -24,11 +24,11 @@
 **Future Improvements:**
 
 ## Notes:
-- To fix the database error and connect the user to their respective todos, you had to fix your get_all _todos to query to the current user then you had to add the owner to the saved database in the  mytodo function: 
- ```
- owner_id=current_user.id,
+- To fix the database error and connect the user to their respective todos, you had to fix your ```get_all _todos``` to query to the current user then you had to add the owner to the saved database in the  mytodo function: 
+```
+owner_id=current_user.id,
             owner=current_user,
-            ```
+```
 - Keep getting the documentation for flask-bootstrap and bootstrap-flask confused, mental note: this is the documentation I use for bootstrap 5 so as not to get confused:
 [Bootstrap-Flask](https://bootstrap-flask.readthedocs.io/en/stable/migrate/) 
 - For Bootstrap 4 & 5
