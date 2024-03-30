@@ -29,18 +29,19 @@
 <!--Second Section-->
 
 <div class="container col-xxl-8 px-4 py-5">
-    <div class="row align-items-center g-5 py-5">
-      <div class="col-10 col-sm-8 col-lg-6">
-        <img class="d-block mx-lg-auto img-fluid" src="{{ url_for('static', filename='images/upcoming.png') }}"  style="max-width: 60%; height: auto; border-radius: 15px;" alt="to do list" loading="lazy">
-      </div>
-      <div id="learn-more" class="description col-lg-6 p-5 rounded">
-        <h2 class="display-5 fw-bold lh-1 mb-3">Unlock Your Productivity: <br> Stay on Track with <br> TaskCheck!</h2>
-        <p class="lead text-white">Start each day with clarity. Whether structuring your day or organizing tasks,
-          our To-do app provides a transparent view of your upcoming days,
-          empowering you to plan your week seamlessly.</p>
-      </div>
+  <div class="description row align-items-center g-5 py-5 rounded">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img class="d-block mx-lg-auto img-fluid" src="{{ url_for('static', filename='images/upcoming.png') }}"  style="max-width: 55%; height: auto; border-radius: 15px;" alt="to do list" loading="lazy">
     </div>
+    <div id="learn-more" class=" col-lg-6 p-5 ">
+      <h2 class="display-5 fw-bold lh-1 mb-3">Unlock Your Productivity: <br> Stay on Track with <br> TaskCheck!</h2>
+      <p class="lead text-white">Start each day with clarity. Whether structuring your day or organizing tasks,
+        our To-do app provides a transparent view of your upcoming days,
+        empowering you to plan your week seamlessly.</p>
+    </div>
+  </div>
 </div>
+
 
 
 {% endblock %}
