@@ -1,5 +1,3 @@
-# In PROGRESS 
-
 
 # Day 89 Professional Portfolio Project: ToDo App
 
@@ -18,10 +16,13 @@
 
 ## Reflection
 **Approach & Challenges:** 
+I enjoyed the process of creating the interface and designing the website. One of the challenges I had was resolving a database error and establishing connections between users and their respective todo pages, as well as addressing issues related to sizing and alignment using ```render_field```.
 
 **Biggest learning:**
+During this project, I came across some new concepts. One was ```contenteditable``` for HTML, which I'm still trying to figure out how to use with Python. I'm still looking for resources to figure out how to  effectively store contenteditable items in the database.
 
 **Future Improvements:**
+There are several areas that can still be improved including, enhancing the UI and UX, implementing features such as enhanced interactivity and the ability for users to have collaborative pages for team work, integrating a calendar and enhancing security and authentication. I've decided to leave it as is for now, but hope to improve it later on.
 
 ## Notes:
 - To fix the database error and connect the user to their respective todos, you had to fix your ```get_all _todos``` to query to the current user then you had to add the owner to the saved database in the  mytodo function: 
