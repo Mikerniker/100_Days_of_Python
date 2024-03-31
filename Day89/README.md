@@ -23,7 +23,7 @@ During this project, I came across some new concepts. One was ```contenteditable
 **Future Improvements:**
 There are several areas that can still be improved including, enhancing the UI and UX, implementing features such as enhanced interactivity and the ability for users to have collaborative pages for team work, integrating a calendar and enhancing security and authentication. I've decided to leave it as is for now, but hope to improve it later on.
 
-## Notes:
+## Notes and References::
 - To fix the database error and connect the user to their respective todos, you had to fix your ```get_all _todos``` to query to the current user then you had to add the owner to the saved database in the  mytodo function: 
 ```
 owner_id=current_user.id,
@@ -33,8 +33,6 @@ owner_id=current_user.id,
 [Bootstrap-Flask](https://bootstrap-flask.readthedocs.io/en/stable/migrate/) 
 - To make bootstrap container rounded: [Rounded container](https://mdbootstrap.com/learn/mdb-foundations/bootstrap/rounded-corners/#:~:text=In%20Bootstrap%2C%20it's%20very%20easy,class%20rounded%2D4%20or%20similar.)
 - To format jinja strftime example: ```{{ todo["start_time"].strftime('%H:%M') }}```
-
-## References:
 - [Content Editable Reference](https://www.w3schools.com/tags/att_global_contenteditable.asp)
 - To fix sizing and alignment with [render_field](https://bootstrap-flask.readthedocs.io/en/stable/macros/#render_field) :              
 - ```{{ render_field(form.email, form_type="horizontal", horizontal_columns=('lg', 2, 8)) }}```
