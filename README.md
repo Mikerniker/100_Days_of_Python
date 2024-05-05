@@ -273,5 +273,7 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 - Topics: Python, Turtle
 
 **Day 88: [Professional Portfolio Project: Cafes and Wifi Website](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day88)**
-- Topics:  Python, Flask, SQLAlchemy, REST APIs, Jinja, Web Development,
+- Topics:  Python, Flask, SQLAlchemy, REST APIs, Jinja, Web Development
 
+**Day 89: [Professional Portfolio Project: ToDo App](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day89)**
+- Topics:  Python, Flask, SQLAlchemy, REST APIs, Auth, Web Development 
