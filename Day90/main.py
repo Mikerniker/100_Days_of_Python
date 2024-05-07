@@ -26,5 +26,9 @@ instructions_label = Label(text=instructions, font=("Arial", 11),
                            justify="center", fg="white", bg=BACKGROUND_COLOR)
 instructions_label.grid(column=0, row=2, pady=5)
 
+time_label = Label(text="Time Left: 06", font=("Arial", 12), fg="white",
+                   bg=BACKGROUND_COLOR)
+time_label.grid(column=0, row=7, pady=6)
+
 
 window.mainloop()
