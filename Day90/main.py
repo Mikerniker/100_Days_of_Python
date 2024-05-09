@@ -10,6 +10,14 @@ countdown_time = 10
 
 
 
+def on_key_release(event):
+    global last_key_release_time, timer_running
+    # Record the time when a key is released
+    last_key_release_time = time.time()
+    # Start the timer only if it's not already running
+    if not timer_running:
+        timer_running = True
+
 
 # Create the main window
 window = Tk()
