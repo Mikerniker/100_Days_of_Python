@@ -1,7 +1,14 @@
 from tkinter import *
 import time
 
-BACKGROUND_COLOR = "#135D66"
+BACKGROUND_COLOR = "#003C43"
+MAX_LINE_LENGTH = 35 
+
+
+instructions = "Don't stop writing or your text will disappear!"
+countdown_time = 10
+
+
 
 
 # Create the main window
