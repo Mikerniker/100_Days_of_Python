@@ -11,13 +11,18 @@ countdown_time = 10
 
 
 def on_key_release(event):
+    """ # Record the time when a key is released and starts the timer if it's not already running"""
     global last_key_release_time, timer_running
-    # Record the time when a key is released
     last_key_release_time = time.time()
-    # Start the timer only if it's not already running
     if not timer_running:
         timer_running = True
 
+
+def on_key_press(event):
+    """Stops the timer when a key is pressed"""
+    global timer_running
+    
+    timer_running = False
 
 # Create the main window
 window = Tk()
@@ -29,6 +34,10 @@ text_widget = Text(window, height=10, width=40,
                    wrap='word', font=("Georgia", 25),
                    bg=BACKGROUND_COLOR, bd=0, fg="#FFF2D7", insertbackground="#FFF2D7")
 text_widget.grid(column=0, row=3, rowspan=4, sticky="nsew")
+# Bind the text widget to the event for key release
+text_widget.bind("<KeyRelease>", on_key_release)
+text_widget.bind("<KeyPress>", on_key_press)
+
 
 
 # Labels
