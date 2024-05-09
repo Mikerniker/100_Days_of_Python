@@ -26,7 +26,8 @@ window.config(padx=50, pady=50, bg=BACKGROUND_COLOR)
 
 # Create a Text widget
 text_widget = Text(window, height=10, width=40,
-                   wrap='word', font=("Georgia", 25))
+                   wrap='word', font=("Georgia", 25),
+                   bg=BACKGROUND_COLOR, bd=0, fg="#FFF2D7", insertbackground="#FFF2D7")
 text_widget.grid(column=0, row=3, rowspan=4, sticky="nsew")
 
 
