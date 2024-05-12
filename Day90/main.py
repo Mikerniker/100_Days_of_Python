@@ -11,7 +11,7 @@ countdown_time = 10
 
 
 def on_key_release(event):
-    """ # Record the time when a key is released and starts the timer if it's not already running"""
+    """ Record the time when a key is released and starts the timer if it's not already running"""
     global last_key_release_time, timer_running
     last_key_release_time = time.time()
     if not timer_running:
@@ -21,8 +21,9 @@ def on_key_release(event):
 def on_key_press(event):
     """Stops the timer when a key is pressed"""
     global timer_running
-    
     timer_running = False
+    if len(text_widget.get("1.0", "end-1c")) > 0:
+        countdown()
 
 # Create the main window
 window = Tk()
