@@ -25,6 +25,15 @@ def on_key_press(event):
     if len(text_widget.get("1.0", "end-1c")) > 0:
         countdown()
 
+
+def check_elapsed_time():
+    global last_key_release_time
+    # Calculate the elapsed time since the last key release
+    elapsed_time = time.time() - last_key_release_time
+
+    return elapsed_time
+
+
 # Create the main window
 window = Tk()
 window.title("Mik's Disappearing Text")
