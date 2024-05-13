@@ -9,6 +9,18 @@ instructions = "Don't stop writing or your text will disappear!"
 countdown_time = 10
 
 
+def countdown():
+    time_elapse = int(check_elapsed_time())
+    if time_elapse > 5:
+        remaining_time = countdown_time - time_elapse
+        if remaining_time >= 0:
+            time_label.config(text=f"Time Left: {remaining_time:02d}")
+        else:
+            time_label.config(text="Time Left: 00")
+            text_widget.delete('1.0', END)
+    else:
+        time_label.config(text=f"Time Left: {5:02d}")
+    window.after(1000, countdown)
 
 def on_key_release(event):
     """ Record the time when a key is released and starts the timer if it's not already running"""
