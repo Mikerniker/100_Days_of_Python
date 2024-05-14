@@ -17,6 +17,7 @@ def countdown():
             time_label.config(text=f"Time Left: {remaining_time:02d}")
         else:
             time_label.config(text="Time Left: 00")
+            # tkinter.messagebox.showinfo("Text deleted", "You've lost your text, click the button if you want to save it")
             text_widget.delete('1.0', END)
     else:
         time_label.config(text=f"Time Left: {5:02d}")
