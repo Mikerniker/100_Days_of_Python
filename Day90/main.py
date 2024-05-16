@@ -49,9 +49,16 @@ def check_elapsed_time():
     global last_key_release_time
     # Calculate the elapsed time since the last key release
     elapsed_time = time.time() - last_key_release_time
-
     return elapsed_time
 
+
+def prompt_save_or_delete():
+    text = text_widget.get("1.0", "end-1c")
+    text_widget.delete('1.0', END)
+    if tkinter.messagebox.askyesno("Time's up!", "Do you want to save your text?"):
+        save_text(text)
+    else:
+        delete_text()
 
 # Create the main window
 window = Tk()
