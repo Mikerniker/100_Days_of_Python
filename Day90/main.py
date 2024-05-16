@@ -1,5 +1,6 @@
 from tkinter import *
 import time
+import tkinter.messagebox
 
 BACKGROUND_COLOR = "#003C43"
 MAX_LINE_LENGTH = 35 
@@ -10,18 +11,23 @@ countdown_time = 10
 
 
 def countdown():
+    global timer_running, popup_shown
     time_elapse = int(check_elapsed_time())
     if time_elapse > 5:
         remaining_time = countdown_time - time_elapse
         if remaining_time >= 0:
             time_label.config(text=f"Time Left: {remaining_time:02d}")
         else:
+            if not popup_shown:
+                popup_shown = True
+                prompt_save_or_delete()
             time_label.config(text="Time Left: 00")
-            # tkinter.messagebox.showinfo("Text deleted", "You've lost your text, click the button if you want to save it")
-            text_widget.delete('1.0', END)
+            timer_running = False
+            return
     else:
-        time_label.config(text=f"Time Left: {5:02d}")
+        time_label.config(text="Keep it up!")
     window.after(1000, countdown)
+    
 
 def on_key_release(event):
     """ Record the time when a key is released and starts the timer if it's not already running"""
