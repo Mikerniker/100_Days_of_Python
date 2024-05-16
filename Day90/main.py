@@ -70,16 +70,23 @@ def delete_text():
     with open("test.txt", "w") as text_file:
         text_file.write("")
 
+
 # Create the main window
 window = Tk()
 window.title("Mik's Disappearing Text")
 window.config(padx=50, pady=50, bg=BACKGROUND_COLOR)
 
+# Initialize variables
+last_key_release_time = 0
+timer_running = False
+popup_shown = False
+
+
 # Create a Text widget
 text_widget = Text(window, height=10, width=40,
                    wrap='word', font=("Georgia", 25),
-                   bg=BACKGROUND_COLOR, bd=0, fg="#FFF2D7", insertbackground="#FFF2D7")
-text_widget.grid(column=0, row=3, rowspan=4, sticky="nsew")
+                   bg=BACKGROUND_COLOR, bd=0,  fg="white", insertbackground="#FFF2D7")
+text_widget.grid(column=0, row=3, rowspan=4, sticky="nsew", pady=(20, 20))
 # Bind the text widget to the event for key release
 text_widget.bind("<KeyRelease>", on_key_release)
 text_widget.bind("<KeyPress>", on_key_press)
