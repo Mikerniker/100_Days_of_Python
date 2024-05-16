@@ -40,11 +40,9 @@ def on_key_release(event):
 
 
 def on_key_press(event):
-    """Stops the timer when a key is pressed"""
-    global timer_running
+    global timer_running, countdown_time
+    # Stop the timer when a key is pressed
     timer_running = False
-    if len(text_widget.get("1.0", "end-1c")) > 0:
-        countdown()
 
 
 def check_elapsed_time():
