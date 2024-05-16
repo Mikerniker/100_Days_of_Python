@@ -120,10 +120,14 @@ time_label.grid(column=0, row=7, pady=6)
 button_frame = Frame(window, bg=BACKGROUND_COLOR)
 button_frame.grid(column=0, row=9)
 
-# Create a button to save the text
+# Create buttons to save and restart the text
 save = Button(button_frame, text="Save File", height="2", width="10",
               font=("Georgia", 10), overrelief="sunken",
               command=lambda: save_text(text_widget.get("1.0", "end-1c")))
 save.pack(side=LEFT, padx=10)
+
+restart_button = Button(button_frame, text="Restart",  height="2", width="10",
+              font=("Georgia", 10), overrelief="sunken", command=restart)
+restart_button.pack(side=LEFT)
 
 window.mainloop()
