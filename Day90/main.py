@@ -60,6 +60,16 @@ def prompt_save_or_delete():
     else:
         delete_text()
 
+
+def save_text(text):
+    with open("test.txt", "w") as text_file:
+        text_file.write(text)
+
+
+def delete_text():
+    with open("test.txt", "w") as text_file:
+        text_file.write("")
+
 # Create the main window
 window = Tk()
 window.title("Mik's Disappearing Text")
