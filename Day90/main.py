@@ -95,16 +95,16 @@ text_widget.bind("<KeyPress>", on_key_press)
 
 # Labels
 header_label = Label(text="Disappearing Text",
-                     font=("Georgia", 30, "bold"), fg="white",
+                     font=("Georgia", 30, "bold"), fg="#EEF7FF",
                      bg=BACKGROUND_COLOR)
 header_label.grid(column=0, row=1, pady=5)
 
-instructions_label = Label(text=instructions, font=("Arial", 11),
+instructions_label = Label(text=instructions, font=("Georgia", 16),
                            wraplength=text_widget.winfo_reqwidth(),
-                           justify="center", fg="white", bg=BACKGROUND_COLOR)
+                           justify="center", fg="#EEF7FF", bg=BACKGROUND_COLOR)
 instructions_label.grid(column=0, row=2, pady=5)
 
-time_label = Label(text="Time Left: 06", font=("Arial", 12), fg="white",
+time_label = Label(text="Keep writing or your text will be lost forever!", font=("Georgia", 14), fg="#EEF7FF",
                    bg=BACKGROUND_COLOR)
 time_label.grid(column=0, row=7, pady=6)
 
