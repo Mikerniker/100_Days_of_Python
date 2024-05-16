@@ -71,6 +71,15 @@ def delete_text():
         text_file.write("")
 
 
+def restart():
+    global last_key_release_time, timer_running, popup_shown
+    text_widget.delete('1.0', END)
+    time_label.config(text="Keep writing or your text will be lost forever!")
+    last_key_release_time = 0
+    timer_running = False
+    popup_shown = False
+    delete_text()
+
 # Create the main window
 window = Tk()
 window.title("Mik's Disappearing Text")
