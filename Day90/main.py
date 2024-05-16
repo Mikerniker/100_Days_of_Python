@@ -27,14 +27,16 @@ def countdown():
     else:
         time_label.config(text="Keep it up!")
     window.after(1000, countdown)
-    
+
 
 def on_key_release(event):
     """ Record the time when a key is released and starts the timer if it's not already running"""
-    global last_key_release_time, timer_running
+    global last_key_release_time, timer_running, popup_shown
     last_key_release_time = time.time()
     if not timer_running:
         timer_running = True
+        popup_shown = False
+        countdown()
 
 
 def on_key_press(event):
