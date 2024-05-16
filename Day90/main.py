@@ -108,5 +108,11 @@ time_label = Label(text="Keep writing or your text will be lost forever!", font=
                    bg=BACKGROUND_COLOR)
 time_label.grid(column=0, row=7, pady=6)
 
+# Create a button to save the text
+save = Button(window, text="Save File", height="2", width="10",
+              font=("Georgia", 10), overrelief="sunken",
+              command=lambda: save_text(text_widget.get("1.0", "end-1c")),
+             )
+save.grid(column=0, row=9, pady=6)
 
 window.mainloop()
