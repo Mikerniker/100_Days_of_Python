@@ -1,5 +1,11 @@
 # Day 90 Disappearing Text Writing App
 
+
+
+https://github.com/Mikerniker/100_Days_of_Python/assets/63586831/a1b01e6d-9fdd-4001-a274-bbb4395cdb21
+
+
+
 ## Overview
 
 - Topics: Python, Tkinter
