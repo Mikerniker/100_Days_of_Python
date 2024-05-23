@@ -5,9 +5,29 @@ from gtts import gTTS
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'add-secret-key-here'
-
+app.config['UPLOAD_FOLDER'] = 'uploads'
 
 file = ""
+
+# Ensure the upload folder exists
+os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+
+
+@app.route("/", methods=["GET", "POST"])
+def get_file():
+    if request.method == 'POST':
+        # Save the file to the upload folder
+        file = request.files['filename']
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
+        file.save(file_path)
+        # Store the file path in the session
+        session['file_path'] = file_path
+        flash("File uploaded successfully")
+        return redirect(url_for('get_pdf_text'))
+    
+    return render_template("index.html")
+
+
 
 def get_pdf_text(pdf_file):
     reader = PdfReader(pdf_file)
