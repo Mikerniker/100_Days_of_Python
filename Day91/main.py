@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, redirect, url_for,\
+    session, send_file
 from PyPDF2 import PdfReader
 from gtts import gTTS
-
+import os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'add-secret-key-here'
