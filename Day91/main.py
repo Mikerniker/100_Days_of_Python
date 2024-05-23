@@ -53,5 +53,14 @@ def home():
     return render_template("index.html")
 
 
+@app.route("/audio/<filename>")
+def get_audio(filename):
+    return send_file(
+       filename,
+       mimetype="audio/mpeg",
+       as_attachment=False
+    )
+
+
 if __name__ == '__main__':
     app.run(debug=True)
