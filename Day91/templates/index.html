@@ -22,15 +22,14 @@
 
 
     <div class="w3-row w3-container">
-      <div class="w3-col s4 w3-center">
-        <form action="/action_page.php">
-          <input type="file" id="File" name="filename" class="w3-button w3-round-xlarge w3-blue w3-hover-purple w3-large" value="Choose File">
-<!--          <input type="submit">-->
-        </form>
-      </div>
-      <div class="w3-col s4 w3-center">
-        <button class="w3-button w3-round-xlarge w3-blue w3-hover-purple w3-xlarge">Choose Format</button>
-      </div>
+      <form action="{{ url_for('get_file') }}" method="POST" enctype="multipart/form-data">
+        <div class="w3-col s4 w3-center">
+          <input type="file" id="File" name="filename" class="w3-button w3-round-xlarge w3-blue w3-hover-pale-yellow w3-large">
+        </div>
+        <div class="w3-col s4 w3-center">
+          <input type="submit" class="w3-button w3-round-xlarge w3-blue w3-hover-pale-yellow w3-large" value="Upload File">
+          </div>
+      </form>
       <div class="w3-col s4 w3-center">
         <a href="#" class="w3-button w3-round-xlarge w3-blue w3-hover-purple w3-xlarge">Convert Now</a>
       </div>
