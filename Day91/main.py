@@ -67,9 +67,9 @@ def convert_and_save_audio():
 @app.route("/audio/<filename>")
 def get_audio(filename):
     return send_file(
-       filename,
-       mimetype="audio/mpeg",
-       as_attachment=False
+        os.path.join(app.config['UPLOAD_FOLDER'], filename),
+        mimetype="audio/mpeg",
+        as_attachment=False
     )
 
 
