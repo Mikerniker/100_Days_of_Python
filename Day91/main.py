@@ -36,15 +36,13 @@ def home():
 
 
 
-def get_pdf_text(pdf_file):
-    reader = PdfReader(pdf_file)
-    number_of_pages = len(reader.pages)
-    print(number_of_pages)
+def extract_text_from_pdf(file_path):
+    reader = PdfReader(file_path)
     all_text = ""
-    for page_no in range(0, number_of_pages):
-        page = reader.pages[page_no]
+    for page in reader.pages:
         text = page.extract_text()
-        all_text += text
+        if text:
+            all_text += text
     return all_text
 
 
