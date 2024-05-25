@@ -17,7 +17,7 @@
 
 ### Links
 
-- Solution URL: [Silent Auction Program](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day10)
+- Solution URL: [Text-Based Calculator](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day10)
 
 ## Notes
 
