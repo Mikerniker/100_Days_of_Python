@@ -46,11 +46,22 @@ def extract_text_from_pdf(file_path):
     return all_text
 
 
-def convert_and_save_audio(file):
-    pdf_text = get_pdf_text(file)
-    print(pdf_text)
-    text_to_speech = gTTS(pdf_text)
-    text_to_speech.save(f'{pdf_text}.mp3')
+@app.route("/convert_audio", methods=["GET"])
+def convert_and_save_audio():
+    text_to_convert = session.get('text_to_convert', '')
+    if text_to_convert:
+        cleaned_text = " ".join(text_to_convert.split())
+        text_to_speech = gTTS(cleaned_text)
+
+        audio_file_path = os.path.join(app.config['UPLOAD_FOLDER'], 'output.mp3')
+        text_to_speech.save(audio_file_path)
+        session['audio_file_path'] = 'output.mp3'  # Store audio file path
+        flash(f"Audio saved successfully as {audio_file_path}")
+        return redirect(url_for('home', filename='output.mp3'))
+    else:
+        flash("No text available for conversion")
+        return redirect(url_for('home'))
+
 
 
 @app.route("/audio/<filename>")
