@@ -8,25 +8,31 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'add-secret-key-here'
 app.config['UPLOAD_FOLDER'] = 'uploads'
 
-file = ""
 
 # Ensure the upload folder exists
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 
 @app.route("/", methods=["GET", "POST"])
-def get_file():
+def home():
+    audio_file_path = request.args.get('filename', '')
     if request.method == 'POST':
-        # Save the file to the upload folder
         file = request.files['filename']
-        file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
-        file.save(file_path)
-        # Store the file path in the session
-        session['file_path'] = file_path
-        flash("File uploaded successfully")
-        return redirect(url_for('get_pdf_text'))
-    
-    return render_template("index.html")
+        if file:
+            # Ensure the upload folder exists before saving the file
+            os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+            file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
+            file.save(file_path)
+            session['file_path'] = file_path
+            text_to_convert = extract_text_from_pdf(file_path)
+            session['text_to_convert'] = text_to_convert
+            flash("File uploaded and text extracted successfully")
+            return render_template("index.html",
+                                   text_to_convert=text_to_convert,
+                                   audio_file_path=audio_file_path)  # CHANGED
+    return render_template("index.html",
+                           text_to_convert=session.get('text_to_convert', ''),
+                           audio_file_path=audio_file_path)
 
 
 
@@ -47,10 +53,6 @@ def convert_and_save_audio(file):
     print(pdf_text)
     text_to_speech = gTTS(pdf_text)
     text_to_speech.save(f'{pdf_text}.mp3')
-
-@app.route("/", methods=["GET", "POST"])
-def home():
-    return render_template("index.html")
 
 
 @app.route("/audio/<filename>")
