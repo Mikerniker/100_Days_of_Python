@@ -64,8 +64,19 @@
     </ul>
     {% endif %}
     {% endwith %}
-
-
+    
+    
+    <div class="w3-row w3-container w3-center w3-padding-48">
+      <h2>Play Audio</h2>
+      <audio controls>
+        {% if audio_file_path %}
+        <source src="{{ url_for('get_audio', filename=audio_file_path) }}" type="audio/mpeg">
+        {% else %}
+        <source src="" type="audio/mpeg">
+        {% endif %}
+        Your browser does not support the audio element.
+      </audio>
+    </div>
 
   </body>
 </html>
