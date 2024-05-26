@@ -35,7 +35,6 @@ def home():
                            audio_file_path=audio_file_path)
 
 
-
 def extract_text_from_pdf(file_path):
     reader = PdfReader(file_path)
     all_text = ""
