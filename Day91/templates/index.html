@@ -18,22 +18,40 @@
   </head>
   <body>
 
-  <div class="w3-container w3-center">
-    <h1>Convert PDF to Audio</h1>
-
-
-    <div class="w3-row w3-container">
-      <form action="{{ url_for('get_file') }}" method="POST" enctype="multipart/form-data">
+    <div class="w3-container w3-center">
+      <h1>Convert PDF to Audio</h1>
+  
+      <div class="w3-row w3-container">
         <div class="w3-col s4 w3-center">
-          <input type="file" id="File" name="filename" class="w3-button w3-round-xlarge w3-blue w3-hover-pale-yellow w3-large">
+          <h2>1</h2>
         </div>
         <div class="w3-col s4 w3-center">
-          <input type="submit" class="w3-button w3-round-xlarge w3-blue w3-hover-pale-yellow w3-large" value="Upload File">
-          </div>
-      </form>
-      <div class="w3-col s4 w3-center">
-        <a href="#" class="w3-button w3-round-xlarge w3-blue w3-hover-purple w3-xlarge">Convert Now</a>
+          <h2>2</h2>
+        </div>
+        <div class="w3-col s4 w3-center">
+          <h2>3</h2>
+        </div>
       </div>
+  
+
+      <div class="w3-row w3-container">
+        <form action="{{ url_for('home') }}" method="POST" enctype="multipart/form-data">
+            <div class="w3-col s4 w3-center">
+                <input type="file" id="File" name="filename" class="w3-button w3-round-xlarge w3-blue w3-hover-pale-yellow w3-large">
+            </div>
+            <div class="w3-col s4 w3-center">
+                <input type="submit" class="w3-button w3-round-xlarge w3-blue w3-hover-pale-yellow w3-large" value="Get PDF">
+            </div>
+        </form>
+        <div class="w3-col s4 w3-center">
+            {% if text_to_convert %}
+            <form id="convert-form"  action="{{ url_for('convert_and_save_audio') }}" method="GET">
+                <input type="submit"  class="w3-button w3-round-xlarge w3-blue w3-hover-pale-yellow w3-xlarge" value="Convert Now">
+            </form>
+            {% else %}
+            <a href="#" class="w3-button w3-disabled w3-round-xlarge w3-blue w3-hover-pale-yellow w3-xlarge">Convert Now</a>
+            {% endif %}
+        </div>
     </div>
   </div>
 

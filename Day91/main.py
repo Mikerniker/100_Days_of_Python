@@ -29,7 +29,7 @@ def home():
             flash("File uploaded and text extracted successfully")
             return render_template("index.html",
                                    text_to_convert=text_to_convert,
-                                   audio_file_path=audio_file_path)  # CHANGED
+                                   audio_file_path=audio_file_path) 
     return render_template("index.html",
                            text_to_convert=session.get('text_to_convert', ''),
                            audio_file_path=audio_file_path)
