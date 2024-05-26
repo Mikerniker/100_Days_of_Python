@@ -52,8 +52,20 @@
             <a href="#" class="w3-button w3-disabled w3-round-xlarge w3-blue w3-hover-pale-yellow w3-xlarge">Convert Now</a>
             {% endif %}
         </div>
+      </div>
     </div>
-  </div>
+    
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="w3-ul w3-center">
+      {% for message in messages %}
+      <li class="w3-padding-16">{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+
 
   </body>
 </html>
