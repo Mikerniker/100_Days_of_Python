@@ -1,0 +1,12 @@
+body {
+    background-color: #006769;
+    color: #E6FF94;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+  }
+  
+  h1, h2 {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+  }

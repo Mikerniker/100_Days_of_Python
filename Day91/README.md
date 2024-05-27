@@ -4,11 +4,11 @@
 
 ## Overview
 
-- Topics: Python, HTTP requests, APIs
+- Topics: Python, Flask
 
 ### The challenge
 
-- Build a python script that takes a PDF file, identifies the text and converts the text to speech. Effectively creating a free audiobook.
+- Build a python script that takes a PDF file, identifies the text and converts the text to speech, like a free audiobook.
  
 ### Links
 
