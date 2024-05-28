@@ -1,7 +1,6 @@
-# Day 92 Professional Portfolio Project: PDF to Audiobook
+# IN PROGRESS
+# Day 92 Professional Portfolio Project: Image Colour Palette Generator
 
-
-https://github.com/Mikerniker/100_Days_of_Python/assets/63586831/61222d56-885a-476b-b4c6-ae09dceb2e5b
 
 ## Overview
 
@@ -9,11 +8,11 @@ https://github.com/Mikerniker/100_Days_of_Python/assets/63586831/61222d56-885a-4
 
 ### The challenge
 
-- Build a python script that takes a PDF file, identifies the text and converts the text to speech, like a free audiobook.
+- Build a website where a user can upload an image and tell them what the top 10 most common colours in that image are.
  
 ### Links
 
-- Solution URL: [PDF to Audiobook](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day92)
+- Solution URL: [Image Colour Palette Generator](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day92)
 
 ## Reflection
 **Approach, Challenges, Future Improvements:** 
