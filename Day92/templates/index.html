@@ -12,7 +12,31 @@
    <div class="w3-container w3-center w3-row" style="width:75%">
     <h1>Image Colour Palette Generator</h1>
 
-      
+    <form action="" method="POST" enctype="multipart/form-data">
+        <h2 class="w3-text-blue">File to Upload: </h2>
+         <div class="s4 w3-center">
+             <input type="file" id="File" name="filename" class="w3-button w3-round-xlarge w3-blue w3-hover-pale-yellow w3-large">
+         </div>
+       <div class="s4 w3-center">
+           <p class="w3-row">
+            <label class="w3-col s7 w3-center w3-text"><b>Number of colors:</b></label>
+            <input class="w3-col s6 w3-center w3-input w3-border w3-round-large" name="colors" type="text" style="width:40%">
+           </p>
+       </div>
+       <div class="s4 w3-center">
+           <p>
+               <label class="w3-col s7 w3-center w3-text"><b>Delta:</b></label>
+               <input class="w3-col s6 w3-center w3-input w3-border w3-round-large" name="delta" type="text" style="width:40%">
+           </p>
+       </div>
+
+
+       <div class="s4 w3-center w3-padding-16">
+           <input type="submit" class="w3-button w3-round-xlarge w3-blue w3-hover-pale-yellow w3-large" value="Get image">
+       </div>
+
+  </form>
+
    </div>
   </body>
 </html>
