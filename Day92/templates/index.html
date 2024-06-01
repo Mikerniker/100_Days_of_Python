@@ -14,10 +14,42 @@
       <link href="{{ url_for('static', filename='assets/css/styles.css') }}" rel="stylesheet" />
 
   </head>
-  
+
   <body>
-   <div class="w3-container w3-center w3-row" style="width:75%">
+   <div class="w3-container w3-center w3-row" style="width:100%">
     <h1>Image Colour Palette Generator</h1>
+       <div class="w3-row">
+           <div class="w3-col">
+            <img src="{{ url_for('static', filename='assets/images/oranges.jpg') }}" alt="oranges" class="w3-border w3-padding" style="width:70%">
+           </div>
+
+           <div class="w3-col">
+               <h2>Colors</h2>
+               <table class="w3-table">
+                <tr>
+                  <th>Color</th>
+                  <th>Color Code</th>
+                  <th>Percentage</th>
+                </tr>
+                <tr>
+                  <td>#f0a800</td>
+                  <td>#f0a800</td>
+                  <td>#f0a800</td>
+                </tr>
+                <tr>
+                  <td>#f0a800</td>
+                  <td>#f0a800</td>
+                  <td>#f0a800</td>
+                </tr>
+                <tr>
+                  <td>#f0a800</td>
+                  <td>#f0a800</td>
+                  <td>#f0a800</td>
+                </tr>
+              </table>
+           </div>
+       </div>
+
 
     <form action="" method="POST" enctype="multipart/form-data">
         <h2 class="w3-text-blue">File to Upload: </h2>
@@ -38,9 +70,7 @@
        </div>
 
 <!--          RADIO-->
-<div class="w3-row">
-    <h2>Radio Buttons</h2>
-     </div>
+
     <div class="w3-row">
         <div class="w3-col s8 w3-center"><p><b>Reduce Brightness:</b></p></div>
         <div class="w3-col s2 w3-center">
