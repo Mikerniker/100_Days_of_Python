@@ -16,39 +16,40 @@
   </head>
 
   <body>
-   <div class="w3-container w3-center w3-row" style="width:100%">
-    <h1>Image Colour Palette Generator</h1>
-       <div class="w3-row">
-           <div class="w3-col">
-            <img src="{{ url_for('static', filename='assets/images/oranges.jpg') }}" alt="oranges" class="w3-border w3-padding" style="width:70%">
+    <div class="w3-container w3-center w3-row" style="width:100%">
+        <h1>Image Colour Palette Generator</h1>
+           <div class="w3-cell-row" style="width:75%">
+               <div class="w3-container w3-cell">
+                <img src="{{ url_for('static', filename='assets/images/oranges.jpg') }}" alt="oranges" class="w3-border w3-padding" style="width:50%">
+               </div>
+    
+               <div class="w3-container w3-cell">
+                   <h2>Colors</h2>
+                   <table class="w3-table">
+                    <tr>
+                      <th>Color</th>
+                      <th>Color Code</th>
+                      <th>Percentage</th>
+                    </tr>
+                    <tr>
+                      <td>#f0a800</td>
+                      <td>#f0a800</td>
+                      <td>#f0a800</td>
+                    </tr>
+                    <tr>
+                      <td>#f0a800</td>
+                      <td>#f0a800</td>
+                      <td>#f0a800</td>
+                    </tr>
+                    <tr>
+                      <td>#f0a800</td>
+                      <td>#f0a800</td>
+                      <td>#f0a800</td>
+                    </tr>
+                  </table>
+               </div>
            </div>
-
-           <div class="w3-col">
-               <h2>Colors</h2>
-               <table class="w3-table">
-                <tr>
-                  <th>Color</th>
-                  <th>Color Code</th>
-                  <th>Percentage</th>
-                </tr>
-                <tr>
-                  <td>#f0a800</td>
-                  <td>#f0a800</td>
-                  <td>#f0a800</td>
-                </tr>
-                <tr>
-                  <td>#f0a800</td>
-                  <td>#f0a800</td>
-                  <td>#f0a800</td>
-                </tr>
-                <tr>
-                  <td>#f0a800</td>
-                  <td>#f0a800</td>
-                  <td>#f0a800</td>
-                </tr>
-              </table>
-           </div>
-       </div>
+    
 
 
     <form action="" method="POST" enctype="multipart/form-data">
