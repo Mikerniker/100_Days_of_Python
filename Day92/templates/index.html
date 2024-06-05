@@ -42,60 +42,34 @@
         </div>
  
 
-           <form action="" method="POST" enctype="multipart/form-data">
-            <h2 class="w3-text">File to Upload: </h2>
-             <div class="s4 w3-center">
-                 <input type="file" id="File" name="filename" class="w3-button w3-round-xlarge w3-pale-red w3-hover-pale-yellow w3-large">
-             </div>
-
-            <!--    Table      -->
-            <table class="w3-table">
-                <tr>
-                <th>Number of colors:</th>
-                <th>Delta:</th>
-                <th>Reduce Brightness:</th>
-                <th>Reduce Gradient:</th>
-                </tr>
-                <tr>
-                <td>
-                    <p>
-                        <input class="w3-input w3-border w3-round-large" name="colors" type="text" style="width:40%">
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        <input class="w3-input w3-border w3-round-large" name="delta" type="text" style="width:40%">
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        <input class="w3-radio" type="radio" name="brightness" value="yes" >
-                        <label>Yes</label>
-                    </p>
-                    <p>
-                        <input class="w3-radio" type="radio" name="brightness" value="no" >
-                        <label>No</label>
-                    </p>
-                </td>
-                    <td>
-                        <p>
-                        <input class="w3-radio" type="radio" name="gradient" value="yes">
-                        <label>Yes</label>
-                        </p>
-
-                        <p>
-                            <input class="w3-radio" type="radio" name="gradient" value="no">
-                            <label>No</label>
-                        </p>
-                    </td>
-                </tr>
-            </table>
- 
-           <div class="s4 w3-center w3-padding-16">
-               <input type="submit" class="w3-button w3-round-xlarge w3-pale-red w3-hover-pale-yellow w3-large" value="Get image">
-           </div>
- 
+        <form action="" method="POST" enctype="multipart/form-data">
+            <h2 class="w3-text w3-left-align w3-margin-left">File to Upload: </h2>
+ <!--    Table      -->
+           <table class="w3-table">
+               <tr>
+                   <th class="w3-large">Upload File:</th>
+                   <td>
+                       <p>
+                           <input type="file" id="File" name="filename" class="w3-button w3-round-xlarge w3-pale-red w3-hover-pale-yellow w3-large">
+                       </p>
+                   </td>
+               </tr>
+               <tr>
+                   <th class="w3-large">Number of colors:</th>
+                   <td>
+                       <input class="w3-input w3-border w3-round-large" name="delta" type="number"  min="1" max="255" style="width:40%">
+                   </td>
+               </tr>
+               <tr>
+                   <th class="w3-large">Run:</th>
+                   <td>
+                       <input type="submit" class="w3-button w3-round-xlarge w3-pale-red w3-hover-pale-yellow w3-large" value="Run">
+                   </td>
+               </tr>
+           </table>
+  
       </form>
+ 
 
    </div>
   </body>
