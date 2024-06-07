@@ -26,6 +26,11 @@ def get_RGB():
     return RGB
 
 
+def rgb_to_hex(red, green, blue):
+   return "#%02x%02x%02x" %(red, green, blue)
+
+
+
 @app.route("/", methods=["GET", "POST"])
 def home():
     # image_colors = get_rgb_final()
