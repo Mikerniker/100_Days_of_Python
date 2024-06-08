@@ -277,3 +277,9 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 
 **Day 89: [Professional Portfolio Project: ToDo App](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day89)**
 - Topics:  Python, Flask, SQLAlchemy, REST APIs, Auth, Web Development 
+
+**Day 90: [Professional Portfolio Project: Disappearing Text Writing App](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day90)**
+- Topics:  Python, Tkinter 
+
+**Day 91: [Professional Portfolio Project: PDF to Audiobook](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day91)**
+- Topics:  Python, Flask, W3.CSS, Web Development 
