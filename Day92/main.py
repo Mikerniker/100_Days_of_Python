@@ -31,7 +31,7 @@ def get_RGB(image_path, colors):
 
 
 def rgb_to_hex(red, green, blue):
-   return "#%02x%02x%02x" %(red, green, blue)
+   return f"#{red:02x}{green:02x}{blue:02x}"
 
 
 
