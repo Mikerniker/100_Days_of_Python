@@ -49,5 +49,24 @@ def home():
     return render_template("index.html", user_image=img, colors=image_colors)
 
 
+@app.route("/upload", methods=["POST"])
+def display_colors():
+    if request.method == "POST":
+        file = request.files['filename']
+        color_num = int(request.form['color_number'])
+        try:
+            if file:
+                filename = file.filename
+                filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+                file.save(filepath)
+                img_path = f"./static/uploads/{filename}"
+                image_colors = get_hex_list(filepath, color_num)
+                print(f"Uploaded file: {filename}, Number of colors: {color_num}")
+                return render_template("index.html", user_image=img_path, colors=image_colors)
+        except Exception as e:
+            print(f"Error: {e}")
+            return redirect(url_for('home'))
+
+
 if __name__ == '__main__':
     app.run(debug=True)
