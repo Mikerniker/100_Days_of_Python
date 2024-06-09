@@ -1,10 +1,14 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, redirect, url_for,\
-    session, send_file
+from flask import Flask, render_template, request, redirect, url_for
 from PIL import Image
 import pandas as pd
-
+import os
 
 app = Flask(__name__)
+
+# Ensure the upload directory exists
+UPLOAD_FOLDER = './static/uploads'
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['SECRET_KEY'] = 'add-secret-key-here'
 
 def get_RGB():
