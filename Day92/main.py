@@ -34,6 +34,11 @@ def rgb_to_hex(red, green, blue):
    return f"#{red:02x}{green:02x}{blue:02x}"
 
 
+def get_hex_list(image_path, colors):
+    RGB = get_RGB(image_path, colors)
+    RGB['hex'] = RGB.apply(lambda r: rgb_to_hex(*r), axis=1)
+    color = RGB.hex.to_list()
+    return color
 
 @app.route("/", methods=["GET", "POST"])
 def home():
