@@ -40,10 +40,13 @@ def get_hex_list(image_path, colors):
     color = RGB.hex.to_list()
     return color
 
-@app.route("/", methods=["GET", "POST"])
+
+@app.route("/", methods=["GET"])
 def home():
-    # image_colors = get_rgb_final()
-    return render_template("index.html", colors=image_colors)
+    img = "./static/assets/images/foodplatter.jpg"
+    colors = 10
+    image_colors = get_hex_list(img, colors)
+    return render_template("index.html", user_image=img, colors=image_colors)
 
 
 if __name__ == '__main__':
