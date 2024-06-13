@@ -18,32 +18,30 @@
   <body>
     <div class="w3-container w3-center w3-row" style="width:100%">
         <h1>Image Colour Palette Generator</h1>
-           <div class="w3-cell-row" style="width:80%">
-               <div class="w3-container w3-cell">
-                   <img src="{{ user_image }}" alt="user image" class="w3-border w3-padding" style="width:100%">
-               </div>
-    
-               <div class="w3-container w3-cell">
-                   <h2>Colors</h2>
-                   <table class="w3-table">
+        <div class="w3-cell-row" style="width:80%">
+            <div class="w3-container w3-cell">
+                <img src="{{ user_image }}" alt="user image" class="w3-border w3-padding" style="width:100%">
+            </div>
+            <div class="w3-container w3-cell">
+                <h2>Colors</h2>
+                <table class="w3-table">
                     <tr>
                         <th>Color</th>
                         <th>Color Code</th>
                     </tr>
-                        {% for color in colors %}
-                       <tr>
-                           <td style="background-color:{{color}}"></td>
-                           <td>{{color}}</td>
-                       </tr>
-                       {% endfor %}
-    
-                  </table>
-               </div>
-           </div>
+                    {% for color in colors %}
+                    <tr>
+                        <td style="background-color:{{color}}"></td>
+                        <td>{{color}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
     
  
 
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="{{url_for('display_colors')}}" method="POST" enctype="multipart/form-data">
             <h2 class="w3-text w3-left-align w3-margin-left">File to Upload: </h2>
  <!--    Table      -->
            <table class="w3-table">
