@@ -1,0 +1,15 @@
+body {
+    background-color: #3AA6B9;
+    color: #F9F9E0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  h1, h2 {
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #F9F9E0;
+  }
