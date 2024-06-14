@@ -1,8 +1,10 @@
 # Day 92 Professional Portfolio Project: Image Colour Palette Generator
 
+https://github.com/Mikerniker/100_Days_of_Python/assets/63586831/51e03f95-6cb9-4e31-8688-d4db73312e29
+
 ## Overview
 
-- Topics: Python, Flask
+- Topics: Python, Flask, Pandas, PIL, W3.CSS
 
 ### The challenge
 
