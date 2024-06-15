@@ -8,7 +8,7 @@
 
 ### The challenge
 
-- Build a website where a user can upload an image and tell them what the top 10 most common colours in that image are.
+- Build a custom web scraper to collect data on things that you are interested in.
  
 ### Links
 
