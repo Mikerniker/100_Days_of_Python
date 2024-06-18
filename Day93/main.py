@@ -8,8 +8,8 @@ chocolate_data = response.text
 
 soup = BeautifulSoup(chocolate_data, "html.parser")
 
-print(soup.title)
-
+tables = soup.select(selector="#choco_database")
+print(tables)
 # from selenium import webdriver
 
 # chrome_options = webdriver.ChromeOptions()
