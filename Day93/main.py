@@ -1,10 +1,10 @@
-from bs4 import BeatifulSoup
+from bs4 import BeautifulSoup
 import requests
 
-#requests allows us to get hold of the data from a particular url
 
-response = requests.get("https://flavorsofcacao.com/chocolate_database.html")
+response = requests.get("http://flavorsofcacao.com/database_w_REF.html")
 chocolate_data = response.text
+
 
 soup = BeautifulSoup(chocolate_data, "html.parser")
 
