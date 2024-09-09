@@ -27,3 +27,7 @@ for row in table_data[1:]:
     cleaned_data = [data.text.strip() for data in row_data]
     length = len(df)
     df.loc[length] = cleaned_data
+
+# Search for data relevant to Philippines
+search_word = 'Philippines'
+
