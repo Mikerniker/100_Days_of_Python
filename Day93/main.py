@@ -19,15 +19,11 @@ table_titles = table.find_all('th')
 col_table_title = [title.text.strip() for title in table_titles]
 df = pd.DataFrame(columns=col_table_title)
 
-
+# Get table data
 table_data = table.find_all('tr')
 
-column_title = [title.getText() for title in table_titles]
-column_data = [item.getText() for item in table_data]
-print(column_data)
-# from selenium import webdriver
-
-# chrome_options = webdriver.ChromeOptions()
-# chrome_options.add_experimental_option("detach", True)
-
-# driver = webdriver.Chrome(options=chrome_options)
+for row in table_data[1:]:
+    row_data = row.find_all('td')
+    cleaned_data = [data.text.strip() for data in row_data]
+    length = len(df)
+    df.loc[length] = cleaned_data
