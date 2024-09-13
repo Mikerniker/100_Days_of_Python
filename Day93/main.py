@@ -34,11 +34,3 @@ for row in table_data[1:]:
 json_data = df.to_json(orient='records')
 
 json_data_io = StringIO(json_data)
-
-# Read the JSON data into a new DataFrame
-chocolate_df = pd.read_json(json_data_io)
-
-
-# Search for data relevant to Philippines
-search_word = 'Philippines'
-
