@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
+from io import StringIO
+import json
 
 response = requests.get("http://flavorsofcacao.com/database_w_REF.html")
 chocolate_data = response.text
