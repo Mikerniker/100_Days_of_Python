@@ -282,4 +282,7 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 - Topics:  Python, Tkinter 
 
 **Day 91: [Professional Portfolio Project: PDF to Audiobook](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day91)**
-- Topics:  Python, Flask, W3.CSS, Web Development 
+- Topics: Python, Flask, W3.CSS, Web Development 
+
+**Day 92: [Professional Portfolio Project: Image Colour Palette Generator](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day92)**
+- Topics: Python, Flask, Pandas, PIL, W3.CSS
