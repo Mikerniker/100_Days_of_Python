@@ -47,3 +47,7 @@ matching_rows = chocolate_df[chocolate_df.apply(lambda row: search_word in row.t
 
 # Convert the matching rows to JSON
 chocolate_json_str = matching_rows.to_json(orient='records')
+
+chocolate_json = json.loads(chocolate_json_str) 
+
+print(chocolate_json)
