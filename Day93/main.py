@@ -51,3 +51,9 @@ chocolate_json_str = matching_rows.to_json(orient='records')
 chocolate_json = json.loads(chocolate_json_str) 
 
 print(chocolate_json)
+
+# SHEETY TEST
+SHEETY_ENDPOINT_API = 'add_endpoint_here';
+
+ref = chocolate_json[0]["REF"]
+manufacturer = chocolate_json[0]["Company (Manufacturer)"]
