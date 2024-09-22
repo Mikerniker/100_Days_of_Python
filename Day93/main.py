@@ -57,3 +57,5 @@ SHEETY_ENDPOINT_API = 'add_endpoint_here';
 
 ref = chocolate_json[0]["REF"]
 manufacturer = chocolate_json[0]["Company (Manufacturer)"]
+company_location = chocolate_json[0]["Company Location"]
+review_date = chocolate_json[0]["Review Date"]
