@@ -55,9 +55,9 @@ print(chocolate_json)
 # SHEETY TEST
 SHEETY_ENDPOINT_API = 'add_endpoint_here';
 
-ref = chocolate_json[0]["REF"]
-manufacturer = chocolate_json[0]["Company (Manufacturer)"]
-company_location = chocolate_json[0]["Company Location"]
-review_date = chocolate_json[0]["Review Date"]
-country_origin = chocolate_json[0]["Country of Bean Origin"]
-barname = chocolate_json[0]["Specific Bean Origin or Bar Name"]
+for item in chocolate_json:
+    chocolate_data = {
+        "sheet1": {
+            "ref": item["REF"],  # No need for chocolate_json[item], item is already a dictionary
+            "manufacturer": item["Company (Manufacturer)"],
+            "companyLocation": item["Company Location"],
