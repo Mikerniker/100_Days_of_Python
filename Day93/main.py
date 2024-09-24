@@ -61,3 +61,12 @@ for item in chocolate_json:
             "ref": item["REF"],  # No need for chocolate_json[item], item is already a dictionary
             "manufacturer": item["Company (Manufacturer)"],
             "companyLocation": item["Company Location"],
+            "reviewDate":  item["Review Date"],
+            "countryOrigin": item["Country of Bean Origin"],
+            "barname": item["Specific Bean Origin or Bar Name"],
+            "cocoaPercent": item["Cocoa Percent"],
+            "ingredients": item["Ingredients"],
+            "characteristics": item["Most Memorable Characteristics"],
+            "rating": item["Rating"],
+        }
+    }
