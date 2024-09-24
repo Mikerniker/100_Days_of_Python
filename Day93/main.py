@@ -70,3 +70,7 @@ for item in chocolate_json:
             "rating": item["Rating"],
         }
     }
+
+    sheet_response = requests.post(SHEETY_ENDPOINT_API, json=chocolate_data)
+    print(sheet_response.status_code)
+    print(sheet_response.text)
