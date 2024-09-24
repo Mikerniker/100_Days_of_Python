@@ -13,7 +13,6 @@ soup = BeautifulSoup(chocolate_data, "html.parser")
 tables = soup.select(selector="#choco_database")
 print(tables)
 
-
 table = soup.find_all('table')[0]
 
 #Get table titles
@@ -32,14 +31,12 @@ for row in table_data[1:]:
 
 # Convert DataFrame to JSON
 json_data = df.to_json(orient='records')
-
 json_data_io = StringIO(json_data)
-
 
 # Read the JSON data into a new DataFrame
 chocolate_df = pd.read_json(json_data_io)
 
-# Define the word you are searching for
+# Define my search word
 search_word = "Philippines"
 
 # Loop through the rows of the DataFrame and print rows that contain the word
