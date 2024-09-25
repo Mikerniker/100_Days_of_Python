@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-from io import StringIO
 import json
 
 response = requests.get("http://flavorsofcacao.com/database_w_REF.html")
@@ -29,18 +28,11 @@ for row in table_data[1:]:
     length = len(df)
     df.loc[length] = cleaned_data
 
-# Convert DataFrame to JSON
-json_data = df.to_json(orient='records')
-json_data_io = StringIO(json_data)
-
-# Read the JSON data into a new DataFrame
-chocolate_df = pd.read_json(json_data_io)
-
-# Define my search word
 search_word = "Philippines"
 
 # Loop through the rows of the DataFrame and print rows that contain the word
-matching_rows = chocolate_df[chocolate_df.apply(lambda row: search_word in row.to_string(), axis=1)]
+matching_rows = df[df.apply(lambda row: search_word in row.to_string(), axis=1)]
+
 
 # Convert the matching rows to JSON
 chocolate_json_str = matching_rows.to_json(orient='records')
