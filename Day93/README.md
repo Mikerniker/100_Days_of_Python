@@ -18,3 +18,5 @@
 **Approach, Challenges, Learnings, and Future Improvements:** 
 
 ## References
+- [Table](https://stackoverflow.com/questions/2010481/how-do-you-get-all-the-rows-from-a-particular-table-using-beautifulsoup)
+- [Getting a Table](https://stackoverflow.com/questions/20522820/how-to-get-tbody-from-table-from-python-beautiful-soup) 
