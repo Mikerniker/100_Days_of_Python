@@ -33,7 +33,6 @@ search_word = "Philippines"
 # Loop through the rows of the DataFrame and print rows that contain the word
 matching_rows = df[df.apply(lambda row: search_word in row.to_string(), axis=1)]
 
-
 # Convert the matching rows to JSON
 chocolate_json_str = matching_rows.to_json(orient='records')
 
