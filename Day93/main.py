@@ -6,7 +6,6 @@ import json
 response = requests.get("http://flavorsofcacao.com/database_w_REF.html")
 chocolate_data = response.text
 
-
 soup = BeautifulSoup(chocolate_data, "html.parser")
 
 tables = soup.select(selector="#choco_database")
