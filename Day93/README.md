@@ -1,6 +1,10 @@
 # Day 93 Professional Portfolio Project: Custom Web Scraper
 
 
+https://github.com/user-attachments/assets/22f97cbf-5a40-480f-8e52-de1bfb4e9e6c
+
+
+
 ## Overview
 
 - Topics: Python, API (Sheety), Pandas
