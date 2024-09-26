@@ -39,7 +39,7 @@ chocolate_json = json.loads(chocolate_json_str)
 
 print(chocolate_json)
 
-# SHEETY TEST
+# SHEETY SECTION
 SHEETY_ENDPOINT_API = 'add_endpoint_here';
 
 for item in chocolate_json:
