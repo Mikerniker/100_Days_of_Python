@@ -1,3 +1,4 @@
+# IN PROGRESS
 # Day 94 Professional Portfolio Project: Automate the Google Dinosaur Game
 
 
@@ -10,7 +11,7 @@
 
 ### The challenge
 
-- Write Python code to play the Google Dinosaur Game.
+- Write Python code to play the [Google Dinosaur Game](https://elgoog.im/t-rex/).
  
 ### Links
 
