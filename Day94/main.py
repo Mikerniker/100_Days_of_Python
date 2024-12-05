@@ -15,6 +15,14 @@ combined_region = (left, top, width + extra_width, height)
 timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 screenshot_path = f"combined_region_{timestamp}.png"
 
+# Get browser window 
+try:
+    window = pyautogui.getWindowsWithTitle("Play Chrome Dinosaur Game Online - elgooG")[0]  
+    window.activate()
+except IndexError:
+    print("Browser window not found. Make sure it's open.")
+    exit() 
+
 # pyautogui.moveTo(100, 200)
 # pyautogui.click()
 
