@@ -1,12 +1,15 @@
 import pyautogui
-from PIL import Image
-import webbrowser
+import datetime
 
-# Open the game URL
-webbrowser.open("https://elgoog.im/t-rex/")
+# Big Dinosaur dimensions
+left = 40
+top = 517
+width = 187
+height = 133
 
-pyautogui.moveTo(100, 200)
-pyautogui.click()
 
-# Get the size of the primary monitor.
-screenWidth, screenHeight = pyautogui.size() 
+# pyautogui.moveTo(100, 200)
+# pyautogui.click()
+
+# # Get the size of the primary monitor.
+# screenWidth, screenHeight = pyautogui.size() 
