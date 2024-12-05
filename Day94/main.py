@@ -11,6 +11,10 @@ height = 133
 extra_width = 150  # width to the right of the dinosaur
 combined_region = (left, top, width + extra_width, height)
 
+# Save the region screenshot reference
+timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+screenshot_path = f"combined_region_{timestamp}.png"
+
 # pyautogui.moveTo(100, 200)
 # pyautogui.click()
 
