@@ -15,6 +15,10 @@ combined_region = (left, top, width + extra_width, height)
 timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 screenshot_path = f"combined_region_{timestamp}.png"
 
+
+def check_for_obstacles():
+    """Detect obstacles and trigger a jump if necessary."""
+
 # Get browser window 
 try:
     window = pyautogui.getWindowsWithTitle("Play Chrome Dinosaur Game Online - elgooG")[0]  
