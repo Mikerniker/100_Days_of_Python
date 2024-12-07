@@ -25,10 +25,10 @@ except IndexError:
 
 
 # Locate the dinosaur on the screen
-try:
-    locate_dinosaur = pyautogui.locateOnScreen('./images/dinosaur.png', confidence=0.7)
-except pyautogui.ImageNotFoundException:
-    print("Could not locate the image on the screen.")
+locate_dinosaur = pyautogui.locateOnScreen('./images/dinosaur.png', confidence=0.7)
+if locate_dinosaur is None:
+    print("Could not locate the dinosaur on the screen.")
+    exit()
 
 
 # pyautogui.moveTo(100, 200)
