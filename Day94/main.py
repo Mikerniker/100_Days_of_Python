@@ -30,6 +30,11 @@ if locate_dinosaur is None:
     print("Could not locate the dinosaur on the screen.")
     exit()
 
+# Start the game
+pyautogui.press('space')
+print(f"Dinosaur found at: {locate_dinosaur}")
+time.sleep(2)
+
 
 # pyautogui.moveTo(100, 200)
 # pyautogui.click()
