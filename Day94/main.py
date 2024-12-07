@@ -12,20 +12,7 @@ extra_width = 150  # width to the right of the dinosaur
 right_region = (left + width, top, extra_width, height)
 
 # Save the region screenshot reference
-timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-screenshot_path = f"combined_region_{timestamp}.png"
-
-
-def check_for_obstacles():
-    """Detect obstacles and trigger a jump if necessary."""
-    # Initial State Screenshot
-    initial_screenshot = pyautogui.screenshot(screenshot_path, region=right_region)
-    print(f"Screenshot of the right region saved as {screenshot_path}")
-    # Save screenshot for debugging (optional)
-    initial_screenshot.save("detection_zone.png")
-    
-    obstacle_positions = []  # Store detected obstacle coordinates
-    #continue for later
+# timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 
 
 # Get browser window 
