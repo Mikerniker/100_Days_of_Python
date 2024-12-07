@@ -2,8 +2,8 @@ import pyautogui
 import datetime
 
 # Big Dinosaur dimensions
-left = 40
-top = 517
+left = 37
+top = 516
 width = 187
 height = 133
 
