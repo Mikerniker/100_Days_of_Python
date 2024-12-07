@@ -40,8 +40,5 @@ initial_screenshot = pyautogui.screenshot(region=right_region)
 initial_screenshot.save("initial_screenshot.png")
 locate_dinosaur2 = pyautogui.locateOnScreen('./images/dinosaur2.png',
                                            confidence=0.7)
-# pyautogui.moveTo(100, 200)
-# pyautogui.click()
 
-# # Get the size of the primary monitor.
-# screenWidth, screenHeight = pyautogui.size() 
+
