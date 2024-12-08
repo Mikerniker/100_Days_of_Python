@@ -14,6 +14,8 @@ right_region = (left + width, top, extra_width, height)
 # Save the region screenshot reference
 # timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 
+# "Game Over" region
+game_over_region = (463, 423, 445, 38)
 
 # Get browser window 
 try:
