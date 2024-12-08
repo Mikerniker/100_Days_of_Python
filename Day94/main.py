@@ -51,3 +51,9 @@ while not game_over:
     current_screenshot = pyautogui.screenshot(region=right_region)
 
     diff = ImageChops.difference(initial_screenshot, current_screenshot)
+
+    ##
+
+
+    # Take a new screenshot of the "Game Over" region
+    game_over_screenshot = pyautogui.screenshot(region=game_over_region)
