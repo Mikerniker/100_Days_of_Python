@@ -57,3 +57,5 @@ while not game_over:
 
     # Take a new screenshot of the "Game Over" region
     game_over_screenshot = pyautogui.screenshot(region=game_over_region)
+    try:
+        check_gameover = pyautogui.locate('./images/game_over.png', game_over_screenshot, confidence=0.7)
