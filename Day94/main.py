@@ -59,3 +59,5 @@ while not game_over:
     game_over_screenshot = pyautogui.screenshot(region=game_over_region)
     try:
         check_gameover = pyautogui.locate('./images/game_over.png', game_over_screenshot, confidence=0.7)
+    except pyautogui.ImageNotFoundException:
+        pass
