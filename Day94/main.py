@@ -1,5 +1,7 @@
 import pyautogui
 import datetime
+from PIL import ImageChops
+import time
 
 # Big Dinosaur dimensions
 left = 37
@@ -48,3 +50,4 @@ while not game_over:
     # Take a new screenshot of the detection zone
     current_screenshot = pyautogui.screenshot(region=right_region)
 
+    diff = ImageChops.difference(initial_screenshot, current_screenshot)
