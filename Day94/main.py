@@ -42,7 +42,7 @@ time.sleep(2)
 # Get initial screenshot
 initial_screenshot = pyautogui.screenshot(region=right_region)
 initial_screenshot.save("initial_screenshot.png")
-locate_dinosaur2 = pyautogui.locateOnScreen('./images/dinosaur2.png', confidence=0.7)
+# locate_dinosaur2 = pyautogui.locateOnScreen('./images/dinosaur2.png', confidence=0.7)
 
 game_over = False
 
@@ -50,6 +50,7 @@ while not game_over:
     # Take a new screenshot of the detection zone
     current_screenshot = pyautogui.screenshot(region=right_region)
 
+    # Compare screenshots
     diff = ImageChops.difference(initial_screenshot, current_screenshot)
 
     ##
