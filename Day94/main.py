@@ -58,6 +58,9 @@ while not game_over:
     if diff.getbbox() is not None: 
         non_zero_count = sum(
             1 for pixel in diff.getdata() if pixel != (0, 0, 0))
+        if non_zero_count > 500:
+            pyautogui.press('up')  # Jump if there is a large pixel difference
+            print(f"Jumped! Obstacle detected. Differing pixels: {non_zero_count}")
 
     # Take a new screenshot of the "Game Over" region
     game_over_screenshot = pyautogui.screenshot(region=game_over_region)
