@@ -43,7 +43,9 @@ time.sleep(2)
 # Get initial screenshot
 initial_screenshot = pyautogui.screenshot(region=right_region)
 initial_screenshot.save("initial_screenshot.png")
-# locate_dinosaur2 = pyautogui.locateOnScreen('./images/dinosaur2.png', confidence=0.7)
+# locate_big_dinosaur = pyautogui.locateOnScreen('./images/dinosaur2.png', confidence=0.7)
+#Note to self: locate_big_dinosaur was to get the coordinates for the big dinosaur 
+# and determine the obstacle detection region beside it. (i.e.  Big Dinosaur dimensions above)
 
 game_over = False
 
