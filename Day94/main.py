@@ -10,9 +10,9 @@ width = 187
 height = 133
 right = left + width
 
-# Define the Dino region and region to right of dino
+# Define detection zone dimensions
 extra_width = 150  # width to the right of the dinosaur
-right_region = (left + width, top, extra_width, height)
+right_region = (right, top, extra_width, height)
 
 # Save the region screenshot reference
 # timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
