@@ -28,7 +28,6 @@ except IndexError:
     print("Browser window not found. Make sure it's open.")
     exit() 
 
-
 # Locate the dinosaur on the screen
 locate_dinosaur = pyautogui.locateOnScreen('./images/dinosaur.png', confidence=0.7)
 if locate_dinosaur is None:
@@ -56,18 +55,20 @@ while not game_over:
     # Compare screenshots
     diff = ImageChops.difference(initial_screenshot, current_screenshot)
 
-    ##
     # Detect obstacle presence
     if diff.getbbox() is not None: 
         non_zero_count = sum(
             1 for pixel in diff.getdata() if pixel != (0, 0, 0))
         if non_zero_count > 500:
             pyautogui.press('up')  # Jump if there is a large pixel difference
-            print(f"Jumped! Obstacle detected. Differing pixels: {non_zero_count}")
+            print(f"Jumped! Obstacle detected. Pixel difference: {non_zero_count}")
 
     # Take a new screenshot of the "Game Over" region
     game_over_screenshot = pyautogui.screenshot(region=game_over_region)
     try:
         check_gameover = pyautogui.locate('./images/game_over.png', game_over_screenshot, confidence=0.7)
+        if check_gameover:
+            game_over = True
+            print("Game is over")
     except pyautogui.ImageNotFoundException:
         pass
