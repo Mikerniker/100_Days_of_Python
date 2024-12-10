@@ -7,7 +7,7 @@
 
 ## Overview
 
-- Topics: 
+- Topics: pyautogui, python, PIL
 
 ### The challenge
 
