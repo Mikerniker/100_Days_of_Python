@@ -8,6 +8,7 @@ left = 37
 top = 516
 width = 187
 height = 133
+right = left + width
 
 # Define the Dino region and region to right of dino
 extra_width = 150  # width to the right of the dinosaur
