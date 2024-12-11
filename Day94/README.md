@@ -21,8 +21,11 @@
 **Approach, Challenges, Learnings, and Future Improvements:** 
 
 ## Notes: 
+- When starting, raise ImageNotFoundException sometimes happens for `locate_dinosaur` but find that refreshing the page works. 
+
 Future fixes:
 1. Code doesn't work when it shifts to night mode
 2. Dinosaur doesn't duck when overhead pterodactyl appears though it doesn't appear necessary since the pterodactyl doesn't touch the dinosaurs head.
+
 
 ## References
