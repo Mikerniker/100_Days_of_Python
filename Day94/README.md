@@ -22,7 +22,7 @@
 Future fixes:
 1. Code doesn't work when it shifts to night mode
 2. Dinosaur doesn't duck when overhead pterodactyl appears though it doesn't appear necessary since the pterodactyl doesn't touch the dinosaurs head.
-3. Future 
+3. Future fix could also adjust for speed when the game starts to go faster.
 
 
 ## References
