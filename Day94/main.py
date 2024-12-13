@@ -36,7 +36,7 @@ if locate_dinosaur is None:
 
 # Start the game
 pyautogui.press('space')
-print(f"Dinosaur found at: {locate_dinosaur}")
+# print(f"Dinosaur found at: {locate_dinosaur}")
 time.sleep(2)
 
 # Get initial screenshot
