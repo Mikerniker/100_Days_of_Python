@@ -17,8 +17,8 @@ https://github.com/user-attachments/assets/16b0eac4-1dd0-46b0-99c6-be8d25453528
 - Solution URL: [Custom Web Scraper](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day94)
 
 ## Reflection
-**Approach, Challenges, Learnings, and Future Improvements:** 
-Approach
+**Approach:** 
+
 - Started by locating the dinosaur to initialize the game.
 - Identified the positions of relevant images for game elements.
 - Defined a detection zone to trigger the dinosaur's jump.
