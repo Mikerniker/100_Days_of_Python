@@ -1,5 +1,7 @@
 # Day 94 Professional Portfolio Project: Automate the Google Dinosaur Game
 
+https://github.com/user-attachments/assets/16b0eac4-1dd0-46b0-99c6-be8d25453528
+(Video is sped up)
 
 ## Overview
 
