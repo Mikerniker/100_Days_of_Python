@@ -14,7 +14,7 @@ https://github.com/user-attachments/assets/16b0eac4-1dd0-46b0-99c6-be8d25453528
  
 ### Links
 
-- Solution URL: [Custom Web Scraper](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day94)
+- Solution URL: [Google Dinosaur Game](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day94)
 
 ## Reflection
 **Approach:** 
