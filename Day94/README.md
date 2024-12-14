@@ -32,3 +32,5 @@ Future fixes:
 
 
 ## References
+- [Pillow docs](https://pypi.org/project/pillow/)
+- [pyautogui](https://pyautogui.readthedocs.io/en/latest/)
