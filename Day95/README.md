@@ -1,10 +1,10 @@
 # IN PROGRESS
 
-# Day 95 Professional Portfolio Project: Automate the Google Dinosaur Game
+# Day 95 Professional Portfolio Project: Space Invaders Game
 
 
 
-(Video is sped up)
+
 
 ## Overview
 
@@ -12,11 +12,11 @@
 
 ### The challenge
 
-- Write Python code to play the [Google Dinosaur Game](https://elgoog.im/t-rex/).
+- Using Python Turtle, build the classic [Space Invaders Game](https://en.wikipedia.org/wiki/Space_Invaders) arcade game where you shoot down alien ships.
  
 ### Links
 
-- Solution URL: [Google Dinosaur Game](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day94)
+- Solution URL: [Space Invaders Game](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day95)
 
 ## Reflection
 **Approach:** 
