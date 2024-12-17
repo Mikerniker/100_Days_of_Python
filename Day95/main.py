@@ -4,6 +4,16 @@ from kivy.uix.widget import Widget
 from kivy.properties import NumericProperty, ReferenceListProperty
 from kivy.vector import Vector
 
+
+class SpaceGame(Widget):
+    pass
+
+
+class SpaceApp(App):
+    def build(self):
+        return SpaceGame()
+    
+    
 # import time
 # from turtle import Screen
 
