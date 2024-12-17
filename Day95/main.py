@@ -15,6 +15,13 @@ class SpaceApp(App):
     
 class Alien(Widget):
     pass
+
+
+
+if __name__ == '__main__':
+    SpaceApp().run()
+
+    
 # import time
 # from turtle import Screen
 
