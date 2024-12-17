@@ -13,7 +13,8 @@ class SpaceApp(App):
     def build(self):
         return SpaceGame()
     
-    
+class Alien(Widget):
+    pass
 # import time
 # from turtle import Screen
 
