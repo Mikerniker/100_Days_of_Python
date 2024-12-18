@@ -12,7 +12,13 @@ class SpaceGame(Widget):
         self.aliens = []
         self.create_aliens()
 
-   
+    def create_aliens(self):
+        self.clear_widgets()
+        alien_width = 35 
+        spacing = 10  
+        total_width = 8 * alien_width + 7 * spacing  
+        start_x = (self.width - total_width) / 2 
+
 
 
 class SpaceApp(App):
