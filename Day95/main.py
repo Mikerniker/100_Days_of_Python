@@ -19,6 +19,11 @@ class SpaceGame(Widget):
         total_width = 8 * alien_width + 7 * spacing  
         start_x = (self.width - total_width) / 2 
 
+        for i in range(8):
+            alien = Alien()
+            alien.pos = (self.center_x + i * (alien_width + spacing), 550)
+            self.add_widget(alien)
+            self.aliens.append(alien)
 
 
 class SpaceApp(App):
