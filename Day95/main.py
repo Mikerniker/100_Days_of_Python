@@ -6,7 +6,13 @@ from kivy.vector import Vector
 
 
 class SpaceGame(Widget):
-    pass
+    
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.aliens = []
+        self.create_aliens()
+
+   
 
 
 class SpaceApp(App):
