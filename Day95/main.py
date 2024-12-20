@@ -30,10 +30,10 @@ class SpaceGame(Widget):
                 self.add_widget(alien)
                 self.aliens.append(alien)
 
-    def update(self, dt):
-        # self.alien.move()
-        for alien in self.aliens:
-            alien.move()
+    # def update(self, dt):
+    #     # self.alien.move()
+    #     for alien in self.aliens:
+    #         alien.move()
 
 class SpaceApp(App):
     def build(self):
