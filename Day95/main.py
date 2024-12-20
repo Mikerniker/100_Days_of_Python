@@ -15,9 +15,11 @@ class SpaceGame(Widget):
     def create_aliens(self):
         self.clear_widgets()
         alien_width = 35 
-        spacing = 10  
-        total_width = 8 * alien_width + 7 * spacing  
-        start_x = (self.width - total_width) / 2 
+        alien_height = 35  # Height of each alien
+        spacing = 10  # Space between aliens
+        total_width = 8 * alien_width + 7 * spacing
+        start_x = (self.width - total_width) / 2  # Center horizontally
+        start_y = self.height / 2 + alien_height
 
         for i in range(8):
             alien = Alien()
