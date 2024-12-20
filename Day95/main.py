@@ -21,11 +21,14 @@ class SpaceGame(Widget):
         start_x = (self.width - total_width) / 2  # Center horizontally
         start_y = self.height / 2 + alien_height
 
-        for i in range(8):
-            alien = Alien()
-            alien.pos = (self.center_x + i * (alien_width + spacing), 550)
-            self.add_widget(alien)
-            self.aliens.append(alien)
+        for row in range(3):  # 3 rows
+            for col in range(8):  # 8 aliens per row
+                alien = Alien()
+                x = start_x + col * (alien_width + spacing)
+                y = start_y + row * (alien_height + spacing)
+                alien.pos = (x, y)
+                self.add_widget(alien)
+                self.aliens.append(alien)
 
     def update(self, dt):
         # self.alien.move()
