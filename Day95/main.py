@@ -41,7 +41,10 @@ class SpaceGame(Widget):
         if any(alien.x < 0 for alien in self.aliens):
             self.alien_velocity_x *= -1  # Change direction to right
             self.lower_aliens()  # Drop aliens down when changing direction
-
+        elif any(alien.right > self.width for alien in self.aliens):
+            self.alien_velocity_x *= -1  # Change direction to left
+            self.lower_aliens()
+            
 class SpaceApp(App):
     def build(self):
         return SpaceGame()
