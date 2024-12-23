@@ -46,9 +46,11 @@ class SpaceGame(Widget):
             self.lower_aliens()
     
     def lower_aliens(self):
-        pass
+        """Drops all aliens down when they change horizontal direction."""
+        for alien in self.aliens:
+            alien.y -= 20 
 
-    
+
 class SpaceApp(App):
     def build(self):
         return SpaceGame()
