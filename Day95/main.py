@@ -44,7 +44,11 @@ class SpaceGame(Widget):
         elif any(alien.right > self.width for alien in self.aliens):
             self.alien_velocity_x *= -1  # Change direction to left
             self.lower_aliens()
-            
+    
+    def lower_aliens(self):
+        pass
+
+    
 class SpaceApp(App):
     def build(self):
         return SpaceGame()
