@@ -7,6 +7,7 @@ from kivy.clock import Clock
 from kivy.core.window import Window
 
 class SpaceGame(Widget):
+    player = ObjectProperty(None)
     
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -61,7 +62,7 @@ class Alien(Widget):
     velocity_x = NumericProperty(0)
     velocity_y = NumericProperty(0)
     velocity = ReferenceListProperty(velocity_x, velocity_y)
-    
+
     def move(self):
         self.pos = Vector(*self.velocity) + self.pos
 
