@@ -4,6 +4,7 @@ from kivy.uix.widget import Widget
 from kivy.properties import NumericProperty, ReferenceListProperty
 from kivy.vector import Vector
 from kivy.clock import Clock
+from kivy.core.window import Window
 
 class SpaceGame(Widget):
     
@@ -13,7 +14,8 @@ class SpaceGame(Widget):
         self.alien_velocity_x = -2  # Negative for leftward movement
         Clock.schedule_once(self.create_aliens)
         Clock.schedule_interval(self.update, 1.0 / 60.0)
-
+        Window.bind(on_key_down=self.on_key_down)
+   
     def create_aliens(self):
         self.clear_widgets()
         alien_width = 35 
@@ -56,7 +58,9 @@ class SpaceApp(App):
         return SpaceGame()
     
 class Alien(Widget):
-    pass
+    velocity_x = NumericProperty(0)
+    velocity_y = NumericProperty(0)
+    velocity = ReferenceListProperty(velocity_x, velocity_y)
 
 
 
