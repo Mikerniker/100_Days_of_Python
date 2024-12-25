@@ -16,6 +16,7 @@ class SpaceGame(Widget):
         Clock.schedule_once(self.create_aliens)
         Clock.schedule_interval(self.update, 1.0 / 60.0)
         Window.bind(on_key_down=self.on_key_down)
+        Window.bind(on_key_up=self.on_key_up)
    
     def create_aliens(self):
         self.clear_widgets()
