@@ -12,6 +12,8 @@ class SpaceGame(Widget):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.aliens = []
+        self.moving_left = False
+        self.moving_right = False
         self.alien_velocity_x = -2  # Negative for leftward movement
         Clock.schedule_once(self.create_aliens)
         Clock.schedule_interval(self.update, 1.0 / 60.0)
