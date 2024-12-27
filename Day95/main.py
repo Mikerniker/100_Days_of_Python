@@ -56,7 +56,9 @@ class SpaceGame(Widget):
         for alien in self.aliens:
             alien.y -= 20 
 
-
+    def on_key_down(self, instance, keyboard, keycode, text, modifiers):
+        pass
+    
 class SpaceApp(App):
     def build(self):
         return SpaceGame()
