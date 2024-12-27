@@ -21,8 +21,7 @@ class SpaceGame(Widget):
         Window.bind(on_key_down=self.on_key_down)
         Window.bind(on_key_up=self.on_key_up)
    
-    def create_aliens(self):
-        self.clear_widgets()
+    def create_aliens(self, *args):
         alien_width = 35 
         alien_height = 35  # Height of each alien
         spacing = 10  # Space between aliens
