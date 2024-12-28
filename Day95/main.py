@@ -59,6 +59,9 @@ class SpaceGame(Widget):
     def on_key_down(self, instance, keyboard, keycode, text, modifiers):
         pass
     
+    def update_movement(self, dt):
+        pass
+    
 class SpaceApp(App):
     def build(self):
         return SpaceGame()
