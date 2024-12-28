@@ -60,8 +60,11 @@ class SpaceGame(Widget):
         pass
     
     def update_movement(self, dt):
-        pass
-    
+        if self.moving_left:
+            self.player.center_x = max(self.player.center_x - 5, self.player.width / 2)
+        if self.moving_right:
+            self.player.center_x = min(self.player.center_x + 5, self.width - self.player.width / 2)
+
 class SpaceApp(App):
     def build(self):
         return SpaceGame()
