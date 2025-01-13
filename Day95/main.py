@@ -6,20 +6,37 @@ from kivy.vector import Vector
 from kivy.clock import Clock
 from kivy.core.window import Window
 
+
+
+class Alien(Widget):
+    velocity_x = NumericProperty(0)
+    velocity_y = NumericProperty(0)
+    velocity = ReferenceListProperty(velocity_x, velocity_y)
+
+    def move(self):
+        self.pos = Vector(*self.velocity) + self.pos
+
+
 class SpaceGame(Widget):
-    player = ObjectProperty(None)
+    # player = ObjectProperty(None)
     
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.aliens = []
+        self._keyboard = Window.request_keyboard(self._on_keyboard_closed, self)
+        if self._keyboard:
+            self._keyboard.bind(on_key_down=self.on_keyboard_down)
+            self._keyboard.bind(on_key_up=self.on_keyboard_up)
         self.moving_left = False
         self.moving_right = False
-        self.alien_velocity_x = -2  # Negative for leftward movement
-        Clock.schedule_once(self.create_aliens)
-        Clock.schedule_interval(self.update, 1.0 / 60.0)
-        Clock.schedule_interval(self.update_movement, 1.0 / 60.0)
-        Window.bind(on_key_down=self.on_key_down)
-        Window.bind(on_key_up=self.on_key_up)
+        # self.aliens = []
+        # self.moving_left = False
+        # self.moving_right = False
+        # self.alien_velocity_x = -2  # Negative for leftward movement
+        # Clock.schedule_once(self.create_aliens)
+        # Clock.schedule_interval(self.update, 1.0 / 60.0)
+        # Clock.schedule_interval(self.update_movement, 1.0 / 60.0)
+        # Window.bind(on_key_down=self.on_key_down)
+        # Window.bind(on_key_up=self.on_key_up)
    
     def create_aliens(self, *args):
         alien_width = 35 
@@ -69,15 +86,6 @@ class SpaceApp(App):
     def build(self):
         return SpaceGame()
     
-class Alien(Widget):
-    velocity_x = NumericProperty(0)
-    velocity_y = NumericProperty(0)
-    velocity = ReferenceListProperty(velocity_x, velocity_y)
-
-    def move(self):
-        self.pos = Vector(*self.velocity) + self.pos
-
-
 if __name__ == '__main__':
     SpaceApp().run()
 
