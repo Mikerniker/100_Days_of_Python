@@ -37,7 +37,14 @@ class SpaceGame(Widget):
         # Clock.schedule_interval(self.update_movement, 1.0 / 60.0)
         # Window.bind(on_key_down=self.on_key_down)
         # Window.bind(on_key_up=self.on_key_up)
-   
+
+    def _on_keyboard_closed(self):
+        self._keyboard.unbind(on_key_down=self.on_keyboard_down)
+        self._keyboard.unbind(on_key_up=self.on_keyboard_up)
+        self._keyboard = None
+
+# continue here
+
     def create_aliens(self, *args):
         alien_width = 35 
         alien_height = 35  # Height of each alien
