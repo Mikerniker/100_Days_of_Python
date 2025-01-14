@@ -49,6 +49,13 @@ class SpaceGame(Widget):
             self.moving_left = True
         elif keycode[1] == 'right':
             self.moving_right = True
+
+    def on_keyboard_up(self, keyboard, keycode):
+        if keycode[1] == 'left':
+            self.moving_left = False
+        elif keycode[1] == 'right':
+            self.moving_right = False
+
 # continue here
 
     def create_aliens(self, *args):
