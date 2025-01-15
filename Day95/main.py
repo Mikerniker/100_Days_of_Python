@@ -56,6 +56,11 @@ class SpaceGame(Widget):
         elif keycode[1] == 'right':
             self.moving_right = False
 
+    def update(self):
+        if self.moving_left and self.x > 0:
+            self.x -= 5
+        if self.moving_right and self.right < self.parent.width:
+            self.x += 5
 # continue here
 
     def create_aliens(self, *args):
@@ -75,18 +80,7 @@ class SpaceGame(Widget):
                 self.add_widget(alien)
                 self.aliens.append(alien)
 
-    def update(self, dt):
-        # Move all aliens left
-        for alien in self.aliens:
-            alien.x += self.alien_velocity_x
-        
-        # Check if any alien hits the left or right edge
-        if any(alien.x < 0 for alien in self.aliens):
-            self.alien_velocity_x *= -1  # Change direction to right
-            self.lower_aliens()  # Drop aliens down when changing direction
-        elif any(alien.right > self.width for alien in self.aliens):
-            self.alien_velocity_x *= -1  # Change direction to left
-            self.lower_aliens()
+    
     
     def lower_aliens(self):
         """Drops all aliens down when they change horizontal direction."""
