@@ -51,8 +51,11 @@ class Spaceship(Widget):
             self.x -= 5
         if self.moving_right and self.right < self.parent.width:
             self.x += 5
-# continue here
 
+class SpaceGame(Widget):
+    player = ObjectProperty(None)
+
+# continue here
     def create_aliens(self, *args):
         alien_width = 35 
         alien_height = 35  # Height of each alien
