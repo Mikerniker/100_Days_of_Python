@@ -17,9 +17,7 @@ class Alien(Widget):
         self.pos = Vector(*self.velocity) + self.pos
 
 
-class SpaceGame(Widget):
-    # player = ObjectProperty(None)
-    
+class Spaceship(Widget):    
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self._keyboard = Window.request_keyboard(self._on_keyboard_closed, self)
