@@ -26,15 +26,7 @@ class Spaceship(Widget):
             self._keyboard.bind(on_key_up=self.on_keyboard_up)
         self.moving_left = False
         self.moving_right = False
-        # self.aliens = []
-        # self.moving_left = False
-        # self.moving_right = False
-        # self.alien_velocity_x = -2  # Negative for leftward movement
-        # Clock.schedule_once(self.create_aliens)
-        # Clock.schedule_interval(self.update, 1.0 / 60.0)
-        # Clock.schedule_interval(self.update_movement, 1.0 / 60.0)
-        # Window.bind(on_key_down=self.on_key_down)
-        # Window.bind(on_key_up=self.on_key_up)
+      
 
     def _on_keyboard_closed(self):
         self._keyboard.unbind(on_key_down=self.on_keyboard_down)
