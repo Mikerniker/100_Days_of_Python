@@ -55,6 +55,12 @@ class Spaceship(Widget):
 class SpaceGame(Widget):
     player = ObjectProperty(None)
 
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.aliens = []
+        self.alien_velocity_x = -2
+        Clock.schedule_once(self.create_aliens)
+        Clock.schedule_interval(self.update, 1.0 / 60.0)
 # continue here
     def create_aliens(self, *args):
         alien_width = 35 
