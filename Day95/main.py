@@ -61,7 +61,7 @@ class SpaceGame(Widget):
         self.alien_velocity_x = -2
         Clock.schedule_once(self.create_aliens)
         Clock.schedule_interval(self.update, 1.0 / 60.0)
-# continue here
+
     def create_aliens(self, *args):
         alien_width = 35 
         alien_height = 35  # Height of each alien
@@ -79,7 +79,12 @@ class SpaceGame(Widget):
                 self.add_widget(alien)
                 self.aliens.append(alien)
 
-    
+    def update(self, dt):
+        self.player.update()
+
+  
+
+   # continue here
     
     def lower_aliens(self):
         """Drops all aliens down when they change horizontal direction."""
