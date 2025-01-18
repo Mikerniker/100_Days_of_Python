@@ -85,7 +85,12 @@ class SpaceGame(Widget):
         for alien in self.aliens:
             alien.x += self.alien_velocity_x
 
-      
+        if any(alien.x < 0 for alien in self.aliens):
+            self.alien_velocity_x *= -1
+            self.lower_aliens()
+        elif any(alien.right > self.width for alien in self.aliens):
+            self.alien_velocity_x *= -1
+            self.lower_aliens()    
 
    # continue here
     
