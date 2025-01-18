@@ -82,7 +82,10 @@ class SpaceGame(Widget):
     def update(self, dt):
         self.player.update()
 
-  
+        for alien in self.aliens:
+            alien.x += self.alien_velocity_x
+
+      
 
    # continue here
     
