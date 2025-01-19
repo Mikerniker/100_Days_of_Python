@@ -110,7 +110,8 @@ class SpaceGame(Widget):
 
 
 class Bullet(Widget):
-    pass
+    speed = NumericProperty(5)
+
 
 class SpaceApp(App):
     def build(self):
