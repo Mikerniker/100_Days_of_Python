@@ -108,6 +108,10 @@ class SpaceGame(Widget):
         if self.moving_right:
             self.player.center_x = min(self.player.center_x + 5, self.width - self.player.width / 2)
 
+
+class Bullet(Widget):
+    pass
+
 class SpaceApp(App):
     def build(self):
         return SpaceGame()
