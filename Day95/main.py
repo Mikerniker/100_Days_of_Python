@@ -52,6 +52,10 @@ class Spaceship(Widget):
         if self.moving_right and self.right < self.parent.width:
             self.x += 5
 
+     def fire_bullet(self):
+        pass
+
+
 class SpaceGame(Widget):
     player = ObjectProperty(None)
 
