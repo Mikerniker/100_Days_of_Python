@@ -52,8 +52,9 @@ class Spaceship(Widget):
         if self.moving_right and self.right < self.parent.width:
             self.x += 5
 
-     def fire_bullet(self):
-        pass
+    def fire_bullet(self):
+        bullet = Bullet()
+        bullet.size = (10, 20)  # Set bullet size
 
 
 class SpaceGame(Widget):
