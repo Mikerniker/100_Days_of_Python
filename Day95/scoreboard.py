@@ -38,3 +38,10 @@ class Scoreboard(Turtle):
     def lose_life(self):
         self.lives -= 1
         self.update_lives()
+
+    def clear_scores(self):
+        self.show_score.clear()
+        self.show_lives.clear()
+
+    def game_over(self):  # TO REVIEW
+        self.game_is_over.write("GAME OVER", align="center", font=FONT)
