@@ -20,3 +20,13 @@ class Scoreboard(Turtle):
         text.color("white")
         text.goto(position)
         return text
+
+    def update_scoreboard(self):
+        self.show_score.clear()
+        self.show_score.write(f"Score: {self.score}", align='left',
+                              font=FONT)
+
+    def update_lives(self):
+        self.show_lives.clear()
+        self.show_lives.write(f"Lives: {self.lives}", align='right',
+                              font=FONT)
