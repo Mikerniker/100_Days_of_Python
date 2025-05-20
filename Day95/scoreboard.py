@@ -30,3 +30,11 @@ class Scoreboard(Turtle):
         self.show_lives.clear()
         self.show_lives.write(f"Lives: {self.lives}", align='right',
                               font=FONT)
+
+    def increase_score(self):
+        self.score += 1
+        self.update_scoreboard()
+
+    def lose_life(self):
+        self.lives -= 1
+        self.update_lives()
