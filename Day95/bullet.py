@@ -2,7 +2,6 @@ from turtle import Turtle
 
 MOVE_DISTANCE = 20
 
-
 class Bullet(Turtle):
     def __init__(self):
        super().__init__()
@@ -15,3 +14,7 @@ class Bullet(Turtle):
 
     def create_bullet(self, position):
        self.goto(position)
+
+
+    def move_bullet(self):
+       self.forward(MOVE_DISTANCE)
