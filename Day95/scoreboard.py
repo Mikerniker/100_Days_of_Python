@@ -18,7 +18,6 @@ class Scoreboard(Turtle):
         self.write(f"Score: {self.score}", align='left', font=FONT)
         self.goto((130, 175))
         self.write(f"Lives: {self.lives}", align='right', font=FONT)
-
    
 
     def increase_score(self):
@@ -27,7 +26,7 @@ class Scoreboard(Turtle):
 
     def lose_life(self):
         self.lives -= 1
-        self.update_lives()
+        self.update_scoreboard()
 
     def clear_scores(self):
         self.show_score.clear()
