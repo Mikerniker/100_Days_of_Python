@@ -20,4 +20,5 @@ class Spaceship(Turtle):
         self.goto(new_x, self.ycor())
 
     def move_right(self):
-        self.forward(MOVE_DISTANCE)
+        new_x = self.xcor() + MOVE_DISTANCE
+        self.goto(new_x, self.ycor())
