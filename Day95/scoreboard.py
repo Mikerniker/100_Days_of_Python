@@ -13,14 +13,13 @@ class Scoreboard(Turtle):
         self.update_scoreboard()
 
     def update_scoreboard(self):
-        self.show_score.clear()
-        self.show_score.write(f"Score: {self.score}", align='left',
-                              font=FONT)
+        self.clear()
+        self.goto(-130, 175)
+        self.write(f"Score: {self.score}", align='left', font=FONT)
+        self.goto((130, 175))
+        self.write(f"Lives: {self.lives}", align='right', font=FONT)
 
-    def update_lives(self):
-        self.show_lives.clear()
-        self.show_lives.write(f"Lives: {self.lives}", align='right',
-                              font=FONT)
+   
 
     def increase_score(self):
         self.score += 1
