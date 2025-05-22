@@ -12,6 +12,8 @@ class Spaceship(Turtle):
         self.penup()
         self.speed("fastest")
         self.goto(SHIP_COORDINATES)
+        # Spaceship bullet list
+        self.bullets = []
 
     def move_left(self):
         self.backward(MOVE_DISTANCE)
