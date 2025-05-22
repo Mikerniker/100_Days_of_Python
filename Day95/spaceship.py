@@ -1,6 +1,7 @@
 from turtle import Turtle
+from bullet import Bullet
 
-SHIP_COORDINATES = (0, -170)
+SHIP_COORDINATES = (-200, -170)
 MOVE_DISTANCE = 25
 
 class Spaceship(Turtle):
