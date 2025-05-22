@@ -25,3 +25,6 @@ class Spaceship(Turtle):
         new_bullet = Bullet()
         new_bullet.create_bullet(self.pos())
         self.bullets.append(new_bullet)
+
+    def reset_position(self):
+        self.goto(SHIP_COORDINATES)
