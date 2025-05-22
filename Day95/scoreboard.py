@@ -29,6 +29,8 @@ class Scoreboard(Turtle):
 
     def clear_scores(self):
          self.clear()
-         
+
     def game_over(self):  # TO REVIEW
-        self.game_is_over.write("GAME OVER", align="center", font=FONT)
+        self.goto((0, 0))
+        self.write("GAME OVER", align="center", font=FONT)
+
