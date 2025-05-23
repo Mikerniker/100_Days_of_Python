@@ -81,5 +81,15 @@ while game_is_on:
             bullet.hideturtle()
             invader.alien_bullets.remove(bullet)
 
+    if scoreboard.lives == 0:
+        scoreboard.game_over()
+        game_is_on = False
+
+    # detect collision with alien or base
+    for alien in invader.all_aliens:
+        if alien.distance(spaceship) < 15 or alien.ycor() < -180:
+            scoreboard.game_over()
+            game_is_on = False
+
 
 screen.exitonclick()
