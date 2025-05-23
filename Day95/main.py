@@ -53,5 +53,17 @@ while game_is_on:
 
     invader.fire_alien_bullet()
 
-    
+    # Fire spaceship bullet
+    for bullet in spaceship.bullets:
+        bullet.move(MOVE_DISTANCE)
+        # Detect alien collision with bullets
+        for alien in invader.all_aliens:
+            if bullet.distance(alien) < 15:
+                # print("made contact")
+                alien.hideturtle()
+                invader.all_aliens.remove(alien)
+                bullet.hideturtle()
+                spaceship.bullets.remove(bullet)
+                scoreboard.increase_score()
+
 screen.exitonclick()
