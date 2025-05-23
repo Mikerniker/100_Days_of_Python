@@ -16,6 +16,11 @@ screen.addshape("spaceship.gif")
 MOVE_DISTANCE = 30
 ALIEN_MOVE_DISTANCE = 5
 
+spaceship = Spaceship()
+invader = Alien()
+scoreboard = Scoreboard()
+
+
 # listen for user clicks
 screen.listen()
 screen.onkey(spaceship.move_left, "Left")
