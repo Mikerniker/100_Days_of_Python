@@ -66,4 +66,8 @@ while game_is_on:
                 spaceship.bullets.remove(bullet)
                 scoreboard.increase_score()
 
+        if bullet.ycor() > 200:
+            bullet.hideturtle()
+            spaceship.bullets.remove(bullet)
+
 screen.exitonclick()
