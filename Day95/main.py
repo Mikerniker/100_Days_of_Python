@@ -13,7 +13,8 @@ screen.tracer(0)
 screen.addshape("aliennew.gif")
 screen.addshape("spaceship.gif")
 
-
+MOVE_DISTANCE = 30
+ALIEN_MOVE_DISTANCE = 5
 
 # listen for user clicks
 screen.listen()
