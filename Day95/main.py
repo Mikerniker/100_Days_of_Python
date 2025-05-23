@@ -27,6 +27,7 @@ screen.onkey(spaceship.move_left, "Left")
 screen.onkey(spaceship.move_right, "Right")
 screen.onkey(spaceship.fire_bullet, "space")
 
+frame_count = 0
 game_is_on = True
 
 while game_is_on:
