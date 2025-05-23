@@ -51,4 +51,7 @@ while game_is_on:
 
         invader.move_aliens()
 
+    invader.fire_alien_bullet()
+
+    
 screen.exitonclick()
