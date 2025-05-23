@@ -91,5 +91,9 @@ while game_is_on:
             scoreboard.game_over()
             game_is_on = False
 
+    if invader.is_blasted():
+        invader.reset_aliens()
+        ALIEN_MOVE_DISTANCE += 10
+
 
 screen.exitonclick()
