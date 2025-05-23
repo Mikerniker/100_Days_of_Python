@@ -45,4 +45,10 @@ while game_is_on:
                 edge_hit = True
                 break
 
+        if edge_hit:
+            invader.move_aliens_down()
+            invader.direction *= -1
+
+        invader.move_aliens()
+
 screen.exitonclick()
