@@ -25,6 +25,7 @@ scoreboard = Scoreboard()
 screen.listen()
 screen.onkey(spaceship.move_left, "Left")
 screen.onkey(spaceship.move_right, "Right")
+screen.onkey(spaceship.fire_bullet, "space")
 
 game_is_on = True
 
