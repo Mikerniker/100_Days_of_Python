@@ -32,7 +32,17 @@ game_is_on = True
 
 while game_is_on:
     screen.update()
-    time.sleep(0.8)
-    
+    time.sleep(0.03)
+
+    frame_count += 1
+
+    # Move aliens
+    if frame_count % 20 == 0:
+        edge_hit = False
+
+        for alien in invader.all_aliens:
+            if alien.xcor() > 230 or alien.xcor() < -230:
+                edge_hit = True
+                break
 
 screen.exitonclick()
