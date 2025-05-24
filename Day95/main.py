@@ -39,16 +39,8 @@ while game_is_on:
 
     # Move aliens
     if frame_count % 20 == 0:
-        edge_hit = False
-
-        for alien in invader.all_aliens:
-            if alien.xcor() > 230 or alien.xcor() < -230:
-                edge_hit = True
-                break
-
-        if edge_hit:
-            invader.move_aliens_down()
-            invader.direction *= -1
+        invader.descend_to_planet()
+        invader.move_aliens()
 
         invader.move_aliens()
 
