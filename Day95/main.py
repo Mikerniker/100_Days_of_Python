@@ -39,9 +39,7 @@ while game_is_on:
 
     # Move aliens
     if frame_count % 20 == 0:
-        invader.descend_to_planet()
-        invader.move_aliens()
-
+        invader.descend_to_planet()  #TO FIX
         invader.move_aliens()
 
     invader.fire_alien_bullet()
@@ -85,6 +83,7 @@ while game_is_on:
             game_is_on = False
 
     if invader.is_blasted():
+        scoreboard.reset_lives()
         invader.reset_aliens()
         ALIEN_MOVE_DISTANCE += 10
 
