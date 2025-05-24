@@ -4,6 +4,7 @@ from spaceship import Spaceship
 from bullet import Bullet
 from scoreboard import Scoreboard
 import time
+import random
 
 screen = Screen()
 screen.setup(width=500, height=400)
