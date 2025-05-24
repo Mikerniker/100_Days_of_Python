@@ -6,6 +6,8 @@ Y_COORDINATES = list(range(160, 160 - 30 * 3, -30))
 # Create a GRID
 COORDINATE_GRID = [[(x, y) for x in X_COORDINATES] for y in Y_COORDINATES]
 MOVE_DISTANCE = 20
+ALIEN_EDGE_X = 230
+
 
 class Alien(Turtle):
     def __init__(self):
@@ -31,16 +33,23 @@ class Alien(Turtle):
             alien.goto(alien.xcor(), alien.ycor() - 10)  #original is 30
 
 
-    def detect_wall(self):
-        edge_hit = False
 
+    def detect_edge(self):
+        # edge_hit = False
         for alien in self.all_aliens:
-            if alien.xcor() > 230 or alien.xcor() < -230:
-                edge_hit = True
-                print("Edge is hit")
-                # break
+            if alien.xcor() > ALIEN_EDGE_X or alien.xcor() < -ALIEN_EDGE_X:
+                self.descend_level()
+                self.direction *= -1
+    # def detect_wall(self):
+    #     edge_hit = False
 
-        if edge_hit:
-            for alien in self.all_aliens:
-                alien.sety(alien.ycor() - 30)  # Move down one row
-                alien.setheading(180 - alien.heading())  # Reverse direction
+    #     for alien in self.all_aliens:
+    #         if alien.xcor() > 230 or alien.xcor() < -230:
+    #             edge_hit = True
+    #             print("Edge is hit")
+    #             # break
+
+    #     if edge_hit:
+    #         for alien in self.all_aliens:
+    #             alien.sety(alien.ycor() - 30)  # Move down one row
+    #             alien.setheading(180 - alien.heading())  # Reverse direction
