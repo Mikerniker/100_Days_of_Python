@@ -24,7 +24,7 @@ class Alien(Turtle):
 
     def move_aliens(self):
         for alien in self.all_aliens:
-            alien.forward(MOVE_DISTANCE)
+            alien.setx(alien.xcor() + (10 * self.direction))
 
     def detect_wall(self):
         edge_hit = False
