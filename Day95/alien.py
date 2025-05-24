@@ -26,6 +26,11 @@ class Alien(Turtle):
         for alien in self.all_aliens:
             alien.setx(alien.xcor() + (10 * self.direction))
 
+    def descend_level(self):
+        for alien in self.all_aliens:
+            alien.goto(alien.xcor(), alien.ycor() - 10)  #original is 30
+
+
     def detect_wall(self):
         edge_hit = False
 
