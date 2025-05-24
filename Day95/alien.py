@@ -34,15 +34,12 @@ class Alien(Turtle):
         for alien in self.all_aliens:
             alien.goto(alien.xcor(), alien.ycor() - 10)  #original is 30
 
-
-
     def detect_edge(self):
         # edge_hit = False
         for alien in self.all_aliens:
             if alien.xcor() > ALIEN_EDGE_X or alien.xcor() < -ALIEN_EDGE_X:
                 self.descend_level()
                 self.direction *= -1
-
 
     def fire_alien_bullet(self):
         # Fire alien bullet randomly
@@ -58,7 +55,11 @@ class Alien(Turtle):
             alien.hideturtle()
         self.all_aliens.clear()
         self.create_aliens()
-      
+
+    def is_blasted(self):
+        return not self.all_aliens
+    
+
     # def detect_wall(self):
     #     edge_hit = False
 
