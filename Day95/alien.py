@@ -1,4 +1,5 @@
 from turtle import Turtle
+import random
 
 X_COORDINATES = list(range(-135, -135 + 30 * 10, 30))
 Y_COORDINATES = list(range(160, 160 - 30 * 3, -30))
@@ -40,6 +41,19 @@ class Alien(Turtle):
             if alien.xcor() > ALIEN_EDGE_X or alien.xcor() < -ALIEN_EDGE_X:
                 self.descend_level()
                 self.direction *= -1
+
+
+    def fire_alien_bullet(self):
+        # Fire alien bullet randomly
+        if random.randint(1, 100) == 1:
+            random_alien = random.choice(self.all_aliens)
+            new_bullet = Bullet()
+            # new_bullet.setheading(270)
+            new_bullet.create_bullet(random_alien.pos())
+            self.alien_bullets.append(new_bullet)
+
+
+            
     # def detect_wall(self):
     #     edge_hit = False
 
