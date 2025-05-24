@@ -1,4 +1,5 @@
 from turtle import Turtle
+from bullet import Bullet
 import random
 
 X_COORDINATES = list(range(-135, -135 + 30 * 10, 30))
@@ -52,8 +53,12 @@ class Alien(Turtle):
             new_bullet.create_bullet(random_alien.pos())
             self.alien_bullets.append(new_bullet)
 
-
-            
+    def reset_aliens(self):
+        for alien in self.all_aliens:
+            alien.hideturtle()
+        self.all_aliens.clear()
+        self.create_aliens()
+      
     # def detect_wall(self):
     #     edge_hit = False
 
