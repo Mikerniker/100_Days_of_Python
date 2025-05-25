@@ -52,7 +52,7 @@ while game_is_on:
                 spaceship.bullets.remove(bullet)
                 scoreboard.increase_score()
 
-        if bullet.ycor() > 200:
+        if bullet.ycor() > SCREEN_LIMIT:
             bullet.hideturtle()
             spaceship.bullets.remove(bullet)
 
@@ -60,10 +60,12 @@ while game_is_on:
     for bullet in invader.alien_bullets:
         bullet.move(-ALIEN_MOVE_DISTANCE)
         if bullet.distance(spaceship) < 15:
-            print("I've been shot")
+            #print("I've been shot")
             spaceship.reset_position()
             scoreboard.lose_life()
-        if bullet.ycor() < -200:
+            bullet.hideturtle()
+            invader.alien_bullets.remove(bullet)
+        if bullet.ycor() < -SCREEN_LIMIT:
             bullet.hideturtle()
             invader.alien_bullets.remove(bullet)
 
