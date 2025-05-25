@@ -2,12 +2,8 @@ from turtle import Turtle
 from bullet import Bullet
 import random
 
-X_COORDINATES = list(range(-135, -135 + 30 * 10, 30))
-Y_COORDINATES = list(range(160, 160 - 30 * 3, -30))
-
-# Create a GRID
-COORDINATE_GRID = [[(x, y) for x in X_COORDINATES] for y in Y_COORDINATES]
-MOVE_DISTANCE = 20
+X_COORDS = list(range(-130, 170, 30))  # 10 columns
+Y_COORDS = list(range(160, 70, -30))   # 3 rows
 ALIEN_EDGE_X = 230
 
 
