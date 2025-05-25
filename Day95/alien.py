@@ -44,21 +44,13 @@ class Alien:
         for alien in self.all_aliens:
             alien.sety(alien.ycor() - ALIEN_DESCEND_STEP)
 
-    def detect_edge(self):
-        # edge_hit = False
-        for alien in self.all_aliens:
-            if alien.xcor() > ALIEN_EDGE_X or alien.xcor() < -ALIEN_EDGE_X:
-                self.descend_level()
-                self.direction *= -1
 
     def fire_alien_bullet(self):
-        # Fire alien bullet randomly
-        if random.randint(1, 100) == 1:
-            random_alien = random.choice(self.all_aliens)
-            new_bullet = Bullet()
-            # new_bullet.setheading(270)
-            new_bullet.create_bullet(random_alien.pos())
-            self.alien_bullets.append(new_bullet)
+        if self.all_aliens and random.randint(1, 100) == 1:
+            shooter = random.choice(self.all_aliens)
+            bullet = Bullet()
+            bullet.position_bullet(shooter.pos())
+            self.alien_bullets.append(bullet)
 
     def reset_aliens(self):
         for alien in self.all_aliens:
