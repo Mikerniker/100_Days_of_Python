@@ -34,10 +34,15 @@ class Alien:
         for alien in self.all_aliens:
             alien.setx(alien.xcor() +  self.alien_move_step * self.direction)
 
-
+    def has_hit_edge(self):
+        return any(
+            alien.xcor() > ALIEN_EDGE_X or alien.xcor() < -ALIEN_EDGE_X
+            for alien in self.all_aliens
+        )
+    
     def descend_level(self):
         for alien in self.all_aliens:
-            alien.goto(alien.xcor(), alien.ycor() - 10)  #original is 30
+            alien.sety(alien.ycor() - ALIEN_DESCEND_STEP)
 
     def detect_edge(self):
         # edge_hit = False
