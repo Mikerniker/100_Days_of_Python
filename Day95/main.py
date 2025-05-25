@@ -26,23 +26,18 @@ scoreboard = Scoreboard()
 screen.listen()
 screen.onkey(spaceship.move_left, "Left")
 screen.onkey(spaceship.move_right, "Right")
-screen.onkey(spaceship.fire_bullet, "space")
+screen.onkey(spaceship.create_bullet, "space")
 
-frame_count = 0
+
 game_is_on = True
 
 while game_is_on:
-    screen.update()
     time.sleep(0.03)
-
-    frame_count += 1
-
-    # Move aliens
-    if frame_count % 20 == 0:
-        invader.descend_to_planet()  #TO FIX
-        invader.move_aliens()
-
+    screen.update()
+   
+    invader.move_aliens()
     invader.fire_alien_bullet()
+
 
     # Fire spaceship bullet
     for bullet in spaceship.bullets:
