@@ -73,16 +73,16 @@ while game_is_on:
         scoreboard.game_over()
         game_is_on = False
 
-    # detect collision with alien or base
+    # Detect collision with alien or base
     for alien in invader.all_aliens:
-        if alien.distance(spaceship) < 15 or alien.ycor() < -180:
+        if alien.distance(spaceship) < 15 or alien.ycor() < ALIEN_BOTTOM_LIMIT:
             scoreboard.game_over()
             game_is_on = False
 
     if invader.is_blasted():
         scoreboard.reset_lives()
         invader.reset_aliens()
-        ALIEN_MOVE_DISTANCE += 10
+        alien_move_distance += 10
 
 
 screen.exitonclick()
