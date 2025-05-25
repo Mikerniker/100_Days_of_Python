@@ -57,7 +57,8 @@ class Alien:
             alien.hideturtle()
         self.all_aliens.clear()
         self.create_aliens()
-
+        self.alien_move_step += 2
+        
     def is_blasted(self):
         return not self.all_aliens
     
