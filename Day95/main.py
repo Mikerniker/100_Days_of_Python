@@ -1,10 +1,8 @@
 from turtle import Screen
 from alien import Alien
 from spaceship import Spaceship
-from bullet import Bullet
 from scoreboard import Scoreboard
 import time
-import random
 
 screen = Screen()
 screen.setup(width=500, height=400)
@@ -14,8 +12,10 @@ screen.tracer(0)
 screen.addshape("aliennew.gif")
 screen.addshape("spaceship.gif")
 
+SCREEN_LIMIT = 200
+ALIEN_BOTTOM_LIMIT = -180
 MOVE_DISTANCE = 30
-ALIEN_MOVE_DISTANCE = 5
+alien_move_distance = 5
 
 spaceship = Spaceship()
 invader = Alien()
