@@ -2,16 +2,19 @@ from turtle import Turtle
 from bullet import Bullet
 import random
 
-X_COORDS = list(range(-130, 170, 30))  # 10 columns
-Y_COORDS = list(range(160, 70, -30))   # 3 rows
+X_COORDS = list(range(-130, 170, 30)) 
+Y_COORDS = list(range(160, 70, -30))  
 ALIEN_EDGE_X = 230
+ALIEN_DESCEND_STEP = 10
 
-
-class Alien(Turtle):
+class Alien:
     def __init__(self):
         super().__init__()
         self.all_aliens = []
+        self.alien_bullets = []
+        self.direction = 1  # 1 for right, -1 for left
         self.create_aliens()
+        self.alien_move_step = 2
 
     def create_aliens(self):
         for row in COORDINATE_GRID:
