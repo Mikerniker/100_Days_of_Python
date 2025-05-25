@@ -17,12 +17,13 @@ class Alien:
         self.alien_move_step = 2
 
     def create_aliens(self):
-        for row in COORDINATE_GRID:
-            for x,y in row:
+        for y in Y_COORDS:
+            for x in X_COORDS:
                 alien = Turtle()
                 alien.shape("aliennew.gif")
                 alien.penup()
                 alien.goto(x, y)
+                alien.setheading(270)
                 self.all_aliens.append(alien)
 
     def move_aliens(self):
