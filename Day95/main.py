@@ -28,7 +28,6 @@ screen.onkey(spaceship.move_left, "Left")
 screen.onkey(spaceship.move_right, "Right")
 screen.onkey(spaceship.create_bullet, "space")
 
-
 game_is_on = True
 
 while game_is_on:
@@ -37,7 +36,6 @@ while game_is_on:
    
     invader.move_aliens()
     invader.fire_alien_bullet()
-
 
     # Fire spaceship bullet
     for bullet in spaceship.bullets:
