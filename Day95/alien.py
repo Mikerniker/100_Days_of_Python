@@ -27,8 +27,13 @@ class Alien:
                 self.all_aliens.append(alien)
 
     def move_aliens(self):
+        if self.has_hit_edge():
+            self.descend_level()
+            self.direction *= -1
+
         for alien in self.all_aliens:
-            alien.setx(alien.xcor() + (10 * self.direction))
+            alien.setx(alien.xcor() +  self.alien_move_step * self.direction)
+
 
     def descend_level(self):
         for alien in self.all_aliens:
