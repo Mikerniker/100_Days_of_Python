@@ -34,3 +34,6 @@ class Scoreboard(Turtle):
         self.goto((0, 0))
         self.write("GAME OVER", align="center", font=FONT)
 
+    def reset_lives(self):
+        self.lives = 3
+        self.update_scoreboard()
