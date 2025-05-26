@@ -23,9 +23,9 @@ class Spaceship(Turtle):
         if self.xcor() < 220:
             self.forward(MOVE_DISTANCE)
 
-    def fire_bullet(self):
+    def create_bullet(self):
         new_bullet = Bullet()
-        new_bullet.create_bullet(self.pos())
+        new_bullet.position_bullet(self.pos())
         self.bullets.append(new_bullet)
 
     def reset_position(self):
