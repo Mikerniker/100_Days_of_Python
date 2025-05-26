@@ -3,7 +3,7 @@ from turtle import Turtle
 MOVE_DISTANCE = 30
 
 class Bullet(Turtle):
-    def __init__(self):
+   def __init__(self):
       super().__init__()
       self.shape("circle")
       self.penup()
@@ -11,7 +11,7 @@ class Bullet(Turtle):
       self.color("white")
       self.speed(10)
 
-    def create_bullet(self, position):
+   def position_bullet(self, position):
        self.goto(position)
 
 
