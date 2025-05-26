@@ -56,7 +56,7 @@ while game_is_on:
 
     # Move alien bullets
     for bullet in invader.alien_bullets:
-        bullet.move(-ALIEN_MOVE_DISTANCE)
+        bullet.move(-alien_move_distance)
         if bullet.distance(spaceship) < 15:
             #print("I've been shot")
             spaceship.reset_position()
