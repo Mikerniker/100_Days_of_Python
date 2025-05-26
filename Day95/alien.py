@@ -62,17 +62,3 @@ class Alien:
     def is_blasted(self):
         return not self.all_aliens
     
-
-    # def detect_wall(self):
-    #     edge_hit = False
-
-    #     for alien in self.all_aliens:
-    #         if alien.xcor() > 230 or alien.xcor() < -230:
-    #             edge_hit = True
-    #             print("Edge is hit")
-    #             # break
-
-    #     if edge_hit:
-    #         for alien in self.all_aliens:
-    #             alien.sety(alien.ycor() - 30)  # Move down one row
-    #             alien.setheading(180 - alien.heading())  # Reverse direction

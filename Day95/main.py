@@ -3,6 +3,9 @@ from alien import Alien
 from spaceship import Spaceship
 from scoreboard import Scoreboard
 import time
+import os
+print("Current working directory:", os.getcwd())
+
 
 screen = Screen()
 screen.setup(width=500, height=400)
