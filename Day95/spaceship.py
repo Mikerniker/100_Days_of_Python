@@ -2,7 +2,7 @@ from turtle import Turtle
 from bullet import Bullet
 
 SHIP_COORDINATES = (-200, -170)
-MOVE_DISTANCE = 25
+MOVE_DISTANCE = 30
 
 class Spaceship(Turtle):
     def __init__(self):
@@ -16,7 +16,8 @@ class Spaceship(Turtle):
         self.bullets = []
 
     def move_left(self):
-        self.backward(MOVE_DISTANCE)
+        if self.xcor() > -220:
+            self.backward(MOVE_DISTANCE)
 
     def move_right(self):
         self.forward(MOVE_DISTANCE)
