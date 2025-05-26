@@ -24,4 +24,3 @@ The biggest takeaway for me was revisiting and reinforcing everything I’ve pre
 
 ## Notes/Concepts: 
 - reviewing OOP/ Turtle coordinate system
--
