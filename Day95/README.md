@@ -1,7 +1,7 @@
 # Day 95 Professional Portfolio Project: Space Invaders Game
 
-## Overview
 
+## Overview
 - Topics: Turtle, Python
 
 ### The challenge
@@ -22,5 +22,6 @@ There’s still a lot of room for improvement: cleaning up and modularizing the 
 
 The biggest takeaway for me was revisiting and reinforcing everything I’ve previously learned about object-oriented programming. There’s still a lot to digest and review, but I’m genuinely happy that I was able to get the game working in the end—even if it was just a basic implementation.
 
-## Notes: 
-- 
+## Notes/Concepts: 
+- reviewing OOP/ Turtle coordinate system
+-
