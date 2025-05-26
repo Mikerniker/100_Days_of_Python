@@ -14,6 +14,6 @@ class Bullet(Turtle):
    def position_bullet(self, position):
        self.goto(position)
 
-
-    def move_bullet(self):
-       self.forward(MOVE_DISTANCE)
+   def move(self, distance):
+       new_y = self.ycor() + distance     #MOVE_DISTANCE
+       self.goto(self.xcor(), new_y)
