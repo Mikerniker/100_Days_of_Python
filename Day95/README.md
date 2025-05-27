@@ -1,5 +1,6 @@
 # Day 95 Professional Portfolio Project: Space Invaders Game
 
+https://github.com/user-attachments/assets/055e5ecf-3e56-470b-a107-6736c693bd02
 
 ## Overview
 - Topics: Turtle, Python
