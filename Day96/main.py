@@ -20,6 +20,11 @@ df = pd.DataFrame([
         'Image URL': "https://www.cryptocompare.com" + item['CoinInfo'].get('ImageUrl', ''),
         'Supply': item['ConversionInfo'].get('Supply'),
         'Total Volume 24H': item['ConversionInfo'].get('TotalVolume24H'),
+        'Raw': (
+            item['ConversionInfo']['RAW'][0]
+            if 'RAW' in item['ConversionInfo'] else None
+        ),
+
     }
     for item in all_data
 ])
