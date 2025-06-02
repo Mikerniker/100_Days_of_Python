@@ -39,7 +39,13 @@ with header_cols[1]:
     st.markdown("**Symbol**")
 with header_cols[2]:
     st.markdown("**Full Name**")
-
+with header_cols[3]:
+    st.markdown("**Supply**")
+with header_cols[4]:
+    st.markdown("**Price**")
+with header_cols[5]:
+    st.markdown("**24h % Change**")
+    
 # for _, row in df.iterrows():
 #     col1, col2, col3, col4, col5, col6 = st.columns([1, 2, 3, 2, 2, 3])
 
