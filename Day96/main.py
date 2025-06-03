@@ -89,7 +89,20 @@ with header_cols[4]:
     st.markdown("**24h % Change**")
 with header_cols[5]:
     st.markdown("**Market Cap**")
-    
+
+
+for _, row in top_gainers.iterrows():
+    col1, col2, col3, col4, col5, col6 = st.columns([1, 2, 3, 2, 2, 3])
+
+    with col1:
+        st.image(row['Image URL'], width=40)
+    with col2:
+        st.write(row['Symbol'])
+    with col3:
+        st.write(row['Full Name'])
+
+
+
 # for _, row in df.iterrows():
 #     col1, col2, col3, col4, col5, col6 = st.columns([1, 2, 3, 2, 2, 3])
 
