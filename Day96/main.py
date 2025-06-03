@@ -10,7 +10,19 @@ data = response.json()
 print(data["Data"])
 all_data = data["Data"]
 
-
+def format_money(value):
+    if value is None:
+        return "N/A"
+    elif value >= 1_000_000_000:
+        return f"${value / 1_000_000_000:.2f}B"
+    elif value >= 1_000_000:
+        return f"${value / 1_000_000:.2f}M"
+    elif value >= 1_000:
+        return f"${value / 1_000:.2f}K"
+    else:
+        return f"${value:.2f}"
+    
+    
 st.title("Top Crypto Gainers & Losers (24h)")
 
 df = pd.DataFrame([
