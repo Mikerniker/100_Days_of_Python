@@ -22,24 +22,30 @@ def format_money(value):
     else:
         return f"${value:.2f}"
     
-    
+
+cleaned_data = []
+
+for item in all_data:
+    coin = item.get('CoinInfo', {})
+    conv = item.get('ConversionInfo', {})
+    raw = conv.get('RAW', [])
+
+    price = open_24h = change_24h = percent_change_24h = market_cap = None  # Initialize all
+
+    if raw and isinstance(raw, list):
+        try:
+            parts = raw[0].split('~')
+            price = float(parts[5])
+            open_24h = float(parts[17])
+            change_24h = price - open_24h
+            percent_change_24h = (change_24h / open_24h * 100) if open_24h != 0 else 0
+        except (IndexError, ValueError):
+            pass
+
+
+
 st.title("Top Crypto Gainers & Losers (24h)")
 
-df = pd.DataFrame([
-    {
-        'Symbol': item['CoinInfo'].get('Name'),
-        'Full Name': item['CoinInfo'].get('FullName'),
-        'Image URL': "https://www.cryptocompare.com" + item['CoinInfo'].get('ImageUrl', ''),
-        'Supply': item['ConversionInfo'].get('Supply'),
-        'Total Volume 24H': item['ConversionInfo'].get('TotalVolume24H'),
-        'Raw': (
-            item['ConversionInfo']['RAW'][0]
-            if 'RAW' in item['ConversionInfo'] else None
-        ),
-
-    }
-    for item in all_data
-])
 
 st.markdown("## TEST TABLE Top Gainers")
 
