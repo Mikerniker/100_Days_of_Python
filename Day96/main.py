@@ -100,7 +100,12 @@ for _, row in top_gainers.iterrows():
         st.write(row['Symbol'])
     with col3:
         st.write(row['Full Name'])
-
+    with col4:
+        st.write(format_money(row['Price']))
+    with col5:
+        st.write(f"{row['Percent Change 24h']:.2f}%" if row['Percent Change 24h'] is not None else "N/A")
+    with col6:
+        st.write(format_money(row['Market Cap']))
 
 
 # for _, row in df.iterrows():
