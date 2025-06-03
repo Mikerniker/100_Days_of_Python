@@ -71,12 +71,10 @@ top_gainers = df.sort_values(by="Percent Change 24h", ascending=False).head(10)
 top_losers = df.sort_values(by="Percent Change 24h", ascending=True).head(10)
 
 
-
 st.title("Top Crypto Gainers & Losers (24h)")
 
 
 st.markdown("## TEST TABLE Top Gainers")
-
 
 header_cols = st.columns([1, 2, 3, 2, 2, 3])
 with header_cols[0]:
@@ -86,11 +84,11 @@ with header_cols[1]:
 with header_cols[2]:
     st.markdown("**Full Name**")
 with header_cols[3]:
-    st.markdown("**Supply**")
-with header_cols[4]:
     st.markdown("**Price**")
-with header_cols[5]:
+with header_cols[4]:
     st.markdown("**24h % Change**")
+with header_cols[5]:
+    st.markdown("**Market Cap**")
     
 # for _, row in df.iterrows():
 #     col1, col2, col3, col4, col5, col6 = st.columns([1, 2, 3, 2, 2, 3])
