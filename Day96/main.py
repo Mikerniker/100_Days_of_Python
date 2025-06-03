@@ -42,6 +42,12 @@ for item in all_data:
         except (IndexError, ValueError):
             pass
 
+    supply = conv.get('Supply')
+    if supply is not None and price is not None:
+        try:
+            market_cap = price * float(supply)
+        except ValueError:
+            market_cap = None
 
 
 st.title("Top Crypto Gainers & Losers (24h)")
