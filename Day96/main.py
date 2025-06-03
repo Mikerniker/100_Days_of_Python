@@ -49,6 +49,19 @@ for item in all_data:
         except ValueError:
             market_cap = None
 
+    cleaned_data.append({
+        "Symbol": coin.get('Name'),
+        "Full Name": coin.get('FullName'),
+        "Image URL": "https://www.cryptocompare.com" + coin.get('ImageUrl', ''),
+        "Supply": supply,
+        "Total Vol 24H": conv.get('TotalVolume24H'),
+        "Price": price,
+        "Open 24h": open_24h,
+        "Change 24h": change_24h,
+        "Percent Change 24h": percent_change_24h,
+        "Market Cap": market_cap
+    })
+
 
 st.title("Top Crypto Gainers & Losers (24h)")
 
