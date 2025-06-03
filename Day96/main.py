@@ -62,6 +62,8 @@ for item in all_data:
         "Market Cap": market_cap
     })
 
+df = pd.DataFrame(cleaned_data)
+print(df.to_string())
 
 st.title("Top Crypto Gainers & Losers (24h)")
 
