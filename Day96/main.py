@@ -63,7 +63,14 @@ for item in all_data:
     })
 
 df = pd.DataFrame(cleaned_data)
-print(df.to_string())
+# print(df.to_string())
+
+# Split Gainers & Losers
+df = df.dropna(subset=["Percent Change 24h"])
+top_gainers = df.sort_values(by="Percent Change 24h", ascending=False).head(10)
+top_losers = df.sort_values(by="Percent Change 24h", ascending=True).head(10)
+
+
 
 st.title("Top Crypto Gainers & Losers (24h)")
 
