@@ -29,20 +29,14 @@ def get_dataframe(data):
 
     for item in data:
         coin = item.get('CoinInfo', {})
-        conv = item.get('ConversionInfo', {})
-        raw = conv.get('RAW', [])
+        raw = item.get('RAW', {}).get('USD', {})
 
-        price = open_24h = change_24h = percent_change_24h = market_cap = None  # Initialize all
-
-        if raw and isinstance(raw, list):
-            try:
-                parts = raw[0].split('~')
-                price = float(parts[5])
-                open_24h = float(parts[17])
-                change_24h = price - open_24h
-                percent_change_24h = (change_24h / open_24h * 100) if open_24h != 0 else 0
-            except (IndexError, ValueError):
-                pass
+        price = raw.get('PRICE')
+        open_24h = raw.get('OPEN24HOUR')
+        change_24h = None
+        percent_change_24h = None
+        market_cap = raw.get('MKTCAP')
+        supply = raw.get('SUPPLY')
 
         supply = conv.get('Supply')
         if supply is not None and price is not None:
