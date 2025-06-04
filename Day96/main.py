@@ -10,6 +10,7 @@ def get_data(url):
     response.raise_for_status()
     return response.json()["Data"]
 
+
 def format_money(value):
     if value is None:
         return "N/A"
@@ -23,47 +24,48 @@ def format_money(value):
         return f"${value:.2f}"
     
 
-cleaned_data = []
+def get_dataframe(data):
+    cleaned_data = []
 
-for item in all_data:
-    coin = item.get('CoinInfo', {})
-    conv = item.get('ConversionInfo', {})
-    raw = conv.get('RAW', [])
+    for item in data:
+        coin = item.get('CoinInfo', {})
+        conv = item.get('ConversionInfo', {})
+        raw = conv.get('RAW', [])
 
-    price = open_24h = change_24h = percent_change_24h = market_cap = None  # Initialize all
+        price = open_24h = change_24h = percent_change_24h = market_cap = None  # Initialize all
 
-    if raw and isinstance(raw, list):
-        try:
-            parts = raw[0].split('~')
-            price = float(parts[5])
-            open_24h = float(parts[17])
-            change_24h = price - open_24h
-            percent_change_24h = (change_24h / open_24h * 100) if open_24h != 0 else 0
-        except (IndexError, ValueError):
-            pass
+        if raw and isinstance(raw, list):
+            try:
+                parts = raw[0].split('~')
+                price = float(parts[5])
+                open_24h = float(parts[17])
+                change_24h = price - open_24h
+                percent_change_24h = (change_24h / open_24h * 100) if open_24h != 0 else 0
+            except (IndexError, ValueError):
+                pass
 
-    supply = conv.get('Supply')
-    if supply is not None and price is not None:
-        try:
-            market_cap = price * float(supply)
-        except ValueError:
-            market_cap = None
+        supply = conv.get('Supply')
+        if supply is not None and price is not None:
+            try:
+                market_cap = price * float(supply)
+            except ValueError:
+                market_cap = None
 
-    cleaned_data.append({
-        "Symbol": coin.get('Name'),
-        "Full Name": coin.get('FullName'),
-        "Image URL": "https://www.cryptocompare.com" + coin.get('ImageUrl', ''),
-        "Supply": supply,
-        "Total Vol 24H": conv.get('TotalVolume24H'),
-        "Price": price,
-        "Open 24h": open_24h,
-        "Change 24h": change_24h,
-        "Percent Change 24h": percent_change_24h,
-        "Market Cap": market_cap
-    })
+        cleaned_data.append({
+            "Symbol": coin.get('Name'),
+            "Full Name": coin.get('FullName'),
+            "Image URL": "https://www.cryptocompare.com" + coin.get('ImageUrl', ''),
+            "Supply": supply,
+            "Total Vol 24H": conv.get('TotalVolume24H'),
+            "Price": price,
+            "Open 24h": open_24h,
+            "Change 24h": change_24h,
+            "Percent Change 24h": percent_change_24h,
+            "Market Cap": market_cap
+        })
 
-df = pd.DataFrame(cleaned_data)
-# print(df.to_string())
+    df = pd.DataFrame(cleaned_data)
+    # print(df.to_string())
 
 # Split Gainers & Losers
 df = df.dropna(subset=["Percent Change 24h"])
