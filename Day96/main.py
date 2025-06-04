@@ -38,12 +38,9 @@ def get_dataframe(data):
         market_cap = raw.get('MKTCAP')
         supply = raw.get('SUPPLY')
 
-        supply = conv.get('Supply')
-        if supply is not None and price is not None:
-            try:
-                market_cap = price * float(supply)
-            except ValueError:
-                market_cap = None
+        if price is not None and open_24h is not None:
+            change_24h = price - open_24h
+            percent_change_24h = (change_24h / open_24h * 100) if open_24h != 0 else 0
 
         cleaned_data.append({
             "Symbol": coin.get('Name'),
