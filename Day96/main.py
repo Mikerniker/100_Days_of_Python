@@ -5,11 +5,10 @@ import requests
 
 URL = "https://min-api.cryptocompare.com/data/top/totalvolfull?limit=100&tsym=USD"
 
-response = requests.get(url=URL)
-response.raise_for_status()
-data = response.json()
-print(data["Data"])
-all_data = data["Data"]
+def get_data(url):
+    response = requests.get(url)
+    response.raise_for_status()
+    return response.json()["Data"]
 
 def format_money(value):
     if value is None:
