@@ -55,7 +55,7 @@ def get_dataframe(data):
         })
 
     df = pd.DataFrame(cleaned_data)
-    # print(df.to_string())
+    return df
 
 # Split Gainers & Losers
 df = df.dropna(subset=["Percent Change 24h"])
