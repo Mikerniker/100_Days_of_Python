@@ -1,6 +1,5 @@
 # Day 96 Professional Portfolio Project: Crypto Top Gainers and Losers (Custom API Based Website)
 
-
 ## Overview
 - Topics:  Pandas, Streamlit, JSON, Python, HTTP request, and REST APIs
 
@@ -27,5 +26,6 @@ Things I’d improve in the future:
 - Improve error handling
 - Add better visualizations (e.g., charts)
 
-## Notes/Concepts: 
-- 
+## Notes/Concepts/Review: 
+- Reviewing accessing dictionaries `my_dict.get('key', default_value)`
+- `:.2f` format a floating-point number to two decimal places.
