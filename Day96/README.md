@@ -1,9 +1,8 @@
-# IN PROGRESS
-# Day 96 Professional Portfolio Project: Custom API Based Website
+# Day 96 Professional Portfolio Project: Crpto Top Gainers and Losers Custom API Based Website
 
 
 ## Overview
-- Topics:  HTTP request and REST APIs
+- Topics:  Pandas, Streamlit, Python, HTTP request, and REST APIs
 
 ### The challenge
 
