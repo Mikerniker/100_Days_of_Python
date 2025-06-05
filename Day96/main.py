@@ -99,3 +99,7 @@ def display_table(title, data):
             st.write(f"{row['Percent Change 24h']:.2f}%")
         with col6:
             st.write(format_money(row['Market Cap']))
+
+# Display both tables
+display_table("Top Gainers", top_gainers)
+display_table("Top Losers", top_losers)
