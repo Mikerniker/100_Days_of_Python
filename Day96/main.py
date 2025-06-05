@@ -57,7 +57,6 @@ def get_dataframe(data):
     df = pd.DataFrame(cleaned_data)
     return df
 
-
 # Get Gainers and Losers
 data = get_data(URL)
 df = get_dataframe(data)
@@ -66,40 +65,23 @@ df = df.dropna(subset=["Percent Change 24h"])
 top_gainers = df.sort_values(by="Percent Change 24h", ascending=False).head(10)
 top_losers = df.sort_values(by="Percent Change 24h", ascending=True).head(10)
 
-# TO FIX
-# st.title("Top Crypto Gainers & Losers (24h)")
 
+# Streamlit UI
+st.title("Top Crypto Gainers & Losers (24h)")
 
-# st.markdown("## TEST TABLE Top Gainers")
-
-# header_cols = st.columns([1, 2, 3, 2, 2, 3])
-# with header_cols[0]:
-#     st.markdown("**Logo**")
-# with header_cols[1]:
-#     st.markdown("**Symbol**")
-# with header_cols[2]:
-#     st.markdown("**Full Name**")
-# with header_cols[3]:
-#     st.markdown("**Price**")
-# with header_cols[4]:
-#     st.markdown("**24h % Change**")
-# with header_cols[5]:
-#     st.markdown("**Market Cap**")
-
-
-# for _, row in top_gainers.iterrows():
-#     col1, col2, col3, col4, col5, col6 = st.columns([1, 2, 3, 2, 2, 3])
-
-#     with col1:
-#         st.image(row['Image URL'], width=40)
-#     with col2:
-#         st.write(row['Symbol'])
-#     with col3:
-#         st.write(row['Full Name'])
-#     with col4:
-#         st.write(format_money(row['Price']))
-#     with col5:
-#         st.write(f"{row['Percent Change 24h']:.2f}%" if row['Percent Change 24h'] is not None else "N/A")
-#     with col6:
-#         st.write(format_money(row['Market Cap']))
+def display_table(title, data):
+    st.markdown(f"## {title}")
+    header_cols = st.columns([1, 2, 3, 2, 2, 3])
+    with header_cols[0]:
+        st.markdown("**Logo**")
+    with header_cols[1]:
+        st.markdown("**Symbol**")
+    with header_cols[2]:
+        st.markdown("**Full Name**")
+    with header_cols[3]:
+        st.markdown("**Price**")
+    with header_cols[4]:
+        st.markdown("**24h % Change**")
+    with header_cols[5]:
+        st.markdown("**Market Cap**")
 
