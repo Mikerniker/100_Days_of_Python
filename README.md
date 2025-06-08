@@ -293,5 +293,8 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 **Day 94: [Professional Portfolio Project: Automate the Google Dinosaur Game](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day94)**
 - Topics: Python, pyautogui, PIL
 
-**Day 95: [Professional Portfolio Project: Automate the Google Dinosaur Game](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day95)**
-- Topics: Python, pyautogui, PIL
+**Day 95: [Professional Portfolio Project: Space Invaders Game](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day95)**
+- Topics: Python, Turtle
+
+**Day 96: [Professional Portfolio Project: Crypto Top Gainers and Losers (Custom API Based Website)](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day96)**
+- Topics:  Pandas, Streamlit, JSON, Python, HTTP request, and REST APIs
