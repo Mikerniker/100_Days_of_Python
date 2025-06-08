@@ -1,6 +1,6 @@
 Hello,
 
-This is a repository of my final projects for Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2023. I am currently on Day 89 and slowly putting the finished projects into Github for my reference. This repository is still a work in progress, thank you for visiting!
+This is a repository of my final projects for Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2023. I am currently on Day 97 and slowly putting the finished projects into Github for my reference. This repository is still a work in progress, thank you for visiting!
 
 ## Beginner
 **Day 1 Project: [Band Name Generator](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day01)**
@@ -286,3 +286,12 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 
 **Day 92: [Professional Portfolio Project: Image Colour Palette Generator](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day92)**
 - Topics: Python, Flask, Pandas, PIL, W3.CSS
+
+**Day 93: [Professional Portfolio Project: Custom Web Scraper](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day93)**
+- Topics: Python, API (Sheety), Pandas
+
+**Day 94: [Professional Portfolio Project: Automate the Google Dinosaur Game](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day94)**
+- Topics: Python, pyautogui, PIL
+
+**Day 95: [Professional Portfolio Project: Automate the Google Dinosaur Game](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day95)**
+- Topics: Python, pyautogui, PIL
