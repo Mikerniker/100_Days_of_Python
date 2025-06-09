@@ -25,3 +25,10 @@ params = {
   "network": "mainnet",
   "address": COLLECTION_ADDRESS
 }
+
+result = sol_api.account.get_nfts(
+  api_key=api_key,
+  params=params,
+)
+
+# print(result)
