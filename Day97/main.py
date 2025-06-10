@@ -13,7 +13,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-   
+    random_number = random.randint(30, 40)
+    current_year = datetime.datetime.now().year
    
     return render_template("index.html")
 
