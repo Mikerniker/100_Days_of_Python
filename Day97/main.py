@@ -16,7 +16,9 @@ def home():
     random_number = random.randint(30, 40)
     current_year = datetime.datetime.now().year
    
-    return render_template("index.html")
+    return render_template("index.html",
+                           price=random_number,
+                           year=current_year)
 
 
 
