@@ -22,21 +22,22 @@ def home():
 
 
 def get_wallet_nft():
-    pass
-  # params = {
-  #   "nft_metadata": True,
-  #   "media_items": False,
-  #   "exclude_spam": False,
-  #   "network": "mainnet",
-  #   "address": COLLECTION_ADDRESS
-  # }
+  params = {
+    "nft_metadata": True,
+    "media_items": False,
+    "exclude_spam": False,
+    "network": "mainnet",
+    "address": COLLECTION_ADDRESS
+  }
 
-  # result = sol_api.account.get_nfts(
-  #   api_key=api_key,
-  #   params=params,
-  # )
+  result = sol_api.account.get_nfts(
+    api_key=api_key,
+    params=params,
+  )
 
-  # print(result)
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
