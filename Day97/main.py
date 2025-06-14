@@ -22,42 +22,46 @@ def home():
 
 
 def get_wallet_nft():
-  params = {
-    "nft_metadata": True,
-    "media_items": False,
-    "exclude_spam": False,
-    "network": "mainnet",
-    "address": COLLECTION_ADDRESS
-  }
-
-  result = sol_api.account.get_nfts(
-    api_key=api_key,
-    params=params,
-  )
-  
-  nft_list = []
-  
-  for nft in result[:12]:
     params = {
-       "network": "mainnet",
-       "address": nft['mint']
-      }
+      "nft_metadata": True,
+      "media_items": False,
+      "exclude_spam": False,
+      "network": "mainnet",
+      "address": COLLECTION_ADDRESS
+    }
 
-    nft_result = sol_api.nft.get_nft_metadata(
-        api_key=api_key,
-        params=params,
-      )
+    result = sol_api.account.get_nfts(
+      api_key=api_key,
+      params=params,
+    )
     
-    nft_list.append({
-        "name": nft_result["name"],
-        "symbol": nft_result["symbol"],
-        "url": nft_result["imageOriginalUrl"]
-    })
+    nft_list = []
+    
+    for nft in result[:12]:
+      params = {
+        "network": "mainnet",
+        "address": nft['mint']
+        }
 
-  # print(nft_list)
-  return nft_list
+      nft_result = sol_api.nft.get_nft_metadata(
+          api_key=api_key,
+          params=params,
+        )
+      
+      nft_list.append({
+          "name": nft_result["name"],
+          "symbol": nft_result["symbol"],
+          "url": nft_result["imageOriginalUrl"]
+      })
+
+    # print(nft_list)
+    return nft_list
 
 
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 
 if __name__ == '__main__':
