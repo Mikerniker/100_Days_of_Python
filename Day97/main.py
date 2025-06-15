@@ -73,6 +73,8 @@ def checkout(index):
                            checkout_nft=checkout_item,
                            sol_to_usd = convert_sol)
 
+nft_data = get_wallet_nft()
+
 
 if __name__ == '__main__':
     app.run(debug=True)
