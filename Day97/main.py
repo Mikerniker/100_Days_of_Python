@@ -58,17 +58,20 @@ def get_wallet_nft():
     return nft_list
 
 
-
 @app.route('/about')
 def about():
     return render_template('about.html')
 
 
-@app.route('/checkout', methods=['GET', 'POST'])
-def checkout():
-    return render_template('checkout.html')
-
-
+@app.route('/checkout/<int:index>', methods=['GET', 'POST'])
+def checkout(index):
+    checkout_item = None
+    for nft in nft_data:
+        if nft["id"] == index:
+            checkout_item = nft
+    return render_template('checkout.html',
+                           checkout_nft=checkout_item,
+                           sol_to_usd = convert_sol)
 
 
 if __name__ == '__main__':
