@@ -21,4 +21,5 @@
 ## Notes/Concepts/Review: 
 
 
-- [Stripe checkout reference](https://docs.stripe.com/checkout/quickstart)
+- [Stripe Checkout Quickstart](https://docs.stripe.com/checkout/quickstart)
+- [Stripe Checkout Sessions](https://docs.stripe.com/api/checkout/sessions)
