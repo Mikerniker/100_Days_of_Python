@@ -23,3 +23,4 @@
 
 - [Stripe Checkout Quickstart](https://docs.stripe.com/checkout/quickstart)
 - [Stripe Checkout Sessions](https://docs.stripe.com/api/checkout/sessions)
+- [Stripe API Docs](https://docs.stripe.com/api)
