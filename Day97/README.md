@@ -19,3 +19,6 @@
 **Approach, Challenges, Learnings, and Future Improvements:**
 
 ## Notes/Concepts/Review: 
+
+
+- [Stripe checkout reference](https://docs.stripe.com/checkout/quickstart)
