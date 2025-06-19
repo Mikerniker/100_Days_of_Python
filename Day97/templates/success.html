@@ -1,0 +1,20 @@
+{% include "header.html" %}
+
+<div class="container success-container pt-5">
+        <div class="card mx-auto shadow-sm mt-5" style="max-width: 400px;">
+            <div class="card-body text-center">
+                <h3 class="text-success">🎉 Payment Successful!</h3>
+                <p class="lead">Thank you for your purchase. Your NFT is on its way to your wallet.</p>
+                    <img src="{{ checkout_nft.url }}" alt="NFT image" class="img-thumbnail d-block mx-auto" width="200" height="200">
+                <ul class="list-group mb-3 text-center">
+                    <li class="list-group-item ">
+                        <h6 class="my-0">{{checkout_nft.name}}</h6>
+                        <small class="text-body-secondary">{{checkout_nft.symbol}}</small>
+                    </li>
+                </ul>
+                <a href="{{ url_for('home') }}" class="btn btn-primary mt-4">Return to Marketplace</a>
+            </div>
+        </div>
+    </div>
+
+{% include "footer.html" %}
