@@ -1,6 +1,5 @@
 {% include "header.html" %}
 
-<!-- Gallery -->
 <div class="album py-5 mt-5 bg-body-tertiary">
     <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -8,9 +7,7 @@
             <div class="col">
                 <div class="card shadow-sm">
                        <img src="{{ nft['url'] }}" alt="NFT image"  >
-                       <title>Placeholder</title>
 
-                    </svg>
                     <div class="card-body text-center">
                         <p class="card-text">
                               <strong>{{ nft['name'] }}</strong><br>
@@ -20,8 +17,7 @@
                         </p>
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Buy</button>
+                               <a href="{{ url_for('checkout', index=nft.id) }}" class="btn btn-outline-primary" role="button" >Buy</a>
                             </div>
 
                         </div>
@@ -32,6 +28,5 @@
         </div>
     </div>
 </div>
-
 
 {% include "footer.html" %}
