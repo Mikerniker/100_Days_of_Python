@@ -98,6 +98,11 @@ def checkout(index):
                            sol_to_usd=session.get('convert_sol', 'Unknown'))
       
 
+@app.route('/checkout')
+def generic_checkout():
+    return render_template('checkout.html', checkout_nft=None)
+
+
 nft_data = get_wallet_nft()
 
 
