@@ -32,7 +32,6 @@ def home():
                            sol_to_usd=session['convert_sol'])
 
 
-
 def get_wallet_nft():
     params = {
       "nft_metadata": True,
@@ -46,27 +45,28 @@ def get_wallet_nft():
       api_key=api_key,
       params=params,
     )
-    
+
+    # GET Mint address for Metadata
     nft_list = []
-    
-    for nft in result[:12]:
-      params = {
-        "network": "mainnet",
-        "address": nft['mint']
+
+    for i, nft in enumerate(result[:12]):
+        params = {
+            "network": "mainnet",
+            "address": nft['mint']
         }
 
-      nft_result = sol_api.nft.get_nft_metadata(
-          api_key=api_key,
-          params=params,
+        nft_result = sol_api.nft.get_nft_metadata(
+            api_key=api_key,
+            params=params,
         )
-      
-      nft_list.append({
-          "name": nft_result["name"],
-          "symbol": nft_result["symbol"],
-          "url": nft_result["imageOriginalUrl"]
-      })
 
-    # print(nft_list)
+        nft_list.append({
+            "id": i,
+            "name": nft_result['name'],
+            "symbol": nft_result['symbol'],
+            "url": nft_result['imageOriginalUrl']
+        })
+
     return nft_list
 
 
