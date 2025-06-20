@@ -103,6 +103,40 @@ def generic_checkout():
     return render_template('checkout.html', checkout_nft=None)
 
 
+@app.route('/create-checkout-session/<int:index>', methods=['GET', 'POST'])
+def create_checkout_session(index):
+    checkout_item = None
+    for nft in nft_data:
+        if nft["id"] == index:
+            checkout_item = nft
+    sol_to_usd = session.get('convert_sol', 0)
+
+    # Store data in session
+    session['checkout_nft'] = checkout_item
+    session['sol_to_usd'] = sol_to_usd
+    try:
+        checkout_session = stripe.checkout.Session.create(
+            line_items=[{
+                'price_data': {
+                    'currency': 'usd',
+                    'unit_amount': int(float(sol_to_usd) * 100),
+                    'product_data': {
+                        'name': checkout_item['name'],
+                    },
+                },
+                'quantity': 1,
+            }],
+            mode='payment',
+            success_url=DOMAIN + 'success',
+            cancel_url=DOMAIN + 'cancel',
+        )
+
+    except Exception as e:
+        return str(e)
+
+    return redirect(checkout_session.url, code=303)
+
+
 nft_data = get_wallet_nft()
 
 
