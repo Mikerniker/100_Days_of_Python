@@ -139,10 +139,13 @@ def create_checkout_session(index):
 
 @app.route('/success')
 def success():
-    # checkout_nft = session.get('checkout_nft')
     checkout_nft = session.pop('checkout_nft', None)
     return render_template('success.html', checkout_nft=checkout_nft)
 
+
+@app.route('/cancel')
+def cancel():
+    return render_template('cancel.html')
 
 nft_data = get_wallet_nft()
 
