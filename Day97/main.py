@@ -137,6 +137,13 @@ def create_checkout_session(index):
     return redirect(checkout_session.url, code=303)
 
 
+@app.route('/success')
+def success():
+    # checkout_nft = session.get('checkout_nft')
+    checkout_nft = session.pop('checkout_nft', None)
+    return render_template('success.html', checkout_nft=checkout_nft)
+
+
 nft_data = get_wallet_nft()
 
 
