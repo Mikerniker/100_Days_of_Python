@@ -81,6 +81,7 @@ def get_sol_price_in_usd(sol: float) -> float:
     price = float(result["usdPrice"])
     return round(sol * price, 2)
 
+
 @app.route('/about')
 def about():
     return render_template('about.html')
@@ -94,7 +95,8 @@ def checkout(index):
             checkout_item = nft
     return render_template('checkout.html',
                            checkout_nft=checkout_item,
-                           sol_to_usd = convert_sol)
+                           sol_to_usd=session.get('convert_sol', 'Unknown'))
+      
 
 nft_data = get_wallet_nft()
 
