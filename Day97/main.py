@@ -70,6 +70,17 @@ def get_wallet_nft():
     return nft_list
 
 
+def get_sol_price_in_usd(sol: float) -> float:
+    params = {
+        "network": "mainnet",
+        "address": "So11111111111111111111111111111111111111112"  # SOL token mint
+    }
+    result = sol_api.token.get_token_price(
+        api_key=api_key,
+        params=params)
+    price = float(result["usdPrice"])
+    return round(sol * price, 2)
+
 @app.route('/about')
 def about():
     return render_template('about.html')
