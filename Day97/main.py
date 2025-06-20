@@ -5,10 +5,12 @@ import datetime
 import stripe
 
 
-
+stripe.api_key = "MY_STRIPE_API_KEY"
 api_key = "MY_MORALIS_API_KEY"
 CHAIN = "solana"
 COLLECTION_ADDRESS ="*********************"
+DOMAIN = "http://127.0.0.1:5000/"
+
 
 app = Flask(__name__)
 
