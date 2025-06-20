@@ -16,14 +16,21 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'add-secret-key-here'
 
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def home():
-    random_number = random.randint(30, 40)
+    if 'random_sol_price' not in session:
+        session['random_sol_price'] = random.randint(30, 40)
+        session['convert_sol'] = get_sol_price_in_usd(session['random_sol_price'])
+
     current_year = datetime.datetime.now().year
-   
+    nft_data = get_wallet_nft()
+
     return render_template("index.html",
-                           price=random_number,
-                           year=current_year)
+                           price=session['random_sol_price'],
+                           year=current_year,
+                           all_nfts=nft_data,
+                           sol_to_usd=session['convert_sol'])
+
 
 
 def get_wallet_nft():
