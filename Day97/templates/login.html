@@ -3,6 +3,25 @@
 
 <div class="container mt-5 py-5 w-50 text-white text-center">
     <main class="form-signin">
+      <h1 class="h3 mb-3 fw-normal">Login</h1>
+      <form method="POST" action="{{ url_for('login') }}">
+        {{ form.csrf_token }}
+        <div class="row text-white form-floating">
+          {{ form.email.label }} {{ form.email(size=30, class="form-control") }}
+        </div>
+        <div class="row text-white form-floating">
+            {{ form.password.label }} {{ form.password(size=30, class="form-control") }}
+        </div>
+        <div class="mt-2 row">
+          <input type="submit" value="Log In" class="w-100 btn btn-lg btn-primary">
+        </div>
+      </form>
+    </main>
+</div>
+
+
+<!-- <div class="container mt-5 py-5 w-50 text-white text-center">
+    <main class="form-signin">
          <form action="{{ url_for('receive_data') }}" method="post">
             <h1 class="h3 mb-3 fw-normal">Sign in</h1>
             <div class="row text-white form-floating">
@@ -20,7 +39,7 @@
             </div>
         </form>
     </main>
-</div>
+</div> -->
 
 
 {% include "footer.html" %}
