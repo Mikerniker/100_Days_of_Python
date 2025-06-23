@@ -7,6 +7,10 @@ from flask_wtf import FlaskForm
 from wtforms import StringField
 
 
+class LoginForm(FlaskForm):
+    email = StringField('Email')
+    password = StringField('Password')
+
 stripe.api_key = "MY_STRIPE_API_KEY"
 api_key = "MY_MORALIS_API_KEY"
 CHAIN = "solana"
