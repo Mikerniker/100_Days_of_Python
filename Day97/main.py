@@ -153,6 +153,13 @@ def success():
 def cancel():
     return render_template('cancel.html')
 
+
+@app.route("/login")
+def login():
+    login_form = LoginForm()
+    return render_template('login.html', form=login_form, logged_in=False)
+
+
 nft_data = get_wallet_nft()
 
 
