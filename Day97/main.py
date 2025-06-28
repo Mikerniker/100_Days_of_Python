@@ -9,8 +9,10 @@ from wtforms.validators import DataRequired
 
 
 class LoginForm(FlaskForm):
-    email = StringField('Email')
-    password = StringField('Password')
+    email = StringField(label='Email', validators=[DataRequired()])
+    password = PasswordField(label='Password', validators=[DataRequired()])
+    submit = SubmitField(label="Log In")
+
 
 stripe.api_key = "MY_STRIPE_API_KEY"
 api_key = "MY_MORALIS_API_KEY"
