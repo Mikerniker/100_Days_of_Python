@@ -157,15 +157,12 @@ def cancel():
     return render_template('cancel.html')
 
 
-# TO FIX
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     form = LoginForm()
     if form.validate_on_submit():
-        print(form.email.data)
-        if form.email.data == "admin@email.com" and form.password.data == "12345678":
-            return render_template("login_success.html")
-    return render_template('login.html', form=form)
+        return render_template("login_success.html", logged_in=True, name=form.email.data, password=form.password.data)
+    return render_template("login.html", form=form)
 
 
 nft_data = get_wallet_nft()
