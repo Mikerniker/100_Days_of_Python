@@ -1,0 +1,15 @@
+{% include "header.html" %}
+
+    <div class="container success-container mt-5 pt-5">
+         <div class="success-container text-white text-center">
+            {% if logged_in %}
+                <h1>Login Successful!</h1>
+                <p class="lead">Welcome back! You have successfully logged in.</p>
+                <a href="/">Go to Homepage</a>
+            {% else %}
+                <h1>We couldn’t recognize that email or password. Try again or sign up if you're new.</h1>
+            {% endif %}
+         </div>
+    </div>
+
+{% include "footer.html" %}
