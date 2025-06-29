@@ -1,11 +1,11 @@
-from flask import Flask, render_template, redirect, session
+from flask import Flask, render_template, redirect, session, request
 from moralis import sol_api
 import random
 import datetime
 import stripe
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
-from wtforms.validators import DataRequired
+from wtforms.validators import DataRequired, Length, Email
 
 
 class LoginForm(FlaskForm):
