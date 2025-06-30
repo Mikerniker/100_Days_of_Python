@@ -11,3 +11,8 @@ def get_eth_wallet_balance(addresses):
 
 def get_sol_wallet_balance(addresses):
     pass
+
+
+
+def get_token_prices(symbol):
+    pass
