@@ -6,3 +6,8 @@ MORALIS_API_KEY="api_key"
 
 def get_eth_wallet_balance(addresses):
     pass
+
+
+
+def get_sol_wallet_balance(addresses):
+    pass
