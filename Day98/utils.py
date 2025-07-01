@@ -1,7 +1,7 @@
 import requests
+from moralis import evm_api
 
 # MORALIS_API_KEY = os.getenv("MORALIS_API_KEY")
-
 MORALIS_API_KEY="api_key"
 
 def get_eth_wallet_balance(addresses):
