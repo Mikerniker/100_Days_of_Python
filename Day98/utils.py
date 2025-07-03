@@ -55,4 +55,12 @@ def get_token_prices():
 
     return result
 
+result = get_token_prices()
+# print(result)
+for i in result:
+    # print(type(i))
+    print(i['usdPrice'])
+    print(i['tokenName'])
+    print(i['tokenSymbol'])
+    print(i['tokenLogo'])
 
