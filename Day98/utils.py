@@ -22,15 +22,23 @@ def get_net_worth():
     return result
 
 
-def get_eth_wallet_balance(addresses):
-    pass
+def get_token_prices():
+    body = {
+        "tokens": [
+            {
+                "token_address": "0xdac17f958d2ee523a2206206994597c13d831ec7"
+            },
+            {
+                "token_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+            },
+            {
+                "exchange": "uniswapv2",
+                "token_address": "0xae7ab96520de3a18e5e111b5eaab095312d7fe84",
+                "to_block": "16314545"
+            },
+            {
+                "token_address": "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0"
+            }
+        ]
+    }
 
-
-
-def get_sol_wallet_balance(addresses):
-    pass
-
-
-
-def get_token_prices(symbol):
-    pass
