@@ -42,3 +42,17 @@ def get_token_prices():
         ]
     }
 
+    params = {
+        "chain": "eth",
+        "include": "percent_change"
+    }
+
+    result = evm_api.token.get_multiple_token_prices(
+        api_key=MORALIS_API_KEY,
+        body=body,
+        params=params,
+    )
+
+    return result
+
+
