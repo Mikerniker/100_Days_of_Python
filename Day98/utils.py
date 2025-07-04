@@ -23,44 +23,33 @@ def get_net_worth():
 
 
 def get_token_prices():
-    body = {
+   body = {
         "tokens": [
-            {
-                "token_address": "0xdac17f958d2ee523a2206206994597c13d831ec7"
-            },
-            {
-                "token_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
-            },
-            {
-                "exchange": "uniswapv2",
-                "token_address": "0xae7ab96520de3a18e5e111b5eaab095312d7fe84",
-                "to_block": "16314545"
-            },
-            {
-                "token_address": "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0"
-            }
+            {"token_address": "0x514910771af9ca656af840dff83e8264ecf986ca"},  # Chainlink
+            {"token_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9"},  # Aave
+            {"token_address": "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0"},  # Matic
         ]
     }
-
-    params = {
+   
+   params = {
         "chain": "eth",
         "include": "percent_change"
     }
-
-    result = evm_api.token.get_multiple_token_prices(
+   
+   result = evm_api.token.get_multiple_token_prices(
         api_key=MORALIS_API_KEY,
         body=body,
         params=params,
     )
+   
+   return result
 
-    return result
-
-result = get_token_prices()
-# print(result)
-for i in result:
-    # print(type(i))
-    print(i['usdPrice'])
-    print(i['tokenName'])
-    print(i['tokenSymbol'])
-    print(i['tokenLogo'])
+# result = get_token_prices()
+# # print(result)
+# for i in result:
+#     # print(type(i))
+#     print(i['usdPrice'])
+#     print(i['tokenName'])
+#     print(i['tokenSymbol'])
+#     print(i['tokenLogo'])
 
