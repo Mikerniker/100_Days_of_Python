@@ -20,4 +20,6 @@ def display_table():
     with header_cols[4]:
         st.markdown("**Percent Change**")
 
+    result = get_token_prices()
+    # print(result)
    
