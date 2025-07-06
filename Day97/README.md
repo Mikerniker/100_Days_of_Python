@@ -1,5 +1,7 @@
 # Day 97 Professional Portfolio Project: An Online Shop
 
+https://github.com/user-attachments/assets/fccc45fe-9a09-4d92-b8c2-29fad04e0155
+
 ## Overview
 - Topics:  Flask, WTForms, Moralis API, Bootstrap, Stripe Integration
 
