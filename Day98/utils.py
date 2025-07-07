@@ -45,6 +45,12 @@ def get_token_prices():
    return result
 
 def check_price(change):
+    threshold = 5  # percent
+
+    if change <= -threshold:
+        print("Alert: Token dropped more than 5% in the last 24 hours")
+    elif change >= threshold:
+        print("Alert: Token rose more than 5%")
    
 
 
