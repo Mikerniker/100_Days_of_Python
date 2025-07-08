@@ -1,5 +1,6 @@
 import requests
 from moralis import evm_api
+import streamlit as st
 
 # MORALIS_API_KEY = os.getenv("MORALIS_API_KEY")
 MORALIS_API_KEY="api_key"
@@ -44,7 +45,7 @@ def get_token_prices():
    
    return result
 
-def check_price(change):
+def check_price(change, symbol): 
     threshold = 5  # percent
     if change is None:
         return
