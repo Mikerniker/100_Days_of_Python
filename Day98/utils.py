@@ -50,10 +50,7 @@ def check_price(change):
         return
     
     if change <= -threshold:
-        print("Alert: Token dropped more than 5% in the last 24 hours")
+        st.warning(f"🔻 {symbol} dropped more than {threshold}% in the last 24 hours")
     elif change >= threshold:
-        print("Alert: Token rose more than 5%")
-   
-
-
+        st.success(f"🔺 {symbol} rose more than {threshold}% in the last 24 hours")
 
