@@ -1,6 +1,5 @@
 import streamlit as st
-from utils import get_token_prices
-
+from utils import get_btc_details
 
 # Streamlit UI
 st.title("Crypto Price Alert")
