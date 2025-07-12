@@ -1,13 +1,27 @@
-import streamlit as st
-from utils import get_btc_details
+from flask import Flask, render_template, request
+import requests
 
 
-result = get_btc_details()
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'add-secret-key-here'
 
-# Streamlit UI
+def get_btc_details():
+    url = "https://api.coingecko.com/api/v3/coins/bitcoin"
+    response = requests.get(url)
+    data = response.json()
 
-st.title("BITCOIN Price Alert")
+    info = {
+        "name": data["name"],
+        "symbol": data["symbol"],
+        "logo": data["image"]["large"],
+        "current_price": data["market_data"]["current_price"]["usd"],
+        "price_change_24h": data["market_data"]["price_change_percentage_24h"],
+    }
 
-st.image(result.get("logo"), width=100)
-st.markdown(f"## BTC Price: $ {result.get('current_price'):.2f}")
-st.markdown(f"## Price Change {result.get('price_change_24h')}%")
+    return info
+
+
+
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', debug=True)
