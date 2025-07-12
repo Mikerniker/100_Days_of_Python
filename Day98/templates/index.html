@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<!--Hero-->
+<div class="px-4 py-5 my-5 text-center">
+    <img src="{{ data.logo }}" alt="Bitcoin Logo" width="200">
+    <h1 class="display-5 fw-bold">Bitcoin Price Alert</h1>
+    <div class="col-lg-6 mx-auto">
+      <h2 class="mb-4">
+          BTC Price: ${{ "{:,.2f}".format(data.current_price) }}
+      </h2>
+      <h2 class="mb-4">
+          24h Change:
+          <span style="color: {{ 'green' if data.price_change_24h > 0 else 'red' }}">
+            {{ (data.price_change_24h * 100) | round(2) }}%
+            {{ "↑" if data.price_change_24h > 0 else "↓" }}
+          </span>
+      </h2>
+    </div>
+  </div>
+
+
+{% endblock %}
