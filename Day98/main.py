@@ -21,6 +21,10 @@ def get_btc_details():
     return info
 
 
+@app.route("/", methods=['GET', 'POST'])
+def home():
+    result = get_btc_details()
+    return render_template("index.html", data=result)
 
 
 if __name__ == '__main__':
