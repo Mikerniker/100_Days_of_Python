@@ -27,3 +27,17 @@ async def btc_price(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(
         chat_id=update.effective_chat.id, text=f"BTC price is ${price:,.2f}"
     )
+
+
+
+if __name__ == '__main__':
+    application = ApplicationBuilder().token(TOKEN).build()
+
+    start_handler = CommandHandler('start', start)
+    price_handler = CommandHandler('btc_price', btc_price)
+
+    application.add_handler(start_handler)
+    application.add_handler(price_handler)
+  
+
+    application.run_polling()
