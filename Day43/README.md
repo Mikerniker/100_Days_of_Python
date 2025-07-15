@@ -1,4 +1,4 @@
-## Day 43 Project: Personal Website with simple CSS
+## Day 43 Project: Color Vocab Website
 
 ## Table of contents
 
@@ -13,6 +13,7 @@
 
 ### The challenge
 **Updated Project (2025): Color Vocab Website**
+
 Given To-dos:
 1. Create a CSS file and incorporate it as an external stylesheet.
 2. Use CSS to style the title's color, weight, and adjust image width and height.
@@ -22,11 +23,11 @@ Given To-dos:
 
 ### Links
 
-- Solution URL: [Personal Website with simple CSS](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day43)
+- Solution URL: [Color Vocab Website](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day43)
 
 ### Built with
 
-- HTML
+- HTML, CSS
 
 ### Tools and References
  
@@ -39,5 +40,11 @@ Given To-dos:
 ### What I learned
 - Inline, Internal and External CSS
 - Debugging CSS Code
-- CSS
-- ID Selectors, Class Selectors, and Tag Selectors
+- CSS Selectors: 
+  - Element Selector
+  - Class Selector
+  - ID Selector
+  - Attribute Selector (id, class, draggable, src, href, alt, etc)
+  - Universal Selector 
+  - Tag Selectors
+- CSS Specificity (intro)
