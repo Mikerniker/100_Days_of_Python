@@ -1,29 +1,28 @@
-
 #red {
-color: red;
+  color: red;
 }
 
 #blue {
-color: blue;
+  color: blue;
 }
 
 #orange {
-color: orange;
+  color: orange;
 }
 
 #green {
-color: green;
+  color: green;
 }
 
 #yellow {
-color: yellow;
+  color: yellow;
 }
 
 .color-title {
-font-weight: normal;
+  font-weight: normal;
 }
 
 img {
-height: 200px;
-width: 200px;
+  height: 200px;
+  width: 200px;
 }
