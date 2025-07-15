@@ -12,7 +12,12 @@
 ## Overview
 
 ### The challenge
+**Updated Project (2025): Color Vocab Website**
+Given To-dos:
+1. Create a CSS file and incorporate it as an external stylesheet.
+2. Use CSS to style the title's color, weight, and adjust image width and height.
 
+**Original Project (Pre-Update 2025): Basic Personal Website**
 - Create a simple HTML CV website, but with css
 
 ### Links
