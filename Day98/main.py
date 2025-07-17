@@ -27,5 +27,10 @@ def home():
     return render_template("index.html", data=result)
 
 
+@app.route("/success")
+def sucess():
+    return render_template("success.html")
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
