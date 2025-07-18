@@ -1,9 +1,13 @@
 from flask import Flask, render_template, request
 import requests
 
+from flask_wtf import FlaskForm
+from wtforms import SelectField, IntegerField
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'add-secret-key-here'
+
+
 
 def get_btc_details():
     url = "https://api.coingecko.com/api/v3/coins/bitcoin"
@@ -28,7 +32,7 @@ def home():
 
 
 @app.route("/success")
-def sucess():
+def success():
     return render_template("success.html")
 
 
