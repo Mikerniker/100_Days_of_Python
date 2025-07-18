@@ -8,6 +8,9 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'add-secret-key-here'
 
 
+class BtcAlert(FlaskForm):
+    user_choice = SelectField(u'Price Direction', choices=[("up", "Above 🢁"),("down", "Below 🡻")])
+    price = IntegerField('BTC_Price')
 
 def get_btc_details():
     url = "https://api.coingecko.com/api/v3/coins/bitcoin"
