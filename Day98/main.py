@@ -30,8 +30,9 @@ def get_btc_details():
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
+    form = BtcAlert()
     result = get_btc_details()
-    return render_template("index.html", data=result)
+    return render_template("index.html", data=result, form=form))
 
 
 @app.route("/success")
