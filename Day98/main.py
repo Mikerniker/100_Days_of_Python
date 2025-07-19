@@ -35,9 +35,14 @@ def home():
     return render_template("index.html", data=result, form=form))
 
 
-@app.route("/success")
+
+@app.route("/success", methods=['GET', 'POST'])
 def success():
-    return render_template("success.html")
+    form = BtcAlert()
+    if form.validate_on_submit():
+        print("validated")
+       
+    return render_template("success.html", form=form)
 
 
 if __name__ == '__main__':
