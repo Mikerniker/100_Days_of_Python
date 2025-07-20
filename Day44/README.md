@@ -12,6 +12,7 @@
 
 ### The challenge
 **Updated Project (2025): Motivational Poster Website**
+<img width="897" height="607" alt="day442025" src="https://github.com/user-attachments/assets/baf93f14-a89a-4a4e-b5e8-d846ddfe0ec8" />
 
 Given To-dos:
 1. Import Google fonts
@@ -20,6 +21,8 @@ Given To-dos:
 
 
 **Original Project (Pre-Update 2025): Personal Website (Stylised with Advanced CSS)**
+<img width="1118" height="604" alt="websiteproject" src="https://github.com/user-attachments/assets/b9960861-227a-4fb8-bcef-765fac378238" />
+
 - Create a simple HTML CV website, with advanced css
 
 ### Links
