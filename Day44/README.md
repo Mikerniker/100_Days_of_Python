@@ -49,8 +49,12 @@ Given To-dos:
 
 ### Tools and References
  
- - 
- - [CSS Default Values Reference](https://www.w3schools.com/cssref/css_default_values.php)
+- [RGB Mixer](https://www.csfieldguide.org.nz/en/interactives/rgb-mixer/)
+- [MDN Named Color](https://developer.mozilla.org/en-US/docs/Web/CSS/named-color)
+- [MDN Text Transform](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform)
+- [Pesticide](https://chromewebstore.google.com/detail/pesticide/bakpbgckdnepkmkeaiomhmfcnejndkbi?pli=1)
+- [CSS Inspection Exercise](https://appbrewery.github.io/css-inspection/)
+
 
 ### Notes:
 - You can horizontally center a div by giving it a width of 50% and a margin-left of 25%.
