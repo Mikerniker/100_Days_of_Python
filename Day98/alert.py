@@ -15,7 +15,6 @@ logging.basicConfig(
 )
 
 
-
 async def get_user():
     bot = telegram.Bot(TOKEN)
     user_info = {}
@@ -43,6 +42,7 @@ async def welcome_user():
     else:
         print("No updates available")
 
+
 # async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 #     await context.bot.send_message(
 #         chat_id=update.effective_chat.id,
@@ -56,7 +56,6 @@ async def welcome_user():
 #     await context.bot.send_message(
 #         chat_id=update.effective_chat.id, text=f"BTC price is ${price:,.2f}"
 #     )
-
 
 
 if __name__ == '__main__':
