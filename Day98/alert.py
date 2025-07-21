@@ -14,6 +14,13 @@ logging.basicConfig(
     level=logging.INFO
 )
 
+
+
+async def get_user():
+    bot = telegram.Bot(TOKEN)
+    user_info = {}
+
+
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(
         chat_id=update.effective_chat.id,
