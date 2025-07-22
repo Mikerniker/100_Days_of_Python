@@ -43,12 +43,6 @@ async def welcome_user():
         print("No updates available")
 
 
-# async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     await context.bot.send_message(
-#         chat_id=update.effective_chat.id,
-#         text="Hi, I'm a BTC alert bot! To get started type /btc_price to get the current BTC price"
-#     )
-
 # async def btc_price(update: Update, context: ContextTypes.DEFAULT_TYPE):
 #     data = get_btc_details()
 #     price = data['current_price']
