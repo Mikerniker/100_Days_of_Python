@@ -43,14 +43,18 @@ async def welcome_user():
         print("No updates available")
 
 
-# async def btc_price(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     data = get_btc_details()
-#     price = data['current_price']
+async def btc_price(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    data = get_btc_details()
+    price = data['current_price']
 
-#     await context.bot.send_message(
-#         chat_id=update.effective_chat.id, text=f"BTC price is ${price:,.2f}"
-#     )
+    await context.bot.send_message(
+        chat_id=update.effective_chat.id, text=f"BTC price is ${price:,.2f}"
+    )
 
+
+
+upper_threshold_alert = 115000
+lower_threshold_alert = 100000
 
 if __name__ == '__main__':
     application = ApplicationBuilder().token(TOKEN).build()
