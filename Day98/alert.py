@@ -76,10 +76,9 @@ async def btc_alert(update: Update, context: ContextTypes.DEFAULT_TYPE):
 if __name__ == '__main__':
     application = ApplicationBuilder().token(TOKEN).build()
 
-    start_handler = CommandHandler('start', start)
     price_handler = CommandHandler('btc_price', btc_price)
 
-    application.add_handler(start_handler)
+    
     application.add_handler(price_handler)
   
 
