@@ -52,9 +52,26 @@ async def btc_price(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 
-
 upper_threshold_alert = 115000
 lower_threshold_alert = 100000
+
+async def btc_alert(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    data = get_btc_details()
+    price = data['current_price']
+    if price > upper_threshold_alert:
+        text_alert = f"🚨 BTC has crossed ${upper_threshold_alert:,.2f}!"
+    elif price < lower_threshold_alert:
+        text_alert = f"📉 BTC dropped below ${lower_threshold_alert:,.2f}!"
+    else:
+        text_alert = f"✅ BTC price is currently ${price:,.2f}"
+
+    await context.bot.send_message(
+        chat_id=update.effective_chat.id, text=text_alert
+    )
+
+
+
+
 
 if __name__ == '__main__':
     application = ApplicationBuilder().token(TOKEN).build()
