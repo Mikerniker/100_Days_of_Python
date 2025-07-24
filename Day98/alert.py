@@ -79,6 +79,8 @@ async def get_upper(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return upper_threshold
 
 
+async def get_lower(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    pass
 
 
 if __name__ == '__main__':
