@@ -69,6 +69,14 @@ async def btc_alert(update: Update, context: ContextTypes.DEFAULT_TYPE):
         chat_id=update.effective_chat.id, text=text_alert
     )
 
+# TO REVIEW
+
+upper_threshold, lower_threshold = range(2)
+
+
+async def get_upper(update: Update, context: ContextTypes.DEFAULT_TYPE):
+        await update.message.reply_text("Welcome! Please enter Upper Threshold:")
+        return upper_threshold
 
 
 
