@@ -84,13 +84,16 @@ async def test_start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
 
     return UPPER
 
-async def get_upper(update: Update, context: ContextTypes.DEFAULT_TYPE):
-        await update.message.reply_text("Welcome! Please enter Upper Threshold:")
-        return upper_threshold
+async def upper(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+    user = update.message.from_user
+    text = update.message.text
+
+   
 
 
-async def get_lower(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    pass
+
+# async def get_lower(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     pass
 
 
 if __name__ == '__main__':
