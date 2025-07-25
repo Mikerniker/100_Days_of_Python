@@ -71,8 +71,18 @@ async def btc_alert(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # TO REVIEW
 
-upper_threshold, lower_threshold = range(2)
 
+UPPER, LOWER = range(2)
+
+async def test_start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+    """Asks the user about user's upper threshold."""
+
+    await update.message.reply_text(
+        "Hi! What is your upper threshold. "
+        "Send /cancel to stop talking to me.\n\n",
+    )
+
+    return UPPER
 
 async def get_upper(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("Welcome! Please enter Upper Threshold:")
