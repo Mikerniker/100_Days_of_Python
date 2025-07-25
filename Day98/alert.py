@@ -1,9 +1,16 @@
 import telegram
 import logging
-from telegram import Update
-from telegram.ext import  filters, MessageHandler, ApplicationBuilder, ContextTypes, CommandHandler
+from telegram import Update,  ReplyKeyboardRemove
+from telegram.ext import (
+    Application,
+    CommandHandler,
+    ContextTypes,
+    ConversationHandler,
+    MessageHandler,
+    ApplicationBuilder,
+    filters,
+)
 from main import get_btc_details
-
 
 TOKEN ="my_token"
 MY_ID = "my_id"
@@ -88,7 +95,15 @@ async def upper(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     user = update.message.from_user
     text = update.message.text
 
-   
+    if not text.isdigit():
+        await update.message.reply_text("Please enter a valid number for your upper threshold.")
+        return UPPER  # Stay in current state until valid input
+
+    context.user_data["upper"] = int(text)  # Save it
+    logger.info("Upper threshold for %s is %s", user.first_name, text)
+
+    await update.message.reply_text("Got it! What about your lower threshold?")
+    return LOWER
 
 
 
