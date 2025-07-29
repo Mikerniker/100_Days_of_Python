@@ -25,6 +25,14 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 logger = logging.getLogger(__name__)
 
 
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user = update.effective_user
+    await update.message.reply_text(
+        f"Hi {user.first_name}! 👋\n"
+        "To get started:\n"
+        "- Type /btc to get the current BTC price\n"
+        "- Type /btc_alert to set a price alert"
+    )
 
 
 async def btc_price(update: Update, context: ContextTypes.DEFAULT_TYPE):
