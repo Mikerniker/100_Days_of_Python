@@ -24,21 +24,6 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 
 logger = logging.getLogger(__name__)
 
-async def get_user():
-    bot = telegram.Bot(TOKEN)
-    user_info = {}
-    async with bot:
-        updates = await bot.get_updates()
-        if updates:
-            update = updates[0]
-            user_id = update.message.from_user.id
-            first_name = update.message.from_user.first_name
-            print(f"User ID: {user_id}, First Name: {first_name}")
-            user_info = {"user_id": user_id, "name":first_name}
-            return user_info
-        else:
-            return None
-
 
 async def welcome_user():
     user_info = await get_user()
