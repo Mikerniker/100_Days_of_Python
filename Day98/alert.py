@@ -25,16 +25,6 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 logger = logging.getLogger(__name__)
 
 
-async def welcome_user():
-    user_info = await get_user()
-    bot = telegram.Bot(TOKEN)
-
-    if user_info:
-        async with bot:
-            print(user_info["user_id"], user_info["name"])
-            await bot.send_message(text=f'Hi {user_info["name"]}!', chat_id=user_info["user_id"])
-    else:
-        print("No updates available")
 
 
 async def btc_price(update: Update, context: ContextTypes.DEFAULT_TYPE):
