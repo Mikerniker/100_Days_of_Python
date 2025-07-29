@@ -35,6 +35,27 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 
+async def first_time_greeter(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user = update.effective_user
+
+    if not context.user_data.get("greeted", False):
+        context.user_data["greeted"] = True  # Mark user as greeted
+
+        await update.message.reply_text(
+            f"👋 Hi {user.first_name}!\n"
+            "Welcome to the BTC Alert Bot.\n"
+            "- Use /btc to get the current Bitcoin price\n"
+            "- Use /btc_alert to set price thresholds\n"
+            "- Use /cancel to exit any prompt"
+        )
+    else:
+        # Optional: respond to repeated non-command messages
+        await update.message.reply_text("You can use /btc or /btc_alert at any time.")
+
+
+
+# CONTINUE HERE
+
 async def btc_price(update: Update, context: ContextTypes.DEFAULT_TYPE):
     data = get_btc_details()
     price = data['current_price']
