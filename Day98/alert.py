@@ -49,10 +49,11 @@ async def first_time_greeter(update: Update, context: ContextTypes.DEFAULT_TYPE)
             "- Use /cancel to exit any prompt"
         )
     else:
-        # Optional: respond to repeated non-command messages
         await update.message.reply_text("You can use /btc or /btc_alert at any time.")
 
 
+# Add threshold
+UPPER, LOWER = range(2)
 
 # CONTINUE HERE
 
@@ -65,8 +66,6 @@ async def btc_price(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 
-upper_threshold_alert = 115000
-lower_threshold_alert = 100000
 
 async def btc_alert(update: Update, context: ContextTypes.DEFAULT_TYPE):
     data = get_btc_details()
