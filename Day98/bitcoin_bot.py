@@ -15,8 +15,8 @@ from telegram.ext import (
 )
 
 # Bot Configuration
-BOT_TOKEN = "*******"
-DEFAULT_CHAT_ID = "********"
+BOT_TOKEN = "my_token"
+DEFAULT_CHAT_ID = "my_id"
 
 # Conversation states
 CHOOSING_TYPE, ENTERING_PRICE = range(2)
@@ -199,4 +199,233 @@ async def handle_alert_choice(update: Update, context: ContextTypes.DEFAULT_TYPE
         await update.message.reply_text("Please choose from the options above.")
         return CHOOSING_TYPE
 
+async def handle_price_input(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Handle price input"""
+    try:
+        price_text = update.message.text
+        logger.info(f"User entered price: {price_text}")
+        
+        price = float(price_text)
+        alert_type = context.user_data.get('alert_type')
+        user_id = update.effective_user.id
+        
+        if price <= 0:
+            await update.message.reply_text("❌ Please enter a valid price (greater than 0).")
+            return ENTERING_PRICE
+        
+        # Store the alert
+        if user_id not in user_alerts:
+            user_alerts[user_id] = []
+        
+        alert = {
+            'type': alert_type,
+            'price': price,
+            'created_at': datetime.now()
+        }
+        user_alerts[user_id].append(alert)
+        
+        # Send confirmation
+        emoji = "🢁" if alert_type == 'above' else "🡻"
+        message = f"""
+✅ <b>Alert Set Successfully!</b>
 
+{emoji} <b>Type:</b> {alert_type.title()}
+💰 <b>Price:</b> ${price:,.2f}
+🕐 <b>Set at:</b> {datetime.now().strftime('%H:%M:%S')}
+
+I'll monitor Bitcoin and notify you when it reaches your target!
+
+Use /my_alerts to view all your alerts.
+        """
+        
+        await update.message.reply_text(message, parse_mode='HTML')
+        context.user_data.clear()
+        return ConversationHandler.END
+        
+    except ValueError:
+        await update.message.reply_text("❌ Please enter a valid number (e.g., 50000).")
+        return ENTERING_PRICE
+    except Exception as e:
+        logger.error(f"Error in handle_price_input: {e}")
+        await update.message.reply_text("❌ Something went wrong. Please try again.")
+        return ConversationHandler.END
+
+async def show_user_alerts(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Show user's current alerts"""
+    user_id = update.effective_user.id
+    
+    if user_id not in user_alerts or not user_alerts[user_id]:
+        await update.message.reply_text(
+            "📭 <b>No alerts set</b>\n\n"
+            "Use /alert to set your first Bitcoin price alert!",
+            parse_mode='HTML'
+        )
+        return
+    
+    alerts = user_alerts[user_id]
+    alert_text = ""
+    
+    for i, alert in enumerate(alerts, 1):
+        emoji = "🢁" if alert['type'] == 'above' else "🡻"
+        alert_text += f"{i}. {emoji} {alert['type'].title()} ${alert['price']:,.2f}\n"
+    
+    message = f"""
+📋 <b>Your Bitcoin Alerts</b>
+
+{alert_text}
+
+<b>Total alerts:</b> {len(alerts)}
+
+Use /alert to add more alerts!
+    """
+    
+    await update.message.reply_text(message, parse_mode='HTML')
+
+async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Cancel conversation"""
+    await update.message.reply_text("❌ Operation cancelled.")
+    context.user_data.clear()
+    return ConversationHandler.END
+
+def send_alert_sync(chat_id, current_price, alert_type, threshold_price):
+    """Send price alert to user (synchronous version)"""
+    try:
+        if alert_type == 'above':
+            emoji = "🚀"
+            message = f"""
+{emoji} <b>BITCOIN PRICE ALERT!</b>
+
+💰 <b>Current Price:</b> ${current_price:,.2f}
+🎯 <b>Your Alert:</b> Above ${threshold_price:,.2f}
+
+✅ <b>Target reached!</b> Bitcoin has gone above your alert price!
+
+<i>Alert triggered at {datetime.now().strftime('%H:%M:%S')}</i>
+            """
+        else:  # below
+            emoji = "📉"
+            message = f"""
+{emoji} <b>BITCOIN PRICE ALERT!</b>
+
+💰 <b>Current Price:</b> ${current_price:,.2f}
+🎯 <b>Your Alert:</b> Below ${threshold_price:,.2f}
+
+✅ <b>Target reached!</b> Bitcoin has dropped below your alert price!
+
+<i>Alert triggered at {datetime.now().strftime('%H:%M:%S')}</i>
+            """
+        
+        # Send message using requests
+        url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+        payload = {
+            "chat_id": chat_id,
+            "text": message,
+            "parse_mode": "HTML"
+        }
+        
+        response = requests.post(url, json=payload)
+        if response.status_code == 200:
+            logger.info(f"🚨 Alert sent to {chat_id} for {alert_type} ${threshold_price:,.2f}")
+        else:
+            logger.error(f"Failed to send alert to {chat_id}: {response.text}")
+        
+    except Exception as e:
+        logger.error(f"Failed to send alert to {chat_id}: {e}")
+
+def monitor_prices():
+    """Monitor Bitcoin prices and send alerts"""
+    logger.info("📊 Starting price monitoring (checking every 30 seconds)")
+    
+    while True:
+        try:
+            # Get current Bitcoin price
+            current_price, error = get_bitcoin_price()
+            
+            if error:
+                logger.error(f"Monitor failed to get BTC price: {error}")
+                time.sleep(30)
+                continue
+            
+            logger.info(f"📈 Current BTC price: ${current_price:,.2f}")
+            
+            # Check all user alerts
+            for user_id, alerts in user_alerts.items():
+                for alert in alerts[:]:  # Use slice to avoid modification during iteration
+                    try:
+                        alert_type = alert['type']
+                        threshold_price = alert['price']
+                        
+                        should_trigger = False
+                        
+                        if alert_type == 'above' and current_price >= threshold_price:
+                            should_trigger = True
+                        elif alert_type == 'below' and current_price <= threshold_price:
+                            should_trigger = True
+                        
+                        if should_trigger:
+                            logger.info(f"🚨 Alert triggered for user {user_id}: {alert_type} ${threshold_price:,.2f}")
+                            
+                            # Send alert
+                            send_alert_sync(user_id, current_price, alert_type, threshold_price)
+                            
+                            # Remove the alert after triggering
+                            alerts.remove(alert)
+                            logger.info(f"✅ Alert removed for user {user_id}")
+                            
+                    except Exception as e:
+                        logger.error(f"Error checking alert for user {user_id}: {e}")
+            
+            # Wait 30 seconds before next check
+            time.sleep(30)
+            
+        except Exception as e:
+            logger.error(f"Error in price monitoring: {e}")
+            time.sleep(60)  # Wait 1 minute before retrying
+
+def main():
+    """Main function to run the bot"""
+    logger.info("🤖 Starting Bitcoin Alert Bot...")
+    logger.info(f"Using bot token: {BOT_TOKEN}")
+    logger.info(f"Default chat ID: {DEFAULT_CHAT_ID}")
+    
+    # Create application
+    application = Application.builder().token(BOT_TOKEN).build()
+    
+    # Conversation handler for alerts
+    conv_handler = ConversationHandler(
+        entry_points=[CommandHandler("alert", start_alert_setup)],
+        states={
+            CHOOSING_TYPE: [
+                MessageHandler(filters.Regex("Above"), handle_alert_choice),
+                MessageHandler(filters.Regex("Below"), handle_alert_choice),
+            ],
+            ENTERING_PRICE: [
+                MessageHandler(filters.TEXT & ~filters.COMMAND, handle_price_input),
+            ],
+        },
+        fallbacks=[CommandHandler("cancel", cancel)],
+    )
+    
+    # Add all handlers
+    application.add_handler(CommandHandler("start", start))
+    application.add_handler(CommandHandler("help", help_command))
+    application.add_handler(CommandHandler("price", get_price))
+    application.add_handler(CommandHandler("my_alerts", show_user_alerts))
+    application.add_handler(conv_handler)
+    application.add_handler(CommandHandler("cancel", cancel))
+    
+    # Start monitoring in a separate thread
+    monitor_thread = threading.Thread(target=monitor_prices, daemon=True)
+    monitor_thread.start()
+    
+    logger.info("✅ Bot and monitor starting...")
+    logger.info("📱 Bot is ready to receive messages")
+    logger.info("📊 Price monitoring is active (checking every 30 seconds)")
+    logger.info("🚨 You'll get notifications when Bitcoin reaches your alert prices!")
+    logger.info("Press Ctrl+C to stop")
+    
+    # Run the bot
+    application.run_polling()
+
+if __name__ == "__main__":
+    main()
