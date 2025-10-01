@@ -10,7 +10,17 @@
 
 A Bitcoin price alert bot for Telegram that monitors Bitcoin prices and sends notifications when your target prices are reached.
 
- 
+### Functionality
+
+## Bot Commands
+
+- `/start` - Welcome message and introduction
+- `/help` - Show help information
+- `/price` - Get current Bitcoin price
+- `/alert` - Set a price alert (Above/Below threshold)
+- `/my_alerts` - View your current alerts
+- `/cancel` - Cancel any ongoing operation 
+
 ### Links
 
 - Solution URL: [Custom Automation](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day98)
