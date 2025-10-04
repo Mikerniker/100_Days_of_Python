@@ -12,6 +12,9 @@ A Bitcoin price alert bot for Telegram that monitors Bitcoin prices and sends no
 
 ### Functionality
 
+A Telegram bot that lets users track Bitcoin price movements and set custom alerts.  
+It fetches live data from the [CoinGecko API](https://www.coingecko.com/) and notifies users when BTC crosses their chosen thresholds.
+
 ## Bot Commands
 
 - `/start` - Welcome message and introduction
