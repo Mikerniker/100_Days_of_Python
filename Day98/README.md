@@ -26,7 +26,7 @@ It fetches live data from the [CoinGecko API](https://www.coingecko.com/) and no
 
 ### Links
 
-- Solution URL: [Custom Automation](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day98)
+- Solution URL: [Bitcoin Alert Bot for Telegram](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day98)
 
 ## Reflection
 **Approach, Challenges, Learnings, and Future Improvements:**
@@ -51,4 +51,4 @@ I know there’s still a lot I don’t fully understand in the code and still ne
 
 ## Notes/Concepts/Review: 
 
-- [Telegram Docs](]https://core.telegram.org/bots/samples)
+- [Telegram Docs](https://core.telegram.org/bots/samples)
