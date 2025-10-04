@@ -1,5 +1,9 @@
 # Day 98 Professional Portfolio Project: Bitcoin Alert Bot for Telegram
 
+
+https://github.com/user-attachments/assets/be77cf77-e837-4b89-a423-70aa72674c2a
+
+
 ## Overview
 - Topics: Python and Telegram 
 
