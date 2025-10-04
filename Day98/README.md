@@ -51,3 +51,4 @@ I know there’s still a lot I don’t fully understand in the code and still ne
 
 ## Notes/Concepts/Review: 
 
+- [Telegram Docs](]https://core.telegram.org/bots/samples)
