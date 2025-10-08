@@ -14,3 +14,14 @@ pd.options.display.float_format = '{:,.2f}'.format
 st.title("Mission Launches")
 
 uploaded_file = "mission_launches.csv"
+
+if uploaded_file:
+    df = pd.read_csv(uploaded_file)
+
+    st.subheader("Preliminary Data Exploration")
+    st.write("**What is the shape of `df_data`?**")
+    st.write(df.shape)
+
+    st.write("**How many rows and columns does it have?**")
+
+    st.write("It has 4324 rows and 9 columns")
