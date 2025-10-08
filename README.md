@@ -298,3 +298,9 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 
 **Day 96: [Professional Portfolio Project: Crypto Top Gainers and Losers (Custom API Based Website)](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day96)**
 - Topics:  Pandas, Streamlit, JSON, Python, HTTP request, and REST APIs
+
+**Day 97: [Professional Portfolio Project: An Online Shop)](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day97)**
+- Topics:  Flask, WTForms, Moralis API, Bootstrap, Stripe Integration
+
+**Day 98: [Professional Portfolio Project: Bitcoin Alert Bot for Telegram)](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day98)**
+- Topics: Python and Telegram 
