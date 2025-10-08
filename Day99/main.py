@@ -7,3 +7,10 @@ import seaborn as sns
 
 # from iso3166 import countries
 from datetime import datetime, timedelta
+
+
+pd.options.display.float_format = '{:,.2f}'.format
+
+st.title("Mission Launches")
+
+uploaded_file = "mission_launches.csv"
