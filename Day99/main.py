@@ -28,3 +28,9 @@ if uploaded_file:
 
     st.write("**What are the column names?**")
     st.write(df.columns)
+
+    st.write("**Are there any NaN values or duplicates?**")
+    # st.write(df.isna())
+
+    total_nans = df.isna().sum().sum()
+    st.write(f"There are {total_nans} missing (NaN) values in the entire DataFrame")
