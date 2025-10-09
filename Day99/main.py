@@ -25,3 +25,6 @@ if uploaded_file:
     st.write("**How many rows and columns does it have?**")
 
     st.write("It has 4324 rows and 9 columns")
+
+    st.write("**What are the column names?**")
+    st.write(df.columns)
