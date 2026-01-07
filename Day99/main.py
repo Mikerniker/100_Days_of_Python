@@ -41,3 +41,6 @@ if uploaded_file:
     st.subheader("**Data Cleaning - Check for Missing Values and Duplicates**")
   
     with st.expander("What Data is Missing"):
+        clean_df = df.dropna()
+        #clean_df.columns  # to get column names
+        df_new = clean_df.drop(columns=["Unnamed: 0.1", "Unnamed: 0"])
