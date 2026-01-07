@@ -49,3 +49,9 @@ if uploaded_file:
                  f" remove columns containing junk data. ")
 
         st.dataframe(df_new.head())
+    
+        code = '''clean_df = df.dropna()
+clean_df.columns  #to get column names
+df_new = clean_df.drop(columns=["Unnamed: 0.1", "Unnamed: 0"])
+df_new.head()'''
+        st.code(code, language="python")
