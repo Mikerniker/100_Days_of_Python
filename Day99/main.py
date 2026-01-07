@@ -55,3 +55,8 @@ clean_df.columns  #to get column names
 df_new = clean_df.drop(columns=["Unnamed: 0.1", "Unnamed: 0"])
 df_new.head()'''
         st.code(code, language="python")
+
+    st.subheader("Descriptive Statistics")
+    
+    with st.expander("Data Overview"):
+        st.write(df_new.describe())
