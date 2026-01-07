@@ -19,8 +19,11 @@ if uploaded_file:
     df = pd.read_csv(uploaded_file)
 
     st.subheader("Preliminary Data Exploration")
-    st.write("**What is the shape of `df_data`?**")
-    st.write(df.shape)
+
+    with st.expander("See Preliminary Data"):
+
+        st.write("**What is the shape of `df_data`?**")
+        st.write(df.shape)
 
     st.write("**How many rows and columns does it have?**")
 
