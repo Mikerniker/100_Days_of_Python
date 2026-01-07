@@ -44,3 +44,8 @@ if uploaded_file:
         clean_df = df.dropna()
         #clean_df.columns  # to get column names
         df_new = clean_df.drop(columns=["Unnamed: 0.1", "Unnamed: 0"])
+
+        st.write(f"Notes Use 'dropna' to remove missing values (ex. NaN, None, or NaT) and"
+                 f" remove columns containing junk data. ")
+
+        st.dataframe(df_new.head())
