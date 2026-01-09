@@ -82,3 +82,8 @@ df_new.head()'''
 
         st.write(total_rockets)
         st.bar_chart(total_rockets)
+    
+        st.write("**Rockets per organisation**")
+        rockets_by_organization = df_new.groupby("Organisation")["Rocket_Status"].value_counts().unstack(fill_value=0)
+        st.write(rockets_by_organization)
+        st.bar_chart(rockets_by_organization)
