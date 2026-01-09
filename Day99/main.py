@@ -73,3 +73,4 @@ df_new.head()'''
             .size()
             .sort_values()
         )
+        st.bar_chart(launch_counts)
