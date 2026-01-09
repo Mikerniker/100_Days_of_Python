@@ -65,3 +65,6 @@ df_new.head()'''
             errors="coerce"
         )
         st.write(df_new["Price"].describe())
+
+    st.subheader("Number of Launches per Company")
+    with st.expander("Chart for Number of Space Mission launches by Organisation."):
