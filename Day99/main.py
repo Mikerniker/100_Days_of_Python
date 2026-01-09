@@ -74,3 +74,7 @@ df_new.head()'''
             .sort_values()
         )
         st.bar_chart(launch_counts)
+
+    st.subheader("Number of Active versus Retired Rockets ")
+    with st.expander("How many rockets are active compared to those that are decommissioned?"):
+        st.write("**Overall Rockets**")
