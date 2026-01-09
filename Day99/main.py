@@ -60,3 +60,8 @@ df_new.head()'''
     
     with st.expander("Data Overview"):
         st.write(df_new.describe())
+        df_new["Price"] = pd.to_numeric(
+            df_new["Price"].astype(str).str.replace(",", "", regex=False),
+            errors="coerce"
+        )
+        st.write(df_new["Price"].describe())
