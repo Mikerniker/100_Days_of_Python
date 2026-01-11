@@ -87,3 +87,6 @@ df_new.head()'''
         rockets_by_organization = df.groupby("Organisation")["Rocket_Status"].value_counts().unstack(fill_value=0)
         st.write(rockets_by_organization)
         st.bar_chart(rockets_by_organization)
+
+    st.subheader("Distribution of Mission Status")
+    with st.expander("How many missions were successful? How many missions failed?**"):
