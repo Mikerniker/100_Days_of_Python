@@ -90,3 +90,8 @@ df_new.head()'''
 
     st.subheader("Distribution of Mission Status")
     with st.expander("How many missions were successful? How many missions failed?**"):
+        st.write("**Overall Mission Status**")
+        mission_status = df["Mission_Status"].value_counts()
+
+        st.write(mission_status)
+        st.bar_chart(mission_status)
