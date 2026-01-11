@@ -78,12 +78,12 @@ df_new.head()'''
     st.subheader("Number of Active versus Retired Rockets ")
     with st.expander("How many rockets are active compared to those that are decommissioned?"):
         st.write("**Overall Rockets**")
-        total_rockets = df_new["Rocket_Status"].value_counts().sort_index()
+        total_rockets = df["Rocket_Status"].value_counts().sort_index()
 
         st.write(total_rockets)
         st.bar_chart(total_rockets)
     
         st.write("**Rockets per organisation**")
-        rockets_by_organization = df_new.groupby("Organisation")["Rocket_Status"].value_counts().unstack(fill_value=0)
+        rockets_by_organization = df.groupby("Organisation")["Rocket_Status"].value_counts().unstack(fill_value=0)
         st.write(rockets_by_organization)
         st.bar_chart(rockets_by_organization)
