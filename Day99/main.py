@@ -89,7 +89,7 @@ df_new.head()'''
         st.bar_chart(rockets_by_organization)
 
     st.subheader("Distribution of Mission Status")
-    with st.expander("How many missions were successful? How many missions failed?**"):
+    with st.expander("How many missions were successful? How many missions failed?"):
         st.write("**Overall Mission Status**")
         mission_status = df["Mission_Status"].value_counts()
 
@@ -104,3 +104,9 @@ df_new.head()'''
         )
 
         st.bar_chart(mission_status_org)
+    
+    
+
+    st.subheader("**How Expensive are the Launches?**")
+    with st.expander("Histogram and visualised distribution."):
+        st.write("continue here")
