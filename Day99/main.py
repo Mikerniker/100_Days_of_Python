@@ -69,7 +69,7 @@ df_new.head()'''
     st.subheader("Number of Launches per Company")
     with st.expander("Chart for Number of Space Mission launches by Organisation."):
         launch_counts = (
-            df_new.groupby("Organisation")
+            df.groupby("Organisation")
             .size()
             .sort_values()
         )
