@@ -112,3 +112,7 @@ df_new.head()'''
         st.write("The price column is given in USD millions.")
         st.write(df_new["Price"].describe())
         price_data = df_new["Price"].dropna()
+
+        # Create histogram
+        plt.figure(figsize=(8, 4), dpi=200)
+        plt.hist(price_data,  edgecolor="black", bins=50)
