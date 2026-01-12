@@ -119,3 +119,4 @@ df_new.head()'''
         plt.xlim(0, 300)
         plt.xlabel("Launch Price (USD Millions)")
         plt.ylabel("Number of Launches")
+        plt.title("Distribution of Launch Prices")
