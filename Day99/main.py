@@ -111,3 +111,4 @@ df_new.head()'''
     with st.expander("Histogram and visualised distribution."):
         st.write("The price column is given in USD millions.")
         st.write(df_new["Price"].describe())
+        price_data = df_new["Price"].dropna()
