@@ -109,4 +109,5 @@ df_new.head()'''
 
     st.subheader("**How Expensive are the Launches?**")
     with st.expander("Histogram and visualised distribution."):
-        st.write("continue here")
+        st.write("The price column is given in USD millions.")
+        st.write(df_new["Price"].describe())
