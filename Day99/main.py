@@ -116,3 +116,6 @@ df_new.head()'''
         # Create histogram
         plt.figure(figsize=(8, 4), dpi=200)
         plt.hist(price_data,  edgecolor="black", bins=50)
+        plt.xlim(0, 300)
+        plt.xlabel("Launch Price (USD Millions)")
+        plt.ylabel("Number of Launches")
