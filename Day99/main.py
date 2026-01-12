@@ -120,3 +120,4 @@ df_new.head()'''
         plt.xlabel("Launch Price (USD Millions)")
         plt.ylabel("Number of Launches")
         plt.title("Distribution of Launch Prices")
+        st.pyplot(plt)
