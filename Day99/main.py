@@ -122,4 +122,9 @@ df_new.head()'''
         plt.title("Distribution of Launch Prices")
         st.pyplot(plt)
 
-        st.write("The majority of launches cost below $300M. A small number of extremely expensive missions (up to $5B) skew the full distribution, so the x-axis is limited to better visualize typical launch costs.")
+        st.write(
+            "The majority of launches cost below \\$300M. "
+            "A small number of extremely expensive missions (up to \\$5B) "
+            "skew the full distribution, so the x-axis is limited to better "
+            "visualize typical launch costs."
+        )
