@@ -150,3 +150,11 @@ df_new.head()'''
             "Gran Canaria": "United States"
         }
         df_new["Country"] = df_new["Country"].replace(country_fixes)
+    
+        # Count launches per country
+        launches_by_country = (
+            df_new
+            .groupby("Country")
+            .size()
+            .reset_index(name="Launch_Count")
+        )
