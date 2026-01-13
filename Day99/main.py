@@ -158,3 +158,5 @@ df_new.head()'''
             .size()
             .reset_index(name="Launch_Count")
         )
+
+        # Create Choropleth Map
