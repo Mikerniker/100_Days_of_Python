@@ -128,3 +128,6 @@ df_new.head()'''
             "skew the full distribution, so the x-axis is limited to better "
             "visualize typical launch costs."
         )
+
+    st.subheader("Choropleth Map:")
+    with st.expander("Number of Launches by Country"):
