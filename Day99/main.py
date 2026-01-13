@@ -138,3 +138,14 @@ df_new.head()'''
             .str[-1]
             .str.strip()
         )
+
+        # Fix Country Names
+        country_fixes = {
+            "Russia": "Russian Federation",
+            "New Mexico": "United States",
+            "Yellow Sea": "China",
+            "Shahrud Missile Test Site": "Iran",
+            "Pacific Missile Range Facility": "United States",
+            "Barents Sea": "Russian Federation",
+            "Gran Canaria": "United States"
+        }
