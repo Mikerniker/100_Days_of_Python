@@ -149,3 +149,4 @@ df_new.head()'''
             "Barents Sea": "Russian Federation",
             "Gran Canaria": "United States"
         }
+        df_new["Country"] = df_new["Country"].replace(country_fixes)
