@@ -155,12 +155,12 @@ with col1:
     }
     df["Country"] = df["Country"].replace(country_fixes)
     
-        # Count launches per country
-        launches_by_country = (
-            df_new
-            .groupby("Country")
-            .size()
-            .reset_index(name="Launch_Count")
-        )
+    # Count launches per country
+    launches_by_country = (
+        df
+        .groupby("Country")
+        .size()
+        .reset_index(name="Launch_Count")
+    )
 
         # Create Choropleth Map
