@@ -133,7 +133,8 @@ df_new.head()'''
 
 col1, col2 = st.columns(2)
 st.header("Choropleth Maps")
-    
+
+with col1:   
     # Extract the country from Location
     df["Country"] = (
         df_new["Location"]
@@ -142,17 +143,17 @@ st.header("Choropleth Maps")
         .str.strip()
     )
 
-        # Fix Country Names
-        country_fixes = {
-            "Russia": "Russian Federation",
-            "New Mexico": "United States",
-            "Yellow Sea": "China",
-            "Shahrud Missile Test Site": "Iran",
-            "Pacific Missile Range Facility": "United States",
-            "Barents Sea": "Russian Federation",
-            "Gran Canaria": "United States"
-        }
-        df_new["Country"] = df_new["Country"].replace(country_fixes)
+    # Fix Country Names
+    country_fixes = {
+        "Russia": "Russian Federation",
+        "New Mexico": "United States",
+        "Yellow Sea": "China",
+        "Shahrud Missile Test Site": "Iran",
+        "Pacific Missile Range Facility": "United States",
+        "Barents Sea": "Russian Federation",
+        "Gran Canaria": "United States"
+    }
+    df["Country"] = df["Country"].replace(country_fixes)
     
         # Count launches per country
         launches_by_country = (
