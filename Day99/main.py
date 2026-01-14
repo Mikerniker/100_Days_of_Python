@@ -178,3 +178,5 @@ with col1:
         geo=dict(showframe=False, showcoastlines=True),
         coloraxis_colorbar=dict(title="Launches")
     )
+
+    st.plotly_chart(fig, use_container_width=True)
