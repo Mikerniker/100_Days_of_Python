@@ -130,6 +130,9 @@ df_new.head()'''
             "visualize typical launch costs."
         )
 
+
+col1, col2 = st.columns(2)
+st.header("Choropleth Maps")
     st.subheader("Choropleth Map:")
     with st.expander("Number of Launches by Country"):
         # Extract the country from Location
