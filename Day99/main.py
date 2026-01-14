@@ -133,15 +133,14 @@ df_new.head()'''
 
 col1, col2 = st.columns(2)
 st.header("Choropleth Maps")
-    st.subheader("Choropleth Map:")
-    with st.expander("Number of Launches by Country"):
-        # Extract the country from Location
-        df_new["Country"] = (
-            df_new["Location"]
-            .str.split(",")
-            .str[-1]
-            .str.strip()
-        )
+    
+    # Extract the country from Location
+    df["Country"] = (
+        df_new["Location"]
+        .str.split(",")
+        .str[-1]
+        .str.strip()
+    )
 
         # Fix Country Names
         country_fixes = {
