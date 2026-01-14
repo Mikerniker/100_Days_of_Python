@@ -173,3 +173,8 @@ with col1:
         color_continuous_scale="blugrn",
         title="Number of Launches by Country"
     )
+    
+    fig.update_layout(
+        geo=dict(showframe=False, showcoastlines=True),
+        coloraxis_colorbar=dict(title="Launches")
+    )
