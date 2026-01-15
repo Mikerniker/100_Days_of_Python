@@ -199,3 +199,18 @@ with col2:
         .size()
         .reset_index(name="Failure_Count")
     )
+
+    fig = px.choropleth(
+    failures_by_country,
+    locations="Country",
+    locationmode="country names",
+    color="Failure_Count",
+    hover_name="Country",
+    color_continuous_scale="matter",
+    title="Number of Failed Launches by Country"
+    )
+
+    fig.update_layout(
+    geo=dict(showframe=False, showcoastlines=True),
+    coloraxis_colorbar=dict(title="Failed Launches")
+)
