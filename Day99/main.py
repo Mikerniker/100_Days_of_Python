@@ -216,3 +216,15 @@ with col2:
 )
     st.plotly_chart(fig, use_container_width=True)
     st.write("This choropleth includes Failure, Partial Failure, and Prelaunch Failure")
+
+## Create a Plotly Sunburst Chart of the countries, organisations, and mission status.
+
+col1, col2 = st.columns(2)
+
+with col1:
+    sunburst_df = (
+        df
+        .groupby(["Country", "Organisation", "Mission_Status"])
+        .size()
+        .reset_index(name="Count")
+    )
