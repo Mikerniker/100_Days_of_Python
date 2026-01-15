@@ -191,3 +191,11 @@ with col2:
             "Prelaunch Failure"
         ])
     ]
+
+    # Count Failures by Country
+    failures_by_country = (
+        failed_df
+        .groupby("Country")
+        .size()
+        .reset_index(name="Failure_Count")
+    )
