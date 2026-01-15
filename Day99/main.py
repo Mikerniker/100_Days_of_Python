@@ -180,3 +180,14 @@ with col1:
     )
 
     st.plotly_chart(fig, use_container_width=True)
+
+
+with col2:
+   #Failed Launches by country
+    failed_df = df[
+        df["Mission_Status"].isin([
+            "Failure",
+            "Partial Failure",
+            "Prelaunch Failure"
+        ])
+    ]
