@@ -214,3 +214,5 @@ with col2:
     geo=dict(showframe=False, showcoastlines=True),
     coloraxis_colorbar=dict(title="Failed Launches")
 )
+    st.plotly_chart(fig, use_container_width=True)
+    st.write("This choropleth includes Failure, Partial Failure, and Prelaunch Failure")
