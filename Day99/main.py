@@ -251,3 +251,9 @@ with col2:
     df["Date"] = pd.to_datetime(df["Date"], errors="coerce", utc=True)
    
     df["Year"] = df["Date"].dt.year
+
+    launches_per_year = (
+        df
+        .groupby("Year")
+        .size()
+    )
