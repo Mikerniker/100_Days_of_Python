@@ -244,3 +244,10 @@ with col1:
     )
     st.header("Sunburst Chart")
     st.plotly_chart(fig, use_container_width=True)
+
+    
+with col2:
+    # Chart the Number of Launches per Year
+    df["Date"] = pd.to_datetime(df["Date"], errors="coerce", utc=True)
+   
+    df["Year"] = df["Date"].dt.year
