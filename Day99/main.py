@@ -257,3 +257,17 @@ with col2:
         .groupby("Year")
         .size()
     )
+
+        plt.figure(figsize=(10, 5))
+
+    plt.plot(
+        launches_per_year.index,
+        launches_per_year.values,
+        linewidth=2
+    )
+
+    plt.xlabel("Year")
+    plt.ylabel("Number of Launches")
+    plt.title("Number of Space Launches per Year")
+    st.header("Line Chart")
+    st.pyplot(plt)
