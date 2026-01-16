@@ -286,3 +286,8 @@ with col1:
         .sort_values(ascending=False)
     )
     total_formatted = total_spend.apply(lambda x: f"${x:,.2f}M")
+    
+    st.write("Top Ten")
+    st.dataframe(
+        total_formatted.head(10).rename("Total Spend (USD Millions)")
+    )
