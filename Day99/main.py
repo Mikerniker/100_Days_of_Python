@@ -291,3 +291,12 @@ with col1:
     st.dataframe(
         total_formatted.head(10).rename("Total Spend (USD Millions)")
     )
+
+with col2:
+    #Average Spend per Launch by Organisation
+    avg_spend_per_launch = (
+        df_new
+        .groupby("Organisation")["Price"]
+        .mean()
+        .sort_values(ascending=False)
+    )
