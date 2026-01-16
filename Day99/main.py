@@ -271,3 +271,8 @@ with col2:
     plt.title("Number of Space Launches per Year")
     st.header("Line Chart")
     st.pyplot(plt)
+
+
+col1, col2 = st.columns(2)
+
+with col1:
