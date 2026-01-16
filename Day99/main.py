@@ -276,3 +276,12 @@ with col2:
 col1, col2 = st.columns(2)
 
 with col1:
+        ## Analyse the Total Amount of Money Spent by Organisation on Space Missions
+    st.subheader("Total Money Spent per Organisation")
+
+    total_spend = (
+        df_new
+        .groupby('Organisation')['Price']
+        .sum()
+        .sort_values(ascending=False)
+    )
