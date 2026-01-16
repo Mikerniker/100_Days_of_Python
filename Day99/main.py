@@ -305,3 +305,7 @@ with col2:
     )
     st.subheader("Average Spend per Launch by Organisation")
     st.write("All Organizations")
+
+    st.dataframe(
+        avg_spend_formatted.rename("Average Launch Cost")
+    )
