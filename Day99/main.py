@@ -303,3 +303,5 @@ with col2:
     avg_spend_formatted = avg_spend_per_launch.apply(
         lambda x: f"${x:,.2f}M per launch"
     )
+    st.subheader("Average Spend per Launch by Organisation")
+    st.write("All Organizations")
