@@ -285,3 +285,4 @@ with col1:
         .sum()
         .sort_values(ascending=False)
     )
+    total_formatted = total_spend.apply(lambda x: f"${x:,.2f}M")
