@@ -81,6 +81,19 @@ if uploaded_file:
             st.write("**Check for Missing Values and Duplicates**")
             # Remove rows with missing values
             clean_df = df.dropna()
+            # Remove junk columns
+            df_new = clean_df.drop(columns=["Unnamed: 0.1", "Unnamed: 0"])
+
+            st.write(
+                "Notes: Use 'dropna' to remove missing values (ex. NaN, None, or NaT) and "
+                "remove columns containing junk data."
+            )
+            st.dataframe(df_new.head())
+
+            code = '''clean_df = df.dropna()
+    df_new = clean_df.drop(columns=["Unnamed: 0.1", "Unnamed: 0"])
+    df_new.head()'''
+            st.code(code, language="python")
 
 
 
