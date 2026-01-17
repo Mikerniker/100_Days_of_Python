@@ -56,20 +56,28 @@ if uploaded_file:
         st.header("Preliminary Data Exploration")
         with st.expander("See Preliminary Data"):
 
-    
+            st.write("**What is the shape of df_data?**")
+            st.write(df.shape)
 
-        st.write("**What is the shape of `df_data`?**")
-        st.write(df.shape)
+            st.write("**How many rows and columns does it have?**")
+            st.write(f"It has {df.shape[0]} rows and {df.shape[1]} columns")
 
-        st.write("**How many rows and columns does it have?**")
+            st.write("**What are the column names?**")
+            st.write(", ".join(df.columns))
 
-        st.write("It has 4324 rows and 9 columns")
+            st.write("**Are there any NaN values or duplicates?**")
+            total_nans = df.isna().sum().sum()
+            st.write(f"There are {total_nans} missing (NaN) values in the entire DataFrame")
 
-        st.write("**What are the column names?**")
-        st.write(", ".join(df.columns))
+            total_dupes = df.duplicated().sum()
+            st.write(f"There are {total_dupes} duplicate rows")
 
-        st.write("**Are there any NaN values or duplicates?**")
-        # st.write(df.isna())
+
+
+
+
+
+
 
         total_nans = df.isna().sum().sum()
         st.write(f"There are {total_nans} missing (NaN) values in the entire DataFrame")
