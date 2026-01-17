@@ -8,9 +8,22 @@ import seaborn as sns
 # from iso3166 import countries
 from datetime import datetime, timedelta
 
-st.set_page_config(layout="wide")
 
+# CONFIGURATION ============================================================================
+st.set_page_config(layout="wide")
 pd.options.display.float_format = '{:,.2f}'.format
+
+
+# CONSTANTS ============================================================================
+COUNTRY_FIXES = {
+    "Russia": "Russian Federation",
+    "New Mexico": "United States",
+    "Yellow Sea": "China",
+    "Shahrud Missile Test Site": "Iran",
+    "Pacific Missile Range Facility": "United States",
+    "Barents Sea": "Russian Federation",
+    "Gran Canaria": "United States"
+}
 
 st.title("Mission Launches")
 
