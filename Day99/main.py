@@ -25,6 +25,19 @@ COUNTRY_FIXES = {
     "Gran Canaria": "United States"
 }
 
+
+USSR_COUNTRIES = ["Russian Federation", "Kazakhstan"]
+USA_COUNTRIES = ["United States", "USA"]
+FAILURE_STATUSES = ["Failure", "Partial Failure", "Prelaunch Failure"]
+COLD_WAR_END_YEAR = 1991
+
+COLOR_MAP_BLOCS = {"USA": "#3F9AAE", "USSR": "#F96E5B"}
+COLOR_MAP_MISSIONS = {
+    "Success": "#6AECE1",
+    "Failure": "#F96E5B",
+    "Partial Failure": "#FFE2AF",
+    "Prelaunch Failure": "#FF986A"
+}
 st.title("Mission Launches")
 
 uploaded_file = "mission_launches.csv"
