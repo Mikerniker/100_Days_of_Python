@@ -72,7 +72,15 @@ if uploaded_file:
             total_dupes = df.duplicated().sum()
             st.write(f"There are {total_dupes} duplicate rows")
 
+  # DATA CLEANING ========================================================================
 
+    # st.subheader("Data Cleaning - Check for Missing Values and Duplicates")
+    with col2:
+        st.header("Data Cleaning")
+        with st.expander("What Data is Missing"):
+            st.write("**Check for Missing Values and Duplicates**")
+            # Remove rows with missing values
+            clean_df = df.dropna()
 
 
 
