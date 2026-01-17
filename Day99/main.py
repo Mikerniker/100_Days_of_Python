@@ -96,6 +96,27 @@ if uploaded_file:
             st.code(code, language="python")
 
 
+ # DATA PREPARATION
+    # ========================================================================
+
+    # Convert dates 
+    df["Date"] = pd.to_datetime(df["Date"], errors="coerce", utc=True)
+    df["Year"] = df["Date"].dt.year
+    df["Month"] = df["Date"].dt.month
+    df["Month_Name"] = df["Date"].dt.month_name()
+    df["YearMonth"] = df["Date"].dt.to_period("M")
+
+    # Extract and fix country names 
+    df["Country"] = df["Location"].str.split(",").str[-1].str.strip()
+    df["Country"] = df["Country"].replace(COUNTRY_FIXES)
+
+    # Convert dates and clean price for df_new
+    df_new["Date"] = pd.to_datetime(df_new["Date"], errors="coerce", utc=True)
+    df_new["Year"] = df_new["Date"].dt.year
+    df_new["Price"] = pd.to_numeric(
+        df_new["Price"].astype(str).str.replace(",", "", regex=False),
+        errors="coerce"
+    )
 
 
 
