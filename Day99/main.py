@@ -38,6 +38,9 @@ COLOR_MAP_MISSIONS = {
     "Partial Failure": "#FFE2AF",
     "Prelaunch Failure": "#FF986A"
 }
+
+# LOAD DATA
+# ============================================================================
 st.title("Mission Launches")
 
 uploaded_file = "mission_launches.csv"
@@ -45,9 +48,15 @@ uploaded_file = "mission_launches.csv"
 if uploaded_file:
     df = pd.read_csv(uploaded_file)
 
-    st.subheader("Preliminary Data Exploration")
+    # PRELIMINARY DATA EXPLORATION ========================================================================
+    
+    col1, col2 = st.columns(2)
 
-    with st.expander("See Preliminary Data"):
+    with col1:
+        st.header("Preliminary Data Exploration")
+        with st.expander("See Preliminary Data"):
+
+    
 
         st.write("**What is the shape of `df_data`?**")
         st.write(df.shape)
