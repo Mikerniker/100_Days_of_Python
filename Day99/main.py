@@ -174,6 +174,13 @@ if uploaded_file:
             tile_left = st.container(border=True)
             tile_left.subheader("Overall Rockets")
 
+            total_rockets = (
+                df["Rocket_Status"]
+                .value_counts()
+                .sort_index()
+            )
+
+            tile_left.dataframe(total_rockets, use_container_width=True)
 
 
 
