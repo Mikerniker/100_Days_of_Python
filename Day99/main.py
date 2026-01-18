@@ -133,11 +133,30 @@ if uploaded_file:
         # ========================================================================
     with col2:
         st.header("How Expensive are the Launches?")
-        
+
         with st.expander("Histogram and visualised distribution"):
             st.write("The price column is given in USD millions.")
             st.write(df_new["Price"].describe())
 
+
+            price_data = df_new["Price"].dropna()
+
+            # Create histogram
+            fig, ax = plt.subplots(figsize=(8, 4), dpi=200)
+            ax.hist(price_data, edgecolor="black", bins=50)
+            ax.set_xlim(0, 300)
+            ax.set_xlabel("Launch Price (USD Millions)")
+            ax.set_ylabel("Number of Launches")
+            ax.set_title("Distribution of Launch Prices")
+            st.pyplot(fig)
+            plt.close()
+
+            st.write(
+                "The majority of launches cost below \\$300M. "
+                "A small number of extremely expensive missions (up to \\$5B) "
+                "skew the full distribution, so the x-axis is limited to better "
+                "visualize typical launch costs."
+            )
 
 
 
