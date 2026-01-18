@@ -182,6 +182,13 @@ if uploaded_file:
 
             tile_left.dataframe(total_rockets, use_container_width=True)
 
+        # -------- RIGHT COLUMN: Rockets per Organisation --------
+        with col2:
+            tile_right = st.container(border=True)
+            tile_right.subheader("Rockets per Organisation")
+
+
+
 
 
 #         total_nans = df.isna().sum().sum()
