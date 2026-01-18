@@ -133,11 +133,15 @@ if uploaded_file:
         # ========================================================================
     with col2:
         st.header("How Expensive are the Launches?")
-
-
-
-
         
+        with st.expander("Histogram and visualised distribution"):
+            st.write("The price column is given in USD millions.")
+            st.write(df_new["Price"].describe())
+
+
+
+
+
 
 
 #         total_nans = df.isna().sum().sum()
