@@ -187,7 +187,14 @@ if uploaded_file:
             tile_right = st.container(border=True)
             tile_right.subheader("Rockets per Organisation")
 
+            rockets_by_organization = (
+                df
+                .groupby("Organisation")["Rocket_Status"]
+                .value_counts()
+                .unstack(fill_value=0)
+            )
 
+            tile_right.dataframe(rockets_by_organization.head(), use_container_width=True)
 
 
 
