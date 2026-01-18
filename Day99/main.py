@@ -166,6 +166,13 @@ if uploaded_file:
     # Add container
     container = st.container(border=True)
 
+    with container:
+        col1, col2 = st.columns(2)
+
+        # -------- LEFT COLUMN: Overall Rockets --------
+        with col1:
+            tile_left = st.container(border=True)
+            tile_left.subheader("Overall Rockets")
 
 
 
