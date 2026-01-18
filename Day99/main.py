@@ -158,6 +158,13 @@ if uploaded_file:
                 "visualize typical launch costs."
             )
 
+   # ACTIVE VS RETIRED ROCKETS ========================================================================
+    
+    st.header("Number of Active versus Retired Rockets")
+    st.write("How many rockets are active compared to those that are decommissioned?")
+
+    # Add container
+    container = st.container(border=True)
 
 
 
