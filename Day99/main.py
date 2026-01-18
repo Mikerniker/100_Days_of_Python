@@ -129,8 +129,15 @@ if uploaded_file:
             st.write(df_new.describe())
 
 
-# continue with LAUNCH PRICE DISTRIBUTION
+        # LAUNCH PRICE DISTRIBUTION
+        # ========================================================================
+    with col2:
+        st.header("How Expensive are the Launches?")
 
+
+
+
+        
 
 
 #         total_nans = df.isna().sum().sum()
