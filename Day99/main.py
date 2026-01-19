@@ -10,7 +10,11 @@ from datetime import datetime, timedelta
 
 
 # CONFIGURATION ============================================================================
-st.set_page_config(layout="wide")
+st.set_page_config(
+    page_title="Space Race",
+    page_icon="🚀",
+    layout="wide",
+)
 pd.options.display.float_format = '{:,.2f}'.format
 
 
