@@ -214,7 +214,9 @@ if uploaded_file:
 
             st.dataframe(rockets_by_organization.head(), use_container_width=True)
 
-
+        with col5:
+            st.subheader("Rockets per Organisation (Bar Chart)")
+            st.bar_chart(rockets_by_organization)
 
 
 
