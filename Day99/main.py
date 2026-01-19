@@ -45,7 +45,11 @@ COLOR_MAP_MISSIONS = {
 
 # LOAD DATA
 # ============================================================================
-st.title("Mission Launches")
+# Banner Section
+st.image("spacerace2.png", caption="Rocket Ships", width="stretch")
+
+st.markdown("<h1 style='text-align: center;'>The Space Race 1957-2020</h1>", unsafe_allow_html=True)
+
 
 uploaded_file = "mission_launches.csv"
 
