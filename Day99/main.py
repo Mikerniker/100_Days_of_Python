@@ -226,7 +226,11 @@ if uploaded_file:
         launch_counts = df.groupby("Organisation").size().sort_values()
         st.bar_chart(launch_counts)
 
+    # MISSION STATUS DISTRIBUTION
+    # ========================================================================
+    st.subheader("Distribution of Mission Status")
 
+    container = st.container(border=True)
 
 
 
