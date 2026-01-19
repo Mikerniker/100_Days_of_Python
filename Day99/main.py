@@ -198,7 +198,22 @@ if uploaded_file:
             st.bar_chart(total_rockets)
 
 
-# CONT with ROW 2: Charts
+        # ===================== ROW 2: Rockets per Org  =====================
+        # CONTINUE GITHUB HERE
+        col4, col5 = st.columns([1, 3], border=True)
+        with col4:
+            # tile_right = st.container(border=True)
+            st.subheader("Rockets per Organisation")
+
+            rockets_by_organization = (
+                df
+                .groupby("Organisation")["Rocket_Status"]
+                .value_counts()
+                .unstack(fill_value=0)
+            )
+
+            st.dataframe(rockets_by_organization.head(), use_container_width=True)
+
 
 
 
