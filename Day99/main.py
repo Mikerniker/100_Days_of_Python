@@ -171,16 +171,19 @@ if uploaded_file:
     st.header("Number of Active versus Retired Rockets")
     st.write("How many rockets are active compared to those that are decommissioned?")
 
-    # Add container
+    # Optional outer container
     container = st.container(border=True)
 
     with container:
-        col1, col2 = st.columns(2)
+        col1, col2, col3 = st.columns(3, border=True)
 
         # -------- LEFT COLUMN: Overall Rockets --------
         with col1:
-            tile_left = st.container(border=True)
-            tile_left.subheader("Overall Rockets")
+            st.image("rocketships.png", caption="Rocket", width=300)
+
+        # -------- RIGHT COLUMN: Total Rockets --------
+        with col2:
+            st.subheader("Total Rockets")
 
             total_rockets = (
                 df["Rocket_Status"]
@@ -188,27 +191,11 @@ if uploaded_file:
                 .sort_index()
             )
 
-            tile_left.dataframe(total_rockets, use_container_width=True)
+            st.dataframe(total_rockets, use_container_width=True)
 
-        # -------- RIGHT COLUMN: Rockets per Organisation --------
-        with col2:
-            tile_right = st.container(border=True)
-            tile_right.subheader("Rockets per Organisation")
-
-            rockets_by_organization = (
-                df
-                .groupby("Organisation")["Rocket_Status"]
-                .value_counts()
-                .unstack(fill_value=0)
-            )
-
-            tile_right.dataframe(rockets_by_organization.head(), use_container_width=True)
-
-
-
-        col3, col4 = st.columns([1, 3])
         with col3:
-            pass
+            st.subheader("Total Rockets (Bar Chart)")
+            st.bar_chart(total_rockets)
 
 
 # CONT with ROW 2: Charts
