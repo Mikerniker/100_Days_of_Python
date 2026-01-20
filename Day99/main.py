@@ -271,6 +271,26 @@ if uploaded_file:
             .reset_index(name="Launch_Count")
         )
 
+        # Create choropleth map
+        fig = px.choropleth(
+            launches_by_country,
+            locations="Country",
+            locationmode="country names",
+            color="Launch_Count",
+            hover_name="Country",
+            color_continuous_scale="blugrn",
+            title="Number of Launches by Country"
+        )
+        fig.update_layout(
+            geo=dict(showframe=False, showcoastlines=True),
+            coloraxis_colorbar=dict(title="Launches")
+        )
+        st.plotly_chart(fig, use_container_width=True)
+
+
+
+
+
 
 #         total_nans = df.isna().sum().sum()
 #         st.write(f"There are {total_nans} missing (NaN) values in the entire DataFrame")
