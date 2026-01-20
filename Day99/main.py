@@ -232,7 +232,15 @@ if uploaded_file:
 
     container = st.container(border=True)
 
-    # CONTINUE Distribution of Mission Status
+    with container:
+        col1, col2 = st.columns(2, border=True)
+
+        # -------- LEFT COLUMN: Overall Rockets --------
+        with col1:
+            st.subheader("Overall Mission Status")
+
+            mission_status = df["Mission_Status"].value_counts()
+            st.dataframe(mission_status)
 
 
 
