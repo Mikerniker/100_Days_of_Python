@@ -287,6 +287,19 @@ if uploaded_file:
         )
         st.plotly_chart(fig, use_container_width=True)
 
+    with col2:
+        # Filter failed missions
+        failed_df = df[df["Mission_Status"].isin(FAILURE_STATUSES)]
+
+        # Count failures by country
+        failures_by_country = (
+            failed_df.groupby("Country")
+            .size()
+            .reset_index(name="Failure_Count")
+        )
+
+
+
 
 
 
