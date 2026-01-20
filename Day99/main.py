@@ -242,6 +242,12 @@ if uploaded_file:
             mission_status = df["Mission_Status"].value_counts()
             st.dataframe(mission_status)
 
+        # -------- RIGHT COLUMN: Rockets per Organisation --------
+        with col2:
+            st.subheader("Overall Mission Status")
+
+            st.bar_chart(mission_status)
+
 
 
 
