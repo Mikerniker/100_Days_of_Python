@@ -248,7 +248,14 @@ if uploaded_file:
 
             st.bar_chart(mission_status)
 
-
+        # NEXT CONTAINER ROW
+        container.write("**Mission Status per Organization**")
+        mission_status_org = (
+            df.groupby("Organisation")["Mission_Status"]
+            .value_counts()
+            .unstack(fill_value=0)
+        )
+        container.bar_chart(mission_status_org)
 
 
 
