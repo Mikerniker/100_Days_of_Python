@@ -264,6 +264,12 @@ if uploaded_file:
     col1, col2 = st.columns(2)
 
     with col1:
+        # Count launches per country
+        launches_by_country = (
+            df.groupby("Country")
+            .size()
+            .reset_index(name="Launch_Count")
+        )
 
 
 #         total_nans = df.isna().sum().sum()
