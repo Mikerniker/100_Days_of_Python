@@ -257,7 +257,13 @@ if uploaded_file:
         )
         container.bar_chart(mission_status_org)
 
+   # CHOROPLETH MAPS
+    # ========================================================================
+    st.header("Choropleth Maps")
 
+    col1, col2 = st.columns(2)
+
+    with col1:
 
 
 #         total_nans = df.isna().sum().sum()
