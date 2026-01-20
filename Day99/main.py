@@ -325,6 +325,7 @@ if uploaded_file:
 
 
 
+
 #         total_nans = df.isna().sum().sum()
 #         st.write(f"There are {total_nans} missing (NaN) values in the entire DataFrame")
     
