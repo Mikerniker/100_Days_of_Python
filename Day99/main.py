@@ -359,6 +359,17 @@ if uploaded_file:
     with col1:
         st.subheader("Total Money Spent per Organisation")
 
+        total_spend = (
+            df_new.groupby("Organisation")["Price"]
+            .sum()
+            .sort_values(ascending=False)
+        )
+        total_formatted = total_spend.apply(lambda x: f"${x:,.2f}M")
+
+
+
+
+
 
 
 #         total_nans = df.isna().sum().sum()
