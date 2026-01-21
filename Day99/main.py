@@ -329,6 +329,21 @@ if uploaded_file:
             .reset_index(name="Count")
         )
 
+        fig = px.sunburst(
+            sunburst_df,
+            path=["Country", "Organisation", "Mission_Status"],
+            values="Count",
+            color="Mission_Status",
+            title="Mission Outcomes by Country and Organisation",
+            color_discrete_map=COLOR_MAP_MISSIONS
+        )
+        st.plotly_chart(fig, use_container_width=True)
+
+
+
+
+
+
 
 
 #         total_nans = df.isna().sum().sum()
