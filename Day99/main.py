@@ -320,9 +320,14 @@ if uploaded_file:
     col1, col2 = st.columns(2)
 
     with col1:
-        pass
+        st.header("Sunburst Chart")
 
-
+        # Create sunburst data
+        sunburst_df = (
+            df.groupby(["Country", "Organisation", "Mission_Status"])
+            .size()
+            .reset_index(name="Count")
+        )
 
 
 
