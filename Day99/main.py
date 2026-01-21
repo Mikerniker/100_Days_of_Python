@@ -345,7 +345,13 @@ if uploaded_file:
         # Chart launches per year
         launches_per_year = df.groupby("Year").size()
 
-
+        fig, ax = plt.subplots(figsize=(10, 5))
+        ax.plot(launches_per_year.index, launches_per_year.values, linewidth=2)
+        ax.set_xlabel("Year")
+        ax.set_ylabel("Number of Launches")
+        ax.set_title("Number of Space Launches per Year")
+        st.pyplot(fig)
+        plt.close()
 
 
 
