@@ -339,7 +339,11 @@ if uploaded_file:
         )
         st.plotly_chart(fig, use_container_width=True)
 
+    with col2:
+        st.header("Line Chart")
 
+        # Chart launches per year
+        launches_per_year = df.groupby("Year").size()
 
 
 
