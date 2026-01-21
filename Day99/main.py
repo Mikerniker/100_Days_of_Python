@@ -353,6 +353,11 @@ if uploaded_file:
         st.pyplot(fig)
         plt.close()
 
+    # SPENDING ANALYSIS ========================================================================
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.subheader("Total Money Spent per Organisation")
 
 
 
