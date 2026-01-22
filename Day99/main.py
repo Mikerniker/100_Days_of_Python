@@ -409,7 +409,19 @@ if uploaded_file:
         peak_month = launches_per_month.idxmax()
         peak_value = launches_per_month.max()
 
-
+        fig, ax = plt.subplots(figsize=(12, 6))
+        ax.plot(
+            launches_per_month.index,
+            launches_per_month.values,
+            label="Monthly Launches",
+            alpha=0.6
+        )
+        ax.plot(
+            rolling_avg.index,
+            rolling_avg.values,
+            label="6-Month Rolling Average",
+            linewidth=3
+        )
 
 
 
