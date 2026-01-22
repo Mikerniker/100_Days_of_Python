@@ -380,6 +380,10 @@ if uploaded_file:
             .sort_values(ascending=False)
         )
 
+        avg_spend_formatted = avg_spend_per_launch.apply(
+            lambda x: f"${x:,.2f}M per launch"
+        )
+
 
 
 
