@@ -393,7 +393,14 @@ if uploaded_file:
     col1, col2 = st.columns(2)
 
     with col1:
-
+        # Monthly launches over time with rolling average
+        launches_per_month = (
+            df.dropna(subset=["Date"])
+            .groupby("YearMonth")
+            .size()
+            .sort_index()
+        )
+        launches_per_month.index = launches_per_month.index.to_timestamp()
 
 
 
