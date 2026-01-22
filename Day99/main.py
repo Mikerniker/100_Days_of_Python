@@ -389,6 +389,16 @@ if uploaded_file:
             avg_spend_formatted.rename("Average Launch Cost")
         )
 
+    # MONTHLY LAUNCH ANALYSIS ========================================================================
+    col1, col2 = st.columns(2)
+
+    with col1:
+
+
+
+
+
+
 
 
 #         total_nans = df.isna().sum().sum()
