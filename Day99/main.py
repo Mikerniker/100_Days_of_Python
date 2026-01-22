@@ -402,6 +402,13 @@ if uploaded_file:
         )
         launches_per_month.index = launches_per_month.index.to_timestamp()
 
+        # Calculate rolling average
+        rolling_avg = launches_per_month.rolling(window=6).mean()
+
+        # Find peak month
+        peak_month = launches_per_month.idxmax()
+        peak_value = launches_per_month.max()
+
 
 
 
