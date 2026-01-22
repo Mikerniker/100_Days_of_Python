@@ -384,7 +384,10 @@ if uploaded_file:
             lambda x: f"${x:,.2f}M per launch"
         )
 
-
+        st.write("All Organizations")
+        st.dataframe(
+            avg_spend_formatted.rename("Average Launch Cost")
+        )
 
 
 
