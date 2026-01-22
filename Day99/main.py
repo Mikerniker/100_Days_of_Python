@@ -423,7 +423,14 @@ if uploaded_file:
             linewidth=3
         )
 
-
+        ax.scatter(peak_month, peak_value, s=120, color='red', zorder=5)
+        ax.set_title("Number of Space Launches Month-on-Month")
+        ax.set_xlabel("Year")
+        ax.set_ylabel("Number of Launches")
+        ax.legend()
+        ax.grid(alpha=0.3)
+        st.pyplot(fig)
+        plt.close()
 
 
 
