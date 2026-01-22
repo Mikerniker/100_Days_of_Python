@@ -432,7 +432,11 @@ if uploaded_file:
         st.pyplot(fig)
         plt.close()
 
-
+        st.write(
+            f"📈 **Based on the provided dataset, the highest number of launches occurred in "
+            f"{peak_month.strftime('%B %Y')} with {peak_value} launches.**"
+        )
+        st.write("Missing Date values:", df["Date"].isna().sum())
 
 #         total_nans = df.isna().sum().sum()
 #         st.write(f"There are {total_nans} missing (NaN) values in the entire DataFrame")
