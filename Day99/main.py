@@ -371,6 +371,15 @@ if uploaded_file:
             total_formatted.head(10).rename("Total Spend (USD Millions)")
         )
 
+    with col2:
+        st.subheader("Average Spend per Launch by Organisation")
+
+        avg_spend_per_launch = (
+            df_new.groupby("Organisation")["Price"]
+            .mean()
+            .sort_values(ascending=False)
+        )
+
 
 
 
