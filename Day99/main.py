@@ -451,6 +451,16 @@ if uploaded_file:
         most_popular = launches_by_month.loc[launches_by_month["Launch_Count"].idxmax()]
         least_popular = launches_by_month.loc[launches_by_month["Launch_Count"].idxmin()]
 
+        fig, ax = plt.subplots(figsize=(10, 5))
+        ax.bar(launches_by_month["Month_Name"], launches_by_month["Launch_Count"])
+        ax.set_title("Launches by Calendar Month (All Years)")
+        ax.set_xlabel("Month")
+        ax.set_ylabel("Number of Launches")
+        ax.tick_params(axis='x', rotation=45)
+        ax.grid(axis="y", alpha=0.3)
+        st.pyplot(fig)
+        plt.close()
+
 
 
 
