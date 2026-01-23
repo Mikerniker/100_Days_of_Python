@@ -447,6 +447,9 @@ if uploaded_file:
             .sort_values("Month")
         )
 
+        # Find most and least popular months
+        most_popular = launches_by_month.loc[launches_by_month["Launch_Count"].idxmax()]
+        least_popular = launches_by_month.loc[launches_by_month["Launch_Count"].idxmin()]
 
 
 
