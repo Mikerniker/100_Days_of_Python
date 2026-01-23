@@ -438,6 +438,19 @@ if uploaded_file:
         )
         st.write("Missing Date values:", df["Date"].isna().sum())
 
+    with col2:
+        # Launches by calendar month (aggregated across all years)
+        launches_by_month = (
+            df.groupby(["Month", "Month_Name"])
+            .size()
+            .reset_index(name="Launch_Count")
+            .sort_values("Month")
+        )
+
+
+
+
+
 #         total_nans = df.isna().sum().sum()
 #         st.write(f"There are {total_nans} missing (NaN) values in the entire DataFrame")
     
