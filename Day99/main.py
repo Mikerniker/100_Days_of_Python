@@ -466,6 +466,10 @@ if uploaded_file:
             f"({most_popular['Launch_Count']} launches)"
         )
 
+        st.write(
+            f"**Least popular month for launches:** {least_popular['Month_Name']} "
+            f"({least_popular['Launch_Count']} launches)"
+        )
 
 
 #         total_nans = df.isna().sum().sum()
