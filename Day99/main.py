@@ -461,6 +461,10 @@ if uploaded_file:
         st.pyplot(fig)
         plt.close()
 
+        st.write(
+            f"**Most popular month for launches:** {most_popular['Month_Name']} "
+            f"({most_popular['Launch_Count']} launches)"
+        )
 
 
 
