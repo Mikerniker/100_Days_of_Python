@@ -494,3 +494,14 @@ if uploaded_file:
         st.pyplot(fig)
         plt.close()
 
+    with col2:
+        st.subheader("Launch Dominance Over Time (Top 10 Organisations)")
+
+        # Find top 10 organisations by total launches
+        top_10_orgs = (
+            df.groupby("Organisation")
+            .size()
+            .sort_values(ascending=False)
+            .head(10)
+            .index
+        )
