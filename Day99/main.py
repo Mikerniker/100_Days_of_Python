@@ -505,3 +505,13 @@ if uploaded_file:
             .head(10)
             .index
         )
+
+        # Filter to top 10
+        df_top10 = df[df["Organisation"].isin(top_10_orgs)]
+
+        # Count launches per year per organisation
+        launches_over_time = (
+            df_top10.groupby(["Year", "Organisation"])
+            .size()
+            .reset_index(name="Launch_Count")
+        )
