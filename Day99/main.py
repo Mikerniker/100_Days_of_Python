@@ -520,3 +520,11 @@ if uploaded_file:
         for org in top_10_orgs:
             org_data = launches_over_time[launches_over_time["Organisation"] == org]
             ax.plot(org_data["Year"], org_data["Launch_Count"], label=org, linewidth=2)
+
+        ax.set_xlabel("Year")
+        ax.set_ylabel("Number of Launches")
+        ax.set_title("Number of Launches Over Time by Top 10 Organisations")
+        ax.legend(bbox_to_anchor=(1.05, 1), loc="upper left")
+        ax.grid(alpha=0.3)
+        st.pyplot(fig)
+        plt.close()
