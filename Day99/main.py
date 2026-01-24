@@ -475,6 +475,14 @@ if uploaded_file:
     col1, col2 = st.columns(2)
 
     with col1:
-        pass
+        st.subheader("Average Launch Price Over Time")
+
+        # Calculate average price per year
+        df_price_clean = df_new.dropna(subset=["Date", "Price"])
+        avg_price_per_year = (
+            df_price_clean.groupby("Year")["Price"]
+            .mean()
+            .sort_index()
+        )
 
 
