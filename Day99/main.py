@@ -515,3 +515,8 @@ if uploaded_file:
             .size()
             .reset_index(name="Launch_Count")
         )
+
+        fig, ax = plt.subplots(figsize=(12, 6))
+        for org in top_10_orgs:
+            org_data = launches_over_time[launches_over_time["Organisation"] == org]
+            ax.plot(org_data["Year"], org_data["Launch_Count"], label=org, linewidth=2)
