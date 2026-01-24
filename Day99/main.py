@@ -485,4 +485,12 @@ if uploaded_file:
             .sort_index()
         )
 
+        fig, ax = plt.subplots(figsize=(10, 5))
+        ax.plot(avg_price_per_year.index, avg_price_per_year.values, linewidth=2)
+        ax.set_xlabel("Year")
+        ax.set_ylabel("Average Launch Price (USD Millions)")
+        ax.set_title("Average Price of Rocket Launches Over Time")
+        ax.grid(alpha=0.3)
+        st.pyplot(fig)
+        plt.close()
 
