@@ -528,3 +528,6 @@ if uploaded_file:
         ax.grid(alpha=0.3)
         st.pyplot(fig)
         plt.close()
+
+    # COLD WAR ANALYSIS - DATA PREPARATION ========================================================================
+    st.header("The Cold War Era")
