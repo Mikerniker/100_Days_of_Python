@@ -535,3 +535,8 @@ if uploaded_file:
 
     # Create Cold War dataset (up to 1991)
     cold_war_df = df[df["Year"] <= COLD_WAR_END_YEAR].copy()
+
+    # Assign 
+    cold_war_df["Bloc"] = "Other"
+    cold_war_df.loc[cold_war_df["Country"].isin(USA_COUNTRIES), "Bloc"] = "USA"
+    cold_war_df.loc[cold_war_df["Country"].isin(USSR_COUNTRIES), "Bloc"] = "USSR"
