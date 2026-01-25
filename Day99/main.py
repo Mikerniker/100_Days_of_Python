@@ -540,3 +540,6 @@ if uploaded_file:
     cold_war_df["Bloc"] = "Other"
     cold_war_df.loc[cold_war_df["Country"].isin(USA_COUNTRIES), "Bloc"] = "USA"
     cold_war_df.loc[cold_war_df["Country"].isin(USSR_COUNTRIES), "Bloc"] = "USSR"
+
+    # Filter to only USA and USSR
+    cold_war_blocs = cold_war_df[cold_war_df["Bloc"].isin(["USA", "USSR"])].copy()
