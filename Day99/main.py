@@ -531,3 +531,4 @@ if uploaded_file:
 
     # COLD WAR ANALYSIS - DATA PREPARATION ========================================================================
     st.header("The Cold War Era")
+    container = st.container(border=True)
