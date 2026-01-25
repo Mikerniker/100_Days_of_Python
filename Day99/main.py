@@ -532,3 +532,6 @@ if uploaded_file:
     # COLD WAR ANALYSIS - DATA PREPARATION ========================================================================
     st.header("The Cold War Era")
     container = st.container(border=True)
+
+    # Create Cold War dataset (up to 1991)
+    cold_war_df = df[df["Year"] <= COLD_WAR_END_YEAR].copy()
