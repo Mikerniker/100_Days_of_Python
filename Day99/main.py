@@ -543,3 +543,10 @@ if uploaded_file:
 
     # Filter to only USA and USSR
     cold_war_blocs = cold_war_df[cold_war_df["Bloc"].isin(["USA", "USSR"])].copy()
+
+    # COLD WAR PIE CHART AND YEAR-ON-YEAR LAUNCHES========================================================================
+
+    col1, col2 = container.columns(2, border=True)
+
+    with col1:
+        pass
