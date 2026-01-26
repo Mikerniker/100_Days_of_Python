@@ -549,4 +549,9 @@ if uploaded_file:
     col1, col2 = container.columns(2, border=True)
 
     with col1:
-        pass
+        # Total launches pie chart
+        launch_counts = (
+            cold_war_blocs.groupby("Bloc")
+            .size()
+            .reset_index(name="Launch_Count")
+        )
