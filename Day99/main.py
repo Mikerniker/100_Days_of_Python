@@ -590,3 +590,8 @@ if uploaded_file:
             hovermode="x unified"
         )
         st.plotly_chart(fig, use_container_width=True)
+
+    col3, col4 = container.columns(2, border=True)
+    with col3:
+        pass
+        # Mission failures year-on-year
