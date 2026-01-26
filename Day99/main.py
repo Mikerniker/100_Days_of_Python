@@ -574,3 +574,19 @@ if uploaded_file:
             .size()
             .reset_index(name="Launch_Count")
         )
+        fig = px.line(
+            launches_per_year,
+            x="Year",
+            y="Launch_Count",
+            color="Bloc",
+            title="Cold War Space Race: Year-on-Year Launches (USA vs USSR)",
+            markers=True,
+            color_discrete_map=COLOR_MAP_BLOCS
+        )
+        fig.update_layout(
+            xaxis_title="Year",
+            yaxis_title="Number of Launches",
+            legend_title="Bloc",
+            hovermode="x unified"
+        )
+        st.plotly_chart(fig, use_container_width=True)
