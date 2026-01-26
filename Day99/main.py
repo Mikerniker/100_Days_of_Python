@@ -555,3 +555,14 @@ if uploaded_file:
             .size()
             .reset_index(name="Launch_Count")
         )
+
+        fig = px.pie(
+            launch_counts,
+            names="Bloc",
+            values="Launch_Count",
+            title="Cold War Space Race: Total Launches (USA vs USSR)",
+            color="Bloc",
+            color_discrete_map=COLOR_MAP_BLOCS
+        )
+        fig.update_traces(textposition="inside", textinfo="percent+label")
+        st.plotly_chart(fig, use_container_width=True)
