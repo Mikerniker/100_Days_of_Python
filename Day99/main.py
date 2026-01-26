@@ -566,3 +566,11 @@ if uploaded_file:
         )
         fig.update_traces(textposition="inside", textinfo="percent+label")
         st.plotly_chart(fig, use_container_width=True)
+
+    with col2:
+        # Year-on-year launches line chart
+        launches_per_year = (
+            cold_war_blocs.groupby(["Year", "Bloc"])
+            .size()
+            .reset_index(name="Launch_Count")
+        )
