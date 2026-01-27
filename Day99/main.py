@@ -597,3 +597,9 @@ if uploaded_file:
         cold_war_failures = cold_war_blocs[
             cold_war_blocs["Mission_Status"].isin(FAILURE_STATUSES)
         ]
+
+        failed_launches_per_year = (
+            cold_war_failures.groupby(["Year", "Bloc"])
+            .size()
+            .reset_index(name="Failure_Count")
+        )
