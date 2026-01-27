@@ -620,3 +620,5 @@ if uploaded_file:
             legend_title="Bloc",
             hovermode="x unified"
         )
+
+        st.plotly_chart(fig, use_container_width=True)
