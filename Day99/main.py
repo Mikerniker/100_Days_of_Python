@@ -613,3 +613,10 @@ if uploaded_file:
             markers=True,
             color_discrete_map=COLOR_MAP_BLOCS
         )
+
+        fig.update_layout(
+            xaxis_title="Year",
+            yaxis_title="Number of Failed Missions",
+            legend_title="Bloc",
+            hovermode="x unified"
+        )
