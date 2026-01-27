@@ -593,5 +593,7 @@ if uploaded_file:
 
     col3, col4 = container.columns(2, border=True)
     with col3:
-        pass
         # Mission failures year-on-year
+        cold_war_failures = cold_war_blocs[
+            cold_war_blocs["Mission_Status"].isin(FAILURE_STATUSES)
+        ]
