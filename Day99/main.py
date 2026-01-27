@@ -603,3 +603,13 @@ if uploaded_file:
             .size()
             .reset_index(name="Failure_Count")
         )
+
+        fig = px.line(
+            a,
+            x="Year",
+            y="Failure_Count",
+            color="Bloc",
+            title="Cold War Mission Failures: Year-on-Year (USA vs USSR)",
+            markers=True,
+            color_discrete_map=COLOR_MAP_BLOCS
+        )
