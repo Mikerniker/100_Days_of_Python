@@ -622,3 +622,10 @@ if uploaded_file:
         )
 
         st.plotly_chart(fig, use_container_width=True)
+
+    # FAILURE PERCENTAGE AND YEARLY LEADERS
+    # ========================================================================
+
+    with col4:
+        # Calculate failure percentage over time
+        pass
