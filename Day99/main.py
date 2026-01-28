@@ -652,3 +652,11 @@ if uploaded_file:
             title="Percentage of Mission Failures Over Time (USA vs USSR)",
             color_discrete_map=COLOR_MAP_BLOCS
         )
+
+        fig.update_layout(
+            xaxis_title="Year",
+            yaxis_title="Failure Rate (%)",
+            legend_title="Bloc",
+            hovermode="x unified"
+        )
+        st.plotly_chart(fig, use_container_width=True)
