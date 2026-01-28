@@ -627,7 +627,7 @@ if uploaded_file:
     # ========================================================================
 
     with col4:
-      # Calculate failure percentage over time
+        # Calculate failure percentage over time
         cold_war_blocs["Is_Failure"] = cold_war_blocs["Mission_Status"].isin(FAILURE_STATUSES)
 
         yearly_stats = (
@@ -638,4 +638,8 @@ if uploaded_file:
             )
             .reset_index()
         )
-        pass
+
+        yearly_stats["Failure_Percentage"] = (
+                yearly_stats["Failed_Launches"] / yearly_stats["Total_Launches"] * 100
+        )
+
