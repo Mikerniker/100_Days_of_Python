@@ -643,3 +643,12 @@ if uploaded_file:
                 yearly_stats["Failed_Launches"] / yearly_stats["Total_Launches"] * 100
         )
 
+        fig = px.line(
+            yearly_stats,
+            x="Year",
+            y="Failure_Percentage",
+            color="Bloc",
+            markers=True,
+            title="Percentage of Mission Failures Over Time (USA vs USSR)",
+            color_discrete_map=COLOR_MAP_BLOCS
+        )
