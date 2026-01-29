@@ -674,3 +674,13 @@ if uploaded_file:
             .size()
             .reset_index(name="Launch_Count")
         )
+
+        yearly_leader_all = (
+            launches_per_year_country.sort_values(
+                ["Year", "Launch_Count"],
+                ascending=[True, False]
+            )
+            .groupby("Year")
+            .first()
+            .reset_index()
+        )
