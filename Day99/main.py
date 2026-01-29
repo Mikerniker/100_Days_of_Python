@@ -663,3 +663,9 @@ if uploaded_file:
 
     # Leading Countries and Organizations ========================================================================
     st.subheader("Leading Countries and Organizations")
+    container = st.container(border=True)
+
+    col1, col2, col3 = container.columns(3, border=True)
+
+    with col1:
+        # Country leaders by year (all missions)
