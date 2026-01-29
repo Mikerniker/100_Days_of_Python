@@ -669,3 +669,8 @@ if uploaded_file:
 
     with col1:
         # Country leaders by year (all missions)
+        launches_per_year_country = (
+            df.groupby(["Year", "Country"])
+            .size()
+            .reset_index(name="Launch_Count")
+        )
