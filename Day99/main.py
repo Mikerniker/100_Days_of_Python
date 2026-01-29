@@ -684,3 +684,11 @@ if uploaded_file:
             .first()
             .reset_index()
         )
+        
+        st.subheader("Country Leading in Total Launches Per Year (All Missions)")
+        st.dataframe(
+            yearly_leader_all.rename(columns={
+                "Country": "Leading Country",
+                "Launch_Count": "Number of Launches"
+            })
+        )
