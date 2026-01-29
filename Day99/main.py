@@ -695,3 +695,9 @@ if uploaded_file:
     with col2:
         # Country leaders by year (successful missions only)
         df_success = df[df["Mission_Status"] == "Success"].copy()
+
+        success_per_year_country = (
+            df_success.groupby(["Year", "Country"])
+            .size()
+            .reset_index(name="Successful_Launches")
+        )
