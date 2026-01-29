@@ -684,7 +684,7 @@ if uploaded_file:
             .first()
             .reset_index()
         )
-        
+
         st.subheader("Country Leading in Total Launches Per Year (All Missions)")
         st.dataframe(
             yearly_leader_all.rename(columns={
@@ -692,3 +692,6 @@ if uploaded_file:
                 "Launch_Count": "Number of Launches"
             })
         )
+    with col2:
+        # Country leaders by year (successful missions only)
+        df_success = df[df["Mission_Status"] == "Success"].copy()
