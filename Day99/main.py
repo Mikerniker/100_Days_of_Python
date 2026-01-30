@@ -701,3 +701,14 @@ if uploaded_file:
             .size()
             .reset_index(name="Successful_Launches")
         )
+
+        
+        yearly_leader_success = (
+            success_per_year_country.sort_values(
+                ["Year", "Successful_Launches"],
+                ascending=[True, False]
+            )
+            .groupby("Year")
+            .first()
+            .reset_index()
+        )
