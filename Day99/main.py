@@ -726,3 +726,11 @@ if uploaded_file:
     # ORGANISATION DOMINANCE BY YEAR ========================================================================
     with col3:
         st.subheader("Organization Leading in Launches Per Year")
+
+        # Count launches per organisation per year
+        launches_per_year_org = (
+            df.dropna(subset=["Year", "Organisation"])
+            .groupby(["Year", "Organisation"])
+            .size()
+            .reset_index(name="Launch_Count")
+        )
