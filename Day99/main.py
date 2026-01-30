@@ -745,3 +745,10 @@ if uploaded_file:
             .first()
             .reset_index()
         )
+
+        st.dataframe(
+            yearly_org_launches.rename(columns={
+                "Organisation": "Leading Organisation",
+                "Launch_Count": "Number of Launches"
+            })
+        )
