@@ -734,3 +734,14 @@ if uploaded_file:
             .size()
             .reset_index(name="Launch_Count")
         )
+
+        # Find leading organisation each year
+        yearly_org_launches = (
+            launches_per_year_org.sort_values(
+                ["Year", "Launch_Count"],
+                ascending=[True, False]
+            )
+            .groupby("Year")
+            .first()
+            .reset_index()
+        )
