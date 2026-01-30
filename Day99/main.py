@@ -712,3 +712,12 @@ if uploaded_file:
             .first()
             .reset_index()
         )
+
+        st.subheader("Country Leading in Successful Launches Per Year")
+        
+        st.dataframe(
+            yearly_leader_success.rename(columns={
+                "Country": "Leading Country",
+                "Successful_Launches": "Successful Launches"
+            })
+        )
