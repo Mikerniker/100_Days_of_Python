@@ -752,3 +752,7 @@ if uploaded_file:
                 "Launch_Count": "Number of Launches"
             })
         )
+
+    col1, col2 = container.columns(2, border=True)
+        # Create year-on-year chart
+    with col1:
