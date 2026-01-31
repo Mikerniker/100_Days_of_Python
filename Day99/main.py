@@ -764,3 +764,9 @@ if uploaded_file:
             markers=True,
             title="Year-on-Year Leading Organisation by Number of Launches"
         )
+
+        fig.update_layout(
+            xaxis_title="Year",
+            yaxis_title="Number of Launches",
+            hovermode="x unified"
+        )
