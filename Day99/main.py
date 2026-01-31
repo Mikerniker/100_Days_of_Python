@@ -771,3 +771,15 @@ if uploaded_file:
             hovermode="x unified"
         )
         st.plotly_chart(fig, use_container_width=True)
+
+    with col2:
+        # Determine dominant organisations by era
+        dominant_70s_80s = (
+            yearly_org_launches[
+                (yearly_org_launches["Year"] >= 1970) &
+                (yearly_org_launches["Year"] <= 1989)
+                ]
+            .groupby("Organisation")["Launch_Count"]
+            .sum()
+            .idxmax()
+        )
