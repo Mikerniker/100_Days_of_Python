@@ -756,3 +756,11 @@ if uploaded_file:
     col1, col2 = container.columns(2, border=True)
         # Create year-on-year chart
     with col1:
+        fig = px.line(
+            yearly_org_launches,
+            x="Year",
+            y="Launch_Count",
+            color="Organisation",
+            markers=True,
+            title="Year-on-Year Leading Organisation by Number of Launches"
+        )
