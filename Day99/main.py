@@ -770,3 +770,4 @@ if uploaded_file:
             yaxis_title="Number of Launches",
             hovermode="x unified"
         )
+        st.plotly_chart(fig, use_container_width=True)
