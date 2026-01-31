@@ -783,3 +783,13 @@ if uploaded_file:
             .sum()
             .idxmax()
         )
+
+        dominant_2018_2020 = (
+            yearly_org_launches[
+                (yearly_org_launches["Year"] >= 2018) &
+                (yearly_org_launches["Year"] <= 2020)
+                ]
+            .groupby("Organisation")["Launch_Count"]
+            .sum()
+            .idxmax()
+        )
