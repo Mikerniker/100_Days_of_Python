@@ -811,3 +811,5 @@ if uploaded_file:
                 label="2018–2020 Dominant Organisation",
                 value=dominant_2018_2020
             )
+        with col_d:
+            st.image("casclogo.png", caption="Source: SpaceChina (Wikipedia, fair use)")
