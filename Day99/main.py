@@ -801,3 +801,6 @@ if uploaded_file:
                 label="1970s–1980s Dominant Organisation",
                 value=dominant_70s_80s
             )
+
+        with col_b:
+            st.image("ussrlogo.png", caption="By Flanker – www.mil.ru (Public Domain)")
