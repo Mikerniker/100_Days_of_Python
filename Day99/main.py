@@ -804,3 +804,10 @@ if uploaded_file:
 
         with col_b:
             st.image("ussrlogo.png", caption="By Flanker – www.mil.ru (Public Domain)")
+
+        col_c, col_d = st.columns(2)
+        with col_c:
+            st.metric(
+                label="2018–2020 Dominant Organisation",
+                value=dominant_2018_2020
+            )
