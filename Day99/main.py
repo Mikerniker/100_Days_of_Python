@@ -794,3 +794,10 @@ if uploaded_file:
             .idxmax()
         )
         st.subheader("Dominant Launch Organisations by Era")
+
+        col_a, col_b = st.columns(2)
+        with col_a:
+            st.metric(
+                label="1970s–1980s Dominant Organisation",
+                value=dominant_70s_80s
+            )
