@@ -49,6 +49,7 @@ COLOR_MAP_MISSIONS = {
 st.image("spacerace2.png", caption="Rocket Ships", width="stretch")
 
 st.markdown("<h1 style='text-align: center;'>The Space Race 1957-2020</h1>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center;'>Submission for Day 99 of Angela Yu's Python Course</h1>", unsafe_allow_html=True)
 
 
 uploaded_file = "mission_launches.csv"
