@@ -605,7 +605,7 @@ if uploaded_file:
         )
 
         fig = px.line(
-            a,
+            failed_launches_per_year,
             x="Year",
             y="Failure_Count",
             color="Bloc",
