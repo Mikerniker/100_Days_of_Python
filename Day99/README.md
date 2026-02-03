@@ -25,7 +25,10 @@
 
 ## Reflection
 **Approach, Challenges, Learnings, and Future Improvements:**
+**Approach**
+For this project, I chose to use Streamlit instead of Jupyter Notebook to make the analysis more interactive and closer to a real-world application. Streamlit allowed me to explore the data while also presenting insights in a simple web-based interface.
 
+I also used AI-assisted tools (ChatGPT and Claude) to help identify appropriate functions and approaches when I got stuck. Although data science is not my primary interest, this project helped me practice applying core concepts in a practical setting.
 
 
 ## Notes/Concepts/Review: 
