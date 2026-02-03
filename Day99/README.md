@@ -45,3 +45,4 @@ This project served as a strong refresher of core data analysis concepts. I revi
 - Refactor parts of the code for better readability and structure
 
 ## Notes/Concepts/Review: 
+- [Built-in Colorscales](https://plotly.com/python/builtin-colorscales/)
