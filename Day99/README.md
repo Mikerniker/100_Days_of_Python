@@ -30,5 +30,8 @@ For this project, I chose to use Streamlit instead of Jupyter Notebook to make t
 
 I also used AI-assisted tools (ChatGPT and Claude) to help identify appropriate functions and approaches when I got stuck. Although data science is not my primary interest, this project helped me practice applying core concepts in a practical setting.
 
+**Challenges**
+One of the main challenges was trying to solve the problems independently, especially since some data science concepts are still not fully intuitive to me. At times, I wasn’t 100% confident in my answers.
+Another difficulty was translating theoretical concepts into actual code, particularly when deciding which approach or visualization best answered the question being asked.
 
 ## Notes/Concepts/Review: 
