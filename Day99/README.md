@@ -34,4 +34,14 @@ I also used AI-assisted tools (ChatGPT and Claude) to help identify appropriate 
 One of the main challenges was trying to solve the problems independently, especially since some data science concepts are still not fully intuitive to me. At times, I wasn’t 100% confident in my answers.
 Another difficulty was translating theoretical concepts into actual code, particularly when deciding which approach or visualization best answered the question being asked.
 
+**Learnings**
+This project served as a strong refresher of core data analysis concepts. I revisited several lessons and rewatched parts of Angela Yu’s course to reinforce my understanding. Using Streamlit also helped me think more about how analysis is presented to an end user.
+
+**Future Improvements**
+
+- Improve confidence in data interpretation and validation of results
+- Add more explanatory text in the app to clearly communicate insights
+- Explore additional visualizations or interactivity in Streamlit
+- Refactor parts of the code for better readability and structure
+
 ## Notes/Concepts/Review: 
