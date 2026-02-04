@@ -1,7 +1,9 @@
 # Day 99 Professional Portfolio Project: Analyse and Visualise the Space Race
 
+https://github.com/user-attachments/assets/6ff2f57a-a27a-4b11-a16f-a91b25e5a583
+
 ## Overview
-- Topics: Python, Pandas  
+- Topics: Python, Pandas, Streamlit  
 
 ### The challenge
 
