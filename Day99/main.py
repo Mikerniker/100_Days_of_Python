@@ -1,9 +1,8 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
 import plotly.express as px
-import seaborn as sns
+from PIL import Image
 
 # from iso3166 import countries
 from datetime import datetime, timedelta
@@ -42,11 +41,17 @@ COLOR_MAP_MISSIONS = {
     "Partial Failure": "#FFE2AF",
     "Prelaunch Failure": "#FF986A"
 }
+# Open the image from a local path
+def open_image(path):
+     image = Image.open(path)
+     return image
 
+# Display the image in the app
+# st.image(image, caption='My PNG Image', use_container_width=True)
 # LOAD DATA
 # ============================================================================
 # Banner Section
-st.image("spacerace2.png", caption="Rocket Ships", width="stretch")
+st.image(open_image("spacerace2.png"), caption="Rocket Ships", width="stretch")
 
 st.markdown("<h1 style='text-align: center;'>The Space Race 1957-2020</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center;'>Submission for Day 99 of Angela Yu's Python Course</h1>", unsafe_allow_html=True)
@@ -180,7 +185,7 @@ if uploaded_file:
 
         # -------- LEFT COLUMN: Overall Rockets --------
         with col1:
-            st.image("rocketships.png", caption="Rocket", width=300)
+            st.image(open_image("rocketships.png"), caption="Rocket", width=300)
 
         # -------- RIGHT COLUMN: Total Rockets --------
         with col2:
