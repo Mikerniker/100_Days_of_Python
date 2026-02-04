@@ -51,7 +51,7 @@ def open_image(path):
 # LOAD DATA
 # ============================================================================
 # Banner Section
-st.image(open_image("spacerace2.png"), caption="Rocket Ships", width="stretch")
+st.image("assets/spacerace2.png", caption="Rocket Ships",  use_container_width=True)
 
 st.markdown("<h1 style='text-align: center;'>The Space Race 1957-2020</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center;'>Submission for Day 99 of Angela Yu's Python Course</h1>", unsafe_allow_html=True)
@@ -185,7 +185,7 @@ if uploaded_file:
 
         # -------- LEFT COLUMN: Overall Rockets --------
         with col1:
-            st.image(open_image("rocketships.png"), caption="Rocket", width=300)
+            st.image(open_image("assets/rocketships.png"), caption="Rocket", width=300)
 
         # -------- RIGHT COLUMN: Total Rockets --------
         with col2:
@@ -809,7 +809,7 @@ if uploaded_file:
             )
 
         with col_b:
-            st.image(open_image("ussrlogo.png"), caption="By Flanker – www.mil.ru (Public Domain)")
+            st.image(open_image("assets/ussrlogo.png"), caption="By Flanker – www.mil.ru (Public Domain)")
 
         col_c, col_d = st.columns(2)
         with col_c:
@@ -818,4 +818,4 @@ if uploaded_file:
                 value=dominant_2018_2020
             )
         with col_d:
-            st.image(open_image("casclogo.png"), caption="Source: SpaceChina (Wikipedia, fair use)")
+            st.image(open_image("assets/casclogo.png"), caption="Source: SpaceChina (Wikipedia, fair use)")
