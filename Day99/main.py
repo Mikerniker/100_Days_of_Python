@@ -809,7 +809,7 @@ if uploaded_file:
             )
 
         with col_b:
-            st.image("ussrlogo.png", caption="By Flanker – www.mil.ru (Public Domain)")
+            st.image(open_image("ussrlogo.png"), caption="By Flanker – www.mil.ru (Public Domain)")
 
         col_c, col_d = st.columns(2)
         with col_c:
@@ -818,4 +818,4 @@ if uploaded_file:
                 value=dominant_2018_2020
             )
         with col_d:
-            st.image("casclogo.png", caption="Source: SpaceChina (Wikipedia, fair use)")
+            st.image(open_image("casclogo.png"), caption="Source: SpaceChina (Wikipedia, fair use)")
