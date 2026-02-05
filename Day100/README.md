@@ -8,7 +8,12 @@
 
 - Extract insights from combining US census data and the 
 Washington Post's database on deaths by police in the United States.
-You will analyse this dataset together with US census data on poverty rate, high school graduation rate, median household income, and racial demographics. This way we better understand social trends and what is going on with the fatal use of force by the police in the United States.
+Analyze this datasets on:
+  - Poverty rate
+  - High school graduation rate
+  - Median household income, 
+  - Racial demographics.
+  
 ### Functionality
 
 
