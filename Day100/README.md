@@ -19,7 +19,7 @@ Analyze this datasets on:
 
 ### Links
 
-- Solution URL: [Analyse and Visualise the Space Race](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day100)
+- Solution URL: [Analyse and Visualise deaths by police in the U.S.](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day100)
 
 ## Reflection
 **Approach, Challenges, Learnings, and Future Improvements:**
