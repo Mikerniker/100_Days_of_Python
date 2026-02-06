@@ -49,3 +49,18 @@ df_fatalities = pd.read_csv('Deaths_by_Police_US.csv', encoding="windows-1252")
 
 all_data = [df_hh_income, df_pct_poverty, df_pct_completed_hs,
             df_share_race_city, df_fatalities]
+
+
+# PRELIMINARY DATA EXPLORATION ========================================================================
+# *What is the shape of the DataFrames?
+# *How many rows and columns do they have?
+# *What are the column names?
+# *Are there any NaN values or duplicates?
+
+
+container = st.container(border=True)
+
+col1, col2 = container.columns(2, border=True)
+
+with col1:
+    st.image("./assets/police_1.png", caption="police man with baton")
