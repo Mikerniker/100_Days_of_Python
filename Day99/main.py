@@ -45,7 +45,7 @@ COLOR_MAP_MISSIONS = {
 # LOAD DATA
 # ============================================================================
 # Banner Section
-st.image(IMG_DIR / "spacerace2.png", caption="Rocket Ships",  use_container_width=True)
+st.image(IMG_DIR / "spacerace2.png", caption="Rocket Ships",  width="stretch")
 
 st.markdown("<h1 style='text-align: center;'>The Space Race 1957-2020</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center;'>Submission for Day 99 of Angela Yu's Python Course</h3>", unsafe_allow_html=True)
