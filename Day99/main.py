@@ -3,9 +3,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
 from PIL import Image
+from pathlib import Path
 
-# from iso3166 import countries
-from datetime import datetime, timedelta
+BASE_DIR = Path(__file__).resolve().parent
+IMG_DIR = BASE_DIR / "assets"
 
 
 # CONFIGURATION ============================================================================
