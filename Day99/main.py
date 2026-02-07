@@ -43,16 +43,16 @@ COLOR_MAP_MISSIONS = {
     "Prelaunch Failure": "#FF986A"
 }
 # Open the image from a local path
-def open_image(path):
-     image = Image.open(path)
-     return image
+# def open_image(path):
+#      image = Image.open(path)
+#      return image
 
 # Display the image in the app
 # st.image(image, caption='My PNG Image', use_container_width=True)
 # LOAD DATA
 # ============================================================================
 # Banner Section
-st.image("assets/spacerace2.png", caption="Rocket Ships",  use_container_width=True)
+st.image(IMG_DIR / "spacerace2.png", caption="Rocket Ships",  use_container_width=True)
 
 st.markdown("<h1 style='text-align: center;'>The Space Race 1957-2020</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center;'>Submission for Day 99 of Angela Yu's Python Course</h1>", unsafe_allow_html=True)
@@ -186,8 +186,7 @@ if uploaded_file:
 
         # -------- LEFT COLUMN: Overall Rockets --------
         with col1:
-            st.image(open_image("assets/rocketships.png"), caption="Rocket", width=300)
-
+            st.image(IMG_DIR / "rocketships.png", caption="Rocket", width=300)
         # -------- RIGHT COLUMN: Total Rockets --------
         with col2:
             st.subheader("Total Rockets")
@@ -810,8 +809,7 @@ if uploaded_file:
             )
 
         with col_b:
-            st.image(open_image("assets/ussrlogo.png"), caption="By Flanker – www.mil.ru (Public Domain)")
-
+            st.image(IMG_DIR / "ussrlogo.png", caption="By Flanker – www.mil.ru (Public Domain)")
         col_c, col_d = st.columns(2)
         with col_c:
             st.metric(
@@ -819,4 +817,4 @@ if uploaded_file:
                 value=dominant_2018_2020
             )
         with col_d:
-            st.image(open_image("assets/casclogo.png"), caption="Source: SpaceChina (Wikipedia, fair use)")
+            st.image(IMG_DIR / "casclogo.png", caption="Source: SpaceChina (Wikipedia, fair use)")
