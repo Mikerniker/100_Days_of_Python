@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
-from PIL import Image
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -43,15 +42,13 @@ COLOR_MAP_MISSIONS = {
     "Prelaunch Failure": "#FF986A"
 }
 
-# Display the image in the app
-# st.image(image, caption='My PNG Image', use_container_width=True)
 # LOAD DATA
 # ============================================================================
 # Banner Section
 st.image(IMG_DIR / "spacerace2.png", caption="Rocket Ships",  use_container_width=True)
 
 st.markdown("<h1 style='text-align: center;'>The Space Race 1957-2020</h1>", unsafe_allow_html=True)
-st.markdown("<h3 style='text-align: center;'>Submission for Day 99 of Angela Yu's Python Course</h1>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center;'>Submission for Day 99 of Angela Yu's Python Course</h3>", unsafe_allow_html=True)
 
 
 uploaded_file = "mission_launches.csv"
