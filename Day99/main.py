@@ -42,10 +42,6 @@ COLOR_MAP_MISSIONS = {
     "Partial Failure": "#FFE2AF",
     "Prelaunch Failure": "#FF986A"
 }
-# Open the image from a local path
-# def open_image(path):
-#      image = Image.open(path)
-#      return image
 
 # Display the image in the app
 # st.image(image, caption='My PNG Image', use_container_width=True)
