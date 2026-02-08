@@ -93,3 +93,11 @@ with col2:
     with st.expander("**Data Cleaning**"):
         for i in range(len(all_data)):
             all_data[i] = all_data[i].fillna(0)
+
+        st.write("**Are there any NaN values or duplicates?**")
+        for df in all_data:
+            total_nans = df.isna().sum().sum()
+            st.write(f"There are {total_nans} missing (NaN) values in the entire DataFrame")
+
+            total_dupes = df.duplicated().sum()
+            st.write(f"There are {total_dupes} duplicate rows")
