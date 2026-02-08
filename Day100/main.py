@@ -122,3 +122,10 @@ with col1:
         .replace("-", np.nan)
         .astype(float)
     )
+
+    poverty_by_state = (
+        df_pct_poverty
+        .groupby("Geographic Area", as_index=False)
+        .agg({"poverty_rate": "mean"})
+        .sort_values(by="poverty_rate", ascending=False)
+    )
