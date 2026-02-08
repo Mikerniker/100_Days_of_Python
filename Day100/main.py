@@ -87,3 +87,9 @@ with col2:
             with st.expander(f"{name} columns & preview"):
                 st.write(list(df.columns))
                 st.dataframe(df.head())
+
+    ## Data Cleaning - Check for Missing Values and Duplicates
+    # Consider how to deal with the NaN values. Perhaps substituting 0 is appropriate.
+    with st.expander("**Data Cleaning**"):
+        for i in range(len(all_data)):
+            all_data[i] = all_data[i].fillna(0)
