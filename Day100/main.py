@@ -129,3 +129,17 @@ with col1:
         .agg({"poverty_rate": "mean"})
         .sort_values(by="poverty_rate", ascending=False)
     )
+
+    fig, ax = plt.subplots(figsize=(14, 6))
+
+    ax.bar(
+        poverty_by_state["Geographic Area"],
+        poverty_by_state["poverty_rate"]
+    )
+
+    ax.set_ylabel("Poverty Rate (%)")
+    ax.set_xlabel("US State")
+    ax.set_title("Poverty Rate by US State (Highest to Lowest)")
+    plt.xticks(rotation=90)
+
+    st.pyplot(fig)
