@@ -72,3 +72,11 @@ col1, col2 = container.columns(2, border=True)
 
 with col1:
     st.image("./assets/police_1.png", caption="police man with baton")
+
+with col2:
+
+    st.write("**What is the shape of df_data?**")
+
+    with st.expander("How many rows and columns does it have?"):
+        for name, df in dataframes.items():
+            st.write(f"**{name}**: This has {df.shape[0]} rows and {df.shape[1]} columns")
