@@ -101,3 +101,24 @@ with col2:
 
             total_dupes = df.duplicated().sum()
             st.write(f"There are {total_dupes} duplicate rows")
+
+st.markdown("<h2 style='text-align: center;'>Poverty, Education, and Mental Health</h2>", unsafe_allow_html=True)
+
+
+# Chart the Poverty Rate in each US State
+# Create a bar chart that ranks the poverty rate from highest to
+# lowest by US state. Which state has the highest poverty rate?
+# Which state has the lowest poverty rate?  Bar Plot
+  # PRICE AND DOMINANCE OVER TIME
+    # ========================================================================
+col1, col2 = st.columns(2)
+
+with col1:
+    st.subheader("Chart the Poverty Rate in each US State")
+    # st.write(f"Chart the Poverty Rate in each US State")
+
+    df_pct_poverty["poverty_rate"] = (
+        df_pct_poverty["poverty_rate"]
+        .replace("-", np.nan)
+        .astype(float)
+    )
