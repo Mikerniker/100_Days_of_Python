@@ -143,3 +143,15 @@ with col1:
     plt.xticks(rotation=90)
 
     st.pyplot(fig)
+
+    highest = poverty_by_state.iloc[0]
+    lowest = poverty_by_state.iloc[-1]
+
+    st.write(
+        f"Highest poverty rate: **{highest['Geographic Area']}** "
+        f"({highest['poverty_rate']:.1f}%)"
+    )
+    st.write(
+        f"Lowest poverty rate: **{lowest['Geographic Area']}** "
+        f"({lowest['poverty_rate']:.1f}%)"
+    )
