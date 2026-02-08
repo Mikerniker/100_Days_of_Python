@@ -80,3 +80,10 @@ with col2:
     with st.expander("How many rows and columns does it have?"):
         for name, df in dataframes.items():
             st.write(f"**{name}**: This has {df.shape[0]} rows and {df.shape[1]} columns")
+
+    with st.expander("**What are the column names?**"):
+        # st.write("**What are the column names?**")
+        for name, df in dataframes.items():
+            with st.expander(f"{name} columns & preview"):
+                st.write(list(df.columns))
+                st.dataframe(df.head())
