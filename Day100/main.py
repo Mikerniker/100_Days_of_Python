@@ -197,3 +197,13 @@ with col2:
 
     highest = state_graduates.iloc[0]
     lowest = state_graduates.iloc[-1]
+
+    st.write(
+        f"**Highest graduation rate:** {highest['Geographic Area']} "
+        f"({highest['percent_completed_hs']:.1f}%)"
+    )
+
+    st.write(
+        f"**Lowest graduation rate:** {lowest['Geographic Area']} "
+        f"({lowest['percent_completed_hs']:.1f}%)"
+    )
