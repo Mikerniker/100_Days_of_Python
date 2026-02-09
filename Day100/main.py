@@ -194,3 +194,6 @@ with col2:
     plt.xticks(rotation=90)
 
     st.pyplot(fig)
+
+    highest = state_graduates.iloc[0]
+    lowest = state_graduates.iloc[-1]
