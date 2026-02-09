@@ -155,3 +155,16 @@ with col1:
         f"Lowest poverty rate: **{lowest['Geographic Area']}** "
         f"({lowest['poverty_rate']:.1f}%)"
     )
+
+
+with col2:
+    #============= High School Graduation Rate
+    # Chart the High School Graduation Rate by US State
+    # Show the High School Graduation Rate in ascending order of US States.
+    # Which state has the lowest high school graduation rate?
+    # Which state has the highest?
+    df_pct_completed_hs["percent_completed_hs"] = (
+        df_pct_completed_hs["percent_completed_hs"]
+        .replace("-", np.nan)
+        .astype(float)
+    )
