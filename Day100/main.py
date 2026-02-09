@@ -187,3 +187,10 @@ with col2:
         state_graduates["Geographic Area"],
         state_graduates["percent_completed_hs"]
     )
+
+    ax.set_ylabel("Graduation Rate (%)")
+    ax.set_xlabel("US State")
+    ax.set_title("Average High School Graduation Rate by State (Highest to Lowest)")
+    plt.xticks(rotation=90)
+
+    st.pyplot(fig)
