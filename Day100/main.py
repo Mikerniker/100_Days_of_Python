@@ -207,3 +207,13 @@ with col2:
         f"**Lowest graduation rate:** {lowest['Geographic Area']} "
         f"({lowest['percent_completed_hs']:.1f}%)"
     )
+
+# Visualise the Relationship between Poverty Rates and High School Graduation Rates
+# Create a line chart with two y-axes to show if the rations of poverty and high school
+# graduation move together.
+
+    # ========================================================================
+col1, col2 = st.columns(2)
+
+with col1:
+    pass
