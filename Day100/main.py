@@ -168,3 +168,9 @@ with col2:
         .replace("-", np.nan)
         .astype(float)
     )
+
+    state_graduates = (
+        df_pct_completed_hs
+        .groupby("Geographic Area", as_index=False)["percent_completed_hs"]
+        .mean()
+    )
