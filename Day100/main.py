@@ -174,3 +174,8 @@ with col2:
         .groupby("Geographic Area", as_index=False)["percent_completed_hs"]
         .mean()
     )
+
+    state_graduates = state_graduates.sort_values(
+        by="percent_completed_hs",
+        ascending=False
+    )
