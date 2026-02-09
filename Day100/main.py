@@ -179,3 +179,11 @@ with col2:
         by="percent_completed_hs",
         ascending=False
     )
+
+    st.subheader("High School Graduation Rate by US State")
+
+    fig, ax = plt.subplots(figsize=(14, 6))
+    ax.bar(
+        state_graduates["Geographic Area"],
+        state_graduates["percent_completed_hs"]
+    )
