@@ -221,3 +221,9 @@ with col1:
         .groupby("Geographic Area", as_index=False)
         .agg({"poverty_rate": "mean"})
     )
+
+    hs_state = (
+        df_pct_completed_hs
+        .groupby("Geographic Area", as_index=False)
+        .agg({"percent_completed_hs": "mean"})
+    )
