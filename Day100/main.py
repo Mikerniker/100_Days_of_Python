@@ -227,3 +227,10 @@ with col1:
         .groupby("Geographic Area", as_index=False)
         .agg({"percent_completed_hs": "mean"})
     )
+
+    state_data = pd.merge(
+        poverty_state,
+        hs_state,
+        on="Geographic Area",
+        how="inner"
+    )
