@@ -216,4 +216,8 @@ with col2:
 col1, col2 = st.columns(2)
 
 with col1:
-    pass
+    poverty_state = (
+        df_pct_poverty
+        .groupby("Geographic Area", as_index=False)
+        .agg({"poverty_rate": "mean"})
+    )
