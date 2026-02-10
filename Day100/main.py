@@ -239,3 +239,9 @@ with col1:
         by="poverty_rate",
         ascending=False
     )
+
+    st.subheader(
+        "Relationship Between Poverty Rates and High School Graduation Rates"
+    )
+
+    fig, ax1 = plt.subplots(figsize=(14, 6))
