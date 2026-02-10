@@ -266,3 +266,12 @@ with col1:
         label="High School Graduation Rate (%)"
     )
     ax2.set_ylabel("High School Graduation Rate (%)")
+
+    plt.title(
+        "Do Poverty Rates and High School Graduation Rates Move Together?"
+    )
+
+    # plt.xticks(rotation=90)
+    ax1.tick_params(axis='x', rotation=90)
+
+    st.pyplot(fig)
