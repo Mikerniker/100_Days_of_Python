@@ -275,3 +275,9 @@ with col1:
     ax1.tick_params(axis='x', rotation=90)
 
     st.pyplot(fig)
+
+    correlation = state_data["poverty_rate"].corr(
+        state_data["percent_completed_hs"]
+    )
+
+    st.write(f"Correlation between poverty and graduation rate: **{correlation:.2f}**")
