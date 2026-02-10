@@ -245,3 +245,24 @@ with col1:
     )
 
     fig, ax1 = plt.subplots(figsize=(14, 6))
+
+    # Poverty rate (left axis)
+    ax1.plot(
+        state_data["Geographic Area"],
+        state_data["poverty_rate"],
+        label="Poverty Rate (%)"
+    )
+    ax1.set_ylabel("Poverty Rate (%)")
+    ax1.set_xlabel("US State")
+
+    # Second y-axis
+    ax2 = ax1.twinx()
+
+    # High school graduation rate (right axis)
+    ax2.plot(
+        state_data["Geographic Area"],
+        state_data["percent_completed_hs"],
+        linestyle="--",
+        label="High School Graduation Rate (%)"
+    )
+    ax2.set_ylabel("High School Graduation Rate (%)")
