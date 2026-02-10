@@ -234,3 +234,8 @@ with col1:
         on="Geographic Area",
         how="inner"
     )
+
+    state_data = state_data.sort_values(
+        by="poverty_rate",
+        ascending=False
+    )
