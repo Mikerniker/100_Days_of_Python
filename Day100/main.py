@@ -281,8 +281,19 @@ with col1:
     )
 
     st.write(f"Correlation between poverty and graduation rate: **{correlation:.2f}**")
-    
+
 with col2:
     st.subheader("Poverty Rate vs High School Graduation Rate (Scatter + KDE)")
 
     sns.set_theme(style="whitegrid")
+
+    joint_fig = sns.jointplot(
+        data=state_data,
+        x="poverty_rate",
+        y="percent_completed_hs",
+        kind="kde",
+        fill=True,
+        alpha=0.5,
+        height=7,
+        color="teal"
+    )
