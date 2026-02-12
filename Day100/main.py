@@ -304,3 +304,5 @@ with col2:
         alpha=0.4,
         s=30  # size of points
     )
+
+    joint_fig.set_axis_labels("Poverty Rate (%)", "High School Graduation Rate (%)")
