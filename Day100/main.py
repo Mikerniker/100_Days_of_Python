@@ -312,3 +312,5 @@ with col2:
         y=1.03,
         fontsize=14
     )
+    
+    st.pyplot(joint_fig.fig)
