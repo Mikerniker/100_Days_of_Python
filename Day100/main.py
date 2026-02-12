@@ -281,3 +281,8 @@ with col1:
     )
 
     st.write(f"Correlation between poverty and graduation rate: **{correlation:.2f}**")
+    
+with col2:
+    st.subheader("Poverty Rate vs High School Graduation Rate (Scatter + KDE)")
+
+    sns.set_theme(style="whitegrid")
