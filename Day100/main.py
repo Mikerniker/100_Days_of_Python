@@ -306,3 +306,9 @@ with col2:
     )
 
     joint_fig.set_axis_labels("Poverty Rate (%)", "High School Graduation Rate (%)")
+
+    joint_fig.fig.suptitle(
+        "Relationship Between Poverty and Graduation Rates",
+        y=1.03,
+        fontsize=14
+    )
