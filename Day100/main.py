@@ -297,3 +297,10 @@ with col2:
         height=7,
         color="teal"
     )
+
+    joint_fig.plot_joint(
+        sns.scatterplot,
+        color="black",
+        alpha=0.4,
+        s=30  # size of points
+    )
