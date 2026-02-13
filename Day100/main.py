@@ -332,3 +332,9 @@ with col1:
         scatter_kws={'alpha': 0.5},
         line_kws={'color': 'red'}
     )
+
+    ax.set_title("Linear Regression Analysis")
+    ax.set_xlabel("Poverty Rate (%)")
+    ax.set_ylabel("High School Graduation Rate (%)")
+
+    st.pyplot(fig)
