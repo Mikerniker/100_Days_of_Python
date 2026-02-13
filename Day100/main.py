@@ -338,3 +338,9 @@ with col1:
     ax.set_ylabel("High School Graduation Rate (%)")
 
     st.pyplot(fig)
+
+    st.write("The scatter and KDE jointplot shows a clear negative relationship "
+             "between poverty rates and high school graduation rates. "
+             "States with higher poverty rates tend to cluster at lower graduation rates, "
+             "while states with lower poverty rates show higher graduation outcomes. "
+             "The KDE contours reinforce this inverse relationship.")
