@@ -314,3 +314,21 @@ with col2:
     )
     
     st.pyplot(joint_fig.fig)
+
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.subheader("Linear Regression: Poverty vs. Graduation Rate (Regplot)")
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+
+    # Create the regression plot
+    sns.regplot(
+        data=state_data,
+        x="poverty_rate",
+        y="percent_completed_hs",
+        ax=ax,
+        scatter_kws={'alpha': 0.5},
+        line_kws={'color': 'red'}
+    )
