@@ -344,3 +344,7 @@ with col1:
              "States with higher poverty rates tend to cluster at lower graduation rates, "
              "while states with lower poverty rates show higher graduation outcomes. "
              "The KDE contours reinforce this inverse relationship.")
+    
+with col2:
+#alternative Using sns.lmplot()
+    st.subheader("Linear Regression: Poverty vs. Graduation Rate (lmplot)")
