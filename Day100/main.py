@@ -356,3 +356,9 @@ with col2:
         height=6,
         aspect=1.5
     )
+
+    lm_plot.set_axis_labels("Poverty Rate (%)", "HS Graduation Rate (%)")
+    lm_plot.fig.suptitle("Regression Analysis via lmplot", y=1.05)
+
+    # You must pass the underlying figure object to Streamlit
+    st.pyplot(lm_plot.fig)
