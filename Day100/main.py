@@ -348,3 +348,11 @@ with col1:
 with col2:
 #alternative Using sns.lmplot()
     st.subheader("Linear Regression: Poverty vs. Graduation Rate (lmplot)")
+
+    lm_plot = sns.lmplot(
+        data=state_data,
+        x="poverty_rate",
+        y="percent_completed_hs",
+        height=6,
+        aspect=1.5
+    )
