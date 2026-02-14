@@ -392,3 +392,7 @@ with col1:
     unarmed_count = counts.get('unarmed', 0)
     gun_count = counts.get('gun', 0)
     armed_count = total - unarmed_count
+
+    armed_pct = round((armed_count / total) * 100, 1)
+    unarmed_pct = round((unarmed_count / total) * 100, 1)
+    gun_pct = round((gun_count/total) * 100, 1)
