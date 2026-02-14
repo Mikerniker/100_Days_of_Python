@@ -362,3 +362,12 @@ with col2:
 
     # You must pass the underlying figure object to Streamlit
     st.pyplot(lm_plot.fig)
+
+col1, col2 = st.columns(2)
+with col1:
+    # Were People Armed?
+    # In what percentage of police killings were people armed?
+    # Create chart that show what kind of weapon (if any) the deceased was carrying.
+    # How many of the people killed by police were armed with guns versus unarmed?
+
+    df_fatalities['armed'] = df_fatalities['armed'].str.lower()
