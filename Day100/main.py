@@ -413,3 +413,8 @@ with col2:
 
     counts = df_fatalities['signs_of_mental_illness'].value_counts()
     counts_labeled = counts.rename(index=mental_health_map)
+
+    mentally_ill = counts.get(True, 0)
+    total = counts.sum()
+
+    pct_mental_illness = round((mentally_ill / total) * 100, 1)
