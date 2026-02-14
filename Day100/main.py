@@ -410,3 +410,6 @@ with col2:
         True: "Diagnosed / Showing Mental Illness",
         False: "No Signs of Mental Illness"
     }
+
+    counts = df_fatalities['signs_of_mental_illness'].value_counts()
+    counts_labeled = counts.rename(index=mental_health_map)
