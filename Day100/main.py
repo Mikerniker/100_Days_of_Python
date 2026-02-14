@@ -396,3 +396,8 @@ with col1:
     armed_pct = round((armed_count / total) * 100, 1)
     unarmed_pct = round((unarmed_count / total) * 100, 1)
     gun_pct = round((gun_count/total) * 100, 1)
+
+    st.write(f"Out of {total} police killings:")
+    st.write(f"- There were {armed_pct}% or {armed_count} individuals who were armed")
+    st.write(f"- There were {unarmed_pct}% or {unarmed_count} individuals who were unarmed")
+    st.write(f"- {gun_pct}% of the deceased were armed with guns")
