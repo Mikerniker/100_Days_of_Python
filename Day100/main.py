@@ -388,3 +388,7 @@ with col1:
 
     st.plotly_chart(fig, width="stretch")
 
+    total = counts.sum()
+    unarmed_count = counts.get('unarmed', 0)
+    gun_count = counts.get('gun', 0)
+    armed_count = total - unarmed_count
