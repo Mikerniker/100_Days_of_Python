@@ -433,3 +433,8 @@ with col2:
     )
 
     st.plotly_chart(fig, use_container_width=True)
+
+    st.write(
+        f"Out of **{total}** available records on mental health, "
+        f"**{pct_mental_illness}%** involved individuals showing signs of mental illness."
+    )
