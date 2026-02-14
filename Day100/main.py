@@ -371,3 +371,20 @@ with col1:
     # How many of the people killed by police were armed with guns versus unarmed?
 
     df_fatalities['armed'] = df_fatalities['armed'].str.lower()
+
+    counts = df_fatalities['armed'].value_counts()
+
+    fig = px.pie(
+                 values=counts.values,
+                 title="Weapon Type of Deceased Individuals in Police Killings",
+                 names=counts.index,
+                  )
+    
+    fig.update_traces(
+        textposition='inside',
+        textinfo='percent+label',
+        textfont_size=15
+    )
+
+    st.plotly_chart(fig, width="stretch")
+
