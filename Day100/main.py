@@ -401,3 +401,12 @@ with col1:
     st.write(f"- There were {armed_pct}% or {armed_count} individuals who were armed")
     st.write(f"- There were {unarmed_pct}% or {unarmed_count} individuals who were unarmed")
     st.write(f"- {gun_pct}% of the deceased were armed with guns")
+
+with col2:
+    # Mental Illness and Police Killings
+    # What percentage of people killed by police have been diagnosed with a mental illness?
+
+    mental_health_map = {
+        True: "Diagnosed / Showing Mental Illness",
+        False: "No Signs of Mental Illness"
+    }
