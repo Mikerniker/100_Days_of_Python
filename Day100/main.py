@@ -418,3 +418,18 @@ with col2:
     total = counts.sum()
 
     pct_mental_illness = round((mentally_ill / total) * 100, 1)
+
+    fig = px.pie(
+        values=counts_labeled.values,
+        names=counts_labeled.index,
+        title="Mental Illness Among People Killed by Police",
+
+    )
+
+    fig.update_traces(
+        textposition='inside',
+        textinfo='percent+label',
+        textfont_size=14
+    )
+
+    st.plotly_chart(fig, use_container_width=True)
