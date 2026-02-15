@@ -33,3 +33,12 @@ percent_under_25 = round((under_25_count / total_people) * 100, 1)
 container.write(f"Total people with known age: {total_people}")
 container.write(f"People under 25: {under_25_count}")
 container.write(f"**{percent_under_25}% of people killed were under 25 years old**")
+
+# -----------------------------------------------
+# Create a Box Plot Showing the Age and Manner of Death
+# Break out the data by gender using `df_fatalities`. Is there a difference between
+# men and women in the manner of death?
+df_fatalities['gender_label'] = df_fatalities['gender'].map({
+    'M': 'Men',
+    'F': 'Women'
+})
