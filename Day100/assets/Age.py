@@ -21,3 +21,7 @@ st.title("How Old Were the People Killed?")
 # Create a histogram and KDE plot that shows the distribution of ages of the people killed by police.
 # Create a seperate KDE plot for each race. Is there a difference between the distributions?
 # Ensure age is numeric
+
+container = st.container(border=True)
+container.subheader("What percentage of people killed were under 25 years old?")
+df_fatalities['age'] = pd.to_numeric(df_fatalities['age'], errors='coerce')
