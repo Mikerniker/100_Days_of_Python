@@ -25,3 +25,7 @@ st.title("How Old Were the People Killed?")
 container = st.container(border=True)
 container.subheader("What percentage of people killed were under 25 years old?")
 df_fatalities['age'] = pd.to_numeric(df_fatalities['age'], errors='coerce')
+
+total_people = df_fatalities['age'].notna().sum()
+under_25_count = (df_fatalities['age'] < 25).sum()
+percent_under_25 = round((under_25_count / total_people) * 100, 1)
