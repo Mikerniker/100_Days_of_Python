@@ -29,3 +29,7 @@ df_fatalities['age'] = pd.to_numeric(df_fatalities['age'], errors='coerce')
 total_people = df_fatalities['age'].notna().sum()
 under_25_count = (df_fatalities['age'] < 25).sum()
 percent_under_25 = round((under_25_count / total_people) * 100, 1)
+
+container.write(f"Total people with known age: {total_people}")
+container.write(f"People under 25: {under_25_count}")
+container.write(f"**{percent_under_25}% of people killed were under 25 years old**")
