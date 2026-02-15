@@ -52,3 +52,13 @@ fig = px.box(
     points='all',
     title='Age Distribution by Manner of Death and Gender'
 )
+
+fig.update_layout(
+    xaxis_title='Manner of Death',
+    yaxis_title='Age',
+)
+
+st.plotly_chart(fig, use_container_width=True)
+st.write("Men account for the majority of deaths across all manners, "
+         "with wider age distributions. Women are also less likely "
+         "to be both shot and tasered.")
