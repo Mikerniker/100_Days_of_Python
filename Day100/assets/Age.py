@@ -42,3 +42,13 @@ df_fatalities['gender_label'] = df_fatalities['gender'].map({
     'M': 'Men',
     'F': 'Women'
 })
+
+
+fig = px.box(
+    df_fatalities,
+    x='manner_of_death',
+    y='age',
+    color='gender_label',
+    points='all',
+    title='Age Distribution by Manner of Death and Gender'
+)
