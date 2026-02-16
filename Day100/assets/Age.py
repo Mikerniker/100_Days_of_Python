@@ -82,3 +82,16 @@ fig.update_layout(
 )
 
 st.plotly_chart(fig, use_container_width=True)
+
+st.subheader("KDE plot: Distribution of ages of the people killed by police.")
+
+#KDE PLOT AGE
+
+fig, ax = plt.subplots(dpi=200)
+
+sns.kdeplot(
+    data=df_fatalities,
+    x='age',
+    fill=True,
+    ax=ax
+)
