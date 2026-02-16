@@ -95,3 +95,9 @@ sns.kdeplot(
     fill=True,
     ax=ax
 )
+
+ax.set_title('KDE: Age Distribution of People Killed by Police')
+ax.set_xlabel('Age')
+
+st.pyplot(fig)
+plt.close()
