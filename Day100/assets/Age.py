@@ -75,3 +75,10 @@ fig = px.histogram(
     marginal='rug',  # KDE-like density hint
     title='Age Distribution of People Killed by Police'
 )
+
+fig.update_layout(
+    xaxis_title='Age',
+    yaxis_title='Percentage (%)'
+)
+
+st.plotly_chart(fig, use_container_width=True)
