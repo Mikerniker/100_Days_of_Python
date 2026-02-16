@@ -62,3 +62,16 @@ st.plotly_chart(fig, use_container_width=True)
 st.write("Men account for the majority of deaths across all manners, "
          "with wider age distributions. Women are also less likely "
          "to be both shot and tasered.")
+
+
+st.subheader("Histogram plot that shows the distribution of ages of the people killed by police.")
+
+#Histogram
+fig = px.histogram(
+    df_fatalities,
+    x='age',
+    nbins=30,
+    histnorm='percent',
+    marginal='rug',  # KDE-like density hint
+    title='Age Distribution of People Killed by Police'
+)
