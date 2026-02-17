@@ -106,3 +106,15 @@ plt.close()
 st.subheader("KDE plot for each race.")
 #KDE PLOT RACE
 df_fatalities['race_label'] = df_fatalities['race'].map(race_map)
+
+fig, ax = plt.subplots(figsize=(8, 5), dpi=200)
+
+sns.kdeplot(
+    data=df_fatalities,
+    x='age',
+    hue='race_label',   # ✅ use mapped labels
+    fill=True,
+    common_norm=False,
+    alpha=0.4,
+    ax=ax
+)
