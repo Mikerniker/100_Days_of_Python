@@ -101,3 +101,8 @@ ax.set_xlabel('Age')
 
 st.pyplot(fig)
 plt.close()
+
+# ----------------------------------------------------
+st.subheader("KDE plot for each race.")
+#KDE PLOT RACE
+df_fatalities['race_label'] = df_fatalities['race'].map(race_map)
