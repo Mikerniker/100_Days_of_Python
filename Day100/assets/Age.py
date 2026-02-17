@@ -118,3 +118,10 @@ sns.kdeplot(
     alpha=0.4,
     ax=ax
 )
+
+
+ax.set_title('Age Distribution by Race')
+ax.set_xlabel('Age')
+
+st.pyplot(fig)
+plt.close()
