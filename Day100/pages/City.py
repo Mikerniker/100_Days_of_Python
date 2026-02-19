@@ -18,3 +18,13 @@ race_map = {
 # In Which Cities Do the Most Police Killings Take Place?
 # Create a chart ranking the top 10 cities with the most police killings.
 # Which cities are the most dangerous?
+
+
+city_counts = (
+    df_fatalities['city']
+    .value_counts()
+    .head(10)
+)
+
+st.subheader("Top 10 Cities with the Most Police Killings")
+st.bar_chart(city_counts, horizontal=True, sort=False)
