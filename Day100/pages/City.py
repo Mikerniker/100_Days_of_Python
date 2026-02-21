@@ -44,3 +44,7 @@ race_dist = (
 race_dist = race_dist.loc[top_10_city_names]
 
 race_dist = race_dist.rename(columns=race_map)
+
+race_share = race_dist.div(race_dist.sum(axis=1), axis=0) * 100
+
+st.subheader("Rate of Police Killings by Race in the Top 10 Cities")
