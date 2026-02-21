@@ -28,3 +28,15 @@ city_counts = (
 
 st.subheader("Top 10 Cities with the Most Police Killings")
 st.bar_chart(city_counts, horizontal=True, sort=False)
+
+
+top_10_city_names = city_counts.index
+
+top_cities_df = df_fatalities[df_fatalities['city'].isin(top_10_city_names)]
+
+race_dist = (
+    top_cities_df
+    .groupby(['city', 'race'])
+    .size()
+    .unstack(fill_value=0)
+)
