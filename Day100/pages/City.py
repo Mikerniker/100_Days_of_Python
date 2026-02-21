@@ -40,3 +40,7 @@ race_dist = (
     .size()
     .unstack(fill_value=0)
 )
+
+race_dist = race_dist.loc[top_10_city_names]
+
+race_dist = race_dist.rename(columns=race_map)
