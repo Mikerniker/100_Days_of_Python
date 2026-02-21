@@ -48,3 +48,9 @@ race_dist = race_dist.rename(columns=race_map)
 race_share = race_dist.div(race_dist.sum(axis=1), axis=0) * 100
 
 st.subheader("Rate of Police Killings by Race in the Top 10 Cities")
+
+st.bar_chart(
+    race_share,
+    stack=True,   # ensure it shows percentages rather than raw counts
+    sort=False
+)
