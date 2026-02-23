@@ -54,3 +54,8 @@ st.bar_chart(
     stack=True,   # ensure it shows percentages rather than raw counts
     sort=False
 )
+
+# Create a Choropleth Map of Police Killings by US State
+# Which states are the most dangerous? Compare your map with your previous chart.
+# Are these the same states with high degrees of poverty?
+st.subheader("Choropleth Map of Police Killings by US State")
