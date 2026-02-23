@@ -69,3 +69,6 @@ state_counts = (
 state_counts.columns = ['state', 'killings']
 
 top_10_states = state_counts.head(10)
+
+st.write("The most dangerous states (by total police killings):")
+st.dataframe(top_10_states)
