@@ -65,3 +65,7 @@ state_counts = (
     .value_counts()
     .reset_index()
 )
+
+state_counts.columns = ['state', 'killings']
+
+top_10_states = state_counts.head(10)
