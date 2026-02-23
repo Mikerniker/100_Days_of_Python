@@ -72,3 +72,26 @@ top_10_states = state_counts.head(10)
 
 st.write("The most dangerous states (by total police killings):")
 st.dataframe(top_10_states)
+
+fig = px.choropleth(
+    state_counts,
+    locations='state',
+    locationmode='USA-states',
+    color='killings',
+    hover_name='state',
+    color_continuous_scale='sunsetdark',
+    title='Police Killings by U.S. State'
+)
+
+fig.update_layout(
+    geo=dict(
+        scope='usa',
+        showlakes=True,
+        lakecolor='rgb(255, 255, 255)'
+    ),
+    coloraxis_colorbar=dict(
+        title='Number of Killings'
+    )
+)
+
+st.plotly_chart(fig, use_container_width=True)
