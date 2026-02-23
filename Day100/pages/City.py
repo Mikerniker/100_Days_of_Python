@@ -59,3 +59,9 @@ st.bar_chart(
 # Which states are the most dangerous? Compare your map with your previous chart.
 # Are these the same states with high degrees of poverty?
 st.subheader("Choropleth Map of Police Killings by US State")
+
+state_counts = (
+    df_fatalities['state']
+    .value_counts()
+    .reset_index()
+)
