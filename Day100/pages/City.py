@@ -104,3 +104,6 @@ st.write("States with the most police killings tend to be large, populous states
          "top 10 states with high poverty rates. Several top 10 cities with the most police"
          " killings are within the top most dangerous states. While poverty may play a role, "
          "other factors appear to influence higher police killings.")
+
+# Number of Police Killings Over Time
+
