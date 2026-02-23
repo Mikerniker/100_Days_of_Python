@@ -95,3 +95,6 @@ fig.update_layout(
 )
 
 st.plotly_chart(fig, use_container_width=True)
+
+st.write("**Which states are the most dangerous? Compare your map with your previous chart. "
+         "Are these the same states with high degrees of poverty?**")
