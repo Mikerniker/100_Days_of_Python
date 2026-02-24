@@ -131,3 +131,12 @@ ax.plot(
     label="Monthly Police Killings",
     alpha=0.7
 )
+
+ax.set_title("Number of Police Killings Over Time (Monthly)")
+ax.set_xlabel("Year")
+ax.set_ylabel("Number of Killings")
+ax.legend()
+ax.grid(alpha=0.3)
+
+st.pyplot(fig)
+plt.close()
