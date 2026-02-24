@@ -120,3 +120,14 @@ killings_per_month = (
     .size()
     .sort_index()
 )
+
+killings_per_month.index = killings_per_month.index.to_timestamp()
+
+
+fig, ax = plt.subplots(figsize=(12, 6))
+ax.plot(
+    killings_per_month.index,
+    killings_per_month.values,
+    label="Monthly Police Killings",
+    alpha=0.7
+)
