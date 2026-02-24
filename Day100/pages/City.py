@@ -111,3 +111,5 @@ st.subheader("Number of Police Killings Over Time")
 df_fatalities['date'] = pd.to_datetime(df_fatalities['date'], errors='coerce')
 
 df_time = df_fatalities.dropna(subset=['date']).copy()
+
+df_time['YearMonth'] = df_time['date'].dt.to_period('M')
