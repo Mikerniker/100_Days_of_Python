@@ -106,4 +106,8 @@ st.write("States with the most police killings tend to be large, populous states
          "other factors appear to influence higher police killings.")
 
 # Number of Police Killings Over Time
+st.subheader("Number of Police Killings Over Time")
 
+df_fatalities['date'] = pd.to_datetime(df_fatalities['date'], errors='coerce')
+
+df_time = df_fatalities.dropna(subset=['date']).copy()
