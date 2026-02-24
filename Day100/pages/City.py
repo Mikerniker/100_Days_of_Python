@@ -140,3 +140,11 @@ ax.grid(alpha=0.3)
 
 st.pyplot(fig)
 plt.close()
+
+st.write("**Analyze the Number of Police Killings over Time. Is there a trend in the data?**")
+st.write("The number of police killings per month appears relatively "
+         "stable over time from 2015 to early 2017, with noticeable "
+         "short-term fluctuations. However, killings "
+         "declined deeply starting mid-2017.")
+
+
