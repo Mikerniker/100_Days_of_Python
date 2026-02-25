@@ -10,3 +10,9 @@ df_fatalities = pd.read_csv('Deaths_by_Police_US.csv', encoding="windows-1252")
 
 col1, col2 = st.columns(2)
 with col1:
+    gender_fatalities = df_fatalities['gender'].value_counts()
+
+    gender_map = {
+        'M': 'Men',
+        'F': 'Women',
+    }
