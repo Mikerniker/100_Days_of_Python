@@ -16,3 +16,5 @@ with col1:
         'M': 'Men',
         'F': 'Women',
     }
+
+    gender_fatalities.index = gender_fatalities.index.map(gender_map)
