@@ -26,3 +26,11 @@ with col1:
         title="Deaths by Police: Men vs Women",
         # hole=0.6
     )
+
+    fig.update_traces(
+        textposition='inside',
+        textinfo='percent+label',
+        textfont_size=15
+    )
+
+    st.plotly_chart(fig, width="stretch")
