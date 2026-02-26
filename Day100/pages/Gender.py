@@ -18,3 +18,11 @@ with col1:
     }
 
     gender_fatalities.index = gender_fatalities.index.map(gender_map)
+
+
+    fig = px.pie(
+        values=gender_fatalities.values,
+        names=gender_fatalities.index,
+        title="Deaths by Police: Men vs Women",
+        # hole=0.6
+    )
