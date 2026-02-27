@@ -34,3 +34,11 @@ with col1:
     )
 
     st.plotly_chart(fig, width="stretch")
+
+with col2:
+    fig_bar = px.bar(
+        x=gender_fatalities.index,
+        y=gender_fatalities.values,
+        text=gender_fatalities.values,
+        title="Total Number of Deaths by Gender"
+    )
