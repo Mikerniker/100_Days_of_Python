@@ -42,3 +42,8 @@ with col2:
         text=gender_fatalities.values,
         title="Total Number of Deaths by Gender"
     )
+    
+    fig_bar.update_layout(
+        xaxis_title="Gender",
+        yaxis_title="Number of Deaths"
+    )
