@@ -16,3 +16,5 @@ race_map = {
     'N': 'Native American',
     'O': 'Other'
 }
+
+race_fatalities.index = race_fatalities.index.map(race_map)
