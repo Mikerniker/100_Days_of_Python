@@ -33,3 +33,5 @@ race_label_map = {
 }
 
 st.subheader("Racial Makeup of Each US State")
+
+race_cols = ['share_white', 'share_black', 'share_native_american', 'share_asian', 'share_hispanic']
