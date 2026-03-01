@@ -18,3 +18,8 @@ race_map = {
 }
 
 race_fatalities.index = race_fatalities.index.map(race_map)
+
+# TO DO
+# Create a Bar Chart with Subsections Showing the Racial Makeup of Each US State
+# Visualise the share of the white, black, hispanic, asian and native american
+# population in each US State using a bar chart with sub sections.
