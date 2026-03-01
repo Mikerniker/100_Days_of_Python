@@ -31,3 +31,5 @@ race_label_map = {
     'share_asian': 'Asian',
     'share_hispanic': 'Hispanic'
 }
+
+st.subheader("Racial Makeup of Each US State")
