@@ -46,3 +46,13 @@ state_race = (
 )
 
 state_race_renamed = state_race.rename(columns=race_label_map)
+
+fig, ax = plt.subplots(figsize=(14, 7))
+state_race_renamed.set_index('Geographic area')[
+    list(race_label_map.values())
+].plot(
+    kind='bar',
+    stacked=True,
+    ax=ax,
+    colormap='tab20'
+)
