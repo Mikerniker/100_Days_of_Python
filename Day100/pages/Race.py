@@ -35,3 +35,12 @@ race_label_map = {
 st.subheader("Racial Makeup of Each US State")
 
 race_cols = ['share_white', 'share_black', 'share_native_american', 'share_asian', 'share_hispanic']
+
+for col in race_cols:
+    df_share_race_city[col] = pd.to_numeric(df_share_race_city[col], errors='coerce')
+
+state_race = (
+    df_share_race_city
+    .groupby('Geographic area', as_index=False)[race_cols]
+    .mean()
+)
