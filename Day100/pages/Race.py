@@ -44,3 +44,5 @@ state_race = (
     .groupby('Geographic area', as_index=False)[race_cols]
     .mean()
 )
+
+state_race_renamed = state_race.rename(columns=race_label_map)
