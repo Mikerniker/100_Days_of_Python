@@ -67,3 +67,8 @@ plt.xticks(rotation=90)
 plt.tight_layout()
 
 st.pyplot(fig)  
+
+
+col1, col2 = st.columns(2)
+with col1:
+    st.subheader("Donut Chart: Percentage of People Killed by Race")
