@@ -62,3 +62,8 @@ ax.set_title('Racial Makeup by US State', fontsize=16)
 ax.set_xlabel('State')
 ax.set_ylabel('Percentage (%)')
 ax.legend(title='Demographics', bbox_to_anchor=(1.05, 1), loc='upper left')
+
+plt.xticks(rotation=90)
+plt.tight_layout()
+
+st.pyplot(fig)  
