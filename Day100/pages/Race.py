@@ -90,3 +90,5 @@ with col1:
         textinfo='percent+label',
         textfont_size=15
     )
+
+    st.plotly_chart(fig, width='stretch')
