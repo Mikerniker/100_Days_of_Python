@@ -76,3 +76,10 @@ with col1:
     # Create Donut Chart by of People Killed by Race
     # Hint: Use `.value_counts()`
     #Create the donut chart
+
+    fig = px.pie(
+        values=race_fatalities.values,
+        names=race_fatalities.index,
+        title="People Killed by Police by Race",
+        hole=0.6
+    )
