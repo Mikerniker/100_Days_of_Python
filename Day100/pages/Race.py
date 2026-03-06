@@ -83,3 +83,10 @@ with col1:
         title="People Killed by Police by Race",
         hole=0.6
     )
+
+
+    fig.update_traces(
+        textposition='inside',
+        textinfo='percent+label',
+        textfont_size=15
+    )
