@@ -97,3 +97,5 @@ with col2:
 #TO DO
 # Race of People Killed
 # Create a chart that shows the total number of people killed by race.
+    st.subheader("Bar Chart: Total Number of People Killed by Race")
+    st.bar_chart(race_fatalities)
