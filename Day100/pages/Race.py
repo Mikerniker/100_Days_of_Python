@@ -92,3 +92,8 @@ with col1:
     )
 
     st.plotly_chart(fig, width='stretch')
+
+with col2:
+#TO DO
+# Race of People Killed
+# Create a chart that shows the total number of people killed by race.
