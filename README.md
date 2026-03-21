@@ -1,6 +1,14 @@
 Hello,
 
-This is a repository of my final projects for Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp for 2023. I am currently on Day 97 and slowly putting the finished projects into Github for my reference. This repository is still a work in progress, thank you for visiting!
+This repository contains my final projects from Angela Yu’s 100 Days of Code: The Complete Python Pro Bootcamp (2023–2026).
+
+It took me longer than expected to complete this journey, as I balanced life along the way: exploring UI design, learning a bit of JavaScript, joining Solana and Algorand bootcamps, taking additional Python courses, diving into AI, spending time with family, and navigating a few setbacks.
+
+I still have a lot to review, and there are times I forget things or feel like I’m still a begginner. But coming from zero programming knowledge to now being a bit more comfortable with coding is something I’m genuinely proud of.
+
+Despite the detours, I stayed committed and saw it through to the end. I’m looking forward to continuing to learn, revisit what I’ve studied, and grow alongside the ever-evolving tech space.
+
+Thank you for visiting!
 
 ## Beginner
 **Day 1 Project: [Band Name Generator](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day01)**
@@ -306,4 +314,7 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 - Topics: Python and Telegram 
 
 **Day 99: [Professional Portfolio Project: Analyse and Visualise the Space Race](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day99)**
+- Topics: Python, Pandas, Streamlit
+
+**Day 100: [Professional Portfolio Project: Analyse and Visualise deaths by police in the U.S](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day100)**
 - Topics: Python, Pandas, Streamlit
