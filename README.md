@@ -304,3 +304,6 @@ CKEditorField, Python decorators, WTForm, Werkzeug (hash and salt passwords), Gr
 
 **Day 98: [Professional Portfolio Project: Bitcoin Alert Bot for Telegram)](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day98)**
 - Topics: Python and Telegram 
+
+**Day 99: [Professional Portfolio Project: Analyse and Visualise the Space Race](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day99)**
+- Topics: Python, Pandas, Streamlit
