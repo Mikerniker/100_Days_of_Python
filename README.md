@@ -1,6 +1,6 @@
 Hello,
 
-This repository contains my final projects from Angela Yu’s 100 Days of Code: The Complete Python Pro Bootcamp (2023–2026).
+This repository contains my final projects from Angela Yu’s 100 Days of Code: The Complete Python Pro Bootcamp (2022–2026).
 
 It took me longer than expected to complete this journey, as I balanced life along the way: exploring UI design, learning a bit of JavaScript, joining Solana and Algorand bootcamps, taking additional Python courses, diving into AI, spending time with family, and navigating a few setbacks.
 
