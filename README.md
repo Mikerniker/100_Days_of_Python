@@ -4,7 +4,7 @@ This repository contains my final projects from Angela Yu’s 100 Days of Code: 
 
 It took me longer than expected to complete this journey, as I balanced life along the way: exploring UI design, learning a bit of JavaScript, joining Solana and Algorand bootcamps, taking additional Python courses, diving into AI, spending time with family, and navigating a few setbacks.
 
-I still have a lot to review, and there are times I forget things or feel like I’m still a begginner. But coming from zero programming knowledge to now being a bit more comfortable with coding is something I’m genuinely proud of.
+I still have a lot to review, and there are times I forget things or feel like I’m still a beginner. But coming from zero programming knowledge to now being a bit more comfortable with coding is something I’m genuinely proud of.
 
 Despite the detours, I stayed committed and saw it through to the end. I’m looking forward to continuing to learn, revisit what I’ve studied, and grow alongside the ever-evolving tech space.
 
