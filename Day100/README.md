@@ -28,7 +28,7 @@ I chose to build the analysis using Streamlit to create a more interactive and a
 At times, I still  relied on AI-assisted tools (ChatGPT) to help identify the appropriate code and approaches when I encountered difficulties. The project provided valuable hands-on practice in applying data analysis workflows.
 
 **Challenges**
-
+One of the main challenges was identifying the correct code and methods to merge and analyze datasets. I also found it difficult at times to determine which analytical approach or visualization best captured relationships. Since data science is not my primary focus, I'm not entirely confident in whether my interpretations were accurate or sufficiently rigorous.
 
 **Learnings**
 
