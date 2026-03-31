@@ -14,8 +14,6 @@ Analyze this datasets on:
   - Median household income, 
   - Racial demographics.
   
-### Functionality
-
 
 ### Links
 
@@ -40,4 +38,4 @@ This project helped reinforce core data analysis concepts, particularly around d
 - Explore deeper statistical analysis
 - Refactor and clean up code for better structure and readability
 
-## Notes/Concepts/Review: 
+
