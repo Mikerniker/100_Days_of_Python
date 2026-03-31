@@ -24,6 +24,8 @@ Analyze this datasets on:
 ## Reflection
 **Approach, Challenges, Learnings, and Future Improvements:**
 **Approach**
+I chose to build the analysis using Streamlit to create a more interactive and application-like experience. This allowed me to both explore the data visually and interactively.
+At times, I still  relied on AI-assisted tools (ChatGPT) to help identify the appropriate code and approaches when I encountered difficulties. The project provided valuable hands-on practice in applying data analysis workflows.
 
 **Challenges**
 
